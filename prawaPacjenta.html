@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    
+    
+    
+    <link rel="stylesheet" href="prawaPacjenta.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="poradnie.css">
+    <link rel="icon" type="image/x-icon" href="/Pictures/favicon.ico" />
+  </head>
+  <body>
+    <div id="top-navbar">
+      <div id="navbar_content">
+        <div id="logo">
+          <a href="index.html"><img src="Pictures/logo famed.svg" alt="" /></a>
+        </div>
+        <div id="main_menu">
+          <div id="male_menu">
+            <p class="contactBar">
+              <i class="fas fa-phone"></i
+              ><a class="contact_links" href="tel:+48123456789">
+                +48 123 456 789</a
+              >
+            </p>
+            <p class="contactBar">
+              <i class="fas fa-envelope"></i>
+              <a class="contact_links" href="mailto:example@example.com">
+                kontakt@fammed.pl</a
+              >
+            </p>
+          </div>
+          <div id="topMenu">
+            <ul id="menuElements">
+              <li class="dropdown">
+                <a id="poradnie_desktop" href="./poradnie.html"
+                  >Poradnie specjalistyczne</a
+                ><a id="poradnie_mobile" href="./poradnie.html">Poradnie</a>
+                <div class="dropdown-content">
+                  <a href="poradnie.html#button_1"
+                    >Poradnia Podstawowej Opieki Zdrowotnej</a
+                  >
+                  <a href="poradnie.html#button_2">Poradnia Alergologiczna</a>
+                  <a href="poradnie.html#button_3">Poradnia Angiologiczna</a>
+                  <a href="poradnie.html#button_4">Poradnia Chirurgiczna</a>
+                  <a href="poradnie.html#button_5">Poradnia Dermatologiczna</a>
+                  <a href="poradnie.html#button_6"
+                    >Poradnia Endokrynologiczna</a
+                  >
+                  <a href="poradnie.html#button_7">Poradnia Gastrologiczna</a>
+                  <a href="poradnie.html#button_8">Poradnia Geriatryczna</a>
+                  <a href="poradnie.html#button_9">Poradnia Ginekologiczna</a>
+                  <a href="poradnie.html#button_10">Poradnia Internistyczna</a>
+                  <a href="poradnie.html#button_11">Poradnia Kardiologiczna</a>
+                  <a href="poradnie.html#button_12">Poradnia Laryngologiczna</a>
+                  <a href="poradnie.html#button_13">Poradnia Medycyny Pracy</a>
+                  <a href="poradnie.html#button_14">Poradnia Nefrologiczna</a>
+                  <a href="poradnie.html#button_15">Poradnia Neurologiczna</a>
+                  <a href="poradnie.html#button_16">Poradnia Ortopedyczna</a>
+                  <a href="poradnie.html#button_17">Poradnia Pediatryczna</a>
+                  <a href="poradnie.html#button_18">Poradnia Proktologiczna</a>
+                  <a href="poradnie.html#button_19">Poradnia Reumatologiczna</a>
+                  <a href="poradnie.html#button_20">Poradnia Urologiczna</a>
+                  <a href="poradnie.html#button_21"
+                    >Poradnia Zdrowia Psychicznego</a
+                  >
+                  <a href="poradnie.html#button_22"
+                    >Gabinet Psychoterapii i Pomocy Psychologicznej Dzieci i
+                    Dorosłych</a
+                  >
+                  <a href="poradnie.html#button_23"
+                    >Gabinet Zdrowego Żywienia</a
+                  >
+                  <a href="poradnie.html#button_24">Badania Laboratoryjne</a>
+                  <a href="poradnie.html#button_25">Opieka Pielęgniarska</a>
+                  <a href="poradnie.html#button_26">Pracownia USG</a>
+                </div>
+              </li>
+              <li class="dropdown" id="aktualnosci">
+                <a href="#carousel-container">Aktualności</a>
+                <div class="dropdown-content">
+                  <!-- <a href="#news1">News 1</a>
+                  <a href="#news2">News 2</a>
+                  <a href="#news3">News 3</a> -->
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="#carousel-container">Placówki</a>
+                <div class="dropdown-content">
+                  <a href="porZbr.html">Zbrosławice</a>
+                  <a href="cmtg.html">Tarnowskie Góry</a>
+                  <a href="porWie.html">Wieszowa</a>
+                  <a href="porMie.html">Miedary</a>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="#carousel-container">Informacje</a>
+                <div class="dropdown-content">
+                  <a href="prawaPacjenta.html">Prawa pacjenta</a>
+                  <a href="#tab1">Polityka ochrony małoletnich</a>
+                  <a href="#tab2">Dokumenty do pobrania</a>
+                  <a href="#tab3">Certyfikaty</a>
+                  <a href="#tab4">RODO</a>
+                  <a href="#tab5"></a>
+                </div>
+              </li>
+              <li class="dropdown"><a href="#branches">Kontakt</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="prawa">
+      <h1>
+        I. Prawa Pacjenta wynikające z bezpośredniego stosowania przepisów
+        Konstytucji:
+      </h1>
+      <p>1. Każdy ma prawo do ochrony zdrowia - art. 68 ust. 1,</p>
+      <p>
+        2. Każdy obywatel ma prawo do równego dostępu do świadczeń opieki
+        zdrowotnej finansowanych ze środków publicznych, na warunkach i w
+        zakresie określonych w obowiązującej ustawie - art. 68 ust. 2.
+      </p>
+      <h1>
+        II . Prawa Pacjenta określone w ustawie o prawach pacjenta i Rzecznika
+        Praw Pacjenta z 2008r. Poniższe informacje zostały wybrane z ustawy o
+        prawach pacjenta i Rzecznika Praw Pacjenta. Pełna treść ustawy jest
+        dostępna w Dzienniku Ustaw Dz. U. z 2009r., Nr 52. poz. 417z
+        późniejszymi zmianami.
+      </h1>
+      <h3>Prawo pacjenta do świadczeń zdrowotnych</h3>
+      <p>
+        1. Pacjent ma prawo do świadczeń zdrowotnych odpowiadających wymaganiom
+        aktualnej wiedzy medycznej.
+      </p>
+      <p>
+        2. Pacjent ma prawo, w sytuacji ograniczonych możliwości udzielenia
+        odpowiednich świadczeń zdrowotnych, do przejrzystej, obiektywnej,
+        opartej na kryteriach medycznych, procedury ustalającej kolejność
+        dostępu do tych świadczeń.
+      </p>
+      <p>
+        3. Pacjent ma prawo do natychmiastowego udzielenia świadczeń zdrowotnych
+        ze względu na zagrożenie zdrowia lub życia.
+      </p>
+      <p>
+        4. Pacjent ma prawo do świadczeń zdrowotnych udzielanych z należytą
+        starannością przez podmioty udzielające świadczeń zdrowotnych w
+        warunkach odpowiadających określonym w odrębnych przepisach wymaganiom
+        fachowym i sanitarnym. Przy udzielaniu świadczeń zdrowotnych osoby
+        wykonujące zawód medyczny kierują się zasadami etyki zawodowej
+        określonymi przez właściwe samorządy zawodów medycznych. </p>
+      <h1>Prawo do
+        informacji</h1> 
+      <p>1. Pacjent ma prawo do informacji o swoim stanie zdrowia.</p>
+      <p> 2.
+        Pacjent, w tym małoletni, który ukończył 16 lat, lub jego ustawowy
+        przedstawiciel mają prawo do uzyskania od lekarza przystępnej informacji
+        o stanie zdrowia pacjenta, rozpoznaniu, proponowanych oraz możliwych
+        metodach diagnostycznych i leczniczych, dających się przewidzieć
+        następstwach ich zastosowania albo zaniechania, wynikach leczenia oraz
+        rokowaniu.</p> 
+      <p>3. Pacjent lub jego ustawowy przedstawiciel mają prawo do
+        wyrażenia zgody na udzielenie informacji wymienionych w pkt. 2 innym
+        osobom.</p> 
+      <p> 4. Pacjent ma prawo żądać, aby lekarz nie udzielił mu
+        informacji, o której mowa w pkt. 2.</p>
+      <p> 5. Pacjent małoletni, który nie
+        ukończył 16 lat, ma prawo do uzyskania od lekarza informacji, o których
+        mowa w ust. 2, w zakresie i formie potrzebnej do prawidłowego przebiegu
+        procesu diagnostycznego lub terapeutycznego.</p> 
+      <p> 6. Pacjent, w tym
+        małoletni, który ukończył 16 lat, lub jego ustawowy przedstawiciel mają
+        prawo do uzyskania od pielęgniarki, położnej przystępnej informacji o
+        jego pielęgnacji i zabiegach pielęgniarskich.</p>
+      <p>7. Pacjent ma prawo do
+        informacji o prawach pacjenta określonych w niniejszej ustawie oraz w
+        przepisach odrębnych, uwzględniającej ograniczenia tych praw określone w
+        tych przepisach. Podmiot udzielający świadczeń zdrowotnych udostępnia tę
+        informację w formie pisemnej, poprzez umieszczenie jej w swoim lokalu, w
+        miejscu ogólnodostępnym.</p>
+      <p> 8. Pacjent ma prawo do informacji o rodzaju i
+        zakresie świadczeń zdrowotnych udzielanych przez podmiot udzielający
+        świadczeń zdrowotnych, w tym o profilaktycznych programach zdrowotnych
+        finansowanych ze środków publicznych, realizowanych przez ten podmiot.</p>
+      <h1>
+        Prawo pacjenta do tajemnicy informacji z nim związanych</h1>
+      <p> 1. Pacjent ma
+        prawo do zachowania w tajemnicy przez osoby wykonujące zawód medyczny, w
+        tym udzielające mu świadczeń zdrowotnych, informacji z nim związanych, a
+        uzyskanych w związku z wykonywaniem zawodu medycznego.</p>
+      <p> 2. W celu
+        realizacji prawa pacjenta do zachowania tajemnicy, osoby wykonujące
+        zawód medyczny są obowiązane zachować w tajemnicy informacje związane z
+        pacjentem, w szczególności ze stanem zdrowia pacjenta.</p>
+      <p> 3. Osoby
+        wykonujące zawód medyczny są zwolnione z obowiązku zachowania tajemnicy,
+        w przypadku gdy: • tak stanowią przepisy odrębnych ustaw; • zachowanie
+        tajemnicy może stanowić niebezpieczeństwo dla życia lub zdrowia pacjenta
+        lub innych osób; • pacjent lub jego przedstawiciel ustawowy wyraża zgodę
+        na ujawnienie tajemnicy; • zachodzi potrzeba przekazania niezbędnych
+        informacji o pacjencie związanych z udzielaniem świadczeń zdrowotnych
+        innym osobom wykonującym zawód medyczny, uczestniczącym w udzielaniu
+        tych świadczeń.</p>
+      <p> 4. Osoby wykonujące zawód medyczny, udzielające
+        świadczeń zdrowotnych, z wyjątkiem przypadków, 5. o których mowa w pkt.
+        3 ppt. 1)-3), są związane tajemnicą również po śmierci pacjenta.</p>
+      </p>
+
+      <h1>Prawo pacjenta do wyrażenia zgody na udzielenie świadczeń zdrowotnych</h1>
+      <p>1. Pacjent ma prawo do wyrażenia zgody na udzielenie określonych świadczeń zdrowotnych lub odmowy takiej
+zgody.</p>
+
+<p>2. Pacjent, w tym małoletni, który ukończył 16 lat, ma prawo do wyrażenia zgody na przeprowadzenie badania
+lub udzielenie innych świadczeń zdrowotnych przez lekarza.</p>
+<p>3. Przedstawiciel ustawowy pacjenta małoletniego, całkowicie ubezwłasnowolnionego lub niezdolnego do
+świadomego wyrażenia zgody, ma prawo do wyrażenia zgody na przeprowadzenie badania lub udzielenie
+innych świadczeń zdrowotnych przez lekarza. W przypadku braku przedstawiciela ustawowego prawo to, w
+odniesieniu do badania, może wykonać opiekun faktyczny.</p>
+<p>4. Pacjent małoletni, który ukończył 16 lat, osoba ubezwłasnowolniona albo pacjent chory psychicznie lub
+upośledzony umysłowo, lecz dysponujący dostatecznym rozeznaniem, ma prawo do wyrażenia sprzeciwu
+co do udzielenia świadczenia zdrowotnego, pomimo zgody przedstawiciela ustawowego lub opiekuna
+faktycznego. W takim przypadku wymagane jest zezwolenie sądu opiekuńczego.</p>
+<p>5. Zgoda oraz sprzeciw, mogą być wyrażone ustnie albo poprzez takie zachowanie osób wymienionych w tych
+przepisach, które w sposób niebudzący wątpliwości wskazuje na wolę poddania się proponowanym przez
+lekarza czynnościom albo brak takiej woli.</p>
+<h1>Prawo do poszanowania intymności i godności pacjenta</h1>
+<p>1. Pacjent ma prawo do poszanowania intymności i godności, w szczególności w czasie udzielania mu
+świadczeń zdrowotnych.</p>
+<p>2. Przy udzielaniu świadczeń zdrowotnych może być obecna osoba bliska.</p>
+<p>3. Osoba wykonująca zawód medyczny udzielająca świadczeń zdrowotnych pacjentowi może odmówić
+obecności osoby bliskiej przy udzielaniu świadczeń zdrowotnych, w przypadku istnienia prawdopodobieństwa
+wystąpienia zagrożenia epidemicznego lub ze względu na bezpieczeństwo zdrowotne pacjenta. Odmowę
+odnotowuje się w dokumentacji medycznej.</p>
+<p>4. W celu realizacji prawa do poszanowania intymności i godności pacjenta, osoba wykonująca zawód medyczny
+ma obowiązek postępować w sposób zapewniający poszanowanie intymności i godności pacjenta.</p>
+<p>5. Osoby wykonujące zawód medyczny, inne niż udzielające świadczeń zdrowotnych, uczestniczą przy
+udzielaniu tych świadczeń tylko wtedy, gdy jest to niezbędne ze względu na rodzaj świadczenia. Uczestnictwo,
+a także obecność innych osób wymaga zgody pacjenta, a w przypadku pacjenta małoletniego, całkowicie
+ubezwłasnowolnionego lub niezdolnego do świadomego wyrażenia zgody, jego przedstawiciela ustawowego,
+i osoby wykonującej zawód medyczny, udzielającej świadczenia zdrowotnego.</p>
+<h1>Prawo pacjenta do dokumentacji medycznej</h1>
+<p>1. Pacjent ma prawo do dostępu do dokumentacji medycznej dotyczącej jego stanu zdrowia oraz udzielonych
+mu świadczeń zdrowotnych.</p>
+<p>2. Dane zawarte w dokumentacji medycznej podlegają ochronie określonej w niniejszej ustawie oraz
+w przepisach odrębnych.</p>
+<p>3. Podmiot udzielający świadczeń zdrowotnych jest obowiązany prowadzić, przechowywać i  udostępniać
+dokumentację medyczną w sposób określony w niniejszym rozdziale oraz zapewnić ochronę danych
+zawartych w tej dokumentacji.</p>
+<p>4. Podmiot udzielający świadczeń zdrowotnych udostępnia dokumentację medyczną pacjentowi lub jego
+przedstawicielowi ustawowemu, bądź osobie upoważnionej przez pacjenta.</p>
+<p>5. Podmiot udzielający świadczeń zdrowotnych udostępnia dokumentację medyczną również:</p>
+<p class="tab">1) podmiotom udzielającym świadczeń zdrowotnych, jeżeli dokumentacja ta jest niezbędna do zapewnienia
+ciągłości świadczeń zdrowotnych;</p>
+<p class="tab">2) organom władzy publicznej, w tym Rzecznikowi Praw Pacjenta, Narodowemu Funduszowi Zdrowia,
+organom samorządu zawodów medycznych oraz konsultantom krajowym i wojewódzkim, w zakresie
+niezbędnym do wykonywania przez te podmioty ich zadań, w szczególności nadzoru i kontroli;
+a. podmiotom, o których mowa w art. 119 ust. 1 i 2 ustawy z dnia 15 kwietnia 2011 r. o działalności
+leczniczej, w zakresie niezbędnym do przeprowadzenia kontroli na zlecenie ministra właściwego
+do spraw zdrowia;
+b. upoważnionym przez podmiot, o którym mowa w art. 121 ustawy z dnia 15 kwietnia 2011 r.
+o działalności leczniczej, osobom wykonującym zawód medyczny, w zakresie niezbędnym do
+sprawowania nadzoru nad podmiotem leczniczym niebędącym przedsiębiorcą;</p>
+<p class="tab">3) ministrowi właściwemu do spraw zdrowia, sądom, w tym sądom dyscyplinarnym, prokuraturom, lekarzom
+sądowym i rzecznikom odpowiedzialności zawodowej, w związku z prowadzonym postępowaniem;</p>
+<p class="tab">4) uprawnionym na mocy odrębnych ustaw organom i instytucjom, jeżeli badanie zostało przeprowadzone
+na ich wniosek;</p>
+<p class="tab">5) organom rentowym oraz zespołom do spraw orzekania o niepełnosprawności, w związku z prowadzonym
+przez nie postępowaniem;</p>
+<p class="tab">6) podmiotom prowadzącym rejestry usług medycznych, w zakresie niezbędnym do prowadzenia rejestrów;</p>
+<p class="tab">7) zakładom ubezpieczeń, za zgodą pacjenta;
+a. komisjom lekarskim podległym ministrowi właściwemu do spraw wewnętrznych, wojskowym
+komisjom lekarskim oraz komisjom lekarskim Agencji Bezpieczeństwa Wewnętrznego lub Agencji
+Wywiadu, podległym Szefom właściwych Agencji;</p>
+<p class="tab">8) osobom wykonującym zawód medyczny, w związku z prowadzeniem procedury oceniającej podmiot
+udzielający świadczeń zdrowotnych na podstawie przepisów o akredytacji w ochronie zdrowia albo
+procedury uzyskiwania innych certyfikatów jakości, w zakresie niezbędnym do ich przeprowadzenia;</p>
+<p class="tab">9) wojewódzkiej komisji do spraw orzekania o zdarzeniach medycznych, o której mowa w art. 67e ust. 1,
+w zakresie prowadzonego postępowania;</p>
+<p class="tab">10) spadkobiercom w zakresie prowadzonego postępowania przed wojewódzką komisją do spraw orzekania
+o zdarzeniach medycznych, o której mowa w art. 67e ust. 1;</p>
+<p class="tab">11) osobom wykonującym czynności kontrolne na podstawie art. 39 ust. 1 ustawy z dnia 28 kwietnia 2011r.
+o systemie informacji w ochronie zdrowia, w zakresie niezbędnym do ich przeprowadzenia;</p>
+<p class="tab">12) członkom zespołów kontroli zakażeń szpitalnych, o których mowa w art. 14 ustawy z dnia 5 grudnia 2008
+r. o zapobieganiu oraz zwalczaniu zakażeń i chorób zakaźnych u ludzi (Dz. U. z 2016 r. poz. 1866, 2003
+i 2173), w zakresie niezbędnym do wykonywania ich zadań.</p>
+<p>6. Dokumentacja medyczna może być udostępniona także szkole wyższej lub jednostce badawczo-rozwojowej
+do wykorzystania dla celów naukowych, bez ujawniania nazwiska i innych danych umożliwiających
+identyfikację osoby, której dokumentacja dotyczy.</p>
+<p>7. Dokumentacja medyczna jest udostępniana:</p>
+<p class="tab">1) do wglądu, w tym także do baz danych w zakresie ochrony zdrowia, w miejscu udzielania świadczeń
+zdrowotnych, z wyłączeniem medycznych czynności ratunkowych, albo w siedzibie podmiotu
+udzielającego świadczeń zdrowotnych, z zapewnieniem pacjentowi lub innym uprawnionym organom
+lub podmiotom możliwości sporządzenia notatek lub zdjęć;</p>
+<p class="tab">2) przez sporządzenie jej wyciągu, odpisu, kopii lub wydruku;</p>
+<p class="tab">3) przez wydanie oryginału za potwierdzeniem odbioru i z zastrzeżeniem zwrotu po wykorzystaniu, na
+żądanie organów władzy publicznej albo sądów powszechnych, a także w przypadku gdy zwłoka w
+wydaniu dokumentacji mogłaby spowodować zagrożenie życia lub zdrowia pacjenta;</p>
+<p class="tab">4) za pośrednictwem środków komunikacji elektronicznej;</p>
+<p class="tab">5) na informatycznym nośniku danych.</p>
+<p>8. Laboratorium przechowuje dokumentację medyczną przez okres 20 lat, licząc od końca roku kalendarzowego,
+w którym dokonano ostatniego wpisu, z wyjątkiem:</p>
+<p class="tab">1) skierowań na badania lub zleceń lekarza, które są przechowywane przez okres:
+a. 5 lat, licząc od końca roku kalendarzowego, w którym udzielono świadczenia zdrowotnego będącego
+przedmiotem skierowania lub zlecenia lekarza,
+b. 2 lat, licząc od końca roku kalendarzowego, w którym wystawiono skierowanie - w przypadku gdy
+świadczenie zdrowotne nie zostało udzielone z powodu niezgłoszenia się pacjenta w ustalonym
+terminie, chyba że pacjent odebrał skierowanie;
+Po upływie okresów przechowywania podmiot udzielający świadczeń zdrowotnych niszczy dokumentację
+medyczną w sposób uniemożliwiający identyfikację pacjenta, którego dotyczyła.
+Podstawa Prawna:</p>
+<br><br><br>
+<p>Konstytucja Rzeczypospolitej Polskiej z dnia 2 kwietnia 1997 roku (Dz. U. z 1997r., Nr 78 poz., 483 z późn. zm.)
+Ustawa z dnia 6 listopada 2008 roku o prawach pacjenta i Rzecznika Praw Pacjenta (Dz. U. z 2009r., Nr 52. poz. 417
+z późn. zm.)</p>
+    </div>
+    <div id="footer">
+      <div id="footer_content">
+        <div id="footer_info">
+          <a href="prawaPacjenta.html">Prawa pacjenta</a>
+          <a href="#tab1">Polityka ochrony małoletnich</a>
+          <a href="#tab2">Dokumenty do pobrania</a>
+          <a href="#tab3">Certyfikaty</a>
+          <a href="#tab4">RODO</a>
+          <a href="#tab5"></a>
+        </div>
+        <div id="footer_contact">
+          <div class="footer_branch_address">
+            <h4>Targonskie Góry</h4>
+            <p>ul. Szwedzka 2</p>
+            <p>42-674 Tarnowskie Góry</p>
+            <p>tel. (32) 284 16 73</p>
+          </div>
+          <div class="footer_branch_address">
+            <h4>Zbrosławice</h4>
+            <p>ul. Piastowska 3</p>
+            <p>42-674 Zbrosławice</p>
+            <p>tel. (32) 233-70-30</p>
+          </div>
+          <div class="footer_branch_address">
+            <h4>Miedary</h4>
+            <p>ul. Tarnogórska 1</p>
+            <p>42-676 Miedary</p>
+            <p>tel. (32) 233-72-50</p>
+          </div>
+          <div class="footer_branch_address">
+            <h4>Wieszowa</h4>
+            <p>ul. Sienkiewicza 123</p>
+            <p>42-672 Wieszowa</p>
+            <p>tel. (32) 273-73-52</p>
+          </div>
+        </div>
+        <div id="footer_logo">
+          <a href="index.html"><img src="Pictures/logo famed.svg" alt="" /></a>
+        </div>
+      </div>
+      <div id="footer_line"></div>
+      <div id="footer_end">
+        <p id="footer_end_p">Designed and Developed by W&T Web Design</p>
+      </div>
+    </div>
+  </body>
+</html>

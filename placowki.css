@@ -1,0 +1,236 @@
+* {
+  font-family: "Poppins";
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.infos {
+  display: flex; /* Używamy flexbox */
+  justify-content: space-around; /* Rozmieszcza elementy równomiernie */
+  align-items: center;
+}
+
+.logos {
+  display: flex; /* Można dodać flexbox dla obrazków */
+  gap: 10px; /* Odstęp między obrazkami, opcjonalne */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addressInfos {
+  /* Możesz dodać style, jeśli chcesz */
+  margin-left: 20px; /* Opcjonalne odstępy po lewej stronie */
+}
+
+.logoQ {
+  width: 100px;
+  height: auto;
+}
+.nfz_logo {
+  width: 150px;
+  height: auto;
+}
+#mainContainer {
+  position: absolute;
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  top: 0;
+  padding-top: 380px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+.cert {
+  width: 50rem;
+  height: auto;
+}
+
+.iso {
+  width: 30rem;
+  height: auto;
+}
+
+.acc {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 162, 172, 1) 0%,
+    rgba(0, 88, 156, 1) 100%
+  );
+  font-size: 18px;
+  font-weight: 200;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  margin: 4px 0;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 2s;
+}
+.partners {
+  
+  width: 200px;
+  height: auto;
+
+}
+.partners_images {
+  /* position: relative; */
+}
+.partners_images img{
+  position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+#doctors_paragraph {
+  display: block;
+  width: 100%;
+  height: 64px;
+  margin-top: 32px;
+}
+#doctors_list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.doctor_info {
+  flex: 1;
+}
+#schedule {
+  width: 100%;
+  min-height: 180px;
+  display: flex;
+  flex-direction: row;
+}
+.days,
+.hours {
+  width: 50%;
+}
+.doctor_info h3 {
+  display: block;
+  height: 64px;
+}
+.panel {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+}
+.panel h3,
+.panel h4 {
+  margin: 24px 0;
+}
+.div_margin {
+  margin: 30px 0;
+}
+.paragraph_margin {
+  margin: 20px 0;
+}
+.paragraph_hours {
+  margin: 10px 0;
+}
+.acc:after {
+  content: "\25BC";
+  font-size: 8px;
+  color: white;
+  float: right;
+  margin: 8px 0 0 5px;
+}
+
+.active:after {
+  content: "\25B2";
+  color: white;
+}
+
+.certificates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.mainView {
+  margin: 160px 0 20px 0;
+}
+
+
+
+.infos {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+.infos h2,
+.infos h3,
+.infos h4 {
+  font-weight: 300;
+}
+.infos h2,
+.infos h3 {
+  margin: 12px 0;
+}
+.bTable {
+  text-align: center;
+}
+
+.headTable {
+  font-size: 1.25rem;
+}
+#footer {
+  margin: 24px 0 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .headTable {
+    font-size: 1rem;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 1rem;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #00a4ac2d;
+  /* background-color: #f2f2f2; */
+}
+.certificates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+#iso,
+#cert {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#iso:hover,
+#cert:hover {
+  opacity: 0.7;
+}

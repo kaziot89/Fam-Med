@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="poradnie.css" />
+    <link rel="icon" type="image/x-icon" href="/Pictures/favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAM-MED</title>
+    <script src="index.js" defer></script>
+    <script src="poradnie.js" defer></script>
+  </head>
+  <body>
+    <div id="border">
+      <div id="top-navbar">
+        <div id="navbar_content">
+          <div id="logo">
+            <a href="index.html"
+              ><img src="Pictures/logo famed.svg" alt=""
+            /></a>
+          </div>
+          <div id="main_menu">
+            <div id="male_menu">
+              <p class="contactBar">
+                <i class="fas fa-phone"></i
+                ><a class="contact_links" href="tel:+48123456789">
+                  +48 322353322</a
+                >
+              </p>
+              <p class="contactBar">
+                <i class="fas fa-envelope"></i>
+                <a class="contact_links" href="mailto:example@example.com">
+                  zbroslawice@fam-med.pl</a
+                >
+              </p>
+            </div>
+            <div id="topMenu">
+              <ul id="menuElements">
+                <li class="dropdown">
+                  <a id="poradnie_desktop" href="./poradnie.html"
+                    >Poradnie specjalistyczne</a
+                  ><a id="poradnie_mobile" href="./poradnie.html">Poradnie</a>
+                </li>
+                <li class="dropdown" id="aktualnosci">
+                  <a
+                    href="index.html#carousel-container"
+                    onclick="scrollToSection()"
+                    >Aktualności</a
+                  >
+
+                  <div class="dropdown-content">
+                    <!-- <a href="#news1">News 1</a>
+                    <a href="#news2">News 2</a>
+                    <a href="#news3">News 3</a> -->
+                  </div>
+                </li>
+                <li class="dropdown">
+                  <a href="#carousel-container">Placówki</a>
+                  <div class="dropdown-content">
+                    <a href="porZbr.html">Zbrosławice</a>
+                    <a href="cmtg.html">Tarnowskie Góry</a>
+                    <a href="porWie.html">Wieszowa</a>
+                    <a href="porMie.html">Miedary</a>
+                  </div>
+                </li>
+                <li class="dropdown">
+                  <a href="#carousel-container">Informacje</a>
+                  <div class="dropdown-content">
+                    <a href="prawaPacjenta.html">Prawa pacjenta</a>
+                    <a href="#tab1">Polityka ochrony małoletnich</a>
+                    <a href="#tab2">Dokumenty do pobrania</a>
+                    <a href="#tab3">Certyfikaty</a>
+                    <a href="#tab4">RODO</a>
+                    <a href="#tab5"></a>
+                  </div>
+                </li>
+                <li class="dropdown"><a href="#branches">Kontakt</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="accSection">
+      <button class="acc">Poradnie specjalistyczne</button>
+      <div class="panel">
+        <div style="overflow-x: auto">
+          <div id="clinics_list2">
+            <div class="clinic_container">
+              <button id="button_1" class="clinic_button">Poradnia POZ</button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_2" class="clinic_button">
+                Poradnia Alergologiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_3" class="clinic_button">
+                Poradnia Angiologiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_4" class="clinic_button">
+                Poradnia Chirurgiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_5" class="clinic_button">
+                Poradnia Dermatologiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_6" class="clinic_button">
+                Poradnia Endokrynologiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_7" class="clinic_button">
+                Poradnia Gastrologiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_8" class="clinic_button">
+                Poradnia Geriatryczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_9" class="clinic_button">
+                Poradnia Ginekologiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_10" class="clinic_button">
+                Poradnia Internistyczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_11" class="clinic_button">
+                Poradnia Kardiologiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_12" class="clinic_button">
+                Poradnia Laryngologiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_13" class="clinic_button">
+                Poradnia Medycyny Pracy
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_14" class="clinic_button">
+                Poradnia Nefrologiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_15" class="clinic_button">
+                Poradnia Neurologiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_16" class="clinic_button">
+                Poradnia Ortopedyczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_17" class="clinic_button">
+                Poradnia Pediatryczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_18" class="clinic_button">
+                Poradnia Proktologiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_19" class="clinic_button">
+                Poradnia Reumatologiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_20" class="clinic_button">
+                Poradnia Urologiczna
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_21" class="clinic_button">
+                Poradnia Zdrowia Psychicznego
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_22" class="clinic_button">
+                Gabinet Psychoterapii
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_23" class="clinic_button">
+                Badania Audiometryczne
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_24" class="clinic_button">
+                Badania Kierowców
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_25" class="clinic_button">
+                Badania Laboratoryjne
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_26" class="clinic_button">Badania USG</button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_27" class="clinic_button">
+                Badania Spirometryczne
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_28" class="clinic_button">
+                Opieka Pielęgniarska
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_29" class="clinic_button">
+                Pracownia USG
+              </button>
+            </div>
+
+            <div class="clinic_container">
+              <button id="button_31" class="clinic_button">
+                Gabinet Zabiegowy
+              </button>
+            </div>
+            <div class="clinic_container">
+              <button id="button_32" class="clinic_button">
+                Gabinet Zdrowego Żywienia
+              </button>
+            </div>
+          </div>
+          <!-- TUTAJ iphone 16  -->
+        </div>
+      </div>
+    </section>
+    <div id="mainContainer">
+      <div id="clinics_list">
+        <div id="slogan2"><p>PORADNIE SPECJALISTYCZNE</p></div>
+        <div class="clinic_container">
+          <button id="button_1" class="clinic_button">Poradnia POZ</button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_2" class="clinic_button">
+            Poradnia Alergologiczna
+          </button>
+        </div>
+        <div class="clinic_container"></div>
+        <button id="button_3" class="clinic_button">
+          Poradnia Angiologiczna
+        </button>
+        <div class="clinic_container">
+          <button id="button_4" class="clinic_button">
+            Poradnia Chirurgiczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_5" class="clinic_button">
+            Poradnia Dermatologiczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_6" class="clinic_button">
+            Poradnia Endokrynologiczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_7" class="clinic_button">
+            Poradnia Gastrologiczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_8" class="clinic_button">
+            Poradnia Geriatryczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_9" class="clinic_button">
+            Poradnia Ginekologiczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_10" class="clinic_button">
+            Poradnia Internistyczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_11" class="clinic_button">
+            Poradnia Kardiologiczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_12" class="clinic_button">
+            Poradnia Laryngologiczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_13" class="clinic_button">
+            Poradnia Medycyny Pracy
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_14" class="clinic_button">
+            Poradnia Nefrologiczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_15" class="clinic_button">
+            Poradnia Neurologiczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_16" class="clinic_button">
+            Poradnia Ortopedyczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_17" class="clinic_button">
+            Poradnia Pediatryczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_18" class="clinic_button">
+            Poradnia Proktologiczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_19" class="clinic_button">
+            Poradnia Reumatologiczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_20" class="clinic_button">
+            Poradnia Urologiczna
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_21" class="clinic_button">
+            Poradnia Zdrowia Psychicznego
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_22" class="clinic_button">
+            Gabinet Psychoterapii
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_23" class="clinic_button">
+            Badania Audiometryczne
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_24" class="clinic_button">
+            Badania Kierowców
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_25" class="clinic_button">
+            Badania Laboratoryjne
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_26" class="clinic_button">Badania USG</button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_27" class="clinic_button">
+            Badania Spirometryczne
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_28" class="clinic_button">
+            Opieka Pielęgniarska
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_29" class="clinic_button">Pracownia USG</button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_31" class="clinic_button">
+            Gabinet Zabiegowy
+          </button>
+        </div>
+        <div class="clinic_container">
+          <button id="button_32" class="clinic_button">
+            Gabinet Zdrowego Żywienia
+          </button>
+        </div>
+      </div>
+      <div id="display_content">
+        <div id="clinic_content1" class="clinic_content">
+          <h2>PORADNIA PODSTAWOWEJ OPIEKI ZDROWOTNEJ</h2>
+
+          <p>Witamy w naszej Przychodni Podstawowej Opieki Zdrowotnej.</p>
+          <p>
+            Nasza przychodnia oferuje kompleksową opiekę zdrowotną dla
+            mieszkańców regionu. Posiadamy trzy placówki zlokalizowane w
+            Miedarach, Wieszowej oraz Zbrosławicach, gdzie nasz zespół
+            doświadczonych lekarzy i personelu medycznego jest gotowy, aby
+            zapewnić Państwu najwyższy standard usług medycznych. Zapewniamy
+            szeroki zakres usług, w tym konsultacje lekarskie, profilaktykę
+            zdrowotną oraz diagnostykę. Naszym celem jest dbałość o zdrowie i
+            dobre samopoczucie naszych pacjentów. Zachęcamy do odwiedzenia
+            jednej z naszych placówek oraz skorzystania z dostępnych usług!
+          </p>
+          <h3>
+            W celu sprawdzenia szczegółów, prosimy wybrać interesującą Państwa
+            placówkę.
+          </h3>
+          <div id="branches_section">
+            <div class="button-container">
+              <button class="branch_button" onclick="toggleContent('miedary')">
+                Miedary
+              </button>
+              <button class="branch_button" onclick="toggleContent('wieszowa')">
+                Wieszowa
+              </button>
+              <button
+                class="branch_button"
+                onclick="toggleContent('zbroslawice')"
+              >
+                Zbrosławice
+              </button>
+            </div>
+
+            <div id="miedary" class="content">
+              <h1>POZ w Miedarach, godziny przyjęć lekarzy:</h1>
+              <div id="doctors_schedule_section">
+                <div class="doctor_schedule" id="doctor1">
+                  <h3>lek. chorób wewnętrznych <br />Jerzy Słodczyk</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <!-- <p>poniedziałek</p> -->
+                      <!-- <p>wtorek</p> -->
+                      <!-- <p>środa</p> -->
+                      <!-- <p>czwartek</p> -->
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <!-- <p>-</p> -->
+                      <!-- <p>-</p> -->
+                      <!-- <p>-</p> -->
+                      <!-- <p>-</p> -->
+                      <p>15:30 - 16:00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor2">
+                  <h3>lek. med. <br />Agnieszka Kolczyńska - Kukla</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <!-- <p>poniedziałek</p> -->
+                      <p>wtorek</p>
+                      <!-- <p>środa</p> -->
+                      <p>czwartek</p>
+                      <!-- <p>piątek</p> -->
+                    </div>
+                    <div id="hours">
+                      <!-- <p>-</p> -->
+                      <p>10:00 - 12:00</p>
+                      <!-- <p>-</p> -->
+                      <p>10:45 - 12:15</p>
+                      <!-- <p>-</p> -->
+                    </div>
+                  </div>
+
+                  <h3>Wizyty domowe</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>czwatrek</p>
+                    </div>
+                    <div id="hours">
+                      <p>12:15 - 12:45</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor3">
+                  <h3>lek. med. <br />Denis Kowalski</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <!-- <p>wtorek</p> -->
+                      <!-- <p>środa</p> -->
+                      <!-- <p>czwatrek</p> -->
+                      <!-- <p>piątek</p> -->
+                    </div>
+                    <div id="hours">
+                      <p>13:30 - 15:30</p>
+                      <!-- <p>-</p> -->
+                      <!-- <p>-</p> -->
+                      <!-- <p>-</p> -->
+                      <!-- <p>-</p> -->
+                    </div>
+                  </div>
+                  <h3>Wizyty domowe</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <!-- <p>wtorek</p> -->
+                      <!-- <p>środa</p> -->
+                      <!-- <p>czwartek</p> -->
+                      <!-- <p>piątek</p> -->
+                    </div>
+                    <div id="hours">
+                      <p>15:30 - 16:00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="wieszowa" class="content">
+              <h1>POZ w Wieszowej, godziny przyjęć lekarzy:</h1>
+              <div id="doctors_schedule_section">
+                <div class="doctor_schedule" id="doctor1">
+                  <h3>lek. chorób wewnętrznych <br />Jerzy Słodczyk</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwartek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>10:00 - 14:30</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:30 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:00 - 14:00</p>
+                      <!-- sdfasdf -->
+                    </div>
+                  </div>
+                  <h3>Wizyty domowe</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwartek</p>
+                      <!-- <p>piątek</p> -->
+                    </div>
+                    <div id="hours">
+                      <p>9:00 - 10:00</p>
+                      <p>12:00 - 13:00</p>
+                      <p>14:00 - 15:00</p>
+                      <p>12:00 - 13:00</p>
+                      <!-- <p>-</p> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor2">
+                  <h3>
+                    dr n. med. spec. chorób dziecięcych <br />
+                    Małgorzata Brać -Czarnecka
+                  </h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwatrek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>14:15 - 15:30</p>
+                      <p>9:00 - 11:00</p>
+                      <p>14:30 - 16:00</p>
+                      <p>13:30 - 15:00</p>
+                      <p>12:30 - 14:30</p>
+                    </div>
+                  </div>
+                  <h3>Wizyty domowe</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <!-- <p>poniedziałek</p> -->
+                      <!-- <p>wtorek</p> -->
+                      <!-- <p>środa</p> -->
+                      <p>czwartek</p>
+                      <!-- <p>piątek</p> -->
+                    </div>
+                    <div id="hours">
+                      <!-- <p>-</p> -->
+                      <!-- <p>-</p> -->
+                      <!-- <p>-</p> -->
+                      <p>15:00 - 15:30</p>
+                      <!-- <p>-</p> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor3">
+                  <h3>
+                    Lek. med. spec. medycyny rodzinnej <br />
+                    Sylwia Gałkowska Krotla
+                  </h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <!-- <p>poniedziałek</p> -->
+                      <p>wtorek</p>
+                      <!-- <p>środa</p> -->
+                      <p>czwatrek</p>
+                      <!-- <p>piątek</p> -->
+                    </div>
+                    <div id="hours">
+                      <!-- <p>-</p> -->
+                      <p>9:00 - 12:00</p>
+                      <!-- <p>10:30 - 14:00</p> -->
+                      <p>9:00 - 12:00</p>
+                      <!-- <p>-</p> -->
+                    </div>
+                  </div>
+                  <h3>Wizyty domowe</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <!-- <p>poniedziałek</p> -->
+                      <!-- <p>wtorek</p> -->
+                      <!-- <p>środa</p> -->
+                      <p>czwatrek</p>
+                      <!-- <p>piątek</p> -->
+                    </div>
+                    <div id="hours">
+                      <!-- <p>-</p> -->
+                      <!-- <p>-</p> -->
+                      <!-- <p>-</p> -->
+                      <p>15:00 - 15:30</p>
+                      <!-- <p>-</p> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="zbroslawice" class="content">
+              <h1>POZ w Zbrosławicach, godziny przyjęć lekarzy:</h1>
+              <div id="doctors_schedule_section">
+                <div class="doctor_schedule" id="doctor1">
+                  <h3>lek.</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwatrek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>10:00 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:30 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:00 - 14:00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor2">
+                  <h3>lek.</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwatrek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>10:00 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:30 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:00 - 14:00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor3">
+                  <h3>lek.</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwatrek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>10:00 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:30 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:00 - 14:00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor3">
+                  <h3>lek.</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwatrek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>10:00 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:30 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:00 - 14:00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor3">
+                  <h3>lek.</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwatrek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>10:00 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:30 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:00 - 14:00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor3">
+                  <h3>lek.</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwatrek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>10:00 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:30 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:00 - 14:00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor3">
+                  <h3>lek.</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwatrek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>10:00 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:30 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:00 - 14:00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor3">
+                  <h3>lek.</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwatrek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>10:00 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:30 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:00 - 14:00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="clinic_content2" class="clinic_content">
+          <h2>PORADNIA ALERGOLOGICZNA</h2>
+          <h3>DIAGNOSTYKA I LECZENIE:</h3>
+          <p>
+            astmy oskrzelowej, pyłkowicy, nawracających infekcji górnych dróg
+            oddechowych, alergiczny nieżyt nosa, atopowe zapalenie skóry,
+            wyprysk kontaktowy, pokrzywki, obrzęk naczynioruchowy, alergia na
+            leki, alergia pokarmowa, uczulenia na jady owadów, zaburzenia
+            immunologiczne.
+          </p>
+          <p>
+            diagnostyczne: badania laboratoryjne, spirometria, testy na alergeny
+            różnego typu, kwalifikacja do innych badań diagnostycznych.
+            Leczenie: między innymi immunoterapia.
+          </p>
+          <h3>NASI SPECJALIŚCI:</h3>
+          <p>
+            doc. dr hab. n. med. Zenon Brzoza specjalista chorób wewnętrznych i
+            alergologii
+          </p>
+        </div>
+        <div id="clinic_content3" class="clinic_content">
+          <h2>PORADNIA ANGIOLOGICZNA</h2>
+          <h3>DIAGNOSTYKA I LECZENIE:</h3>
+          <p>
+            Diagnostyka i leczenie chorób tętnic i żył: miażdżyca tętnic,
+            tętniaki, przewlekła niewydolność żylna, żylaki, choroba
+            zakrzepowo-zatorowa, mikro-i makroangiopatia cukrzycowa, choroba
+            Buergera, zapalenie naczyń, choroby naczyń limfatycznych. USG met.
+            Dopplera naczyń kończyn górnych i dolnych, tętnic szyjnych,
+            kapilaroskopia. Konsultacje angiologiczne.
+          </p>
+          <p>
+            Leczenie: żylaków - laseroterapia, leczenie pajączków naczyniowych -
+            skleroterapia.
+          </p>
+
+          <h3>NASI SPECJALIŚCI:</h3>
+          <p>
+            dr n. med. Łukasz Szczygieł, specjalista chorób wewnętrznych i
+            chorób naczyń - angiolog
+          </p>
+        </div>
+        <div id="clinic_content4" class="clinic_content">
+          <h2>PORADNIA CHIRURGICZNA</h2>
+          <h3>DIAGNOSTYKA I LECZENIE:</h3>
+
+          <p>
+            - konsultacja diagnostyczna (ocena schorzenia),<br />
+            - badanie fizykalne,<br />
+            - USG jamy brzusznej,<br />
+            - usunięcie ciała obcego,<br />
+            - nacięcie zmian ropnych,<br />
+            - zaopatrywanie ran,<br />
+            - kontynuacja leczenia poszpitalnego.
+          </p>
+
+          <p>Zabiegi Chirurgiczne w znieczuleniu miejscowym:</p>
+
+          <p>
+            - usunięcie znamion skórnych,<br />
+            - usuniecie wrastającego paznokcia.
+          </p>
+
+          <h3>NASI SPECJALIŚCI:</h3>
+          <p>lek. Jakub Kodrębski, specjalista chirurg</p>
+        </div>
+        <div id="clinic_content5" class="clinic_content">
+          <h2>PORADNIA DERMATOLOGICZNA</h2>
+          <h3>DIAGNOSTYKA I LECZENIE:</h3>
+          <p>
+            Diagnostyka i leczenie chorób skóry i przydatków u dorosłych i
+            dzieci, dermatozy alergiczne, wirusowe, choroby zapalne skóry i błon
+            śluzowych, kolagenozy, choroby pęcherzowe, nowotwory skóry
+            diagnostyka i leczenie .
+          </p>
+          <p>
+            chorób skóry i jej przydatków: dermatozy alergiczne, naczyniowe,
+            choroby zapalne skóry, błon śluzowych, kolagenozy, nowotwory skóry
+            (diagnostyka i leczenie guzków, znamion, przebarwień).
+          </p>
+          <h3>NASI SPECJALIŚCI:</h3>
+          <p>
+            dr n. med. Małgorzata Pindycka-Piaszczyńska, specjalista dermatolog
+          </p>
+          <h3></h3>
+          <p>krioterapia, elektrokoagulacja, dermobrazja.</p>
+        </div>
+        <div id="clinic_content6" class="clinic_content">
+          <h2>PORADNIA ENDOKRYNOLOGICZNA</h2>
+          <p>
+            Diagnostyka i leczenie chorób gruczołów dokrewnych : tarczycy,
+            przytarczyc, przysadki mózgowej, kory nadnerczy, guz chromochłonny
+            nadnerczy, zaburzenia czynności jajników i jąder, otyłość i
+            osteoporozy, choroby neuroendokrynne. Wykonuje: USG, EKG, biopsja
+            cienkoigłowa, badania laboratoryjne hormonów, markerów nowotworowych
+            i przeciwciał. Konsultacje endokrynologiczne, internistyczne,
+            kwalifikacje do badań diagnostycznych.
+          </p>
+          <h3>DIAGNOSTYKA I LECZENIE:</h3>
+          <p>
+            - schorzenia tarczycy (nadczynność, niedoczynność, wole, zapalenia i
+            inne.)<br />
+            - schorzenia przytarczyc<br />
+            - schorzenia przysadki mózgowej<br />
+            - schorzenia kory nadnerczy<br />
+            - schorzenia rdzenia nadnerczy<br />
+            - zaburzenia czynności jajników i jąder<br />
+            - otyłość<br />
+            - inne zaburzenia endokrynologiczne
+          </p>
+          <h3>KONSULTACJI UDZIELA:</h3>
+          <p>
+            dr n. med. Janusz Strzelczyk, specjalista chorób wewnętrznych i
+            endokrynologii
+          </p>
+
+          <p>
+            lek. Anna Dittfeld, specjalista chorób wewnętrznych i endokrynologii
+          </p>
+
+          <p>
+            lek. Aleksandra Syguła, specjalista chorób wewnętrznych i
+            endokrynologii
+          </p>
+          <h3>BADANIA DIAGNOSTYCZNE:</h3>
+          <p>
+            Badania dodatkowe zleca lekarz specjalista po wcześniejszej
+            konsultacji:<br />
+            - USG<br />
+            - biopsja cienkoigłowa<br />
+            - scyntygrafia tarczycy<br />
+            - EKG<br />
+            - MR<br />
+            - TK<br />
+            - badania laboratoryjne.
+          </p>
+        </div>
+        <div id="clinic_content7" class="clinic_content">
+          <h2>PORADNIA GASTROLOGICZNA</h2>
+          <p></p>
+        </div>
+        <div id="clinic_content8" class="clinic_content">
+          <h2>PORADNIA GERIATRYCZNA</h2>
+          <h3>DIAGNOSTYKA I LECZENIE:</h3>
+          <p>
+            Poradnia oferuje kompleksową ocenę medyczną dla osób w wieku
+            podeszłym, prewencję zaburzeń somatycznych i funkcjonalnych, ocenę
+            problemów geriatrycznych, chorób przewlekłych i ostrych.
+          </p>
+          <p>
+            Proponujemy całościowe indywidualne spojrzenie na pacjenta, analizę
+            i modyfikację leczenia przewlekłego, diagnostykę i leczenie
+            wszystkich schorzeń internistycznych, w tym podstawowych schorzeń
+            reumatologicznych, kardiologicznych, gastrologicznych,
+            diabetologicznych, nefrologicznych, psychiatrycznych, diagnostykę
+            zaburzeń pamięci, zaburzeń chodu, zaburzeń odżywiania, leczenie
+            niektórych schorzeń neurologicznych.
+          </p>
+          <p>
+            Wykonujemy badania: internistyczne, testy funkcjonalne, testy
+            funkcji poznawczych (ocena pamięci), ocenę depresji.
+          </p>
+          <h3>NASI SPECJALIŚCI:</h3>
+          <p>lek. Anna Rudzka</p>
+        </div>
+        <div id="clinic_content9" class="clinic_content">
+          <h2>PORADNIA GINEKOLOGICZNA</h2>
+          <h3>
+            lek. Sylwia Wędzińska-Gdula, lek. Lakhsman Maleuwe-Tantrige, lek.
+            Kasper Krawet
+          </h3>
+          <p>
+            Udzielamy konsultacji ginekologicznych, położniczych, diagnozujemy i
+            leczymy następujące schorzenia: - zaburzenia miesiączkowania -
+            nieprawidłowe krwawienia -prowadzenie ciąży - powikłania ciąży,
+            porodu i połogu - stany zapalne sromu i pochwy - zapalenie jajników,
+            torbiele i guzy - mięśniaki macicy - menopauzę - nowotwory narządów
+            płciowych - zaburzenia sutka, badanie piersi -leczenie nadżerek
+            szyjki macicy Badania dodatkowe zleca lekarz specjalista po
+            wcześniejszej konsultacji: - USG dopochwowe - badania markerów
+            nowotworowych - badania laboratoryjne Wykonujemy następujące
+            zabiegi: - zakładanie i usuwanie wkładek wewnątrzmacicznych -
+            pobieranie wymazów do badań cytologicznych: klasyczna i płynna
+          </p>
+        </div>
+        <div id="clinic_content10" class="clinic_content">
+          <h2>PORADNIA INTERNISTYCZNA</h2>
+          <p></p>
+        </div>
+        <div id="clinic_content11" class="clinic_content">
+          <h2>PORADNIA KARDIOLOGICZNA</h2>
+          <p>
+            Diagnostyka i leczenie: choroba wieńcowa, nadciśnienie, zapalenie
+            mięśnia sercowego, choroby reumatyczne zastawek serca,
+            niereumatyczne zaburzenia zastawek serca, kardiomiopatie, zaburzenia
+            rytmu serca, niewydolność serca. Badania: EKG, EKG 24-godzinne
+            (Holter), 24-godzinne badanie ciśnienia tętniczego, spirometria, UKG
+            serca. Konsultacje kardiologiczne, kwalifikacje do zabiegów
+            diagnostycznych.
+          </p>
+          <h3>KONSULTACJI UDZIELA:</h3>
+          <p>lek. med. Ewa Wołoszyn - Horak</p>
+        </div>
+        <div id="clinic_content12" class="clinic_content">
+          <h2>PORADNIA LARYNGOLOGICZNA</h2>
+          <p>
+            Zapraszamy do korzystania z usług w poradni laryngologicznej w
+            ramach kontraktu z Narodowym Funduszem Zdrowia, a także udzielamy
+            porad prywatnych.
+          </p>
+          <p>
+            Udzielamy konsultacji laryngologicznych (np. dla medycyny pracy) i
+            leczymy następujące schorzenia: - choroby zatok szczękowych
+            (zapalne, urazowe) - choroby nosa (urazy, stany zapalne, polipy
+            nosa, nieżyty alergiczne i naczyniowe) - choroby gardła i migdałów
+            (anginy, przewlekłe zapalenie migdałów podniebiennych, ostre i
+            przewlekłe zapalenia gardła) - choroby uszu (zapalenia, egzema,
+            stany pourazowe, niedosłuch) - choroby krtani (zapalne, torbiele) -
+            choroby ślinianek (zapalne, niezapalne) - ciała obce ucha, gardła,
+            krtani - krwawienia z nos, gardła, ucha - zaburzenia połykania i
+            choroby przełyku - nowotwory Badania dodatkowe zleca lekarz
+            specjalista po wcześniejszej konsultacji: - RTG zatok, uszu, nosa -
+            TK - USG ślinianek, szyi - badania audiometryczne - badania
+            laboratoryjne
+          </p>
+          <h3>NASI SPECJALIŚCI:</h3>
+          <p>
+            lek. Beata Nowodworska, specjalista otolaryngologii <br />
+            dr Bożena Wąsowicz, specjalista larynglolog
+          </p>
+          <p>
+            Na wizytę proszę umawiać się osobiście lub telefonicznie: (32)
+            233-70-30 lub (32) 235-42-63.
+          </p>
+        </div>
+        <div id="clinic_content13" class="clinic_content">
+          <h2>PORADNIA MEDYCYNY PRACY</h2>
+          <p>
+            Zapraszamy do Poradni Medycyny Pracy wszelkie podmioty gospodarcze,
+            które w myśl ustawy mają obowiązek zapewnienia świadczeń z zakresu
+            profilaktycznej opieki lekarskiej nad pracownikami. Oferujemy
+            następujące badania: - profilaktyczne badanie wstępne – dla
+            pracowników przed podjęciem zatrudnienia lub po zmianie stanowiska
+            pracy, - badanie okresowe - dla pracowników pracujących na danym
+            stanowisku, przed zakończeniem ważności poprzedniego zaświadczenia,
+            - badanie kontrolne - dla pracowników przed ponownym rozpoczęciem
+            pracy po zwolnieniu lekarskim dłuższym niż 30 dni. W ramach poradni
+            wykonywane są konsultację specjalistyczne wymagane ustawą dla
+            pracowników na danym stanowisku pracy: - laryngologiczne
+            (wysokościowe) - neurologiczne (wysokościowe) - okulistyczne
+            Wykonujemy następujące badania diagnostyczne: - EKG, - badanie
+            spirometryczne, - badania audiometryczne, - badania laboratoryjne, -
+            badanie RTG ( Zakład Pulmonologii w Tarnowskich Górach ul. Lipowa
+            3). Wykonujemy również badania sanitarno-epidemiologiczne dla
+            pracowników zatrudnionych na stanowiskach wymagających takiego
+            badania. Zapraszamy wszelkie podmioty gospodarcze do podpisania
+            umowy na wykonanie świadczeń zdrowotnych z zakresu medycyny pracy.
+            Gwarantuje ona korzystne ceny na pakiety świadczeń z zakresu badań
+            wstępnych, okresowych i kontrolnych. Zapewniamy wykonanie badań
+            przez wykwalifikowany personel medyczny, sprawną organizację badań,
+            wiarygodność i rzetelność. Do badań proszę umawiać się telefonicznie
+            600 289 796
+          </p>
+          <p>
+            Zapraszamy wszelkie podmioty gospodarcze, które w myśl ustawy mają
+            obowiązek zapewnienia świadczeń z zakresu profilaktycznej opieki
+            lekarskiej nad pracownikami.
+          </p>
+          <p>
+            Oferujemy badania:<br />
+            - profilaktyczne badanie wstępne dla pracowników przed podjęciem
+            zatrudnienia lub po zmianie stanowiska pracy,<br />
+            - badanie okresowe,<br />
+            - dla pracowników pracujących na danym stanowisku, przed
+            zakończeniem ważności poprzedniego zaświadczenia,<br />
+            - badanie kontrolne,<br />
+            - dla pracowników przed ponownym rozpoczęciem pracy po zwolnieniu
+            lekarskim dłuższym niż 30 dni.<br />
+          </p>
+          <p>
+            W ramach poradni wykonywane są konsultacje specjalistyczne wymagane
+            ustawą dla pracowników na danym stanowisku pracy:<br />
+            - laryngologiczne (wysokościowe),<br />
+            - neurologiczne (wysokościowe),<br />
+            - okulistyczne,<br />
+            - sanitarno-epidemiologiczne.<br />
+          </p>
+          <p>
+            Wykonujemy następujące badania diagnostyczne:<br />
+            - EKG,<br />
+            - badania audiometryczne,<br />
+            - badanie spirometryczne,<br />
+            - badania laboratoryjne,<br />
+            - badanie RTG (Zakład Pulmonologii w Tarnowskich Górach, ul. Lipowa
+            3).<br />
+          </p>
+          <p>
+            Zapraszamy wszelkie podmioty gospodarcze do podpisania umowy na
+            wykonanie świadczeń zdrowotnych z zakresu medycyny pracy. Gwarantuje
+            ona korzystne ceny na pakiety świadczeń z zakresu badań wstępnych,
+            okresowych i kontrolnych. Zapewniamy wykonanie badań przez
+            wykwalifikowany personel medyczny, sprawną organizację badań,
+            wiarygodność i rzetelność.
+          </p>
+          <p>
+            Do badań proszę umawiać się telefonicznie : 600 289 796; (32)
+            235-33-22
+          </p>
+        </div>
+        <div id="clinic_content14" class="clinic_content">
+          <h2>PORADNIA NEFROLOGICZNA</h2>
+          <p></p>
+        </div>
+        <div id="clinic_content15" class="clinic_content">
+          <h2>PORADNIA NEUROLOGICZNA</h2>
+          <h3>lek. med. Grażyna Wilczek</h3>
+          <p>
+            Specjalizujemy się w diagnozowaniu i leczeniu schorzeń i chorób
+            układu nerwowego. Udzielamy świadczeń medycznych osobom po
+            przebytych udarach mózgowych, chorym na padaczkę, cierpiącym z
+            powodu bólów kręgosłupa, zawrotów i bólów głowy, chorób
+            neurodegeneracyjnych, zmagającym się z chorobami mózgu, rdzenia
+            kręgowego, nerwów obwodowych, czy pacjenci z problemami funkcji
+            nerwowo-mięśniowych. W poradni oferujemy również pacjentom po
+            pobycie w szpitalu, dalszą możliwość kontynuowania leczenie schorzeń
+            układu nerwowego. Wykonujemy badania neurologiczne, diagnozujemy
+            schorzenia i opracowujemy plan leczenia. Pacjenci mogą skorzystać z
+            konsultacji oraz z badania neurologicznych, diagnozy badań
+            obrazowych oraz zaleceń terapeutycznych i rehabilitacyjnych. Badanie
+            dodatkowe zaleca lekarz specjalista po wcześnijeszej komsultacji: •
+            elektroencefalografia (EEG) • tomografia komputerowa (TK) • rezonans
+            magnetyczny (MRI) • elektromiografia (EMG) • RTG kręgosłupa i
+            czaszki.
+          </p>
+        </div>
+        <div id="clinic_content16" class="clinic_content">
+          <h2>PORADNIA ORTOPEDYCZNA</h2>
+          <h3>lek. Robert Pańczyk</h3>
+          <p>
+            Diagnostyka i leczenie chorób układu kostno-stawowego: choroby
+            zwyrodnieniowe stawów, choroby tkanek miękkich, zespoły uciskowe
+            nerwów obwodowych np. zespół cieśni kanału nadgarstka, zespół bólowy
+            barku, zaburzenie budowy i funkcji stopy np. paluchy koślawe,
+            przykurcz Dupuytrena, palec zatrzaskujący, osteoporoza, urazy układu
+            kostno- stawowego Wykonuje: konsultacje z zakresu ortopedii i
+            traumatologii, diagnostyka chorób układu kostno-stawowego w tym USG
+            stawów, diagnostyka i leczenie urazów układu ruchu, iniekcje
+            dostawowe i okołostawowe, leczenie zespołów bólowych kręgosłupa z
+            wykorzystaniem terapii manualnej wg Lewita, kwalifikacja do leczenia
+            operacyjnego, projektowanie i dobór wkładek indywidualnych.
+          </p>
+        </div>
+        <div id="clinic_content17" class="clinic_content">
+          <h2>PORADNIA PEDIATRYCZNA</h2>
+          <p></p>
+        </div>
+        <div id="clinic_content18" class="clinic_content">
+          <h2>PORADNIA PROKTOLOGICZNA</h2>
+          <h3>lek. Jakub Kodrębski specjalista chirurg</h3>
+          <p>
+            Leczenie: nieinwazyjne leczenie żylaków odbytu. Diagnostyka i
+            leczenie chorób jelita grubego :choroby zapalne odbytu, guzki
+            krwawnicze (żylaki) odbytu, szczelina i przetoka ok. odbytnicy i
+            odbytu, ropnie odbytnicy i odbytu. Wykonuje: USG narządów jamy
+            brzusznej, anoskopię, USG piersi, USG taryczcy, drobne zabiegi
+            chirurgiczne
+          </p>
+        </div>
+        <div id="clinic_content19" class="clinic_content">
+          <h2>PORADNIA REUMATOLOGICZNA</h2>
+          <p></p>
+        </div>
+        <div id="clinic_content20" class="clinic_content">
+          <h2>PORADNIA UROLOGICZNA</h2>
+          <h3>dr n. med. Tadeusz Dzióba</h3>
+          <p>
+            ZAKRES USŁUG: Gabinet urologiczny oferuje: Konsultacje z zakresu
+            urologii, Medycyna seksualna i andrologia Diagnostyka i leczenie
+            chorób układu moczowego (nerek, moczowodów i pęcherza moczowego):
+            kamicy układu moczowego zakażeń układu moczowego (ostrych i
+            przewlekłych) chorób nowotworowych urazów Leczenie zaburzeń
+            potencji, dysfunkcji seksualnych, płodności Badania: USG,
+            uroflowmetria, cystoskopia, biopsje Zabiegi urologiczne (operacje,
+            zabiegi endoskopowe)
+          </p>
+        </div>
+        <div id="clinic_content21" class="clinic_content">
+          <h2>PORADNIA ZDROWIA PSYCHICZNEGO</h2>
+          <h3>lek. ŁUKASZ KUNERT</h3>
+          <p>
+            diagnoza psychiatryczna, leczenie chorób i zaburzeń psychicznych
+          </p>
+        </div>
+        <div id="clinic_content22" class="clinic_content">
+          <h2>
+            GABINET PSYCHOTERAPII I POMOCY PSYCHOLOGICZNEJ DZIECI I DOROSŁYCH
+          </h2>
+          <h3>mgr ANNA PIETRASIŃSKA – WOJNA - psycholog</h3>
+          <p>
+            Diagnoza psychologiczna osób dorosłych, terapia poznawczo –
+            behawioralna (m.in. zaburzenia nastroju, zaburzenia lękowe), pomoc
+            osobom dorosłym w sytuacjach kryzysowych.
+          </p>
+        </div>
+        <div id="clinic_content23" class="clinic_content">
+          <h2>BADANIA AUDIOMETRYCZNE</h2>
+          <p></p>
+        </div>
+        <div id="clinic_content24" class="clinic_content">
+          <h2>BADANIA KIEROWCÓW</h2>
+          <p></p>
+        </div>
+        <div id="clinic_content25" class="clinic_content">
+          <h2>BADANIA LABORATORYJNE</h2>
+          <p></p>
+        </div>
+        <div id="clinic_content26" class="clinic_content">
+          <h2>BADANIA USG</h2>
+          <p></p>
+        </div>
+        <div id="clinic_content27" class="clinic_content">
+          <h2>BADANIA SPIROMETRYCZNE</h2>
+          <p>
+            Wykonując spirometrię można zbadać czy pojemność płuc jest taka
+            jakiej można się spodziewać w danym wieku czy lepsza np. jeśli
+            uprawiamy sport. Badanie spirometryczne może wykazać cechy
+            przedwczesnego starzenia się płuc- u palaczy tytoniu. Zapraszamy do
+            badania spirometrycznego w Poradni Lekarza Rodzinnego w
+            Zbrosławicach.
+          </p>
+        </div>
+        <div id="clinic_content28" class="clinic_content">
+          <h2>OPIEKA PIELĘGNIARSKA W DOMU PACJENTA</h2>
+          <p>
+            Gabinet pielęgniarki znajduje się w Tarnowskich Górach przy ul.
+            Szwedzkiej 2 i w Zbrosławicach przy ul. Piastowskiej 3. Świadczymy
+            usługi pielęgniarskie poza umową z NFZ - odpłatnie, dla pacjentów
+            przebywających w domu i nie wymagających hospitalizacji, ale ze
+            względu na swój stan zdrowia potrzebujących systematycznej opieki
+            pielęgniarskiej. W ramach świadczeń pielęgniarka zapewnia: -
+            kontrola parametrów ciała - pomiar ciśnienia i temperatury,
+            oznaczanie stężenia glukozy, - czynności pielęgniarskie - iniekcje i
+            podawanie płynów infuzyjnych, zmiana opatrunków, wymiana cewnika,
+            lewatywa, usuwanie szwów, toaleta przeciwodleżynowa, pomoc w
+            codziennej toalecie, kąpieli, karmieniu, uruchamianiu osób leżących
+            - pomoc w rozwiązywaniu problemów zdrowotnych związanych z
+            samodzielnym funkcjonowaniem w domu, pomoc w pozyskiwaniu sprzętu
+            medycznego i rehabilitacyjnego, - edukacja zdrowotna chorego i jego
+            rodziny.
+          </p>
+        </div>
+        <div id="clinic_content29" class="clinic_content">
+          <h2>PRACOWNIA USG</h2>
+          <p>
+            Zapraszamy do korzystania z badań USG : USG jamy brzusznej i
+            miednicy małej USG szyi i tarczycy USG piersi USG met. Dopplera
+            naczyń obu kończyn dolnych USG met. Dopplera naczyń szyjnych. USG
+            Aorty Brzusznej USG Węzłów Chłonnych Prosimy o przygotowanie się do
+            badania USG jamy brzusznej i miednicy małej w następujący sposób:2
+            dni przed planowanym badaniem nie należy spożywać pokarmów
+            wzdymających. Na badanie należy zgłosić się na czczo (6 godzin
+            wcześniej nic nie jeść i nie pić) i nie palić papierosów. Przez 3
+            dni przed badaniem można zażywać Espumisan w kapsułkach (bez
+            recepty) – 3x2 kaps./dobę po jedzeniu. Prosimy o wcześniejszą
+            rejestrację telefoniczną lub osobiście.
+          </p>
+          <p>
+            Zakład Opieki Zdrowotnej FAM-MED dysponuje wysokiej klasy sprzętem
+            USG Zapraszamy do Pracowni USG w Zbrosławicach, przy ul.
+            Piastowskiej 3 Wykonujemy następujące badania USG: - USG jamy
+            brzusznej, - USG tarczycy i szyi, - USG ginekologiczne dopochwowe, -
+            USG metodą Dopplera naczyń w obu kończynach dolnych (badanie
+            przepływów), - USG metodą Dopplera naczyń szyjnych (badanie
+            przepływów). Badania wykonywane są w ramach umowy z NFZ pacjentom,
+            którzy otrzymali skierowanie od lekarzy Zakładu Opieki Zdrowotnej
+            „FAM-MED” i „VADEMECUM” w Tarnowskich Górach. Pacjenci ze
+            skierowaniem z innych zakładów opieki zdrowotnej lub bez skierowania
+            mają wykonywane badanie odpłatnie. Prosimy o przygotowanie się do
+            badania USG jamy brzusznej i miednicy małej w następujący sposób:
+            dwa dni przed planowanym badaniem nie należy spożywać pokarmów
+            wzdymających, na badanie należy zgłosić się na czczo (6 godzin
+            wcześniej nic nie jeść i nie pić), w dniu badania nie palić
+            papierosów. Przez trzy dni przed badaniem można zażywać Espumisan w
+            kapsułkach - 3x 2 kapsułki po jedzeniu (Espumisan jest dostępny bez
+            recepty). Prosimy o wcześniejszą rejestrację telefoniczną lub
+            osobistą
+          </p>
+        </div>
+        <div id="clinic_content31" class="clinic_content">
+          <h2>GABINET ZABIEGOWY</h2>
+          <p>
+            W gabinecie zabiegowym wykonywane są: - zabiegi pielęgnacyjne np.
+            zmiana opatrunków, usuwanie szwów - iniekcje (domięśniowe, dożylne,
+            podskórne) - EKG - pomiary ciśnienia tętniczego - badania stężenia
+            glukozy glukometrem - inne testy diagnostyczne - spirometria<br />
+            Zabiegi pielęgniarskie wymagają skierowania lekarzy POZ lub lekarzy
+            specjalistów pracujących w ramach umowy z NFZ. W innym przypadku
+            usługa jest płatna. W punktach szczepień poradni POZ wykonywane są
+            szczepienia u dzieci i młodzieży wg kalendarza szczepień
+            (obowiązkowe i zalecane), - szczepienia skojarzone
+            (wieloskładnikowe) u dzieci do 2 roku życia, (tężec, błonica,
+            krztusiec, poliomyelitis, HIB i żółtaczka typu B) - szczepienia
+            przeciw pneumokokom, rotawirusom, meningokokom, ospie wietrznej -
+            szczepienia przeciw wirusowemu zapaleniu wątroby WZW typu B przed
+            zabiegiem operacyjnym - przed wyjazdami zagranicznymi (cholera,
+            żółta febra, dur brzuszny) - przy otwartych ranach - szczepienie
+            przeciw tężcowi (bezpłatnie).
+          </p>
+        </div>
+        <div id="clinic_content32" class="clinic_content">
+          <h2>GABINET ZDROWEGO ŻYWIENIA</h2>
+          <p>
+            Wywiad dietetyczny i zdrowotny, pomiar wagi i składu ciała,
+            ustalanie indywidualnej diety w zależności od stanu zdrowia, trybu
+            życia, pracy, nauki, upodobań, stylu jedzenia, wysiłku fizycznego.
+            -leczenie otyłości i nadwagi -leczenie dietetyczne chorób
+            przewlekłych: cukrzycy, chorób układu krążenia, miażdżycy,
+            osteoporozy, chorób przewodu pokarmowego, dny moczanowej. -porady
+            dla osób z zaburzeniami jedzenia, anoreksją, bulimią, jedzeniem
+            kompulsywnym. GABINET DIETETYCZNY Serdecznie zaprasza na PORADY I
+            KONSULTACJE DIETETYCZNE W ramach konsultacji oferuje Państwu: 1.
+            Opracowanie i wdrożenie indywidualnego modelu żywienia mającego na
+            celu wspomaganie leczenia: - chorób układu krążenia -chorób układu
+            pokarmowego -chorób układu kostnego -chorób nerek -schorzeń
+            metabolicznych -schorzeń autoimmunologicznych -schorzeń
+            endokrynologicznych -alergii i nietolerancji pokarmowych 2.
+            Przygotowanie organizmu do zabiegów chirurgicznych mających na celu
+            zapewnienie optymalnego odżywienia wspomagającego regenerację
+            organizmu i szybki powrót do zdrowia 3. Pomoc w leczeniu nadwagi i
+            otyłości poprzez opracowanie indywidualnego programu żywieniowego
+            mającego na celu osiągnięcie i utrzymanie należnej masy ciała 4.
+            Opracowanie prawidłowego modelu żywienia dla kobiet ciężarnych i
+            karmiących zapewniających prawidłowy stan odżywienia kobiety i
+            dziecka 5. Poprawę jakości życia osób wieku podeszłego, borykających
+            się z problemami żołądkowo -jelitowymi oraz innymi schorzeniami
+            organizmu 6. Prawidłowy rozwój dzieci i młodzieży poprzez
+            upowszechnianie i kształtowanie prawidłowych wzorców żywieniowych
+            przy jednoczesnej eliminacji nieprawidłowych nawyków żywieniowych 7.
+            Poprawę stanu odżywienia oraz jakości życia osób cierpiących na
+            alergie pokarmowe lub nietolerancje pokarmowe 8. Analizę składu
+            ciała profesjonalnym urządzeniem pozwalającą ocenić zachodzące w
+            organizmie zmiany podczas stosowania wprowadzonego modelu żywienia
+            POZNAJ SKŁAD WŁASNEGO CIAŁA Analiza składu ciała, dzięki której
+            dowiesz się: jaka jest Twoja masa ciała czy Twój Wskaźnik Masy Ciała
+            (BMI) mieści się w zakresie normy jaki procent Twojego ciała stanowi
+            tkanka tłuszczowa ile kilogramów tkanki tłuszczowej oraz
+            beztłuszczowej zawiera Twój organizm ile tkanki mięśniowej posiada
+            Twój organizm jaka jest całkowita zawartość wody w Twoim organizmie
+            (w kg i %) jaki jest Twój wskaźnik podstawowej przemiany materii
+            (kcal) jaka jest Twoja zmineralizowana masa kości (kg) jaki jest
+            Twój wskaźnik trzewnej tkanki tłuszczowej jaki jest Twój wiek
+            metaboliczny Badanie trwa około 1 minuty. Uzyskane wyniki zostaną
+            dokładnie omówione przez dietetyka. Dodatkowo będziesz mógł się
+            dowiedzieć co zrobić, aby poprawić swoje parametry ciała.
+          </p>
+          <p>
+            Wywiad dietetyczny i zdrowotny, pomiar wagi i składu ciała,
+            ustalanie indywidualnej diety w zależności od stanu zdrowia, trybu
+            życia, pracy, nauki, upodobań, stylu jedzenia, wysiłku fizycznego.
+            -leczenie otyłości i nadwagi -leczenie dietetyczne chorób
+            przewlekłych: cukrzycy, chorób układu krążenia, miażdżycy,
+            osteoporozy, chorób przewodu pokarmowego, dny moczanowej. -porady
+            dla osób z zaburzeniami jedzenia, anoreksją, bulimią, jedzeniem
+            kompulsywnym. GABINET DIETETYCZNY Serdecznie zaprasza na PORADY I
+            KONSULTACJE DIETETYCZNE W ramach konsultacji oferuje Państwu: 1.
+            Opracowanie i wdrożenie indywidualnego modelu żywienia mającego na
+            celu wspomaganie leczenia: - chorób układu krążenia -chorób układu
+            pokarmowego -chorób układu kostnego -chorób nerek -schorzeń
+            metabolicznych - schorzeń autoimmunologicznych -schorzeń
+            endokrynologicznych -alergii i nietolerancji pokarmowych 2.
+            Przygotowanie organizmu do zabiegów chirurgicznych mających na celu
+            zapewnienie optymalnego odżywienia wspomagającego regenerację
+            organizmu i szybki powrót do zdrowia 3. Pomoc w leczeniu nadwagi i
+            otyłości poprzez opracowanie indywidualnego programu żywieniowego
+            mającego na celu osiągnięcie i utrzymanie należnej masy ciała 4.
+            Opracowanie prawidłowego modelu żywienia dla kobiet ciężarnych i
+            karmiących zapewniających prawidłowy stan odżywienia kobiety i
+            dziecka 5. Poprawę jakości życia osób wieku podeszłego, borykających
+            się z problemami żołądkowo -jelitowymi oraz innymi schorzeniami
+            organizmu 6. Prawidłowy rozwój dzieci i młodzieży poprzez
+            upowszechnianie i kształtowanie prawidłowych wzorców żywieniowych
+            przy jednoczesnej eliminacji nieprawidłowych nawyków żywieniowych 7.
+            Poprawę stanu odżywienia oraz jakości życia osób cierpiących na
+            alergie pokarmowe lub nietolerancje pokarmowe 8. Analizę składu
+            ciała profesjonalnym urządzeniem pozwalającą ocenić zachodzące w
+            organizmie zmiany podczas stosowania wprowadzonego modelu żywienia
+            POZNAJ SKŁAD WŁASNEGO CIAŁA Analiza składu ciała, dzięki której
+            dowiesz się: jaka jest Twoja masa ciała czy Twój Wskaźnik Masy Ciała
+            (BMI) mieści się w zakresie normy jaki procent Twojego ciała stanowi
+            tkanka tłuszczowa ile kilogramów tkanki tłuszczowej oraz
+            beztłuszczowej zawiera Twój organizm ile tkanki mięśniowej posiada
+            Twój organizm jaka jest całkowita zawartość wody w Twoim organizmie
+            (w kg i %) jaki jest Twój wskaźnik podstawowej przemiany materii
+            (kcal) jaka jest Twoja zmineralizowana masa kości (kg) jaki jest
+            Twój wskaźnik trzewnej tkanki tłuszczowej jaki jest Twój wiek
+            metaboliczny Badanie trwa około 1 minuty. Uzyskane wyniki zostaną
+            dokładnie omówione przez dietetyka. Dodatkowo będziesz mógł się
+            dowiedzieć co zrobić, aby poprawić swoje parametry ciała.
+          </p>
+        </div>
+        <div id="clinics_greeting">
+          <h3>
+            Serdecznie zapraszamy do skorzystania z szerokiej oferty
+            diagnostycznej naszych przychodni.
+          </h3>
+          <h3 id="hide_mobile">Prosimy skorzystać z menu po lewej stronie</h3>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="footer_content">
+        <div id="footer_info">
+          <a href="prawaPacjenta.html">Prawa pacjenta</a>
+          <a href="#tab1">Polityka ochrony małoletnich</a>
+          <a href="#tab2">Dokumenty do pobrania</a>
+          <a href="#tab3">Certyfikaty</a>
+          <a href="#tab4">RODO</a>
+          <a href="#tab5"></a>
+        </div>
+        <div id="footer_contact">
+          <div class="footer_branch_address">
+            <h4>Tarnowskie Góry</h4>
+            <p>ul. Szwedzka 2</p>
+            <p>42-612 Tarnowskie Góry</p>
+            <p>tel. (32) 284 16 73</p>
+          </div>
+          <div class="footer_branch_address">
+            <h4>Zbrosławice</h4>
+            <p>ul. Piastowska 3</p>
+            <p>42-674 Zbrosławice</p>
+            <p>tel. (32) 233-70-30</p>
+          </div>
+          <div class="footer_branch_address">
+            <h4>Miedary</h4>
+            <p>ul. Tarnogórska 1</p>
+            <p>42-676 Miedary</p>
+            <p>tel. (32) 233-72-50</p>
+          </div>
+          <div class="footer_branch_address">
+            <h4>Wieszowa</h4>
+            <p>ul. Sienkiewicza 123</p>
+            <p>42-672 Wieszowa</p>
+            <p>tel. (32) 273-73-52</p>
+          </div>
+        </div>
+        <div id="footer_logo">
+          <a href="index.html"><img src="Pictures/logo famed.svg" alt="" /></a>
+        </div>
+      </div>
+      <div id="footer_line"></div>
+      <div id="footer_end">
+        <p id="footer_end_p">Designed and Developed by W&T Web Design</p>
+      </div>
+    </div>
+  </body>
+</html>
