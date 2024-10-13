@@ -17,7 +17,7 @@ body {
 .logos {
   display: flex; /* Można dodać flexbox dla obrazków */
   gap: 10px; /* Odstęp między obrazkami, opcjonalne */
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
 }
@@ -269,4 +269,43 @@ tr:nth-child(even) {
 #iso:hover,
 #cert:hover {
   opacity: 0.7;
+}
+@media (max-width: 420px) {
+  #poradnie_spec {
+    display: flex;
+  }
+  .acc2 {
+    width: 100%;
+  }
+  .mainView {
+    margin: 110px 0 20px 0;
+  }
+  .infos {
+    flex-direction: column;
+    width: 100%;
+  }
+  #logos {
+    display: flex;
+    flex-direction: row;
+  }
+  .nfz_logo {
+    width: 100px;
+  }
+  .logoQ {
+    width: 50px;
+  }
+  .infos h2 {
+    font-size: 14px;
+    margin: 8px;
+  }
+  .infos h3 {
+    font-size: 12px;
+    margin: 4px;
+  }
+  .infos h4 {
+    font-size: 10px;
+  }
+  .infos h2 {
+    font-size: 14px;
+  }
 }
