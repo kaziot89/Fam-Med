@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="placowki.css" />
     <link rel="icon" type="image/x-icon" href="/Pictures/favicon.ico" />
     <script src="placowki.js" defer></script>
+    <script src="porZbr.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAM-MED</title>
@@ -132,109 +133,62 @@
         </div>
       </div>
       <section class="accSection">
-        <button class="acc">Harmonogram pracy lekarzy</button>
-
+        <button class="acc" id="poradnie_spec">Poradnie specjalistyczne</button>
         <div class="panel">
-          <h2 id="doctors_paragraph">Nasi lekarze</h2>
-          <div id="doctors_container" style="overflow-x: auto">
-            <div id="doctors_list">
-              <div class="doctor_info">
-                <h3>
-                  lek. chorób wewn. <br />
-                  Jerzy Słodczyk
-                </h3>
-                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
-                <div id="schedule">
-                  <div class="days">
-                    <p>poniedziałek</p>
-                    <p>wtorek</p>
-                    <p>środa</p>
-                    <p>czwartek</p>
-                    <p>piątek</p>
-                  </div>
-                  <div id="hours">
-                    <p>10:00 - 14:30</p>
-                    <p>13:00 - 16:00</p>
-                    <p>10:30 - 14:00</p>
-                    <p>13:00 - 16:00</p>
-                    <p>10:00 - 14:00</p>
-                  </div>
-                </div>
-                <p style="margin: 20px 0">wizyty domowe:</p>
-                <div id="schedule">
-                  <div class="days">
-                    <p>poniedziałek</p>
-                    <p>wtorek</p>
-                    <p>środa</p>
-                    <p>czwartek</p>
-                  </div>
-                  <div id="hours">
-                    <p>09:00 - 10:00</p>
-                    <p>12:00 - 13:00</p>
-                    <p>14:00 - 15:00</p>
-                    <p>12:30 - 13:00</p>
-                  </div>
-                </div>
-              </div>
-              <div class="doctor_info">
-                <h3>
-                  dr n. med. spec. chorób dziecięcych <br />Małgorzata
-                  Brać-Czarnecka
-                </h3>
-                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
-                <div id="schedule">
-                  <div class="days">
-                    <p>poniedziałek</p>
-                    <p>wtorek</p>
-                    <p>środa</p>
-                    <p>czwartek</p>
-                    <p>piątek</p>
-                  </div>
-                  <div id="hours">
-                    <p>14:30 - 16:30</p>
-                    <p>09:00 - 11:00</p>
-                    <p>14:30 - 16:00</p>
-                    <p>13:30 - 15:30</p>
-                    <p>12:30 - 14:30</p>
-                  </div>
-                </div>
-              </div>
-              <div class="doctor_info">
-                <h3>
-                  lek. med. spec. medycyny rodzinnej <br />
-                  Sylwia Gałkowska-Krotla
-                </h3>
-                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
-                <div id="schedule">
-                  <div class="days">
-                    <p>wtorek</p>
-
-                    <p>czwartek</p>
-                  </div>
-                  <div id="hours">
-                    <p></p>
-                    <p>09:00 - 12:00</p>
-                    <p></p>
-                    <p>09:00 - 12:00</p>
-                    <p></p>
-                  </div>
-                </div>
-                <p style="margin: 20px 0">wizyty domowe:</p>
-                <div id="schedule">
-                  <div class="days">
-                    <p>wtorek</p>
-
-                    <p>czwartek</p>
-                  </div>
-                  <div id="hours">
-                    <p>12:00 - 13:00</p>
-
-                    <p>12:00 - 13:00</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <button class="acc2" id="go_to_clinic1" data-button-id="button_1">
+            Poradnia POZ
+          </button>
+          <button class="acc2" id="go_to_clinic2" data-button-id="button_6">
+            Poradnia endokrynologiczna
+          </button>
+          <button class="acc2" id="go_to_clinic3" data-button-id="button_9">
+            Poradnia ginekologiczna
+          </button>
+          <button class="acc2" id="go_to_clinic4" data-button-id="button_12">
+            Poradnia laryngologiczna
+          </button>
+          <button class="acc2" id="go_to_clinic5" data-button-id="button_15">
+            Poradnia neurologiczna
+          </button>
+          <button class="acc2" id="go_to_clinic6" data-button-id="button_14">
+            Poradnia nefrologiczna
+          </button>
+          <button class="acc2" id="go_to_clinic7" data-button-id="button_19">
+            Poradnia reumatologiczna
+          </button>
+          <button class="acc2" id="go_to_clinic8" data-button-id="button_3">
+            Poradnia chorób naczyń
+          </button>
+          <button class="acc2" id="go_to_clinic9" data-button-id="button_5">
+            Poradnia dermatologiczna
+          </button>
+          <button class="acc2" id="go_to_clinic10" data-button-id="button_16">
+            Poradnia ortopedyczna
+          </button>
+          <button class="acc2" id="go_to_clinic11" data-button-id="button_5">
+            Poradnia dermatologiczna
+          </button>
+          <button class="acc2" id="go_to_clinic12" data-button-id="button_27">
+            Badania spirometryczne
+          </button>
+          <button class="acc2" id="go_to_clinic13" data-button-id="button_23">
+            Badania audiometryczne
+          </button>
+          <button class="acc2" id="go_to_clinic14" data-button-id="button_13">
+            Medycyna pracy
+          </button>
+          <button class="acc2" id="go_to_clinic15" data-button-id="button_24">
+            Badania kierowców
+          </button>
+          <button class="acc2" id="go_to_clinic15" data-button-id="button_28">
+            Opieka pielęgniarska
+          </button>
+          <button class="acc2" id="go_to_clinic15" data-button-id="button_26">
+            Pracownia USG
+          </button>
+          <button class="acc2" id="go_to_clinic15" data-button-id="button_31">
+            Gabinet zabiegowy
+          </button>
         </div>
 
         <button class="acc">Deklaracje do pobrania</button>

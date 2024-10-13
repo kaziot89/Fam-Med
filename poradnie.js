@@ -116,3 +116,20 @@ function toggleContent(branch) {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  function getQueryParam(param) {
+    let urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  if (getQueryParam("autoClick") === "true") {
+    const buttonId = getQueryParam("buttonId");
+
+    // Kliknij przycisk o ID podanym w parametrze buttonId
+    let buttonToClick = document.getElementById(buttonId);
+    if (buttonToClick) {
+      buttonToClick.click();
+    }
+  }
+});

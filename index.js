@@ -157,27 +157,77 @@ window.onload = function () {
 
 function handleButtonClick(buttonId) {
   const pageMap = {
-      "bottom_menu_button1": "poradnie.html",
-      "bottom_menu_button2": "laboratoria.html",
-      "bottom_menu_button3": "http://3.html",
-      "bottom_menu_button4": "http://4.html"
+    bottom_menu_button1: "poradnie.html",
+    bottom_menu_button2: "laboratoria.html",
+    bottom_menu_button3: "http://3.html",
+    bottom_menu_button4: "http://4.html",
   };
-  
+
   window.location.href = pageMap[buttonId];
 }
 
-document.getElementById("bottom_menu_button1").addEventListener("click", function() {
-  handleButtonClick(this.id);
+document
+  .getElementById("bottom_menu_button1")
+  .addEventListener("click", function () {
+    handleButtonClick(this.id);
+  });
+
+document
+  .getElementById("bottom_menu_button2")
+  .addEventListener("click", function () {
+    handleButtonClick(this.id);
+  });
+
+document
+  .getElementById("bottom_menu_button3")
+  .addEventListener("click", function () {
+    handleButtonClick(this.id);
+  });
+
+document
+  .getElementById("bottom_menu_button4")
+  .addEventListener("click", function () {
+    handleButtonClick(this.id);
+  });
+const track = document.querySelector(".carousel-track");
+const slides = Array.from(track.children);
+let startX = 0;
+let moveX = 0;
+let currentIndex = 0; // Track the current index of the slide
+
+// Get the width of one slide
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+// Event listeners for touch events
+track.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
 });
 
-document.getElementById("bottom_menu_button2").addEventListener("click", function() {
-  handleButtonClick(this.id);
+track.addEventListener("touchmove", (e) => {
+  moveX = e.touches[0].clientX - startX;
 });
 
-document.getElementById("bottom_menu_button3").addEventListener("click", function() {
-  handleButtonClick(this.id);
+track.addEventListener("touchend", () => {
+  if (moveX < -50) {
+    moveToNextSlide();
+  } else if (moveX > 50) {
+    moveToPrevSlide();
+  }
+  moveX = 0;
 });
 
-document.getElementById("bottom_menu_button4").addEventListener("click", function() {
-  handleButtonClick(this.id);
-});
+// Move to the next slide
+function moveToNextSlide() {
+  if (currentIndex < slides.length - 1) {
+    currentIndex++;
+    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+  }
+}
+
+// Move to the previous slide
+function moveToPrevSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+  }
+}

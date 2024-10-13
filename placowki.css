@@ -55,6 +55,36 @@ body {
   width: 30rem;
   height: auto;
 }
+.acc2 {
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  background-color: transparent;
+  cursor: pointer;
+  /* padding: 18px; */
+
+  margin: 4px 0;
+  /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.1); */
+  width: 33%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+.acc2:hover {
+  color: rgba(0, 162, 172, 1);
+}
+/* #poradnie_spec {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+} */
 
 .acc {
   background: linear-gradient(
@@ -76,20 +106,17 @@ body {
   transition: 2s;
 }
 .partners {
-  
   width: 200px;
   height: auto;
-
 }
 .partners_images {
   /* position: relative; */
 }
-.partners_images img{
+.partners_images img {
   position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #doctors_paragraph {
   display: block;
@@ -120,12 +147,23 @@ body {
   height: 64px;
 }
 .panel {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   padding: 0 18px;
   background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+}
+.panel2 {
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 18px;
+
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s cubic-bezier(0.5, 0, 0.5, 1);
@@ -166,8 +204,6 @@ body {
 .mainView {
   margin: 160px 0 20px 0;
 }
-
-
 
 .infos {
   width: 100%;

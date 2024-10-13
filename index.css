@@ -362,7 +362,7 @@ a:visited {
   width: 90%;
   max-width: 1400px;
   margin: 32px auto;
-  overflow: hidden;
+  overflow: hidden; /* Zmieniono na 'hidden', aby ukryć elementy spoza widoku */
   background: linear-gradient(
     126deg,
     rgba(0, 162, 172, 1) 0%,
@@ -370,31 +370,29 @@ a:visited {
     rgba(0, 88, 156, 1) 100%
   );
   display: flex;
-  align-items: center; /* Centers items vertically */
+  align-items: center;
 }
 
 .carousel-track-container {
-  overflow: visible;
-  flex: 1; /* Makes this container expand to take up available space */
+  overflow: hidden; /* Zapewnia, że elementy poza widokiem są ukryte */
+  flex: 1;
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.3s ease-in-out;
-  /* height: 300px; */
   z-index: -1;
 }
 
 .carousel-item {
   display: flex;
-  align-items: center; /* Centers content vertically within each item */
-  justify-content: center; /* Centers content horizontally within each item */
+  align-items: center;
+  justify-content: center;
   font-family: "Poppins";
-  min-width: 500px;
-  /* border-radius: 2%; */
+  min-width: 500px; /* Na urządzeniach mobilnych zmień na 100% */
   height: 230px;
   background-color: #ffffff;
-  margin: 0 100px; /* spacing between items */
+  margin: 0 100px;
   color: rgba(0, 162, 172, 0.2);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5), 0 20px 40px rgba(0, 0, 0, 0.5);
   z-index: 5;
@@ -665,8 +663,11 @@ a:visited {
     left: 5%;
   }
   .carousel-item {
-    min-width: 300px;
-    margin: 0 50px;
+    /* min-width: 300px;
+    margin: 0 50px; */
+
+    min-width: 100%;
+    margin: 0;
   }
   #branches {
     flex-wrap: wrap;
@@ -801,20 +802,30 @@ a:visited {
     margin-bottom: 24px;
   }
   .info-banner p.visible {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 300;
     line-height: 24px;
   }
   #bottom-menu {
     flex-direction: column;
     width: 100vw;
   }
+  #bottom-menu h2 {
+    font-size: 24px;
+  }
   .bottom-menu-tabs {
     width: 100vw;
   }
-
-  .carousel-container {
-    width: 100vw;
+  .bottom-menu-tab-picture {
+    width: 150px;
+    height: 150px;
+    margin: 16px auto;
   }
+  .carousel-container {
+    /* width: 100vw; */
+    height: auto;
+  }
+
   #branches {
     width: 100vw;
   }
