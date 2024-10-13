@@ -287,12 +287,13 @@ tr:nth-child(even) {
   #logos {
     display: flex;
     flex-direction: row;
+    gap: 20px;
   }
   .nfz_logo {
     width: 100px;
   }
   .logoQ {
-    width: 50px;
+    width: 40px;
   }
   .infos h2 {
     font-size: 14px;
