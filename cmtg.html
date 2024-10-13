@@ -28,21 +28,23 @@
           <div id="male_menu">
             <p class="contactBar">
               <i class="fas fa-phone"></i
-              ><a class="contact_links" href="tel:+48322841673">
-                +48322841673</a
+              ><a class="contact_links" href="tel:+48322337030">
+                +48322337030</a
               >
             </p>
             <p class="contactBar">
               <i class="fas fa-envelope"></i>
-              <a class="contact_links" href="mailto:t.gory@fam-med.pl">
-                t.gory@fam-med.pl</a
+              <a class="contact_links" href="mailto:zbroslawice@fam-med.pl">
+                zbroslawice@fam-med.pl</a
               >
             </p>
           </div>
           <div id="topMenu">
             <ul id="menuElements">
               <li class="dropdown">
-                <a href="./poradnie.html">Poradnie specjalistyczne</a>
+                <a id="poradnie_desktop" href="./poradnie.html"
+                  >Poradnie specjalistyczne</a
+                ><a id="poradnie_mobile" href="./poradnie.html">Poradnie</a>
                 <div class="dropdown-content">
                   <a href="poradnie.html#button_1"
                     >Poradnia Podstawowej Opieki Zdrowotnej</a
@@ -83,7 +85,7 @@
                   <a href="poradnie.html#button_26">Pracownia USG</a>
                 </div>
               </li>
-              <li class="dropdown">
+              <li class="dropdown" id="aktualnosci">
                 <a href="#carousel-container">Aktualności</a>
                 <div class="dropdown-content">
                   <!-- <a href="#news1">News 1</a>
@@ -92,7 +94,7 @@
                 </div>
               </li>
               <li class="dropdown">
-                Placówki
+                <a href="#carousel-container">Placówki</a>
                 <div class="dropdown-content">
                   <a href="porZbr.html">Zbrosławice</a>
                   <a href="cmtg.html">Tarnowskie Góry</a>
@@ -100,25 +102,18 @@
                   <a href="porMie.html">Miedary</a>
                 </div>
               </li>
-              <!-- <li class="dropdown">
-                zakładka4
-                <div class="dropdown-content">
-                  <a href="#tab1">Tab 1</a>
-                  <a href="#tab2">Tab 2</a>
-                  <a href="#tab3">Tab 3</a>
-                </div>
-              </li> -->
               <li class="dropdown">
-                Informacje
+                <a href="#carousel-container">Informacje</a>
                 <div class="dropdown-content">
-                  <a href="#tab1">Prawa pacjenta</a>
-                  <a href="pom.html">Polityka ochrony małoletnich</a>
-                  <a href="#tab3">RODO</a>
-                  <a href="#tab4">Certyfikaty</a>
-                  <a href="#tab5">Dokumenty do pobrania</a>
+                  <a href="prawaPacjenta.html">Prawa pacjenta</a>
+                  <a href="#tab1">Polityka ochrony małoletnich</a>
+                  <a href="#tab2">Dokumenty do pobrania</a>
+                  <a href="#tab3">Certyfikaty</a>
+                  <a href="#tab4">RODO</a>
+                  <a href="#tab5"></a>
                 </div>
               </li>
-              <li><a href="#branches">Kontakt</a></li>
+              <li class="dropdown"><a href="#branches">Kontakt</a></li>
             </ul>
           </div>
         </div>
@@ -142,8 +137,8 @@
         </div>
       </div>
       <section class="accSection">
-        <button class="acc" id="poradnie_spec">Poradnie specjalistyczne</button>
-        <div class="panel">
+        <button class="acc">Poradnie specjalistyczne</button>
+        <div class="panel" id="poradnie_spec">
           <button class="acc2" id="go_to_clinic1" data-button-id="button_7">
             Poradnia gastrologiczna
           </button>
