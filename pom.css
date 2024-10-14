@@ -1,134 +1,51 @@
-@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html {
-  scroll-behavior: smooth;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
-#top-navbar {
-  position: fixed;
-  width: 100%;
-  box-shadow: rgb(104, 103, 103) 2px 0px 12px 0px;
-  min-height: 80px;
-  background-color: #fff;
-  z-index: 10;
-  padding: 0.75em;
-}
-#navbar_content {
+#pom {
   position: relative;
+  top: 150px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
   max-width: 1400px;
+  font-family: "Poppins";
 }
 
-#logo {
-  width: 150px;
-}
-
-#logo img {
-  width: 100%;
-}
-#main_menu {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-}
-#male_menu {
-  width: 100%;
-  /* height: 60px; */
-  background: linear-gradient(
-    126deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 5%,
-    rgba(0, 162, 172, 1) 30%,
-    rgba(0, 88, 156, 1) 100%
-  );
-  margin: 10px 0;
-  color: #fff;
-}
-#male_menu p {
-  display: block;
-  float: right;
-  padding: 5px 20px;
-}
-#topMenu {
-  width: 100%;
-  /* height: 60px; */
-}
-
-#menuElements {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-#menuElements li,
-a:link {
-  position: relative;
-  /* width: 16%; */
-  padding: 24px 1px;
-  cursor: pointer;
-  list-style-type: none;
-  font-family: "Roboto Condensed", sans-serif;
+#pom p {
+  margin: 15px 0;
+  font-family: "Poppins";
   font-weight: 300;
-  font-size: 18px;
-  color: rgb(60, 60, 60);
-  text-decoration: none;
+  line-height: 32px;
+  text-align: justify;
 }
 
-#menuElements li:hover,
-a:hover {
-  /* background-color: rgba(229, 229, 229, 0.728); */
-  color: rgb(43, 159, 167);
+#pom h1 {
+  font-family: "Poppins";
+  padding-top: 32px;
+  color: rgb(3 162 172);
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
 }
-
-a:visited {
-  color: rgb(60, 60, 60);
+#pom h3 {
+  margin-top: 24px;
+  color: rgb(3 162 172);
+  font-weight: 300;
 }
-
-.dropdown {
-  position: relative;
-  /* width: 2250px; */
+#pom h4 {
+  margin-top: 24px;
+  color: rgb(3 162 172);
+  font-weight: 300;
+  text-align: center;
 }
-
-.dropdown-content {
-  display: block; /* Początkowo ustawione na 'block' */
-  position: absolute;
-  /* background-color: #d00f0f; */
-  min-width: 350px;
-  /* max-width: 230px; */
-  z-index: 1;
-  backdrop-filter: blur(10px);
-  background-color: rgba(229, 229, 229, 0.5);
-  top: 100%; /* Wysunięcie pod li */
-  left: 0;
-  margin-top: 10px;
-  overflow: auto; /* Ukryj zawartość, która nie mieści się w wysokości */
-  max-height: 0; /* Ukryj zawartość, początkowa wysokość 0 */
-  transition: max-height 0.5s ease; /* Animacja zmiany max-height */
+.tab {
+  margin: 15px 15 0 30px;
+  line-height: 32px;
+  text-align: justify;
 }
-
-.dropdown-content a {
-  display: block;
-  padding: 12px 16px;
-  color: black;
-  text-decoration: none;
-  transition: 0.3s ease;
+#footer {
+  margin-top: 200px;
 }
-
-.dropdown-content a:hover {
-  background-color: rgb(83, 154, 158);
-  color: white;
-}
-
-.dropdown:hover .dropdown-content {
-  max-height: 400px; /* Wysuwamy dropdown, gdy jesteśmy nad nim */
+@media (max-width: 1024px) {
+  #pom {
+    width: 80%;
+  }
 }

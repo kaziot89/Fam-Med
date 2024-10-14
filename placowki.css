@@ -310,3 +310,8 @@ tr:nth-child(even) {
     font-size: 14px;
   }
 }
+@media only screen and (max-width: 830px) {
+  .infos {
+    flex-direction: column;
+  }
+}
