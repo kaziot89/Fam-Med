@@ -413,17 +413,17 @@
         <div id="clinic_content1" class="clinic_content">
           <h2>PORADNIA PODSTAWOWEJ OPIEKI ZDROWOTNEJ</h2>
 
-          <p>Witamy w naszej Przychodni Podstawowej Opieki Zdrowotnej.</p>
+          <p>Witamy w Poradni Podstawowej Opieki Zdrowotnej.</p>
           <p>
             Nasza przychodnia oferuje kompleksową opiekę zdrowotną dla
-            mieszkańców regionu. Posiadamy trzy placówki zlokalizowane w
-            Miedarach, Wieszowej oraz Zbrosławicach, gdzie nasz zespół
-            doświadczonych lekarzy i personelu medycznego jest gotowy, aby
-            zapewnić Państwu najwyższy standard usług medycznych. Zapewniamy
-            szeroki zakres usług, w tym konsultacje lekarskie, profilaktykę
-            zdrowotną oraz diagnostykę. Naszym celem jest dbałość o zdrowie i
-            dobre samopoczucie naszych pacjentów. Zachęcamy do odwiedzenia
-            jednej z naszych placówek oraz skorzystania z dostępnych usług!
+            mieszkańców regionu. Posiadamy placówki zlokalizowane w
+            Zbrosławicach oraz Wieszowie, gdzie nasz zespół doświadczonych
+            lekarzy i personelu medycznego jest gotowy, aby zapewnić Państwu
+            najwyższy standard usług medycznych. Zapewniamy szeroki zakres
+            usług, w tym konsultacje lekarskie, profilaktykę zdrowotną oraz
+            diagnostykę. Naszym celem jest dbałość o zdrowie i dobre
+            samopoczucie naszych pacjentów. Zachęcamy do odwiedzenia jednej z
+            naszych placówek oraz skorzystania z dostępnych usług!
           </p>
           <h3>
             W celu sprawdzenia szczegółów, prosimy wybrać interesującą Państwa
@@ -431,87 +431,191 @@
           </h3>
           <div id="branches_section">
             <div class="button-container">
-              <button class="branch_button" onclick="toggleContent('miedary')">
-                Miedary
-              </button>
-              <button class="branch_button" onclick="toggleContent('wieszowa')">
-                Wieszowa
-              </button>
               <button
                 class="branch_button"
                 onclick="toggleContent('zbroslawice')"
               >
-                Zbrosławice
+                Zbrosławice<img class="nfz_logo" src="Pictures/NFZ_logo.svg" />
+              </button>
+              <button class="branch_button" onclick="toggleContent('wieszowa')">
+                Wieszowa<img class="nfz_logo" src="Pictures/NFZ_logo.svg" />
               </button>
             </div>
 
-            <div id="miedary" class="content">
-              <h1>POZ w Miedarach, godziny przyjęć lekarzy:</h1>
+            <div id="zbroslawice" class="content">
+              <h1>POZ w Zbrosławicach, godziny przyjęć lekarzy:</h1>
               <div id="doctors_schedule_section">
                 <div class="doctor_schedule" id="doctor1">
-                  <h3>lek. chorób wewnętrznych <br />Jerzy Słodczyk</h3>
+                  <h3>
+                    dr n. med. spec. med. rodz.<br /><strong
+                      >Barbara Pietrasińska</strong
+                    >
+                  </h3>
                   <div id="schedule">
                     <div class="days">
-                      <!-- <p>poniedziałek</p> -->
-                      <!-- <p>wtorek</p> -->
-                      <!-- <p>środa</p> -->
-                      <!-- <p>czwartek</p> -->
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwartek</p>
                       <p>piątek</p>
                     </div>
                     <div id="hours">
-                      <!-- <p>-</p> -->
-                      <!-- <p>-</p> -->
-                      <!-- <p>-</p> -->
-                      <!-- <p>-</p> -->
-                      <p>15:30 - 16:00</p>
+                      <p>8:00 - 13:30</p>
+                      <p>12:00 - 16:00</p>
+                      <p>12:30 - 18:00</p>
+                      <p>8:00 - 13:00</p>
+                      <p>8:00 - 13:00</p>
+                    </div>
+                  </div>
+                  <h3>Wizyty domowe</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwartek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>13:30 - 15:00</p>
+                      <p>16:00 - 18:00</p>
+                      <p>9:00 - 10:00</p>
+                      <p>13:00 - 15:30</p>
+                      <p>13:00 - 15:30</p>
                     </div>
                   </div>
                 </div>
                 <div class="doctor_schedule" id="doctor2">
-                  <h3>lek. med. <br />Agnieszka Kolczyńska - Kukla</h3>
+                  <h3>
+                    lek. med. rodz.<br /><strong>Joanna Wach-Sury</strong>
+                  </h3>
                   <div id="schedule">
                     <div class="days">
-                      <!-- <p>poniedziałek</p> -->
+                      <p>poniedziałek</p>
                       <p>wtorek</p>
-                      <!-- <p>środa</p> -->
+                      <p>środa</p>
                       <p>czwartek</p>
-                      <!-- <p>piątek</p> -->
+                      <p>piątek</p>
                     </div>
                     <div id="hours">
-                      <!-- <p>-</p> -->
-                      <p>10:00 - 12:00</p>
-                      <!-- <p>-</p> -->
-                      <p>10:45 - 12:15</p>
-                      <!-- <p>-</p> -->
+                      <p>9:00 - 12:30</p>
+                      <p>9:00 - 11:30</p>
+                      <p>9:00 - 12:30</p>
+                      <p>9:00 - 11:30</p>
+                      <p>9:00 - 12:30</p>
                     </div>
                   </div>
-
                   <h3>Wizyty domowe</h3>
                   <div id="schedule">
                     <div class="days">
-                      <p>czwartek</p>
+                      <p>poniedziałek</p>
+                      <!-- <p>wtorek</p> -->
+                      <p>środa</p>
+                      <!-- <p>czwartek</p> -->
+                      <p>piątek</p>
                     </div>
                     <div id="hours">
-                      <p>12:15 - 12:45</p>
+                      <p>12:30 - 13:00</p>
+                      <!-- <p>12:00 - 13:00</p> -->
+                      <p>12:30 - 13:00</p>
+                      <!-- <p>12:30 - 13:00</p> -->
+                      <p>12:30 - 13:00</p>
                     </div>
                   </div>
                 </div>
                 <div class="doctor_schedule" id="doctor3">
-                  <h3>lek. med. <br />Denis Kowalski</h3>
+                  <h3>
+                    lek. spec. med. rodz.<br /><strong>Anna Gradzik</strong>
+                  </h3>
                   <div id="schedule">
                     <div class="days">
                       <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwartek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>17:00 - 18:00</p>
+                      <p>17:00 - 18:00</p>
+                      <p>13:30 - 15:30</p>
+                      <p>13:30 - 15:30</p>
+                      <p>13:30 - 15:00</p>
+                    </div>
+                  </div>
+                  <h3>Wizyty domowe</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <!-- <p>poniedziałek</p> -->
                       <!-- <p>wtorek</p> -->
-                      <!-- <p>środa</p> -->
-                      <!-- <p>czwartek</p> -->
+                      <p>środa</p>
+                      <p>czwartek</p>
                       <!-- <p>piątek</p> -->
                     </div>
                     <div id="hours">
-                      <p>13:30 - 15:30</p>
+                      <!-- <p>9:00 - 10:00</p> -->
+                      <!-- <p>12:00 - 13:00</p> -->
+                      <p>15:30 - 16:00</p>
+                      <p>15:30 - 16:30</p>
                       <!-- <p>-</p> -->
-                      <!-- <p>-</p> -->
-                      <!-- <p>-</p> -->
-                      <!-- <p>-</p> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor3">
+                  <h3>lek. med.<br /><strong>Katarzyna Śliwa</strong></h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwartek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>12:00 - 17:30</p>
+                      <p>8:30 - 13:30</p>
+                      <p>8:30 - 13:30</p>
+                      <p>9:00 - 14:30</p>
+                      <p>8:30 - 13:30</p>
+                    </div>
+                  </div>
+                  <h3>Wizyty domowe</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <!-- <p>czwartek</p> -->
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>17:30 - 18:00</p>
+                      <p>13:30 - 14:00</p>
+                      <p>13:30 - 14:00</p>
+                      <!-- <p>12:30 - 13:00</p> -->
+                      <p>13:30 - 14:00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor3">
+                  <h3>
+                    lek. med.<br />
+                    <strong>Agnieszka Kolczyńska-Kukla</strong>
+                  </h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwartek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>9:00 - 12:00</p>
+                      <p>12:15 - 15:00</p>
+                      <p>9:00 - 13:00</p>
+                      <p>13:00 - 17:00</p>
+                      <p>9:00 - 12:00</p>
                     </div>
                   </div>
                   <h3>Wizyty domowe</h3>
@@ -519,19 +623,103 @@
                     <div class="days">
                       <p>poniedziałek</p>
                       <!-- <p>wtorek</p> -->
-                      <!-- <p>środa</p> -->
+                      <p>środa</p>
+                      <p>czwartek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>12:00 - 12:45</p>
+                      <!-- <p>12:00 - 13:00</p> -->
+                      <p>13:00 - 14:00</p>
+                      <p>17:00 - 18:00</p>
+                      <p>12:00 - 13:00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="doctor_schedule" id="doctor3">
+                  <h3>
+                    lek. med.<br />
+                    <strong>Jarosław Teodorowicz</strong>
+                  </h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <!-- <p>wtorek</p> -->
+                      <p>środa</p>
                       <!-- <p>czwartek</p> -->
                       <!-- <p>piątek</p> -->
                     </div>
                     <div id="hours">
-                      <p>15:30 - 16:00</p>
+                      <p>14:30 - 17:30</p>
+                      <!-- <p>13:00 - 16:00</p> -->
+                      <p>14:30 - 17:30</p>
+                      <!-- <p>13:00 - 16:00</p> -->
+                      <!-- <p>10:00 - 14:00</p> -->
+                    </div>
+                  </div>
+                  <h3>Wizyty domowe</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <!-- <p>wtorek</p> -->
+                      <p>środa</p>
+                      <!-- <p>czwartek</p> -->
+                      <!-- <p>piątek</p> -->
+                    </div>
+                    <div id="hours">
+                      <p>17:30 - 18:00</p>
+                      <!-- <p>12:00 - 13:00</p> -->
+                      <p>17:30 - 18:00</p>
+                      <!-- <p>12:30 - 13:00</p> -->
+                      <!-- <p>-</p> -->
                     </div>
                   </div>
                 </div>
+                <div class="doctor_schedule" id="doctor3">
+                  <h3>
+                    lek. chor. wewn.<br /><strong>Jerzy Słodczyk</strong
+                    ><br />badania USG
+                  </h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <!-- <p>poniedziałek</p> -->
+                      <!-- <p>wtorek</p> -->
+                      <p>środa</p>
+                      <p>czwartek</p>
+                      <!-- <p>piątek</p> -->
+                    </div>
+                    <div id="hours">
+                      <!-- <p>10:00 - 14:00</p> -->
+                      <!-- <p>13:00 - 16:00</p> -->
+                      <p>8:00 - 10:00</p>
+                      <p>8:00 - 12:00</p>
+                      <!-- <p>10:00 - 14:00</p> -->
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="doctor_schedule" id="doctor3">
+                  <h3>lek.</h3>
+                  <div id="schedule">
+                    <div class="days">
+                      <p>poniedziałek</p>
+                      <p>wtorek</p>
+                      <p>środa</p>
+                      <p>czwartek</p>
+                      <p>piątek</p>
+                    </div>
+                    <div id="hours">
+                      <p>10:00 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:30 - 14:00</p>
+                      <p>13:00 - 16:00</p>
+                      <p>10:00 - 14:00</p>
+                    </div>
+                  </div>
+                </div> -->
               </div>
             </div>
             <div id="wieszowa" class="content">
-              <h1>POZ w Wieszowej, godziny przyjęć lekarzy:</h1>
+              <h1>POZ w Wieszowie, godziny przyjęć lekarzy:</h1>
               <div id="doctors_schedule_section">
                 <div class="doctor_schedule" id="doctor1">
                   <h3>lek. chorób wewnętrznych <br />Jerzy Słodczyk</h3>
@@ -565,7 +753,7 @@
                       <p>9:00 - 10:00</p>
                       <p>12:00 - 13:00</p>
                       <p>14:00 - 15:00</p>
-                      <p>12:00 - 13:00</p>
+                      <p>12:30 - 13:00</p>
                       <!-- <p>-</p> -->
                     </div>
                   </div>
@@ -573,7 +761,7 @@
                 <div class="doctor_schedule" id="doctor2">
                   <h3>
                     dr n. med. spec. chorób dziecięcych <br />
-                    Małgorzata Brać -Czarnecka
+                    Małgorzata Barć-Czarnecka
                   </h3>
                   <div id="schedule">
                     <div class="days">
@@ -611,8 +799,8 @@
                 </div>
                 <div class="doctor_schedule" id="doctor3">
                   <h3>
-                    Lek. med. spec. medycyny rodzinnej <br />
-                    Sylwia Gałkowska Krotla
+                    lek. med. spec. med. rodz. <br />
+                    Sylwia Gałkowska-Krotla
                   </h3>
                   <div id="schedule">
                     <div class="days">
@@ -634,174 +822,17 @@
                   <div id="schedule">
                     <div class="days">
                       <!-- <p>poniedziałek</p> -->
-                      <!-- <p>wtorek</p> -->
+                      <p>wtorek</p>
                       <!-- <p>środa</p> -->
                       <p>czwartek</p>
                       <!-- <p>piątek</p> -->
                     </div>
                     <div id="hours">
                       <!-- <p>-</p> -->
+                      <p>12:00 - 13:00</p>
                       <!-- <p>-</p> -->
+                      <p>12:00 - 13:00</p>
                       <!-- <p>-</p> -->
-                      <p>15:00 - 15:30</p>
-                      <!-- <p>-</p> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="zbroslawice" class="content">
-              <h1>POZ w Zbrosławicach, godziny przyjęć lekarzy:</h1>
-              <div id="doctors_schedule_section">
-                <div class="doctor_schedule" id="doctor1">
-                  <h3>lek.</h3>
-                  <div id="schedule">
-                    <div class="days">
-                      <p>poniedziałek</p>
-                      <p>wtorek</p>
-                      <p>środa</p>
-                      <p>czwartek</p>
-                      <p>piątek</p>
-                    </div>
-                    <div id="hours">
-                      <p>10:00 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:30 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:00 - 14:00</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="doctor_schedule" id="doctor2">
-                  <h3>lek.</h3>
-                  <div id="schedule">
-                    <div class="days">
-                      <p>poniedziałek</p>
-                      <p>wtorek</p>
-                      <p>środa</p>
-                      <p>czwartek</p>
-                      <p>piątek</p>
-                    </div>
-                    <div id="hours">
-                      <p>10:00 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:30 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:00 - 14:00</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="doctor_schedule" id="doctor3">
-                  <h3>lek.</h3>
-                  <div id="schedule">
-                    <div class="days">
-                      <p>poniedziałek</p>
-                      <p>wtorek</p>
-                      <p>środa</p>
-                      <p>czwartek</p>
-                      <p>piątek</p>
-                    </div>
-                    <div id="hours">
-                      <p>10:00 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:30 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:00 - 14:00</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="doctor_schedule" id="doctor3">
-                  <h3>lek.</h3>
-                  <div id="schedule">
-                    <div class="days">
-                      <p>poniedziałek</p>
-                      <p>wtorek</p>
-                      <p>środa</p>
-                      <p>czwartek</p>
-                      <p>piątek</p>
-                    </div>
-                    <div id="hours">
-                      <p>10:00 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:30 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:00 - 14:00</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="doctor_schedule" id="doctor3">
-                  <h3>lek.</h3>
-                  <div id="schedule">
-                    <div class="days">
-                      <p>poniedziałek</p>
-                      <p>wtorek</p>
-                      <p>środa</p>
-                      <p>czwartek</p>
-                      <p>piątek</p>
-                    </div>
-                    <div id="hours">
-                      <p>10:00 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:30 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:00 - 14:00</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="doctor_schedule" id="doctor3">
-                  <h3>lek.</h3>
-                  <div id="schedule">
-                    <div class="days">
-                      <p>poniedziałek</p>
-                      <p>wtorek</p>
-                      <p>środa</p>
-                      <p>czwartek</p>
-                      <p>piątek</p>
-                    </div>
-                    <div id="hours">
-                      <p>10:00 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:30 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:00 - 14:00</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="doctor_schedule" id="doctor3">
-                  <h3>lek.</h3>
-                  <div id="schedule">
-                    <div class="days">
-                      <p>poniedziałek</p>
-                      <p>wtorek</p>
-                      <p>środa</p>
-                      <p>czwartek</p>
-                      <p>piątek</p>
-                    </div>
-                    <div id="hours">
-                      <p>10:00 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:30 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:00 - 14:00</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="doctor_schedule" id="doctor3">
-                  <h3>lek.</h3>
-                  <div id="schedule">
-                    <div class="days">
-                      <p>poniedziałek</p>
-                      <p>wtorek</p>
-                      <p>środa</p>
-                      <p>czwartek</p>
-                      <p>piątek</p>
-                    </div>
-                    <div id="hours">
-                      <p>10:00 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:30 - 14:00</p>
-                      <p>13:00 - 16:00</p>
-                      <p>10:00 - 14:00</p>
                     </div>
                   </div>
                 </div>
@@ -1531,10 +1562,10 @@
         <div id="clinic_content29" class="clinic_content">
           <h2>PRACOWNIA USG</h2>
           <p>
-            Zapraszamy do korzystania z badań USG : USG jamy brzusznej i
-            miednicy małej USG szyi i tarczycy USG piersi USG met. Dopplera
-            naczyń obu kończyn dolnych USG met. Dopplera naczyń szyjnych. USG
-            Aorty Brzusznej USG Węzłów Chłonnych Prosimy o przygotowanie się do
+            Zapraszamy do korzystania z badań USG: USG jamy brzusznej i miednicy
+            małej USG szyi i tarczycy USG piersi USG met. Dopplera naczyń obu
+            kończyn dolnych USG met. Dopplera naczyń szyjnych. USG Aorty
+            Brzusznej USG Węzłów Chłonnych Prosimy o przygotowanie się do
             badania USG jamy brzusznej i miednicy małej w następujący sposób:2
             dni przed planowanym badaniem nie należy spożywać pokarmów
             wzdymających. Na badanie należy zgłosić się na czczo (6 godzin
