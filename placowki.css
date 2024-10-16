@@ -9,21 +9,13 @@ body {
 }
 
 .infos {
-  display: flex; /* Używamy flexbox */
-  justify-content: space-around; /* Rozmieszcza elementy równomiernie */
-  align-items: center;
-}
-
-.logos {
-  display: flex; /* Można dodać flexbox dla obrazków */
-  gap: 10px; /* Odstęp między obrazkami, opcjonalne */
-  /* flex-direction: column; */
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
 .addressInfos {
-  /* Możesz dodać style, jeśli chcesz */
   margin-left: 20px; /* Opcjonalne odstępy po lewej stronie */
 }
 
