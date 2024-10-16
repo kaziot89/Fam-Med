@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Pobierz przycisk z identyfikatorem 'branch_button1'
-  var button = document.getElementById("branch_button1");
+  let button = document.getElementById("branch_button1");
 
   // Dodaj nasłuchiwanie kliknięcia do przycisku
   button.addEventListener("click", function () {
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
   // Pobierz przycisk z identyfikatorem 'branch_button1'
-  var button = document.getElementById("branch_button2");
+  let button = document.getElementById("branch_button2");
 
   // Dodaj nasłuchiwanie kliknięcia do przycisku
   button.addEventListener("click", function () {
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
   // Pobierz przycisk z identyfikatorem 'branch_button1'
-  var button = document.getElementById("branch_button3");
+  let button = document.getElementById("branch_button3");
 
   // Dodaj nasłuchiwanie kliknięcia do przycisku
   button.addEventListener("click", function () {
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
   // Pobierz przycisk z identyfikatorem 'branch_button1'
-  var button = document.getElementById("branch_button4");
+  let button = document.getElementById("branch_button4");
 
   // Dodaj nasłuchiwanie kliknięcia do przycisku
   button.addEventListener("click", function () {
