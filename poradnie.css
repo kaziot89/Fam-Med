@@ -179,6 +179,15 @@ button::before {
   font-weight: 300;
 }
 
+.specialist {
+  display: flex;
+  flex-direction: row;
+}
+
+.specialist div {
+  margin-right: 48px;
+}
+
 .acc {
   display: none;
 }
