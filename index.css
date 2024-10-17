@@ -310,36 +310,57 @@ a:visited {
   max-width: 1400px;
   margin: 150px auto 0;
   padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: white;
 }
 .bottom-menu-tabs {
   width: 25%;
   height: 300px;
   background-color: rgb(255, 255, 255);
-  border-top: 1px rgb(203, 203, 203) solid;
-  border-bottom: 1px rgb(203, 203, 203) solid;
+  /* border-top: 1px rgb(203, 203, 203) solid;
+  border-bottom: 1px rgb(203, 203, 203) solid; */
   transition: 0.3s ease;
 }
+.bottom-menu-tabs {
+  width: 25%;
+  background-color: rgb(255, 255, 255);
+  opacity: 0; /* Początkowo niewidoczny */
+  transform: translateY(100px); /* Przesunięty o 100px w dół */
+  transition: opacity 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    transform 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Efekt bounce */
+}
+
+.bottom-menu-tabs.visible {
+  opacity: 1; /* Widoczny */
+  transform: translateY(0); /* Na docelowej pozycji */
+}
+
 .bottom_menu_buttons {
   width: 400px;
-  height: auto;
+  max-height: 350px;
   border: none;
+  background-color: white;
+  border-top: 1px rgb(203, 203, 203) solid;
 }
 #tab1,
 #tab2,
 #tab3,
 #tab4 {
   width: 100%;
+  height: 100%;
 }
 .bottom-menu-tabs:hover {
-  background-color: rgb(43, 159, 167);
+  /* background-color: rgb(43, 159, 167); */
 }
 .bottom-menu-tabs:hover .bottom-menu-tab-picture {
-  border: 5px solid rgb(54, 146, 217);
+  border: 6px solid rgb(54, 146, 217);
 }
-.bottom-menu-tabs:hover .bottom-menu-h2 {
+/* .bottom-menu-tabs:hover .bottom-menu-h2 {
   color: #fffefe;
-}
+} */
 .bottom-menu-tab-picture {
+  position: relative;
+  top: 40px;
   display: block;
   width: 180px;
   height: 180px;
@@ -352,6 +373,7 @@ a:visited {
   font-family: "Poppins";
   font-weight: 300;
   text-align: center;
+  padding-top: 24px;
   color: rgba(0, 162, 172, 1);
   transition: 0.3s ease;
 }
@@ -916,7 +938,7 @@ a:visited {
   }
   .bottom_menu_buttons {
     width: 100vw;
-    height: auto;
+    /* height: auto; */
     border: none;
   }
 }
