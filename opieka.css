@@ -1,0 +1,40 @@
+* {
+  font-family: "poppins";
+}
+
+#main_container {
+  max-width: 1400px;
+  position: relative;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-height: 100vh;
+}
+#main_container img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 80%;
+  margin-bottom: 120px;
+}
+#info {
+  display: flex;
+}
+#text {
+  text-align: justify;
+  flex: 1;
+  margin-bottom: 200px;
+}
+#picture {
+  flex: 1;
+}
+#info p {
+  margin: 24px 0;
+}
+#info li {
+  margin: 0 32px;
+}
+#picture #ko_picture2 {
+  margin-bottom: 200px;
+  min-width: 80%;
+}
