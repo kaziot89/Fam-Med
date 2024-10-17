@@ -222,17 +222,43 @@ function moveToPrevSlide() {
     track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
   }
 }
-window.addEventListener("scroll", function () {
-  var elements = document.querySelectorAll(".bottom-menu-tabs");
+// window.addEventListener("scroll", function () {
+//   var elements = document.querySelectorAll(".bottom-menu-tabs");
 
-  elements.forEach(function (element, index) {
-    var position = element.getBoundingClientRect();
+//   elements.forEach(function (element, index) {
+//     var position = element.getBoundingClientRect();
 
-    // Sprawdza, czy element jest w widocznej części ekranu
-    if (position.top <= window.innerHeight && position.bottom >= 0) {
-      // Dodajemy opóźnienie do animacji
-      element.style.transitionDelay = index * 0.15 + "s";
-      element.classList.add("visible");
-    }
+//     // Sprawdza, czy element jest w widocznej części ekranu
+//     if (position.top <= window.innerHeight && position.bottom >= 0) {
+//       // Dodajemy opóźnienie do animacji
+//       element.style.transitionDelay = index * 0.15 + "s";
+//       element.classList.add("visible");
+//     }
+//   });
+// });
+document.addEventListener("DOMContentLoaded", function () {
+  const headingsAndParagraphs = document.querySelectorAll(".bottom-menu-tabs");
+
+  // Utwórz nowy Intersection Observer
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+          // Opóźnij dodanie klasy 'visible' o 500ms
+          setTimeout(() => {
+            entry.target.classList.add("visible");
+          }, 200);
+
+          // Przestań obserwować ten element
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  ); // Ustawienie progu na 50% widoczności
+
+  // Obserwuj elementy h3 i p wewnątrz .info-banner
+  headingsAndParagraphs.forEach((element) => {
+    observer.observe(element);
   });
 });
