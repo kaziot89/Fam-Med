@@ -358,7 +358,7 @@ a:visited {
 
 .carousel-container {
   position: relative;
-  height: 400px;
+  height: 600px;
   width: 90%;
   max-width: 1400px;
   margin: 32px auto;
@@ -390,9 +390,9 @@ a:visited {
   justify-content: center;
   font-family: "Poppins";
   min-width: 500px; /* Na urządzeniach mobilnych zmień na 100% */
-  height: 230px;
+  height: 400px;
   background-color: #ffffff;
-  margin: 0 100px;
+  margin: 70px 100px;
   color: rgba(0, 162, 172, 0.2);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5), 0 20px 40px rgba(0, 0, 0, 0.5);
   z-index: 5;
@@ -762,7 +762,7 @@ a:visited {
   }
   .dropdown-content {
     position: fixed; /* Fix the dropdown to the viewport */
-    top: 40px; /* Adjust the top position as per the navbar */
+    top: 105px; /* Adjust the top position as per the navbar */
     left: 0;
     width: 100vw; /* Full width of the viewport */
     background-color: rgba(
@@ -833,7 +833,9 @@ a:visited {
   #branch2,
   #branch3,
   #branch4 {
-    height: 120px;
+    top: 16%;
+    height: 110px;
+    width: 90%;
   }
   #branch1 p a,
   #branch2 p a,
@@ -859,24 +861,21 @@ a:visited {
     color: rgba(0, 162, 172, 0.8);
     margin: 16px 0 4px 0;
   }
-  #branch1,
-  #branch2,
-  #branch3,
-  #branch4 {
-    min-height: 140px;
+  #branch1 h3,
+  #branch2 h3,
+  #branch3 h3 {
+    margin-bottom: 0;
   }
 
   #branch1 p,
   #branch2 p,
-  #branch3 p,
-  #branch4 p {
-    margin: 4px 0;
+  #branch3 p {
+    margin: 0 0;
   }
 
   #branch1 p a,
   #branch2 p a,
-  #branch3 p a,
-  #branch4 p a {
+  #branch3 p a {
     font-size: 12px;
     font-weight: 300;
     padding: 0;
