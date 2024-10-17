@@ -313,14 +313,14 @@ a:visited {
   padding-bottom: 32px;
   background-color: white;
 }
-.bottom-menu-tabs {
+/* .bottom-menu-tabs {
   width: 25%;
   height: 300px;
   background-color: rgb(255, 255, 255);
   /* border-top: 1px rgb(203, 203, 203) solid;
   border-bottom: 1px rgb(203, 203, 203) solid; */
-  transition: 0.3s ease;
-}
+/* transition: 0.3s ease; */
+/* } */
 .bottom-menu-tabs {
   width: 25%;
   background-color: rgb(255, 255, 255);

@@ -3,29 +3,30 @@ document.addEventListener("DOMContentLoaded", function () {
     ".info-banner h3, .info-banner p, .contact"
   );
 
-  // Create a new Intersection Observer
+  // Utwórz nowy Intersection Observer
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-          // Delay adding the 'visible' class by 200ms
+          // Opóźnij dodanie klasy 'visible' o 500ms
           setTimeout(() => {
             entry.target.classList.add("visible");
           }, 200);
 
-          // Stop observing this element
+          // Przestań obserwować ten element
           observer.unobserve(entry.target);
         }
       });
     },
     { threshold: 0.5 }
-  );
+  ); // Ustawienie progu na 50% widoczności
 
-  // Observe h3 and p elements inside .info-banner
+  // Obserwuj elementy h3 i p wewnątrz .info-banner
   headingsAndParagraphs.forEach((element) => {
     observer.observe(element);
   });
-
+});
+document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
   const prevButton = document.querySelector(".carousel-button.prev");
   const nextButton = document.querySelector(".carousel-button.next");
@@ -33,10 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const itemWidth =
     items[0].getBoundingClientRect().width +
     parseFloat(getComputedStyle(items[0]).marginRight);
+
   let currentIndex = 0;
 
   function updateCarousel() {
-    track.style.transition = "transform 0.8s ease";
+    track.style.transition = "transform 0.8s ease"; // Dodanie przejścia CSS
     track.style.transform = "translateX(" + -currentIndex * itemWidth + "px)";
     prevButton.disabled = currentIndex === 0;
     nextButton.disabled = currentIndex >= items.length - 4;
@@ -56,29 +58,46 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Reset CSS transition after animation
+  // Resetowanie przejścia CSS po zakończeniu animacji
   track.addEventListener("transitionend", () => {
     track.style.transition = "";
   });
 
   updateCarousel();
+});
 
-  // Handle branch button clicks
-  const branchButtons = [
-    { id: "branch_button1", url: "porZbr.html" },
-    { id: "branch_button2", url: "cmtg.html" },
-    { id: "branch_button3", url: "porWie.html" },
-  ];
+document.addEventListener("DOMContentLoaded", function () {
+  // Pobierz przycisk z identyfikatorem 'branch_button1'
+  let button = document.getElementById("branch_button1");
 
-  branchButtons.forEach(({ id, url }) => {
-    const button = document.getElementById(id);
-    if (button) {
-      button.addEventListener("click", () => {
-        window.location.href = url;
-      });
-    }
+  // Dodaj nasłuchiwanie kliknięcia do przycisku
+  button.addEventListener("click", function () {
+    // Przekieruj do 'porWie.html' w tym samym oknie
+    window.location.href = "porZbr.html";
   });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  // Pobierz przycisk z identyfikatorem 'branch_button1'
+  let button = document.getElementById("branch_button2");
 
+  // Dodaj nasłuchiwanie kliknięcia do przycisku
+  button.addEventListener("click", function () {
+    // Przekieruj do 'porWie.html' w tym samym oknie
+    window.location.href = "cmtg.html";
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  // Pobierz przycisk z identyfikatorem 'branch_button1'
+  let button = document.getElementById("branch_button3");
+
+  // Dodaj nasłuchiwanie kliknięcia do przycisku
+  button.addEventListener("click", function () {
+    // Przekieruj do 'porWie.html' w tym samym oknie
+    window.location.href = "porWie.html";
+  });
+});
+//
+document.addEventListener("DOMContentLoaded", function () {
   // Get all dropdowns
   let dropdowns = document.querySelectorAll(".dropdown");
 
@@ -102,89 +121,118 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Close dropdown if clicked outside
   document.addEventListener("click", function (event) {
+    // Check if click is outside of dropdown
     dropdowns.forEach(function (dropdown) {
       if (!dropdown.contains(event.target)) {
         dropdown.classList.remove("open");
       }
     });
   });
-
-  // Scroll to section function
-  function scrollToSection() {
-    const target = document.getElementById("carousel-container");
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }
+});
+function scrollToSection() {
+  const target = document.getElementById("carousel-container");
+  if (target) {
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "center", // Ustawienie wyświetlania elementu na środku viewportu
+    });
   }
+}
 
-  window.onload = function () {
-    if (window.location.hash) {
-      scrollToSection();
-    }
+window.onload = function () {
+  // Sprawdzanie, czy strona została załadowana z kotwicą
+  if (window.location.hash) {
+    scrollToSection(); // Przewiń do sekcji, jeśli jest kotwica
+  }
+};
+
+function handleButtonClick(buttonId) {
+  const pageMap = {
+    bottom_menu_button1: "poradnie.html",
+    bottom_menu_button2: "laboratoria.html",
+    bottom_menu_button3: "http://3.html",
+    bottom_menu_button4: "http://4.html",
   };
 
-  function handleButtonClick(buttonId) {
-    const pageMap = {
-      bottom_menu_button1: "poradnie.html",
-      bottom_menu_button2: "laboratoria.html",
-      bottom_menu_button3: "http://3.html",
-      bottom_menu_button4: "http://4.html",
-    };
+  window.location.href = pageMap[buttonId];
+}
 
-    window.location.href = pageMap[buttonId];
-  }
-
-  // Add event listeners to bottom menu buttons
-  for (let i = 1; i <= 4; i++) {
-    const button = document.getElementById(`bottom_menu_button${i}`);
-    if (button) {
-      button.addEventListener("click", function () {
-        handleButtonClick(this.id);
-      });
-    }
-  }
-
-  // Carousel touch events
-  const slides = Array.from(track.children);
-  let startX = 0;
-  let moveX = 0;
-
-  // Get the width of one slide
-  const slideWidth = slides[0].getBoundingClientRect().width;
-
-  track.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
+document
+  .getElementById("bottom_menu_button1")
+  .addEventListener("click", function () {
+    handleButtonClick(this.id);
   });
 
-  track.addEventListener("touchmove", (e) => {
-    moveX = e.touches[0].clientX - startX;
+document
+  .getElementById("bottom_menu_button2")
+  .addEventListener("click", function () {
+    handleButtonClick(this.id);
   });
 
-  track.addEventListener("touchend", () => {
-    if (moveX < -50) {
-      moveToNextSlide();
-    } else if (moveX > 50) {
-      moveToPrevSlide();
-    }
-    moveX = 0;
+document
+  .getElementById("bottom_menu_button3")
+  .addEventListener("click", function () {
+    handleButtonClick(this.id);
   });
 
-  // Move to the next slide
-  function moveToNextSlide() {
-    if (currentIndex < slides.length - 1) {
-      currentIndex++;
-      track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-    }
-  }
+document
+  .getElementById("bottom_menu_button4")
+  .addEventListener("click", function () {
+    handleButtonClick(this.id);
+  });
+const track = document.querySelector(".carousel-track");
+const slides = Array.from(track.children);
+let startX = 0;
+let moveX = 0;
+let currentIndex = 0; // Track the current index of the slide
 
-  // Move to the previous slide
-  function moveToPrevSlide() {
-    if (currentIndex > 0) {
-      currentIndex--;
-      track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-    }
+// Get the width of one slide
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+// Event listeners for touch events
+track.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+track.addEventListener("touchmove", (e) => {
+  moveX = e.touches[0].clientX - startX;
+});
+
+track.addEventListener("touchend", () => {
+  if (moveX < -50) {
+    moveToNextSlide();
+  } else if (moveX > 50) {
+    moveToPrevSlide();
   }
+  moveX = 0;
+});
+
+// Move to the next slide
+function moveToNextSlide() {
+  if (currentIndex < slides.length - 1) {
+    currentIndex++;
+    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+  }
+}
+
+// Move to the previous slide
+function moveToPrevSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+  }
+}
+window.addEventListener("scroll", function () {
+  var elements = document.querySelectorAll(".bottom-menu-tabs");
+
+  elements.forEach(function (element, index) {
+    var position = element.getBoundingClientRect();
+
+    // Sprawdza, czy element jest w widocznej części ekranu
+    if (position.top <= window.innerHeight && position.bottom >= 0) {
+      // Dodajemy opóźnienie do animacji
+      element.style.transitionDelay = index * 0.15 + "s";
+      element.classList.add("visible");
+    }
+  });
 });
