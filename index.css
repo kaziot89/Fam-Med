@@ -313,14 +313,14 @@ a:visited {
   padding-bottom: 32px;
   background-color: white;
 }
-/* .bottom-menu-tabs {
+.bottom-menu-tabs {
   width: 25%;
   height: 300px;
   background-color: rgb(255, 255, 255);
   /* border-top: 1px rgb(203, 203, 203) solid;
   border-bottom: 1px rgb(203, 203, 203) solid; */
-/* transition: 0.3s ease; */
-/* } */
+  transition: 0.3s ease;
+}
 .bottom-menu-tabs {
   width: 25%;
   background-color: rgb(255, 255, 255);
@@ -411,15 +411,21 @@ a:visited {
   align-items: center;
   justify-content: center;
   font-family: "Poppins";
-  min-width: 500px; /* Na urządzeniach mobilnych zmień na 100% */
-  height: 400px;
+  max-width: 30%; /* Na urządzeniach mobilnych zmień na 100% */
+  max-height: 400px;
   background-color: #ffffff;
   margin: 70px 100px;
   color: rgba(0, 162, 172, 0.2);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5), 0 20px 40px rgba(0, 0, 0, 0.5);
   z-index: 5;
 }
-
+.carousel-item img {
+  /* position: relative; */
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  /* height: 400px; */
+}
 .carousel-button {
   position: absolute;
   top: 50%;
