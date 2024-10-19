@@ -907,14 +907,19 @@ a:visited {
 
   #branches {
     width: 100vw;
+    height: 800px;
   }
   #branch1,
   #branch2,
   #branch3,
   #branch4 {
     top: 16%;
-    height: 110px;
+    height: 220px;
     width: 90%;
+  }
+  iframe {
+    height: 110px;
+    width: 350px;
   }
   #branch1 p a,
   #branch2 p a,
