@@ -9,6 +9,14 @@
 html {
   scroll-behavior: smooth;
 }
+/* body {
+  background-image: url(Pictures/BGIMAGE2.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
 .contactBar {
   font-family: "Poppins";
   margin: 0;
@@ -466,7 +474,7 @@ a:visited {
   top: 50%;
   transform: translateY(-50%);
   width: 20%;
-  height: 170px;
+  height: 350px;
   background-color: #fff;
   font-family: "Poppins";
   text-align: center;
@@ -541,11 +549,11 @@ a:visited {
   /* background-color: rgb(206, 206, 206); */
   box-shadow: rgb(104, 103, 103) 2px 0px 12px 0px;
 }
-#footer_logo {
-  height: 120px;
+#footer_content #footer_logo a img {
+  height: 80px;
   position: relative;
   top: 50%;
-  transform: translateY(25%);
+  transform: translateY(-50%);
 }
 #footer_content {
   position: relative;
@@ -554,7 +562,7 @@ a:visited {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 90%;
+  width: 95%;
   max-width: 1400px;
   /* background-color: lightblue; */
 }
@@ -570,13 +578,15 @@ a:visited {
 #footer_contact {
   display: flex;
   flex-direction: row;
-  margin: 32px 0;
+  width: 50%;
+  margin: 24px 0;
   font-family: "Poppins";
   font-size: 12px;
   font-weight: 300;
 }
 .footer_branch_address {
-  margin: 0 24px;
+  margin: auto;
+  flex: 1;
 }
 #footer_line {
   width: 100%;
@@ -596,9 +606,9 @@ a:visited {
   transform: translateY(-50%);
   font-family: "Poppins";
   font-weight: 300;
-  font-size: 14px;
-  float: right;
-  margin: auto 0;
+  font-size: 10px;
+  float: left;
+  margin: auto;
 }
 
 @media (max-height: 720px) {
@@ -626,8 +636,14 @@ a:visited {
 }
 @media (max-width: 1024px) {
   #logo {
-    width: 130px;
-    margin-top: 10px;
+    width: 100px;
+    margin-top: auto;
+  }
+  #navbar_content {
+    width: 95%;
+  }
+  #mainContainerIndex {
+    width: 95%;
   }
   #characterAndSlogan {
     background-position: -550px top;
@@ -645,16 +661,40 @@ a:visited {
   }
   #bottom-menu {
     padding-top: 32px;
+    width: 95%;
+  }
+  .carousel-container {
+    width: 95%;
+  }
+  #branches {
+    width: 95%;
+  }
+  #footer_contact {
+    margin: 8px 0;
+    font-size: 12px;
+  }
+  #footer_info a {
+    font-size: 12px;
+  }
+  #footer_logo a img {
+    width: 80px;
+  }
+  #footer_end_p {
+    margin-left: 24px;
   }
 }
 @media (max-width: 830px) {
   #logo {
-    margin-top: 15px;
-    width: 120px;
+    margin: auto 0;
+    width: 90px;
+  }
+  #main_menu {
+    width: 80%;
   }
   #menuElements a,
   #menuElements li {
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 400;
   }
   #characterAndSlogan {
     height: 40rem;
@@ -690,6 +730,11 @@ a:visited {
     top: 30%;
     left: 5%;
   }
+  #footer_contact,
+  #footer_info a {
+    font-size: 11px;
+  }
+
   .carousel-item {
     /* min-width: 300px;
     margin: 0 50px; */
@@ -706,6 +751,12 @@ a:visited {
   #branch4 {
     top: 25%;
     min-width: 35%; /* Dwa elementy w wierszu */
+  }
+  #footer_logo a img {
+    width: 80px;
+  }
+  #footer_contact {
+    width: 60%;
   }
 }
 @media (max-width: 430px) {
@@ -847,7 +898,7 @@ a:visited {
   .bottom-menu-tab-picture {
     width: 150px;
     height: 150px;
-    margin: 16px auto;
+    margin: 16px auto 36px;
   }
   .carousel-container {
     /* width: 100vw; */
@@ -920,10 +971,12 @@ a:visited {
   }
   #footer_info a {
     color: rgb(56, 56, 56);
+    font-size: 12px;
   }
 
   #footer_contact {
     flex-wrap: wrap;
+    font-size: 12px;
     min-width: 80vw;
   }
   .footer_branch_address {
