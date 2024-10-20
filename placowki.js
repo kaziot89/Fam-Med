@@ -27,3 +27,20 @@ for (i = 0; i < acc2.length; i++) {
     }
   });
 }
+
+let modal = document.getElementById("myModal");
+let modalImg = document.getElementById("img01");
+let captionText = document.getElementById("caption");
+let images = document.querySelectorAll(".certificates img");
+
+images.forEach(function (img) {
+  img.onclick = function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  };
+});
+
+modalImg.onclick = function () {
+  modal.style.display = "none";
+};
