@@ -21,24 +21,59 @@
     <div id="top-navbar">
       <div id="navbar_content">
         <div id="logo">
-          <a href="index.html"><img src="Pictures/logo famed.svg" alt="" /></a>
+          <a href="index.html"
+            ><img src="Pictures/logo famed.svg" alt="logo"
+          /></a>
         </div>
         <div id="main_menu">
           <div id="male_menu">
             <p class="contactBar">
               <i class="fas fa-phone"></i
-              ><a class="contact_links" href="tel:+48322737352">
-                +48322737352</a
+              ><a class="contact_links" href="tel:+48322353322">
+                +48322353322</a
               >
             </p>
             <p class="contactBar">
               <i class="fas fa-envelope"></i>
-              <a class="contact_links" href="mailto:wieszowa@fam-med.pl">
-                wieszowa@fam-med.pl</a
+              <a class="contact_links" href="mailto:zbroslawice@fam-med.pl">
+                zbroslawice@fam-med.pl</a
               >
             </p>
           </div>
+
           <div id="topMenu">
+            <nav>
+              <div class="menu-btn">
+                <span class="menu-btn__burger"></span>
+                <span class="menu-btn__burger"></span>
+                <span class="menu-btn__burger"></span>
+              </div>
+
+              <ul class="nav-menu">
+                <li><a href="poradnie.html">Poradnie</a></li>
+                <li class="dropdown">
+                  <button class="dropdown-btn">Placówki</button>
+                  <ul class="dropdown-content">
+                    <li><a href="cmtg.html">Tarnowskie Góry</a></li>
+                    <li><a href="porZbr.html">Zbrosławice</a></li>
+                    <li><a href="porWie.html">Wieszowa</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <button class="dropdown-btn">Informacje</button>
+                  <ul class="dropdown-content">
+                    <li><a href="prawaPacjenta.html">Prawa pacjęta</a></li>
+                    <li>
+                      <a href="pom.html">Polityka ochrony małoletnich</a>
+                    </li>
+                    <li><a href="#informacja3">Dokumenty do pobrania</a></li>
+                    <li><a href="#informacja4">Certyfikaty</a></li>
+                    <li><a href="#informacja5">Rodo</a></li>
+                  </ul>
+                </li>
+                <li><a href="#kontakt">Kontakt</a></li>
+              </ul>
+            </nav>
             <ul id="menuElements">
               <li class="dropdown">
                 <a id="poradnie_desktop" href="./poradnie.html"
@@ -85,11 +120,7 @@
                 </div>
               </li>
               <li class="dropdown" id="aktualnosci">
-                <a
-                  href="index.html#carousel-container"
-                  onclick="scrollToSection()"
-                  >Aktualności</a
-                >
+                <a href="#" onclick="scrollToSection()">Aktualności</a>
                 <div class="dropdown-content"></div>
               </li>
               <li class="dropdown">

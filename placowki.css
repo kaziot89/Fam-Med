@@ -267,8 +267,8 @@ tr:nth-child(even) {
   #logo {
     /* display: none; */
     position: relative;
-    left: 10px;
-    top: 20px;
+    /* left: 10px; */
+    /* top: 20px; */
     width: 16%;
   }
   #poradnie_spec {

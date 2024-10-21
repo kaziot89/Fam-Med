@@ -1,3 +1,11 @@
+const menuBtn = document.querySelector(".menu-btn");
+const navMenu = document.querySelector(".nav-menu");
+
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("open");
+  navMenu.classList.toggle("activeH");
+});
+
 let acc = document.getElementsByClassName("acc");
 let acc2 = document.getElementsByClassName("acc2");
 let i;
@@ -282,12 +290,4 @@ window.addEventListener("scroll", function () {
       element.classList.add("visible");
     }
   });
-});
-
-const menuBtn = document.querySelector(".menu-btn");
-const navMenu = document.querySelector(".nav-menu");
-
-menuBtn.addEventListener("click", () => {
-  menuBtn.classList.toggle("open");
-  navMenu.classList.toggle("activeH");
 });
