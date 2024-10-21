@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -60,10 +61,13 @@ html {
 #logo img {
   width: 100%;
 }
+nav {
+  display: none;
+}
 #main_menu {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 80%;
 }
 #poradnie_mobile {
   display: none;
@@ -84,7 +88,7 @@ html {
 #male_menu p {
   display: block;
   float: right;
-  padding: 5px 20px;
+  padding: 5px 8px;
 }
 #topMenu {
   width: 100%;
@@ -204,6 +208,9 @@ a:visited {
   animation: mojaAnimacja 2s ease;
   /* background-color: rgba(58, 57, 57, 0.521); */
 }
+
+/* noewnowneowenowenwonwoenwoenwoen */
+
 @keyframes mojaAnimacja {
   0% {
     opacity: 0;
@@ -555,6 +562,7 @@ img {
   background-color: #fff;
   font-family: "Poppins";
   text-align: center;
+  border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* cień */
 }
 iframe {
@@ -719,6 +727,9 @@ iframe {
     width: 100px;
     margin-top: auto;
   }
+  #menuElements li a {
+    font-size: 14px;
+  }
   #navbar_content {
     width: 95%;
   }
@@ -852,7 +863,7 @@ iframe {
     width: 60%;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 620px) {
   #top-navbar {
     padding: 0;
     max-width: 100vw;
@@ -861,12 +872,12 @@ iframe {
     width: 100%;
     height: 110px;
   }
-  #logo {
+  #logo img {
     /* display: none; */
     position: relative;
     left: 10px;
     top: 20px;
-    width: 16%;
+    height: 50px;
   }
   #poradnie_desktop {
     display: none;
@@ -913,39 +924,129 @@ iframe {
     height: 60px;
     align-items: center;
     background-color: white;
-    display: flex;
+    display: none;
     width: 75vw;
-
-    /* flex-direction: column; */
   }
-  #menuElements li a {
-    font-size: 14px;
+  /* flex-direction: column; */
+  /* }akjsldfhakljsdhfakljshdflkajsdhfkjlashdfklajshdflkajshdf */ /* nowenowenwnowenowenowne */
+
+  /* Stylowanie menu hamburger z trzema kreskami */
+  nav {
+    display: block;
+  }
+  .menu-btn {
+    position: absolute;
+    top: 62px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+  }
+
+  .menu-btn__burger {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(3, 162, 172);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .menu-btn.open .menu-btn__burger {
+    background-color: rgb(3, 162, 172);
+  }
+
+  .menu-btn.open .menu-btn__burger:nth-child(1) {
+    transform: translateY(10px) rotate(45deg); /* Górna kreska w prawo */
+    opacity: 1; /* Pełna widoczność */
+  }
+
+  .menu-btn.open .menu-btn__burger:nth-child(2) {
+    opacity: 0; /* Środkowa kreska znika */
+  }
+
+  .menu-btn.open .menu-btn__burger:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg); /* Dolna kreska w lewo */
+    opacity: 1; /* Pełna widoczność */
+  }
+
+  /* Dodatkowe elementy (kreski) */
+  .menu-btn__burger + .menu-btn__burger,
+  .menu-btn__burger + .menu-btn__burger + .menu-btn__burger {
+    margin-top: 5px;
+  }
+
+  /* Wygląd nawigacji */
+  .nav-menu {
+    list-style: none;
+    position: fixed;
+    top: 110px;
+    right: -100%;
+    height: 50px;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    transition: right 0.3s ease-in-out;
+    z-index: 2;
+  }
+
+  .nav-menu li {
+    /* Stylowanie elementów menu */
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+  }
+
+  .nav-menu.activeH {
+    right: 0;
+  }
+
+  /* Stylowanie rozwijanych list */
+  .dropdown {
+    position: relative;
+    transition: top 0.3s ease;
+  }
+  .dropdown .dropdown-btn {
+    background-color: #333;
+    border: none;
+    color: white;
+    font-size: 12px;
+    font-family: "poppins";
     font-weight: 300;
   }
-  #menuElements li {
-    padding: 0;
-    text-align: center;
-    max-width: 25%;
+  /* Stylowanie rozwijanych list */
+  .dropdown-content {
+    position: fixed;
+    top: 150px;
+    left: 0;
+    width: 100vw;
+    background-color: rgba(0, 162, 172, 1);
+    z-index: 9999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-height: 0; /* Ukrywanie zawartości */
+    overflow: hidden; /* Ukrywanie zawartości, gdy jest zwinięta */
+    transition: all 0.5s ease-in-out; /* Animacja rozwijania */
   }
 
-  .dropdown {
-    width: 50%;
-    padding: 5px 0;
+  /* Użyj klasy .show do rozwinięcia */
+  .dropdown:hover .dropdown-content {
+    display: block; /* Umożliwia animację rozwijania */
   }
-  .dropdown-content {
-    position: fixed; /* Fix the dropdown to the viewport */
-    top: 105px; /* Adjust the top position as per the navbar */
-    left: 0;
-    width: 100vw; /* Full width of the viewport */
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0.95
-    ); /* Increase opacity for readability */
-    z-index: 9999; /* High z-index to ensure it stays on top */
-    overflow-y: auto; /* Scrollable content */
+
+  .dropdown-btn {
+    cursor: pointer;
   }
+
   #mainContainerIndex {
     width: 100vw;
   }

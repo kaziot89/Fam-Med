@@ -54,12 +54,12 @@ h3 {
   scrollbar-width: none;
 }
 
-button::before {
+/* button::before {
   content: "•";
   margin-right: 8px;
   font-size: 24px;
   color: rgb(3 162 172);
-}
+} */
 .clinic_button {
   border: none;
   background-color: transparent;
@@ -282,7 +282,7 @@ button::before {
     position: relative;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 750px) {
   #male_menu p {
     font-size: 13px;
   }
@@ -305,18 +305,28 @@ button::before {
   }
   .acc {
     display: inline;
-    margin-top: 130px;
-    background-color: #eee;
-    color: #444;
+    margin-top: 110px;
+    padding-left: 12px;
+    background-color: #444;
+    color: white;
     font-family: "poppins";
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
-    padding: 18px;
     width: 100%;
+    height: 50px;
     text-align: left;
     border: none;
     outline: none;
     transition: 0.4s;
+  }
+  .acc:hover {
+    background-color: #444;
+  }
+  .acc:before {
+    display: none;
+  }
+  .acc:after {
+    margin-right: 12px;
   }
   #hide_mobile {
     display: none;

@@ -15,8 +15,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAM-MED</title>
-    <script src="index.js" defer></script>
     <script src="poradnie.js" defer></script>
+    <!-- <script src="index.js" defer></script> -->
   </head>
   <body>
     <div id="border">
@@ -43,24 +43,88 @@
               </p>
             </div>
             <div id="topMenu">
+              <nav>
+                <div class="menu-btn">
+                  <span class="menu-btn__burger"></span>
+                  <span class="menu-btn__burger"></span>
+                  <span class="menu-btn__burger"></span>
+                </div>
+  
+                <ul class="nav-menu">
+                  <li><a href="poradnie.html">Poradnie</a></li>
+                  <li class="dropdown">
+                    <button class="dropdown-btn" id="places_btn">Placówki</button>
+                    <ul class="dropdown-content" id="places_dropdown">
+                      <li><a href="cmtg.html">Tarnowskie Góry</a></li>
+                      <li><a href="porZbr.html">Zbrosławice</a></li>
+                      <li><a href="porWie.html">Wieszowa</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <button class="dropdown-btn" id="infos_btn">
+                      Informacje
+                    </button>
+                    <ul class="dropdown-content" id="infos_dropdown">
+                      <li><a href="prawaPacjenta.html">Prawa pacjęta</a></li>
+                      <li>
+                        <a href="pom.html">Polityka ochrony małoletnich</a>
+                      </li>
+                      <li><a href="#informacja3">Dokumenty do pobrania</a></li>
+                      <li><a href="#informacja4">Certyfikaty</a></li>
+                      <li><a href="#informacja5">Rodo</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+              </nav>
               <ul id="menuElements">
                 <li class="dropdown">
                   <a id="poradnie_desktop" href="./poradnie.html"
                     >Poradnie specjalistyczne</a
                   ><a id="poradnie_mobile" href="./poradnie.html">Poradnie</a>
+                  <div class="dropdown-content">
+                    <a href="poradnie.html#button_1"
+                      >Poradnia Podstawowej Opieki Zdrowotnej</a
+                    >
+                    <a href="poradnie.html#button_2">Poradnia Alergologiczna</a>
+                    <a href="poradnie.html#button_3">Poradnia Angiologiczna</a>
+                    <a href="poradnie.html#button_4">Poradnia Chirurgiczna</a>
+                    <a href="poradnie.html#button_5">Poradnia Dermatologiczna</a>
+                    <a href="poradnie.html#button_6"
+                      >Poradnia Endokrynologiczna</a
+                    >
+                    <a href="poradnie.html#button_7">Poradnia Gastrologiczna</a>
+                    <a href="poradnie.html#button_8">Poradnia Geriatryczna</a>
+                    <a href="poradnie.html#button_9">Poradnia Ginekologiczna</a>
+                    <a href="poradnie.html#button_10">Poradnia Internistyczna</a>
+                    <a href="poradnie.html#button_11">Poradnia Kardiologiczna</a>
+                    <a href="poradnie.html#button_12">Poradnia Laryngologiczna</a>
+                    <a href="poradnie.html#button_13">Poradnia Medycyny Pracy</a>
+                    <a href="poradnie.html#button_14">Poradnia Nefrologiczna</a>
+                    <a href="poradnie.html#button_15">Poradnia Neurologiczna</a>
+                    <a href="poradnie.html#button_16">Poradnia Ortopedyczna</a>
+                    <a href="poradnie.html#button_17">Poradnia Pediatryczna</a>
+                    <a href="poradnie.html#button_18">Poradnia Proktologiczna</a>
+                    <a href="poradnie.html#button_19">Poradnia Reumatologiczna</a>
+                    <a href="poradnie.html#button_20">Poradnia Urologiczna</a>
+                    <a href="poradnie.html#button_21"
+                      >Poradnia Zdrowia Psychicznego</a
+                    >
+                    <a href="poradnie.html#button_22"
+                      >Gabinet Psychoterapii i Pomocy Psychologicznej Dzieci i
+                      Dorosłych</a
+                    >
+                    <a href="poradnie.html#button_23"
+                      >Gabinet Zdrowego Żywienia</a
+                    >
+                    <a href="poradnie.html#button_24">Badania Laboratoryjne</a>
+                    <a href="poradnie.html#button_25">Opieka Pielęgniarska</a>
+                    <a href="poradnie.html#button_26">Pracownia USG</a>
+                  </div>
                 </li>
                 <li class="dropdown" id="aktualnosci">
-                  <a
-                    href="index.html#carousel-container"
-                    onclick="scrollToSection()"
-                    >Aktualności</a
-                  >
-
-                  <div class="dropdown-content">
-                    <!-- <a href="#news1">News 1</a>
-                    <a href="#news2">News 2</a>
-                    <a href="#news3">News 3</a> -->
-                  </div>
+                  <a href="#" onclick="scrollToSection()">Aktualności</a>
+                  <div class="dropdown-content"></div>
                 </li>
                 <li class="dropdown">
                   <a href="#carousel-container">Placówki</a>
@@ -84,7 +148,6 @@
                 <li class="dropdown"><a href="#branches">Kontakt</a></li>
               </ul>
             </div>
-          </div>
         </div>
       </div>
     </div>
