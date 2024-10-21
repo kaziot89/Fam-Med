@@ -551,6 +551,9 @@ tr:nth-child(even) {
   .dropdown-btn {
     cursor: pointer;
   }
+  .infos {
+    margin-top: 50px;
+  }
 
   #mainContainerIndex {
     width: 100vw;

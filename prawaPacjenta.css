@@ -38,6 +38,15 @@
 }
 @media (max-width: 1024px) {
   #prawa {
-    width: 80%;
+    width: 90%;
+  }
+}
+@media (max-width: 550px) {
+  #prawa {
+    font-size: 12px;
+    margin-bottom: 200px;
+  }
+  #prawa h1 {
+    font-size: 16px;
   }
 }

@@ -23,18 +23,17 @@
   color: rgb(3 162 172);
   font-size: 24px;
   font-weight: 300;
-  text-align: center;
+  margin-bottom: 24px;
 }
 #pom h3 {
-  margin-top: 24px;
+  /* margin-top: 24px; */
   color: rgb(3 162 172);
   font-weight: 300;
 }
 #pom h4 {
-  margin-top: 24px;
+  /* margin-top: 24px; */
   color: rgb(3 162 172);
   font-weight: 300;
-  text-align: center;
 }
 .tab {
   margin: 15px 15 0 30px;
@@ -46,6 +45,15 @@
 }
 @media (max-width: 1024px) {
   #pom {
-    width: 80%;
+    width: 90%;
+  }
+}
+@media (max-width: 550px) {
+  #pom {
+    font-size: 12px;
+    margin-bottom: 200px;
+  }
+  #pom h1 {
+    font-size: 16px;
   }
 }
