@@ -1,3 +1,10 @@
+const menuBtn = document.querySelector(".menu-btn");
+const navMenu = document.querySelector(".nav-menu");
+
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("open");
+  navMenu.classList.toggle("activeH");
+});
 document.addEventListener("DOMContentLoaded", function () {
   // Funkcja do ukrywania wszystkich divów z zawartością
   function hideAllContent() {
@@ -132,11 +139,4 @@ document.addEventListener("DOMContentLoaded", function () {
       buttonToClick.click();
     }
   }
-});
-const menuBtn = document.querySelector(".menu-btn");
-const navMenu = document.querySelector(".nav-menu");
-
-menuBtn.addEventListener("click", () => {
-  menuBtn.classList.toggle("open");
-  navMenu.classList.toggle("activeH");
 });

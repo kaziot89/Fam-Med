@@ -181,11 +181,6 @@ body {
   margin: 8px 0 0 5px;
 }
 
-.active:after {
-  content: "\25B2";
-  color: white;
-}
-
 .certificates {
   display: flex;
   flex-direction: column;

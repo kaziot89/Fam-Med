@@ -201,93 +201,106 @@ window.onload = function () {
   }
 };
 
-function handleButtonClick(buttonId) {
-  const pageMap = {
-    bottom_menu_button1: "poradnie.html",
-    bottom_menu_button2: "laboratoria.html",
-    bottom_menu_button3: "http://3.html",
-    bottom_menu_button4: "opieka.html",
-  };
+// function handleButtonClick(buttonId) {
+//   const pageMap = {
+//     bottom_menu_button1: "poradnie.html",
+//     bottom_menu_button2: "laboratoria.html",
+//     bottom_menu_button3: "http://3.html",
+//     bottom_menu_button4: "opieka.html",
+//   };
 
-  window.location.href = pageMap[buttonId];
-}
+//   window.location.href = pageMap[buttonId];
+// }
 
-document
-  .getElementById("bottom_menu_button1")
-  .addEventListener("click", function () {
-    handleButtonClick(this.id);
-  });
+// document
+//   .getElementById("bottom_menu_button1")
+//   .addEventListener("click", function () {
+//     handleButtonClick(this.id);
+//   });
 
-document
-  .getElementById("bottom_menu_button2")
-  .addEventListener("click", function () {
-    handleButtonClick(this.id);
-  });
+// document
+//   .getElementById("bottom_menu_button2")
+//   .addEventListener("click", function () {
+//     handleButtonClick(this.id);
+//   });
 
-document
-  .getElementById("bottom_menu_button3")
-  .addEventListener("click", function () {
-    handleButtonClick(this.id);
-  });
+// document
+//   .getElementById("bottom_menu_button3")
+//   .addEventListener("click", function () {
+//     handleButtonClick(this.id);
+//   });
 
-document
-  .getElementById("bottom_menu_button4")
-  .addEventListener("click", function () {
-    handleButtonClick(this.id);
-  });
-const track = document.querySelector(".carousel-track");
-const slides = Array.from(track.children);
-let startX = 0;
-let moveX = 0;
-let currentIndex = 0; // Track the current index of the slide
+// document
+//   .getElementById("bottom_menu_button4")
+//   .addEventListener("click", function () {
+//     handleButtonClick(this.id);
+//   });
+// const track = document.querySelector(".carousel-track");
+// const slides = Array.from(track.children);
+// let startX = 0;
+// let moveX = 0;
+// let currentIndex = 0; // Track the current index of the slide
 
-// Get the width of one slide
-const slideWidth = slides[0].getBoundingClientRect().width;
+// // Get the width of one slide
+// const slideWidth = slides[0].getBoundingClientRect().width;
 
-// Event listeners for touch events
-track.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-});
+// // Event listeners for touch events
+// track.addEventListener("touchstart", (e) => {
+//   startX = e.touches[0].clientX;
+// });
 
-track.addEventListener("touchmove", (e) => {
-  moveX = e.touches[0].clientX - startX;
-});
+// track.addEventListener("touchmove", (e) => {
+//   moveX = e.touches[0].clientX - startX;
+// });
 
-track.addEventListener("touchend", () => {
-  if (moveX < -50) {
-    moveToNextSlide();
-  } else if (moveX > 50) {
-    moveToPrevSlide();
-  }
-  moveX = 0;
-});
+// track.addEventListener("touchend", () => {
+//   if (moveX < -50) {
+//     moveToNextSlide();
+//   } else if (moveX > 50) {
+//     moveToPrevSlide();
+//   }
+//   moveX = 0;
+// });
 
-// Move to the next slide
-function moveToNextSlide() {
-  if (currentIndex < slides.length - 1) {
-    currentIndex++;
-    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-  }
-}
+// // Move to the next slide
+// function moveToNextSlide() {
+//   if (currentIndex < slides.length - 1) {
+//     currentIndex++;
+//     track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+//   }
+// }
 
-// Move to the previous slide
-function moveToPrevSlide() {
-  if (currentIndex > 0) {
-    currentIndex--;
-    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-  }
-}
-window.addEventListener("scroll", function () {
-  var elements = document.querySelectorAll(".bottom-menu-tabs");
+// // Move to the previous slide
+// function moveToPrevSlide() {
+//   if (currentIndex > 0) {
+//     currentIndex--;
+//     track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+//   }
+// }
+// window.addEventListener("scroll", function () {
+//   var elements = document.querySelectorAll(".bottom-menu-tabs");
 
-  elements.forEach(function (element, index) {
-    var position = element.getBoundingClientRect();
+//   elements.forEach(function (element, index) {
+//     var position = element.getBoundingClientRect();
 
-    // Sprawdza, czy element jest w widocznej części ekranu
-    if (position.top <= window.innerHeight && position.bottom >= 0) {
-      // Dodajemy opóźnienie do animacji
-      element.style.transitionDelay = index * 0.15 + "s";
-      element.classList.add("visible");
-    }
+//     // Sprawdza, czy element jest w widocznej części ekranu
+//     if (position.top <= window.innerHeight && position.bottom >= 0) {
+//       // Dodajemy opóźnienie do animacji
+//       element.style.transitionDelay = index * 0.15 + "s";
+//       element.classList.add("visible");
+//     }
+//   });
+// });
+document.addEventListener("DOMContentLoaded", () => {
+  // Dodaj event listener do każdego przycisku
+  const buttons = document.querySelectorAll(".acc2");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const buttonId = button.getAttribute("data-button-id");
+      // Przechodzimy do poradnie.html i wywołujemy funkcję klikającą w odpowiedni przycisk
+      window.location.href =
+        "poradnie.html?" +
+        new URLSearchParams({ buttonId: buttonId }).toString();
+    });
   });
 });
