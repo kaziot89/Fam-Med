@@ -47,6 +47,16 @@ body {
   width: 30rem;
   height: auto;
 }
+
+.harmo {
+  display: flex;
+  flex-direction: column;
+}
+
+.harmo p {
+  text-align: start;
+}
+
 .acc2 {
   font-size: 16px;
   font-weight: 300;
