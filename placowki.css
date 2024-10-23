@@ -10,7 +10,7 @@ body {
 
 .infos {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -111,9 +111,7 @@ body {
   width: 200px;
   height: auto;
 }
-.partners_images {
-  /* position: relative; */
-}
+
 .partners_images img {
   position: relative;
   top: 50%;
@@ -177,6 +175,16 @@ body {
 .div_margin {
   margin: 30px 0;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+}
+
+.grid-container div div {
+  margin-bottom: 5px; /* Optional: add space between lines */
+}
+
 .paragraph_margin {
   margin: 20px 0;
 }
@@ -207,6 +215,7 @@ body {
   padding: 1rem;
   height: 200px;
   text-align: center;
+  align-items: stretch;
 }
 .infos h2,
 .infos h3,
@@ -503,10 +512,6 @@ tr:nth-child(even) {
     justify-content: space-around;
     transition: right 0.3s ease-in-out;
     z-index: 2;
-  }
-
-  .nav-menu li {
-    /* Stylowanie elementów menu */
   }
 
   .nav-menu a {
