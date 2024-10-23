@@ -205,7 +205,7 @@ window.onload = function () {
 //   const pageMap = {
 //     bottom_menu_button1: "poradnie.html",
 //     bottom_menu_button2: "laboratoria.html",
-//     bottom_menu_button3: "http://3.html",
+//     bottom_menu_button3: "medycyna.html",
 //     bottom_menu_button4: "opieka.html",
 //   };
 
