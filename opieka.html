@@ -18,188 +18,228 @@
     <link rel="stylesheet" href="opieka.css" />
     <link rel="stylesheet" href="index.css" />
     <link rel="icon" type="image/x-icon" href="/Pictures/favicon.ico" />
+    <script src="opieka.js" defer></script>
+    
+    <!-- <link
+      rel="stylesheet"
+      href="https://kaziot89.github.io/Fam-Med/index.css"
+    />
+    <script src="https://kaziot89.github.io/Fam-Med/index.js"></script> -->
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAM-MED</title>
   </head>
   <body>
-    <div id="top-navbar">
-      <div id="navbar_content">
-        <div id="logo">
-          <a href="index.html"
-            ><img src="Pictures/logo famed.svg" alt="logo"
-          /></a>
-        </div>
-        <div id="main_menu">
-          <div id="male_menu">
-            <p class="contactBar">
-              <i class="fas fa-phone"></i
-              ><a class="contact_links" href="tel:+48322337030">
-                +48322337030</a
-              >
-            </p>
-            <p class="contactBar">
-              <i class="fas fa-envelope"></i>
-              <a class="contact_links" href="mailto:zbroslawice@fam-med.pl">
-                zbroslawice@fam-med.pl</a
-              >
-            </p>
+    <div id="border">
+      <div id="top-navbar">
+        <div id="navbar_content">
+          <div id="logo">
+            <a href="index.html"
+              ><img src="Pictures/logo famed.svg" alt=""
+            /></a>
           </div>
-          <div id="topMenu">
-            <ul id="menuElements">
-              <li class="dropdown">
-                <a id="poradnie_desktop" href="./poradnie.html"
-                  >Poradnie specjalistyczne</a
-                ><a id="poradnie_mobile" href="./poradnie.html">Poradnie</a>
-                <div class="dropdown-content2">
-                  <a href="poradnie.html#button_1"
-                    >Poradnia Podstawowej Opieki Zdrowotnej</a
-                  >
-                  <a href="poradnie.html#button_2">Poradnia Alergologiczna</a>
-                  <a href="poradnie.html#button_3">Poradnia Angiologiczna</a>
-                  <a href="poradnie.html#button_4">Poradnia Chirurgiczna</a>
-                  <a href="poradnie.html#button_5">Poradnia Dermatologiczna</a>
-                  <a href="poradnie.html#button_6"
-                    >Poradnia Endokrynologiczna</a
-                  >
-                  <a href="poradnie.html#button_7">Poradnia Gastrologiczna</a>
-                  <a href="poradnie.html#button_8">Poradnia Geriatryczna</a>
-                  <a href="poradnie.html#button_9">Poradnia Ginekologiczna</a>
-                  <a href="poradnie.html#button_10">Poradnia Internistyczna</a>
-                  <a href="poradnie.html#button_11">Poradnia Kardiologiczna</a>
-                  <a href="poradnie.html#button_12">Poradnia Laryngologiczna</a>
-                  <a href="poradnie.html#button_13">Poradnia Medycyny Pracy</a>
-                  <a href="poradnie.html#button_14">Poradnia Nefrologiczna</a>
-                  <a href="poradnie.html#button_15">Poradnia Neurologiczna</a>
-                  <a href="poradnie.html#button_16">Poradnia Ortopedyczna</a>
-                  <a href="poradnie.html#button_17">Poradnia Pediatryczna</a>
-                  <a href="poradnie.html#button_18">Poradnia Proktologiczna</a>
-                  <a href="poradnie.html#button_19">Poradnia Reumatologiczna</a>
-                  <a href="poradnie.html#button_20">Poradnia Urologiczna</a>
-                  <a href="poradnie.html#button_21"
-                    >Poradnia Zdrowia Psychicznego</a
-                  >
-                  <a href="poradnie.html#button_22"
-                    >Gabinet Psychoterapii i Pomocy Psychologicznej Dzieci i
-                    Dorosłych</a
-                  >
-                  <a href="poradnie.html#button_23"
-                    >Gabinet Zdrowego Żywienia</a
-                  >
-                  <a href="poradnie.html#button_24">Badania Laboratoryjne</a>
-                  <a href="poradnie.html#button_25">Opieka Pielęgniarska</a>
-                  <a href="poradnie.html#button_26">Pracownia USG</a>
+          <div id="main_menu">
+            <div id="male_menu">
+              <p class="contactBar">
+                <i class="fas fa-phone"></i
+                ><a class="contact_links" href="tel:+48322353322">
+                  +48322353322</a
+                >
+              </p>
+              <p class="contactBar">
+                <i class="fas fa-envelope"></i>
+                <a class="contact_links" href="mailto:zbroslawice@fam-med.pl">
+                  zbroslawice@fam-med.pl</a
+                >
+              </p>
+            </div>
+            <div id="topMenu">
+              <nav>
+                <div class="menu-btn">
+                  <span class="menu-btn__burger"></span>
+                  <span class="menu-btn__burger"></span>
+                  <span class="menu-btn__burger"></span>
                 </div>
-              </li>
-              <li class="dropdown" id="aktualnosci">
-                <a href="#" onclick="scrollToSection()">Aktualności</a>
-                <div class="dropdown-content2"></div>
-              </li>
-              <li class="dropdown">
-                <a href="#carousel-container">Placówki</a>
-                <div class="dropdown-content2">
-                  <a href="porZbr.html">Zbrosławice</a>
-                  <a href="cmtg.html">Tarnowskie Góry</a>
-                  <a href="porWie.html">Wieszowa</a>
-                </div>
-              </li>
-              <li class="dropdown">
-                <a href="#carousel-container">Informacje</a>
-                <div class="dropdown-content2">
-                  <a href="prawaPacjenta.html">Prawa pacjenta</a>
-                  <a href="pom.html">Polityka ochrony małoletnich</a>
-                  <a href="#tab2">Dokumenty do pobrania</a>
-                  <a href="#tab3">Certyfikaty</a>
-                  <a href="#tab4">RODO</a>
-                  <a href="#tab5"></a>
-                </div>
-              </li>
-              <li class="dropdown"><a href="#branches">Kontakt</a></li>
-            </ul>
-          </div>
+  
+                <ul class="nav-menu">
+                  <li><a href="poradnie.html">Poradnie</a></li>
+                  <li class="dropdown">
+                    <button class="dropdown-btn" id="places_btn">Placówki</button>
+                    <ul class="dropdown-content" id="places_dropdown">
+                      <li><a href="cmtg.html">Tarnowskie Góry</a></li>
+                      <li><a href="porZbr.html">Zbrosławice</a></li>
+                      <li><a href="porWie.html">Wieszowa</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <button class="dropdown-btn" id="infos_btn">
+                      Informacje
+                    </button>
+                    <ul class="dropdown-content" id="infos_dropdown">
+                      <li><a href="prawaPacjenta.html">Prawa pacjęta</a></li>
+                      <li>
+                        <a href="pom.html">Polityka ochrony małoletnich</a>
+                      </li>
+                      <li><a href="#informacja3">Dokumenty do pobrania</a></li>
+                      <li><a href="#informacja4">Certyfikaty</a></li>
+                      <li><a href="#informacja5">Rodo</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+              </nav>
+              <ul id="menuElements">
+                <li class="dropdown">
+                  <a id="poradnie_desktop" href="./poradnie.html"
+                    >Poradnie specjalistyczne</a
+                  ><a id="poradnie_mobile" href="./poradnie.html">Poradnie</a>
+                  <div class="dropdown-content">
+                    <a href="poradnie.html#button_1"
+                      >Poradnia Podstawowej Opieki Zdrowotnej</a
+                    >
+                    <a href="poradnie.html#button_2">Poradnia Alergologiczna</a>
+                    <a href="poradnie.html#button_3">Poradnia Angiologiczna</a>
+                    <a href="poradnie.html#button_4">Poradnia Chirurgiczna</a>
+                    <a href="poradnie.html#button_5">Poradnia Dermatologiczna</a>
+                    <a href="poradnie.html#button_6"
+                      >Poradnia Endokrynologiczna</a
+                    >
+                    <a href="poradnie.html#button_7">Poradnia Gastrologiczna</a>
+                    <a href="poradnie.html#button_8">Poradnia Geriatryczna</a>
+                    <a href="poradnie.html#button_9">Poradnia Ginekologiczna</a>
+                    <a href="poradnie.html#button_10">Poradnia Internistyczna</a>
+                    <a href="poradnie.html#button_11">Poradnia Kardiologiczna</a>
+                    <a href="poradnie.html#button_12">Poradnia Laryngologiczna</a>
+                    <a href="poradnie.html#button_13">Poradnia Medycyny Pracy</a>
+                    <a href="poradnie.html#button_14">Poradnia Nefrologiczna</a>
+                    <a href="poradnie.html#button_15">Poradnia Neurologiczna</a>
+                    <a href="poradnie.html#button_16">Poradnia Ortopedyczna</a>
+                    <a href="poradnie.html#button_17">Poradnia Pediatryczna</a>
+                    <a href="poradnie.html#button_18">Poradnia Proktologiczna</a>
+                    <a href="poradnie.html#button_19">Poradnia Reumatologiczna</a>
+                    <a href="poradnie.html#button_20">Poradnia Urologiczna</a>
+                    <a href="poradnie.html#button_21"
+                      >Poradnia Zdrowia Psychicznego</a
+                    >
+                    <a href="poradnie.html#button_22"
+                      >Gabinet Psychoterapii i Pomocy Psychologicznej Dzieci i
+                      Dorosłych</a
+                    >
+                    <a href="poradnie.html#button_23"
+                      >Gabinet Zdrowego Żywienia</a
+                    >
+                    <a href="poradnie.html#button_24">Badania Laboratoryjne</a>
+                    <a href="poradnie.html#button_25">Opieka Pielęgniarska</a>
+                    <a href="poradnie.html#button_26">Pracownia USG</a>
+                  </div>
+                </li>
+                <li class="dropdown" id="aktualnosci">
+                  <a href="#" onclick="scrollToSection()">Aktualności</a>
+                  <div class="dropdown-content"></div>
+                </li>
+                <li class="dropdown">
+                  <a href="#carousel-container">Placówki</a>
+                  <div class="dropdown-content">
+                    <a href="porZbr.html">Zbrosławice</a>
+                    <a href="cmtg.html">Tarnowskie Góry</a>
+                    <a href="porWie.html">Wieszowa</a>
+                  </div>
+                </li>
+                <li class="dropdown">
+                  <a href="#carousel-container">Informacje</a>
+                  <div class="dropdown-content">
+                    <a href="prawaPacjenta.html">Prawa pacjenta</a>
+                    <a href="pom.html">Polityka ochrony małoletnich</a>
+                    <a href="#tab2">Dokumenty do pobrania</a>
+                    <a href="#tab3">Certyfikaty</a>
+                    <a href="#tab4">RODO</a>
+                    <a href="#tab5"></a>
+                  </div>
+                </li>
+                <li class="dropdown"><a href="#branches">Kontakt</a></li>
+              </ul>
+            </div>
         </div>
       </div>
     </div>
+    
     <div id="main_container">
+      
       <div id="info">
         <img id="img_mobile" src="Pictures/ok_poz.jpg" alt="" />
         <div id="text">
-          <p>
-            Opieka koordynowana to wiele możliwości diagnostycznych i leczenia
-            najczęstszych chorób przewlekłych już u swojego lekarza rodzinnego.
-            Lekarz POZ może zlecić pacjentom badania (w sytuacjach medycznie
-            uzasadnionych), które do tej pory były zarezerwowane dla lekarza
-            specjalisty.
-          </p>
-          <p>
-            Leczenie jest oparte na Indywidualnym Planie Opieki Medycznej (IPOM)
-            i uwzględnia nie tylko wykonywanie badań, ale także konsultacje
-            między lekarzem POZ, a lekarzem specjalistą i dodatkowe konsultacje
-            np. z dietetykiem.
-          </p>
-          <p>
-            Opieka koordynowana jest dla pacjentów ze schorzeniami z zakresu:
-          </p>
+        <p>
+          Opieka koordynowana to wiele możliwości diagnostycznych i leczenia
+          najczęstszych chorób przewlekłych już u swojego lekarza rodzinnego.
+          Lekarz POZ może zlecić pacjentom badania (w sytuacjach medycznie
+          uzasadnionych), które do tej pory były zarezerwowane dla lekarza
+          specjalisty.
+        </p>
+        <p>
+          Leczenie jest oparte na Indywidualnym Planie Opieki Medycznej (IPOM) i
+          uwzględnia nie tylko wykonywanie badań, ale także konsultacje między
+          lekarzem POZ, a lekarzem specjalistą i dodatkowe konsultacje np. z
+          dietetykiem.
+        </p>
+        <p>Opieka koordynowana jest dla pacjentów ze schorzeniami z zakresu:</p>
 
-          <ul>
-            <li>kardiologii</li>
-            <li>diabetologii</li>
-            <li>chorób płuc</li>
-            <li>endokrynologii</li>
-            <li>chorób nerek</li>
-          </ul>
-          <p>
-            W przypadku pacjentów, u których zdiagnozowano choroby z tych
-            dziedzin, lekarz POZ przeprowadza kompleksową poradę i ustala
-            indywidualny plan leczenia.
-          </p>
-          <p>
-            Wprowadzenie opieki koordynowanej w POZ poszerza listę badań
-            diagnostycznych, które może zlecić lekarz rodzinny. Chodzi m.in. o:
-          </p>
-          <ul>
-            <li>pakiet badań tarczycowych: antyTPO, antyTSHR, antyTG</li>
-            <li>EKG wysiłkowe</li>
-            <li>Holter EKG (24, 48, 72 godz.)</li>
-            <li>USG Doppler naczyń kończyn dolnych</li>
-            <li>ECHO serca</li>
-          </ul>
+        <ul>
+          <li>kardiologii</li>
+          <li>diabetologii</li>
+          <li>chorób płuc</li>
+          <li>endokrynologii</li>
+          <li>chorób nerek</li>
+        </ul>
+        <p>
+          W przypadku pacjentów, u których zdiagnozowano choroby z tych
+          dziedzin, lekarz POZ przeprowadza kompleksową poradę i ustala
+          indywidualny plan leczenia.
+        </p>
+        <p>
+          Wprowadzenie opieki koordynowanej w POZ poszerza listę badań
+          diagnostycznych, które może zlecić lekarz rodzinny. Chodzi m.in. o:
+        </p>
+        <ul>
+          <li>pakiet badań tarczycowych: antyTPO, antyTSHR, antyTG</li>
+          <li>EKG wysiłkowe</li>
+          <li>Holter EKG (24, 48, 72 godz.)</li>
+          <li>USG Doppler naczyń kończyn dolnych</li>
+          <li>ECHO serca</li>
+        </ul>
 
-          <p>
-            Ponadto lekarz POZ może zlecić pacjentowi (w sytuacji medycznie
-            uzasadnionej) konsultacje z dietetykiem (przy rozpoznaniu np.
-            cukrzycy) oraz konsultacje z lekarzem specjalistą z zakresu
-            diabetologii, endokrynologii, kardiologii, pulmonologii lub
-            alergologii. Poszerzenie katalogu badań w POZ skraca czas potrzebny
-            na wykonanie diagnostyki, pozwala na szybsze postawienie diagnozy i
-            wprowadzenie właściwego leczenia.
-          </p>
-          <p>
-            Nowym rozwiązaniem, jest możliwość konsultowania stanu zdrowia
-            pacjenta przez lekarza POZ z lekarzem specjalistą. Konsultacje
-            lekarskie są prowadzone również zdalnie. Bezpośrednie omówienie
-            wyników badań pacjenta i dalszego przebiegu leczenia między
-            lekarzami, wpływa na większą skuteczność terapii i bezpieczeństwo
-            pacjenta.
-          </p>
-          <p>
-            Koordynator opieki w POZ po raz pierwszy pojawił się w październiku
-            2021 r. Wtedy zadania koordynatora skupiały się na działaniach
-            profilaktycznych.
-          </p>
-          <p>
-            Opieka koordynowana wzmacnia rolę koordynatora, który dba m.in. o
-            lepszą komunikację na linii lekarz – pacjent, szczegółowo informuje
-            pacjenta o kolejnych etapach leczenia, współpracuje z osobami, które
-            udzielają świadczeń medycznych w ramach opieki koordynowanej.
-          </p>
-          <p>Telefon do Koordynatora <br />POZ Zbrosławice 600 289 796</p>
-        </div>
+        <p>
+          Ponadto lekarz POZ może zlecić pacjentowi (w sytuacji medycznie
+          uzasadnionej) konsultacje z dietetykiem (przy rozpoznaniu np.
+          cukrzycy) oraz konsultacje z lekarzem specjalistą z zakresu
+          diabetologii, endokrynologii, kardiologii, pulmonologii lub
+          alergologii. Poszerzenie katalogu badań w POZ skraca czas potrzebny na
+          wykonanie diagnostyki, pozwala na szybsze postawienie diagnozy i
+          wprowadzenie właściwego leczenia.
+        </p>
+        <p>
+          Nowym rozwiązaniem, jest możliwość konsultowania stanu zdrowia
+          pacjenta przez lekarza POZ z lekarzem specjalistą. Konsultacje
+          lekarskie są prowadzone również zdalnie. Bezpośrednie omówienie
+          wyników badań pacjenta i dalszego przebiegu leczenia między lekarzami,
+          wpływa na większą skuteczność terapii i bezpieczeństwo pacjenta.
+        </p>
+        <p>
+          Koordynator opieki w POZ po raz pierwszy pojawił się w październiku
+          2021 r. Wtedy zadania koordynatora skupiały się na działaniach
+          profilaktycznych.
+        </p>
+        <p>
+          Opieka koordynowana wzmacnia rolę koordynatora, który dba m.in. o
+          lepszą komunikację na linii lekarz – pacjent, szczegółowo informuje
+          pacjenta o kolejnych etapach leczenia, współpracuje z osobami, które
+          udzielają świadczeń medycznych w ramach opieki koordynowanej.</p><p> Telefon
+          do Koordynatora <br>POZ Zbrosławice 600 289 796</p>
+        </p></div>
         <div id="picture">
           <img id="picture_desktop" src="Pictures/ok_poz.jpg" alt="" />
-          <img id="ko_picture2" src="Pictures/ko_poz2.jpg" alt="" />
-        </div>
+        <img id="ko_picture2"src="Pictures/ko_poz2.jpg" alt="">
+      </div>
       </div>
     </div>
 
@@ -243,6 +283,6 @@
       </div>
     </div>
 
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
   </body>
 </html>
