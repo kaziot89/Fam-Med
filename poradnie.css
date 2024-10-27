@@ -254,8 +254,7 @@ h3 {
     height: 32px;
     font-size: 16px;
     padding-left: 0;
-  }
-  .clinic_button {
+    color: black;
     margin-left: 0;
   }
 }
@@ -278,10 +277,9 @@ h3 {
     position: relative;
     width: 65%;
   }
+
   .clinic_button {
     font-size: 14px;
-  }
-  .clinic_button {
     margin-left: 0;
     color: black;
   }
