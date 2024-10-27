@@ -1,3 +1,10 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const accButton = document.querySelector(".acc");
+  if (accButton) {
+    accButton.click();
+  }
+});
+
 const menuBtn = document.querySelector(".menu-btn");
 const navMenu = document.querySelector(".nav-menu");
 

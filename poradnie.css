@@ -19,11 +19,11 @@ h3 {
   min-height: 100vh;
   max-width: 1400px;
   top: 0;
-  padding: 180px 0;
+  padding-top: 180px;
   /* margin-bottom: 80px; */
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
+  width: 95%;
   flex: 1;
 }
 #clinics_greeting h3 {
@@ -32,7 +32,7 @@ h3 {
 }
 #slogan2 {
   height: 50px;
-  margin-left: 20px;
+  /* margin-left: 16px; */
   font-family: "Poppins";
   font-size: 18px;
   max-width: fit-content;
@@ -41,7 +41,7 @@ h3 {
 }
 #clinics_list {
   width: 28%;
-  min-height: 90%;
+  min-height: 100vh;
   overflow-y: auto;
   border-right: 1px solid #ccc; /* Optional: adds a border to the right */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
@@ -64,13 +64,13 @@ h3 {
   border: none;
   background-color: transparent;
   font-family: "Poppins";
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   width: 300px;
   height: 2em;
   text-align: left;
-  margin-left: 20px;
-  padding-left: 20px;
+  /* margin-left: 20px;
+  padding-left: 20px; */
 }
 .clinic_button:hover {
   color: rgb(33, 159, 167);
@@ -167,7 +167,7 @@ h3 {
   font-weight: 300;
 }
 #display_content h3 {
-  margin: 32px 0 8px 0;
+  margin: 0 0 32px 0;
   font-size: 16px;
 }
 #display_content p {
@@ -190,6 +190,9 @@ h3 {
 }
 
 .acc {
+  display: none;
+}
+.accSection {
   display: none;
 }
 
@@ -238,7 +241,7 @@ h3 {
 
 @media (max-width: 1024px) {
   #slogan2 p {
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 0;
   }
   #clinics_list {
@@ -248,7 +251,8 @@ h3 {
     width: 65%;
   }
   .clinic_button {
-    font-size: 17px;
+    height: 32px;
+    font-size: 16px;
     padding-left: 0;
   }
   .clinic_button {
@@ -262,8 +266,10 @@ h3 {
   }
 
   #slogan2 p {
-    font-size: 16px;
-    margin-left: -15px;
+    font-size: 15px;
+    font-weight: 500;
+
+    /* margin-left: -15px; */
   }
   #clinics_list {
     width: 35%;
@@ -282,7 +288,7 @@ h3 {
     position: relative;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 620px) {
   #male_menu p {
     font-size: 13px;
   }
@@ -302,6 +308,19 @@ h3 {
   }
   #clinics_list {
     display: none;
+  }
+  #clinic_list2 {
+    min-height: 100vh;
+  }
+  .accSection {
+    display: block;
+  }
+  #mobile_greeting {
+    font-family: "poppins";
+    font-size: 14px;
+    font-weight: 300;
+
+    margin: 24px 0;
   }
   .acc {
     display: inline;
