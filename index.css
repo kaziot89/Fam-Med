@@ -672,6 +672,7 @@ iframe {
   font-size: 12px;
   font-weight: 300;
 }
+
 .footer_branch_address {
   margin: auto;
   flex: 1;
@@ -833,6 +834,9 @@ iframe {
   }
   #footer_contact,
   #footer_info a {
+    font-size: 11px;
+  }
+  .phnmb {
     font-size: 11px;
   }
 
@@ -1180,6 +1184,9 @@ iframe {
     flex-wrap: wrap;
     font-size: 12px;
     min-width: 80vw;
+  }
+  .phnmb {
+    font-size: 12px;
   }
   .footer_branch_address {
     flex: 1;

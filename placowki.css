@@ -15,6 +15,16 @@ body {
   align-items: center;
 }
 
+.addr {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.with-space::after {
+  content: "\00a0";
+}
+
 .addressInfos {
   margin-left: 20px; /* Opcjonalne odstępy po lewej stronie */
 }
@@ -300,6 +310,10 @@ tr:nth-child(even) {
     flex-direction: column;
     width: 100%;
   }
+  .addr {
+    display: flex;
+    flex-direction: column;
+  }
   #logos {
     display: flex;
     flex-direction: row;
@@ -535,6 +549,10 @@ tr:nth-child(even) {
   }
   .infos {
     margin-top: 50px;
+  }
+  .addr {
+    display: flex;
+    flex-direction: column;
   }
 
   #mainContainerIndex {
