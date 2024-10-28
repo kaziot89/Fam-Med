@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,7 +21,6 @@
     <script src="opieka.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
-    
     <!-- <link
       rel="stylesheet"
       href="https://kaziot89.github.io/Fam-Med/index.css"
@@ -34,482 +32,774 @@
     <title>FAM-MED</title>
   </head>
   <body>
-    <div id="border">
-      <div id="top-navbar">
-        <div id="navbar_content">
-          <div id="logo">
-            <a href="index.html"
-              ><img src="Pictures/logo famed.svg" alt=""
-            /></a>
+    <!-- <div id="border"> -->
+    <div id="top-navbar">
+      <div id="navbar_content">
+        <div id="logo">
+          <a href="index.html"><img src="Pictures/logo famed.svg" alt="" /></a>
+        </div>
+        <div id="main_menu">
+          <div id="male_menu">
+            <p class="contactBar">
+              <i class="fas fa-phone"></i
+              ><a class="contact_links" href="tel:+48322353322">
+                +48322353322</a
+              >
+            </p>
+            <p class="contactBar">
+              <i class="fas fa-envelope"></i>
+              <a class="contact_links" href="mailto:zbroslawice@fam-med.pl">
+                zbroslawice@fam-med.pl</a
+              >
+            </p>
           </div>
-          <div id="main_menu">
-            <div id="male_menu">
-              <p class="contactBar">
-                <i class="fas fa-phone"></i
-                ><a class="contact_links" href="tel:+48322353322">
-                  +48322353322</a
-                >
-              </p>
-              <p class="contactBar">
-                <i class="fas fa-envelope"></i>
-                <a class="contact_links" href="mailto:zbroslawice@fam-med.pl">
-                  zbroslawice@fam-med.pl</a
-                >
-              </p>
-            </div>
-            <div id="topMenu">
-              <nav>
-                <div class="menu-btn">
-                  <span class="menu-btn__burger"></span>
-                  <span class="menu-btn__burger"></span>
-                  <span class="menu-btn__burger"></span>
-                </div>
+          <div id="topMenu">
+            <nav>
+              <div class="menu-btn">
+                <span class="menu-btn__burger"></span>
+                <span class="menu-btn__burger"></span>
+                <span class="menu-btn__burger"></span>
+              </div>
 
-                <ul class="nav-menu">
-                  <li><a href="poradnie.html">Poradnie</a></li>
-                  <li class="dropdown">
-                    <button class="dropdown-btn" id="places_btn">
-                      Placówki
-                    </button>
-                    <ul class="dropdown-content" id="places_dropdown">
-                      <li><a href="cmtg.html">Tarnowskie Góry</a></li>
-                      <li><a href="porZbr.html">Zbrosławice</a></li>
-                      <li><a href="porWie.html">Wieszowa</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <button class="dropdown-btn" id="infos_btn">
-                      Informacje
-                    </button>
-                    <ul class="dropdown-content" id="infos_dropdown">
-                      <li><a href="prawaPacjenta.html">Prawa pacjęta</a></li>
-                      <li>
-                        <a href="pom.html">Polityka ochrony małoletnich</a>
-                      </li>
-                      <li><a href="#informacja3">Dokumenty do pobrania</a></li>
-                      <li><a href="#informacja4">Certyfikaty</a></li>
-                      <li><a href="#informacja5">Rodo</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#kontakt">Kontakt</a></li>
-                </ul>
-              </nav>
-              <ul id="menuElements">
+              <ul class="nav-menu">
+                <li><a href="poradnie.html">Poradnie</a></li>
                 <li class="dropdown">
-                  <a id="poradnie_desktop" href="./poradnie.html"
-                    >Poradnie specjalistyczne</a
-                  ><a id="poradnie_mobile" href="./poradnie.html">Poradnie</a>
-                  <div class="dropdown-content">
-                    <a href="poradnie.html#button_1"
-                      >Poradnia Podstawowej Opieki Zdrowotnej</a
-                    >
-                    <a href="poradnie.html#button_2">Poradnia Alergologiczna</a>
-                    <a href="poradnie.html#button_3">Poradnia Angiologiczna</a>
-                    <a href="poradnie.html#button_4">Poradnia Chirurgiczna</a>
-                    <a href="poradnie.html#button_5"
-                      >Poradnia Dermatologiczna</a
-                    >
-                    <a href="poradnie.html#button_6"
-                      >Poradnia Endokrynologiczna</a
-                    >
-                    <a href="poradnie.html#button_7">Poradnia Gastrologiczna</a>
-                    <a href="poradnie.html#button_8">Poradnia Geriatryczna</a>
-                    <a href="poradnie.html#button_9">Poradnia Ginekologiczna</a>
-                    <a href="poradnie.html#button_10"
-                      >Poradnia Internistyczna</a
-                    >
-                    <a href="poradnie.html#button_11"
-                      >Poradnia Kardiologiczna</a
-                    >
-                    <a href="poradnie.html#button_12"
-                      >Poradnia Laryngologiczna</a
-                    >
-                    <a href="poradnie.html#button_13"
-                      >Poradnia Medycyny Pracy</a
-                    >
-                    <a href="poradnie.html#button_14">Poradnia Nefrologiczna</a>
-                    <a href="poradnie.html#button_15">Poradnia Neurologiczna</a>
-                    <a href="poradnie.html#button_16">Poradnia Ortopedyczna</a>
-                    <a href="poradnie.html#button_17">Poradnia Pediatryczna</a>
-                    <a href="poradnie.html#button_18"
-                      >Poradnia Proktologiczna</a
-                    >
-                    <a href="poradnie.html#button_19"
-                      >Poradnia Reumatologiczna</a
-                    >
-                    <a href="poradnie.html#button_20">Poradnia Urologiczna</a>
-                    <a href="poradnie.html#button_21"
-                      >Poradnia Zdrowia Psychicznego</a
-                    >
-                    <a href="poradnie.html#button_22"
-                      >Gabinet Psychoterapii i Pomocy Psychologicznej Dzieci i
-                      Dorosłych</a
-                    >
-                    <a href="poradnie.html#button_23"
-                      >Gabinet Zdrowego Żywienia</a
-                    >
-                    <a href="poradnie.html#button_24">Badania Laboratoryjne</a>
-                    <a href="poradnie.html#button_25">Opieka Pielęgniarska</a>
-                    <a href="poradnie.html#button_26">Pracownia USG</a>
-                  </div>
-                </li>
-                <li class="dropdown" id="aktualnosci">
-                  <a href="#" onclick="scrollToSection()">Aktualności</a>
-                  <div class="dropdown-content"></div>
+                  <button class="dropdown-btn" id="places_btn">Placówki</button>
+                  <ul class="dropdown-content" id="places_dropdown">
+                    <li><a href="cmtg.html">Tarnowskie Góry</a></li>
+                    <li><a href="porZbr.html">Zbrosławice</a></li>
+                    <li><a href="porWie.html">Wieszowa</a></li>
+                  </ul>
                 </li>
                 <li class="dropdown">
-                  <a href="#carousel-container">Placówki</a>
-                  <div class="dropdown-content">
-                    <a href="porZbr.html">Zbrosławice</a>
-                    <a href="cmtg.html">Tarnowskie Góry</a>
-                    <a href="porWie.html">Wieszowa</a>
-                  </div>
+                  <button class="dropdown-btn" id="infos_btn">
+                    Informacje
+                  </button>
+                  <ul class="dropdown-content" id="infos_dropdown">
+                    <li><a href="prawaPacjenta.html">Prawa pacjęta</a></li>
+                    <li>
+                      <a href="pom.html">Polityka ochrony małoletnich</a>
+                    </li>
+                    <li><a href="#informacja3">Dokumenty do pobrania</a></li>
+                    <li><a href="#informacja4">Certyfikaty</a></li>
+                    <li><a href="#informacja5">Rodo</a></li>
+                  </ul>
                 </li>
-                <li class="dropdown">
-                  <a href="#carousel-container">Informacje</a>
-                  <div class="dropdown-content">
-                    <a href="prawaPacjenta.html">Prawa pacjenta</a>
-                    <a href="pom.html">Polityka ochrony małoletnich</a>
-                    <a href="#tab2">Dokumenty do pobrania</a>
-                    <a href="#tab3">Certyfikaty</a>
-                    <a href="#tab4">RODO</a>
-                    <a href="#tab5"></a>
-                  </div>
-                </li>
-                <li class="dropdown"><a href="#branches">Kontakt</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
               </ul>
-            </div>
+            </nav>
+            <ul id="menuElements">
+              <li class="dropdown">
+                <a id="poradnie_desktop" href="./poradnie.html"
+                  >Poradnie specjalistyczne</a
+                ><a id="poradnie_mobile" href="./poradnie.html">Poradnie</a>
+                <div class="dropdown-content">
+                  <a href="poradnie.html#button_1"
+                    >Poradnia Podstawowej Opieki Zdrowotnej</a
+                  >
+                  <a href="poradnie.html#button_2">Poradnia Alergologiczna</a>
+                  <a href="poradnie.html#button_3">Poradnia Angiologiczna</a>
+                  <a href="poradnie.html#button_4">Poradnia Chirurgiczna</a>
+                  <a href="poradnie.html#button_5">Poradnia Dermatologiczna</a>
+                  <a href="poradnie.html#button_6"
+                    >Poradnia Endokrynologiczna</a
+                  >
+                  <a href="poradnie.html#button_7">Poradnia Gastrologiczna</a>
+                  <a href="poradnie.html#button_8">Poradnia Geriatryczna</a>
+                  <a href="poradnie.html#button_9">Poradnia Ginekologiczna</a>
+                  <a href="poradnie.html#button_10">Poradnia Internistyczna</a>
+                  <a href="poradnie.html#button_11">Poradnia Kardiologiczna</a>
+                  <a href="poradnie.html#button_12">Poradnia Laryngologiczna</a>
+                  <a href="poradnie.html#button_13">Poradnia Medycyny Pracy</a>
+                  <a href="poradnie.html#button_14">Poradnia Nefrologiczna</a>
+                  <a href="poradnie.html#button_15">Poradnia Neurologiczna</a>
+                  <a href="poradnie.html#button_16">Poradnia Ortopedyczna</a>
+                  <a href="poradnie.html#button_17">Poradnia Pediatryczna</a>
+                  <a href="poradnie.html#button_18">Poradnia Proktologiczna</a>
+                  <a href="poradnie.html#button_19">Poradnia Reumatologiczna</a>
+                  <a href="poradnie.html#button_20">Poradnia Urologiczna</a>
+                  <a href="poradnie.html#button_21"
+                    >Poradnia Zdrowia Psychicznego</a
+                  >
+                  <a href="poradnie.html#button_22"
+                    >Gabinet Psychoterapii i Pomocy Psychologicznej Dzieci i
+                    Dorosłych</a
+                  >
+                  <a href="poradnie.html#button_23"
+                    >Gabinet Zdrowego Żywienia</a
+                  >
+                  <a href="poradnie.html#button_24">Badania Laboratoryjne</a>
+                  <a href="poradnie.html#button_25">Opieka Pielęgniarska</a>
+                  <a href="poradnie.html#button_26">Pracownia USG</a>
+                </div>
+              </li>
+              <li class="dropdown" id="aktualnosci">
+                <a href="#" onclick="scrollToSection()">Aktualności</a>
+                <div class="dropdown-content"></div>
+              </li>
+              <li class="dropdown">
+                <a href="#carousel-container">Placówki</a>
+                <div class="dropdown-content">
+                  <a href="porZbr.html">Zbrosławice</a>
+                  <a href="cmtg.html">Tarnowskie Góry</a>
+                  <a href="porWie.html">Wieszowa</a>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a href="#carousel-container">Informacje</a>
+                <div class="dropdown-content">
+                  <a href="prawaPacjenta.html">Prawa pacjenta</a>
+                  <a href="pom.html">Polityka ochrony małoletnich</a>
+                  <a href="#tab2">Dokumenty do pobrania</a>
+                  <a href="#tab3">Certyfikaty</a>
+                  <a href="#tab4">RODO</a>
+                  <a href="#tab5"></a>
+                </div>
+              </li>
+              <li class="dropdown"><a href="#branches">Kontakt</a></li>
+            </ul>
           </div>
         </div>
       </div>
+    </div>
 
-      <div id="main_container">
-        <div id="info">
-          <img id="img_mobile" src="Pictures/ok_poz.jpg" alt="" />
-          <div id="text">
-            <p>
-              Opieka koordynowana to wiele możliwości diagnostycznych i leczenia
-              najczęstszych chorób przewlekłych już u swojego lekarza
-              rodzinnego. Lekarz POZ może zlecić pacjentom badania (w sytuacjach
-              medycznie uzasadnionych), które do tej pory były zarezerwowane dla
-              lekarza specjalisty.
-            </p>
-            <p>
-              Leczenie jest oparte na Indywidualnym Planie Opieki Medycznej
-              (IPOM) i uwzględnia nie tylko wykonywanie badań, ale także
-              konsultacje między lekarzem POZ, a lekarzem specjalistą i
-              dodatkowe konsultacje np. z dietetykiem.
-            </p>
-            <p>
-              Opieka koordynowana jest dla pacjentów ze schorzeniami z zakresu:
-            </p>
+    <div id="main_container">
+      <div id="info">
+        <img id="img_mobile" src="Pictures/ok_poz.jpg" alt="" />
+        <div id="text">
+          <p>
+            Opieka koordynowana to wiele możliwości diagnostycznych i leczenia
+            najczęstszych chorób przewlekłych już u swojego lekarza rodzinnego.
+            Lekarz POZ może zlecić pacjentom badania (w sytuacjach medycznie
+            uzasadnionych), które do tej pory były zarezerwowane dla lekarza
+            specjalisty.
+          </p>
+          <p>
+            Leczenie jest oparte na Indywidualnym Planie Opieki Medycznej (IPOM)
+            i uwzględnia nie tylko wykonywanie badań, ale także konsultacje
+            między lekarzem POZ, a lekarzem specjalistą i dodatkowe konsultacje
+            np. z dietetykiem.
+          </p>
+          <p>
+            Opieka koordynowana jest dla pacjentów ze schorzeniami z zakresu:
+          </p>
 
-            <ul>
-              <li>kardiologii</li>
-              <li>diabetologii</li>
-              <li>chorób płuc</li>
-              <li>endokrynologii</li>
-              <li>chorób nerek</li>
-            </ul>
-            <p>
-              W przypadku pacjentów, u których zdiagnozowano choroby z tych
-              dziedzin, lekarz POZ przeprowadza kompleksową poradę i ustala
-              indywidualny plan leczenia.
-            </p>
-            <p>
-              Wprowadzenie opieki koordynowanej w POZ poszerza listę badań
-              diagnostycznych, które może zlecić lekarz rodzinny. Chodzi m.in.
-              o:
-            </p>
-            <ul>
-              <li>pakiet badań tarczycowych: antyTPO, antyTSHR, antyTG</li>
-              <li>EKG wysiłkowe</li>
-              <li>Holter EKG (24, 48, 72 godz.)</li>
-              <li>USG Doppler naczyń kończyn dolnych</li>
-              <li>ECHO serca</li>
-            </ul>
+          <ul>
+            <li>kardiologii</li>
+            <li>diabetologii</li>
+            <li>chorób płuc</li>
+            <li>endokrynologii</li>
+            <li>chorób nerek</li>
+          </ul>
+          <p>
+            W przypadku pacjentów, u których zdiagnozowano choroby z tych
+            dziedzin, lekarz POZ przeprowadza kompleksową poradę i ustala
+            indywidualny plan leczenia.
+          </p>
+          <p>
+            Wprowadzenie opieki koordynowanej w POZ poszerza listę badań
+            diagnostycznych, które może zlecić lekarz rodzinny. Chodzi m.in. o:
+          </p>
+          <ul>
+            <li>pakiet badań tarczycowych: antyTPO, antyTSHR, antyTG</li>
+            <li>EKG wysiłkowe</li>
+            <li>Holter EKG (24, 48, 72 godz.)</li>
+            <li>USG Doppler naczyń kończyn dolnych</li>
+            <li>ECHO serca</li>
+          </ul>
 
-        <p>
-          Ponadto lekarz POZ może zlecić pacjentowi (w sytuacji medycznie
-          uzasadnionej) konsultacje z dietetykiem (przy rozpoznaniu np.
-          cukrzycy) oraz konsultacje z lekarzem specjalistą z zakresu
-          diabetologii, endokrynologii, kardiologii, pulmonologii lub
-          alergologii. Poszerzenie katalogu badań w POZ skraca czas potrzebny na
-          wykonanie diagnostyki, pozwala na szybsze postawienie diagnozy i
-          wprowadzenie właściwego leczenia.
-        </p>
-        <p>
-          Nowym rozwiązaniem, jest możliwość konsultowania stanu zdrowia
-          pacjenta przez lekarza POZ z lekarzem specjalistą. Konsultacje
-          lekarskie są prowadzone również zdalnie. Bezpośrednie omówienie
-          wyników badań pacjenta i dalszego przebiegu leczenia między lekarzami,
-          wpływa na większą skuteczność terapii i bezpieczeństwo pacjenta.
-        </p>
-        <p>
-          Koordynator opieki w POZ po raz pierwszy pojawił się w październiku
-          2021 r. Wtedy zadania koordynatora skupiały się na działaniach
-          profilaktycznych.
-        </p>
-        <p>
-          Opieka koordynowana wzmacnia rolę koordynatora, który dba m.in. o
-          lepszą komunikację na linii lekarz – pacjent, szczegółowo informuje
-          pacjenta o kolejnych etapach leczenia, współpracuje z osobami, które
-          udzielają świadczeń medycznych w ramach opieki koordynowanej.</p><p> Telefon
-          do Koordynatora <br>POZ Zbrosławice 600 289 796</p>
-        </p></div>
+          <p>
+            Ponadto lekarz POZ może zlecić pacjentowi (w sytuacji medycznie
+            uzasadnionej) konsultacje z dietetykiem (przy rozpoznaniu np.
+            cukrzycy) oraz konsultacje z lekarzem specjalistą z zakresu
+            diabetologii, endokrynologii, kardiologii, pulmonologii lub
+            alergologii. Poszerzenie katalogu badań w POZ skraca czas potrzebny
+            na wykonanie diagnostyki, pozwala na szybsze postawienie diagnozy i
+            wprowadzenie właściwego leczenia.
+          </p>
+          <p>
+            Nowym rozwiązaniem, jest możliwość konsultowania stanu zdrowia
+            pacjenta przez lekarza POZ z lekarzem specjalistą. Konsultacje
+            lekarskie są prowadzone również zdalnie. Bezpośrednie omówienie
+            wyników badań pacjenta i dalszego przebiegu leczenia między
+            lekarzami, wpływa na większą skuteczność terapii i bezpieczeństwo
+            pacjenta.
+          </p>
+          <p>
+            Koordynator opieki w POZ po raz pierwszy pojawił się w październiku
+            2021 r. Wtedy zadania koordynatora skupiały się na działaniach
+            profilaktycznych.
+          </p>
+          <p>
+            Opieka koordynowana wzmacnia rolę koordynatora, który dba m.in. o
+            lepszą komunikację na linii lekarz – pacjent, szczegółowo informuje
+            pacjenta o kolejnych etapach leczenia, współpracuje z osobami, które
+            udzielają świadczeń medycznych w ramach opieki koordynowanej.
+          </p>
+          <p>Telefon do Koordynatora <br />POZ Zbrosławice 600 289 796</p>
+        </div>
         <div id="picture">
           <img id="picture_desktop" src="Pictures/ok_poz.jpg" alt="" />
-        <img id="ko_picture2"src="Pictures/ko_poz2.jpg" alt="">
-      </div>
+          <img id="ko_picture2" src="Pictures/ko_poz2.jpg" alt="" />
+        </div>
       </div>
       <div id="opieka_form">
-        <h1 id="form_text">Szanowni Pacjenci!
-          Zapraszamy do wypełnienia ankiety dotyczącej opieki koordynowanej 
-          realizowanej w Naszej Przychodni ZOZ FAM-MED w Zbrosławicach. </h1>
-    <form id="surveyForm">
-      <label for="age">W jakim wieku jest Pan/Pani (proszę zaznaczyć zakres):</label>
-      <br>
-      <input type="radio" id="age1" name="age" value="18-39">
-      <label for="age1">18 - 39</label>
-      <input type="radio" id="age2" name="age" value="40-59">
-      <label for="age2">40 - 59</label>
-      <input type="radio" id="age3" name="age" value="60+">
-      <label for="age3">powyżej 60 lat</label>
-      <br><br>
-      
-      <label for="gender">Proszę podać płeć:</label>
-      <br>
-      <input type="radio" id="gender1" name="gender" value="kobieta">
-      <label for="gender1">kobieta</label>
-      <input type="radio" id="gender2" name="gender" value="mężczyzna">
-      <label for="gender2">mężczyzna</label>
-      <br><br>
-      
-      <label for="education">Jakie ma Pan/Pani wykształcenie:</label>
-      <br>
-      <input type="radio" id="education1" name="education" value="podstawowe">
-      <label for="education1">podstawowe</label>
-      <input type="radio" id="education2" name="education" value="średnie">
-      <label for="education2">średnie</label>
-      <input type="radio" id="education3" name="education" value="wyższe">
-      <label for="education3">wyższe</label>
-      <br><br>
-      
-      <label for="ok_start">Kiedy został Pan/i objęty/a Opieką Koordynowaną (dalej OK)?</label>
-      <br>
-      <input type="radio" id="ok_start1" name="ok_start" value="poniżej 12 miesięcy">
-      <label for="ok_start1">mniej niż 12 miesięcy temu</label>
-      <input type="radio" id="ok_start2" name="ok_start" value="ponad 12 miesięcy">
-      <label for="ok_start2">ponad 12 miesięcy temu</label>
-      <br><br>
-      
-      <label for="diagnostics">Czy poza badaniami krwi były wykonywane inne badania diagnostyczne?
-          (Można zaznaczyć kilka odpowiedzi)</label>
-      <br>
-      <input type="checkbox" id="diagnostic1" name="diagnostics" value="Holter EKG">
-      <label for="diagnostic1">Holter EKG</label><br>
-      <input type="checkbox" id="diagnostic2" name="diagnostics" value="Echo serca">
-      <label for="diagnostic2">Echo serca</label><br>
-      <input type="checkbox" id="diagnostic3" name="diagnostics" value="USG Doppler">
-      <label for="diagnostic3">USG Doppler</label><br>
-      <input type="checkbox" id="diagnostic4" name="diagnostics" value="Biopsja tarczycy">
-      <label for="diagnostic4">Biopsja tarczycy</label><br>
-      <input type="checkbox" id="diagnostic5" name="diagnostics" value="Holter RR">
-      <label for="diagnostic5">Holter RR</label><br>
-      <input type="checkbox" id="diagnostic6" name="diagnostics" value="Spirometria">
-      <label for="diagnostic6">Spirometria</label><br>
-      <input type="checkbox" id="diagnostic7" name="diagnostics" value="nie">
-      <label for="diagnostic7">nie</label>
-      <br><br>
-      
-      <label for="wait_time">Jak ocenia Pan/i czas oczekiwania na te badania diagnostyczne?</label>
-      <br>
-      <input type="radio" id="wait_time1" name="wait_time" value="krótki">
-      <label for="wait_time1">krótki</label>
-      <input type="radio" id="wait_time2" name="wait_time" value="akceptowalny">
-      <label for="wait_time2">akceptowalny</label>
-      <input type="radio" id="wait_time3" name="wait_time" value="długi">
-      <label for="wait_time3">długi</label>
-      <input type="radio" id="wait_time4" name="wait_time" value="bardzo długi">
-      <label for="wait_time4">bardzo długi</label>
-      <br><br>
-      <label>Czy korzystał/a Pan/i z porad któregokolwiek ze specjalistów wymienionych poniżej, w ramach OK?</label><br>
-      <input type="checkbox" id="specialist1" name="specialist" value="kardiolog">
-      <label for="specialist1">kardiolog</label>
-      <input type="checkbox" id="specialist2" name="specialist" value="diabetolog">
-      <label for="specialist2">diabetolog</label>
-      <input type="checkbox" id="specialist3" name="specialist" value="pulmonolog">
-      <label for="specialist3">pulmonolog</label>
-      <input type="checkbox" id="specialist4" name="specialist" value="endokrynolog">
-      <label for="specialist4">endokrynolog</label>
-      <input type="checkbox" id="specialist5" name="specialist" value="nefrolog">
-      <label for="specialist5">nefrolog</label>
-      <input type="checkbox" id="specialist6" name="specialist" value="nie">
-      <label for="specialist6">nie</label>
-      <br><br>
-      
-      <label>Jak ocenia Pan/i czas oczekiwania na te konsultacje?</label>
-      <br>
-      <input type="radio" id="wait_time1" name="consultation_wait_time" value="krótki">
-      <label for="wait_time1">krótki</label>
-      <input type="radio" id="wait_time2" name="consultation_wait_time" value="akceptowalny">
-      <label for="wait_time2">akceptowalny</label>
-      <input type="radio" id="wait_time3" name="consultation_wait_time" value="długi">
-      <label for="wait_time3">długi</label>
-      <input type="radio" id="wait_time4" name="consultation_wait_time" value="bardzo długi">
-      <label for="wait_time4">bardzo długi</label>
-      <br><br>
-      
-      <label>Czy uważa Pan/i, że dzięki OK skorzystanie z konsultacji specjalistycznych jest łatwiejsze?</label>
-      <br>
-      <input type="radio" id="easier_access1" name="easier_access" value="tak">
-      <label for="easier_access1">tak</label>
-      <input type="radio" id="easier_access2" name="easier_access" value="nie">
-      <label for="easier_access2">nie</label>
-      <input type="radio" id="easier_access3" name="easier_access" value="nie mam zdania">
-      <label for="easier_access3">nie mam zdania</label>
-      <br><br>
-      
-      <label>Czy miał Pan/i wykonywaną Poradę Edukacyjną?</label>
-      <br>
-      <input type="radio" id="education_consult1" name="education_consult" value="tak">
-      <label for="education_consult1">tak</label>
-      <input type="radio" id="education_consult2" name="education_consult" value="nie">
-      <label for="education_consult2">nie</label>
-      <br><br>
-      
-      <label>Jak ją Pan/i ocenia?</label>
-      <br>
-      <input type="radio" id="education_quality1" name="education_quality" value="bardzo dobrze">
-      <label for="education_quality1">bardzo dobrze</label>
-      <input type="radio" id="education_quality2" name="education_quality" value="dobrze">
-      <label for="education_quality2">dobrze</label>
-      <input type="radio" id="education_quality3" name="education_quality" value="przeciętnie">
-      <label for="education_quality3">przeciętnie</label>
-      <input type="radio" id="education_quality4" name="education_quality" value="źle">
-      <label for="education_quality4">źle</label>
-      <input type="radio" id="education_quality5" name="education_quality" value="bardzo źle">
-      <label for="education_quality5">bardzo źle</label>
-      <br><br>
-      
-      <label>Czy korzystał/a Pan/i z porad dietetyka w ramach OK?</label>
-      <br>
-      <input type="radio" id="dietitian1" name="dietitian" value="tak i zrezygnowałem">
-      <label for="dietitian1">tak i zrezygnowałem</label>
-      <input type="radio" id="dietitian2" name="dietitian" value="tak i planuję nadal">
-      <label for="dietitian2">tak i planuję nadal</label>
-      <input type="radio" id="dietitian3" name="dietitian" value="nie">
-      <label for="dietitian3">nie</label>
-      <input type="radio" id="dietitian4" name="dietitian" value="nie wiedziałem o takiej możliwości">
-      <label for="dietitian4">nie, nie wiedziałem o takiej możliwości</label>
-      <br><br>
-      
-      <label>Czy wizyty te podniosły poziom Pana/i wiedzy na temat żywienia i nawyków żywieniowych?</label>
-      <br>
-      <input type="radio" id="nutrition_knowledge1" name="nutrition_knowledge" value="nie">
-      <label for="nutrition_knowledge1">nie</label>
-      <input type="radio" id="nutrition_knowledge2" name="nutrition_knowledge" value="tak">
-      <label for="nutrition_knowledge2">tak</label>
-      <input type="radio" id="nutrition_knowledge3" name="nutrition_knowledge" value="nie dotyczy">
-      <label for="nutrition_knowledge3">nie dotyczy</label>
-      <br><br>
-      
-      <label>Czy korzystał Pan/i z pomocy koordynatora w celu realizacji planu leczenia ustalonego przez Lekarza prowadzącego?</label>
-      <br>
-      <input type="radio" id="coordinator_help1" name="coordinator_help" value="tak, zawsze gdy istniała taka potrzeba">
-      <label for="coordinator_help1">tak, zawsze gdy istniała taka potrzeba</label>
-      <input type="radio" id="coordinator_help2" name="coordinator_help" value="nie, nie mogłem/am liczyć na jego pomoc">
-      <label for="coordinator_help2">nie, nie mogłem/am liczyć na jego pomoc</label>
-      <input type="radio" id="coordinator_help3" name="coordinator_help" value="nie wiedziałem/am o takiej możliwości">
-      <label for="coordinator_help3">nie wiedziałem/am o takiej możliwości</label>
-      <br><br>
-      
-      <label>Czy miał Pan/i jakieś trudności w umawianiu wizyt lub badań w ramach OK?</label>
-      <br>
-      <input type="radio" id="appointment_difficulty1" name="appointment_difficulty" value="nie, nie miałem/am żadnych problemów">
-      <label for="appointment_difficulty1">nie, nie miałem/am żadnych problemów</label>
-      <br>
-      <input type="radio" id="appointment_difficulty2" name="appointment_difficulty" value="tak">
-      <label for="appointment_difficulty2">tak (proszę podać jakie)</label><br>
-      <textarea name="difficulty_details" id="difficulty_details" rows="3" cols="50"></textarea>
-      <br><br>
-      
-      <label>Czy uważa Pan/i, że dzięki OK Pana/i leczenie jest bardziej spójne i uporządkowane?</label>
-      <br>
-      <input type="radio" id="treatment_coherence1" name="treatment_coherence" value="zdecydowanie tak">
-      <label for="treatment_coherence1">zdecydowanie tak</label>
-      <input type="radio" id="treatment_coherence2" name="treatment_coherence" value="raczej tak">
-      <label for="treatment_coherence2">raczej tak</label>
-      <input type="radio" id="treatment_coherence3" name="treatment_coherence" value="raczej nie">
-      <label for="treatment_coherence3">raczej nie</label>
-      <input type="radio" id="treatment_coherence4" name="treatment_coherence" value="zdecydowanie nie">
-      <label for="treatment_coherence4">zdecydowanie nie</label>
-      <br><br>
-      
-      <label>Czy poleciłby Pan/i opiekę koordynowaną innym Pacjentom?</label>
-      <br>
-      <input type="radio" id="recommendation1" name="recommendation" value="zdecydowanie tak">
-      <label for="recommendation1">zdecydowanie tak</label>
-      <input type="radio" id="recommendation2" name="recommendation" value="raczej tak">
-      <label for="recommendation2">raczej tak</label>
-      <input type="radio" id="recommendation3" name="recommendation" value="raczej nie">
-      <label for="recommendation3">raczej nie</label>
-      <input type="radio" id="recommendation4" name="recommendation" value="zdecydowanie nie">
-      <label for="recommendation4">zdecydowanie nie</label>
-      <br><br>
-      
-      <p>Dziękujemy za poświęcony czas!</p>
-      <br><br>
-      <button id="download_button" onclick="downloadAsJPEG(event)">Pobierz ankietę jako JPEG</button>
+        <h1 id="form_text">
+          Szanowni Pacjenci! Zapraszamy do wypełnienia ankiety dotyczącej opieki
+          koordynowanej realizowanej w Naszej Przychodni ZOZ FAM-MED w
+          Zbrosławicach.
+        </h1>
 
+        <form id="surveyForm">
+          <label for="age"
+            >W jakim wieku jest Pan/Pani (proszę zaznaczyć zakres):</label
+          >
+          <br />
+          <input type="radio" id="age1" name="age" value="18-39" />
+          <label for="age1">18 - 39</label>
+          <input type="radio" id="age2" name="age" value="40-59" />
+          <label for="age2">40 - 59</label>
+          <input type="radio" id="age3" name="age" value="60+" />
+          <label for="age3">powyżej 60 lat</label>
+          <br /><br />
 
-    </form>
-    
-  </div>
-</div>
+          <label for="gender">Proszę podać płeć:</label>
+          <br />
+          <input type="radio" id="gender1" name="gender" value="kobieta" />
+          <label for="gender1">kobieta</label>
+          <input type="radio" id="gender2" name="gender" value="mężczyzna" />
+          <label for="gender2">mężczyzna</label>
+          <br /><br />
 
-<div id="footer">
-  <div id="footer_content">
-    <div id="footer_info">
-      <a href="prawaPacjenta.html">Prawa pacjenta</a>
-      <a href="pom.html">Polityka ochrony małoletnich</a>
-      <a href="#tab2">Dokumenty do pobrania</a>
-      <a href="#tab3">Certyfikaty</a>
-      <a href="#tab4">RODO</a>
-      <a href="#tab5"></a>
-    </div>
-    <div id="footer_contact">
-      <div class="footer_branch_address">
-        <h4>Zbrosławice</h4>
-        <p>ul. Piastowska 3</p>
-        <p>42-674 Zbrosławice</p>
-        <p>tel. (32) 233-70-30</p>
+          <label for="education">Jakie ma Pan/Pani wykształcenie:</label>
+          <br />
+          <input
+            type="radio"
+            id="education1"
+            name="education"
+            value="podstawowe"
+          />
+          <label for="education1">podstawowe</label>
+          <input
+            type="radio"
+            id="education2"
+            name="education"
+            value="średnie"
+          />
+          <label for="education2">średnie</label>
+          <input type="radio" id="education3" name="education" value="wyższe" />
+          <label for="education3">wyższe</label>
+          <br /><br />
+
+          <label for="ok_start"
+            >Kiedy został Pan/i objęty/a Opieką Koordynowaną (dalej OK)?</label
+          >
+          <br />
+          <input
+            type="radio"
+            id="ok_start1"
+            name="ok_start"
+            value="poniżej 12 miesięcy"
+          />
+          <label for="ok_start1">mniej niż 12 miesięcy temu</label>
+          <input
+            type="radio"
+            id="ok_start2"
+            name="ok_start"
+            value="ponad 12 miesięcy"
+          />
+          <label for="ok_start2">ponad 12 miesięcy temu</label>
+          <br /><br />
+
+          <label for="diagnostics"
+            >Czy poza badaniami krwi były wykonywane inne badania diagnostyczne?
+            (Można zaznaczyć kilka odpowiedzi)</label
+          >
+          <br />
+          <input
+            type="checkbox"
+            id="diagnostic1"
+            name="diagnostics"
+            value="Holter EKG"
+          />
+          <label for="diagnostic1">Holter EKG</label><br />
+          <input
+            type="checkbox"
+            id="diagnostic2"
+            name="diagnostics"
+            value="Echo serca"
+          />
+          <label for="diagnostic2">Echo serca</label><br />
+          <input
+            type="checkbox"
+            id="diagnostic3"
+            name="diagnostics"
+            value="USG Doppler"
+          />
+          <label for="diagnostic3">USG Doppler</label><br />
+          <input
+            type="checkbox"
+            id="diagnostic4"
+            name="diagnostics"
+            value="Biopsja tarczycy"
+          />
+          <label for="diagnostic4">Biopsja tarczycy</label><br />
+          <input
+            type="checkbox"
+            id="diagnostic5"
+            name="diagnostics"
+            value="Holter RR"
+          />
+          <label for="diagnostic5">Holter RR</label><br />
+          <input
+            type="checkbox"
+            id="diagnostic6"
+            name="diagnostics"
+            value="Spirometria"
+          />
+          <label for="diagnostic6">Spirometria</label><br />
+          <input
+            type="checkbox"
+            id="diagnostic7"
+            name="diagnostics"
+            value="nie"
+          />
+          <label for="diagnostic7">nie</label>
+          <br /><br />
+
+          <label for="wait_time"
+            >Jak ocenia Pan/i czas oczekiwania na te badania
+            diagnostyczne?</label
+          >
+          <br />
+          <input type="radio" id="wait_time1" name="wait_time" value="krótki" />
+          <label for="wait_time1">krótki</label>
+          <input
+            type="radio"
+            id="wait_time2"
+            name="wait_time"
+            value="akceptowalny"
+          />
+          <label for="wait_time2">akceptowalny</label>
+          <input type="radio" id="wait_time3" name="wait_time" value="długi" />
+          <label for="wait_time3">długi</label>
+          <input
+            type="radio"
+            id="wait_time4"
+            name="wait_time"
+            value="bardzo długi"
+          />
+          <label for="wait_time4">bardzo długi</label>
+          <br /><br />
+          <label
+            >Czy korzystał/a Pan/i z porad któregokolwiek ze specjalistów
+            wymienionych poniżej, w ramach OK?</label
+          ><br />
+          <input
+            type="checkbox"
+            id="specialist1"
+            name="specialist"
+            value="kardiolog"
+          />
+          <label for="specialist1">kardiolog</label>
+          <input
+            type="checkbox"
+            id="specialist2"
+            name="specialist"
+            value="diabetolog"
+          />
+          <label for="specialist2">diabetolog</label>
+          <input
+            type="checkbox"
+            id="specialist3"
+            name="specialist"
+            value="pulmonolog"
+          />
+          <label for="specialist3">pulmonolog</label>
+          <input
+            type="checkbox"
+            id="specialist4"
+            name="specialist"
+            value="endokrynolog"
+          />
+          <label for="specialist4">endokrynolog</label>
+          <input
+            type="checkbox"
+            id="specialist5"
+            name="specialist"
+            value="nefrolog"
+          />
+          <label for="specialist5">nefrolog</label>
+          <input
+            type="checkbox"
+            id="specialist6"
+            name="specialist"
+            value="nie"
+          />
+          <label for="specialist6">nie</label>
+          <br /><br />
+
+          <label>Jak ocenia Pan/i czas oczekiwania na te konsultacje?</label>
+          <br />
+          <input
+            type="radio"
+            id="wait_time1"
+            name="consultation_wait_time"
+            value="krótki"
+          />
+          <label for="wait_time1">krótki</label>
+          <input
+            type="radio"
+            id="wait_time2"
+            name="consultation_wait_time"
+            value="akceptowalny"
+          />
+          <label for="wait_time2">akceptowalny</label>
+          <input
+            type="radio"
+            id="wait_time3"
+            name="consultation_wait_time"
+            value="długi"
+          />
+          <label for="wait_time3">długi</label>
+          <input
+            type="radio"
+            id="wait_time4"
+            name="consultation_wait_time"
+            value="bardzo długi"
+          />
+          <label for="wait_time4">bardzo długi</label>
+          <br /><br />
+
+          <label
+            >Czy uważa Pan/i, że dzięki OK skorzystanie z konsultacji
+            specjalistycznych jest łatwiejsze?</label
+          >
+          <br />
+          <input
+            type="radio"
+            id="easier_access1"
+            name="easier_access"
+            value="tak"
+          />
+          <label for="easier_access1">tak</label>
+          <input
+            type="radio"
+            id="easier_access2"
+            name="easier_access"
+            value="nie"
+          />
+          <label for="easier_access2">nie</label>
+          <input
+            type="radio"
+            id="easier_access3"
+            name="easier_access"
+            value="nie mam zdania"
+          />
+          <label for="easier_access3">nie mam zdania</label>
+          <br /><br />
+
+          <label>Czy miał Pan/i wykonywaną Poradę Edukacyjną?</label>
+          <br />
+          <input
+            type="radio"
+            id="education_consult1"
+            name="education_consult"
+            value="tak"
+          />
+          <label for="education_consult1">tak</label>
+          <input
+            type="radio"
+            id="education_consult2"
+            name="education_consult"
+            value="nie"
+          />
+          <label for="education_consult2">nie</label>
+          <br /><br />
+
+          <label>Jak ją Pan/i ocenia?</label>
+          <br />
+          <input
+            type="radio"
+            id="education_quality1"
+            name="education_quality"
+            value="bardzo dobrze"
+          />
+          <label for="education_quality1">bardzo dobrze</label>
+          <input
+            type="radio"
+            id="education_quality2"
+            name="education_quality"
+            value="dobrze"
+          />
+          <label for="education_quality2">dobrze</label>
+          <input
+            type="radio"
+            id="education_quality3"
+            name="education_quality"
+            value="przeciętnie"
+          />
+          <label for="education_quality3">przeciętnie</label>
+          <input
+            type="radio"
+            id="education_quality4"
+            name="education_quality"
+            value="źle"
+          />
+          <label for="education_quality4">źle</label>
+          <input
+            type="radio"
+            id="education_quality5"
+            name="education_quality"
+            value="bardzo źle"
+          />
+          <label for="education_quality5">bardzo źle</label>
+          <br /><br />
+
+          <label>Czy korzystał/a Pan/i z porad dietetyka w ramach OK?</label>
+          <br />
+          <input
+            type="radio"
+            id="dietitian1"
+            name="dietitian"
+            value="tak i zrezygnowałem"
+          />
+          <label for="dietitian1">tak i zrezygnowałem</label>
+          <input
+            type="radio"
+            id="dietitian2"
+            name="dietitian"
+            value="tak i planuję nadal"
+          />
+          <label for="dietitian2">tak i planuję nadal</label>
+          <input type="radio" id="dietitian3" name="dietitian" value="nie" />
+          <label for="dietitian3">nie</label>
+          <input
+            type="radio"
+            id="dietitian4"
+            name="dietitian"
+            value="nie wiedziałem o takiej możliwości"
+          />
+          <label for="dietitian4"
+            >nie, nie wiedziałem o takiej możliwości</label
+          >
+          <br /><br />
+
+          <label
+            >Czy wizyty te podniosły poziom Pana/i wiedzy na temat żywienia i
+            nawyków żywieniowych?</label
+          >
+          <br />
+          <input
+            type="radio"
+            id="nutrition_knowledge1"
+            name="nutrition_knowledge"
+            value="nie"
+          />
+          <label for="nutrition_knowledge1">nie</label>
+          <input
+            type="radio"
+            id="nutrition_knowledge2"
+            name="nutrition_knowledge"
+            value="tak"
+          />
+          <label for="nutrition_knowledge2">tak</label>
+          <input
+            type="radio"
+            id="nutrition_knowledge3"
+            name="nutrition_knowledge"
+            value="nie dotyczy"
+          />
+          <label for="nutrition_knowledge3">nie dotyczy</label>
+          <br /><br />
+
+          <label
+            >Czy korzystał Pan/i z pomocy koordynatora w celu realizacji planu
+            leczenia ustalonego przez Lekarza prowadzącego?</label
+          >
+          <br />
+          <input
+            type="radio"
+            id="coordinator_help1"
+            name="coordinator_help"
+            value="tak, zawsze gdy istniała taka potrzeba"
+          />
+          <label for="coordinator_help1"
+            >tak, zawsze gdy istniała taka potrzeba</label
+          >
+          <input
+            type="radio"
+            id="coordinator_help2"
+            name="coordinator_help"
+            value="nie, nie mogłem/am liczyć na jego pomoc"
+          />
+          <label for="coordinator_help2"
+            >nie, nie mogłem/am liczyć na jego pomoc</label
+          >
+          <input
+            type="radio"
+            id="coordinator_help3"
+            name="coordinator_help"
+            value="nie wiedziałem/am o takiej możliwości"
+          />
+          <label for="coordinator_help3"
+            >nie wiedziałem/am o takiej możliwości</label
+          >
+          <br /><br />
+
+          <label
+            >Czy miał Pan/i jakieś trudności w umawianiu wizyt lub badań w
+            ramach OK?</label
+          >
+          <br />
+          <input
+            type="radio"
+            id="appointment_difficulty1"
+            name="appointment_difficulty"
+            value="nie, nie miałem/am żadnych problemów"
+          />
+          <label for="appointment_difficulty1"
+            >nie, nie miałem/am żadnych problemów</label
+          >
+          <br />
+          <input
+            type="radio"
+            id="appointment_difficulty2"
+            name="appointment_difficulty"
+            value="tak"
+          />
+          <label for="appointment_difficulty2">tak (proszę podać jakie)</label
+          ><br />
+          <textarea
+            name="difficulty_details"
+            id="difficulty_details"
+            rows="3"
+            cols="50"
+          ></textarea>
+          <br /><br />
+
+          <label
+            >Czy uważa Pan/i, że dzięki OK Pana/i leczenie jest bardziej spójne
+            i uporządkowane?</label
+          >
+          <br />
+          <input
+            type="radio"
+            id="treatment_coherence1"
+            name="treatment_coherence"
+            value="zdecydowanie tak"
+          />
+          <label for="treatment_coherence1">zdecydowanie tak</label>
+          <input
+            type="radio"
+            id="treatment_coherence2"
+            name="treatment_coherence"
+            value="raczej tak"
+          />
+          <label for="treatment_coherence2">raczej tak</label>
+          <input
+            type="radio"
+            id="treatment_coherence3"
+            name="treatment_coherence"
+            value="raczej nie"
+          />
+          <label for="treatment_coherence3">raczej nie</label>
+          <input
+            type="radio"
+            id="treatment_coherence4"
+            name="treatment_coherence"
+            value="zdecydowanie nie"
+          />
+          <label for="treatment_coherence4">zdecydowanie nie</label>
+          <br /><br />
+
+          <label
+            >Czy poleciłby Pan/i opiekę koordynowaną innym Pacjentom?</label
+          >
+          <br />
+          <input
+            type="radio"
+            id="recommendation1"
+            name="recommendation"
+            value="zdecydowanie tak"
+          />
+          <label for="recommendation1">zdecydowanie tak</label>
+          <input
+            type="radio"
+            id="recommendation2"
+            name="recommendation"
+            value="raczej tak"
+          />
+          <label for="recommendation2">raczej tak</label>
+          <input
+            type="radio"
+            id="recommendation3"
+            name="recommendation"
+            value="raczej nie"
+          />
+          <label for="recommendation3">raczej nie</label>
+          <input
+            type="radio"
+            id="recommendation4"
+            name="recommendation"
+            value="zdecydowanie nie"
+          />
+          <label for="recommendation4">zdecydowanie nie</label>
+          <br /><br />
+
+          <p>Dziękujemy za poświęcony czas!</p>
+          <br /><br />
+          <button id="download_button" onclick="downloadAsJPEG(event)">
+            Pobierz ankietę jako JPEG
+          </button>
+          <p>
+            Ankietę możecie Państwo przesłać na nasz adres e-mail, lub
+            dostarczyć wydrukowany egzemplarz do naszej przychodni.
+          </p>
+        </form>
       </div>
-      <div class="footer_branch_address">
-        <h4>Tarnowskie Góry</h4>
-        <p>ul. Szwedzka 2</p>
-        <p>42-612 Tarnowskie Góry</p>
-        <p>tel. (32) 284-16-73</p>
-      </div>
-      <div class="footer_branch_address">
-        <h4>Wieszowa</h4>
-        <p>ul. Sienkiewicza 123</p>
-        <p>42-672 Wieszowa</p>
-        <p>tel. (32) 273-73-52</p>
-      </div>
     </div>
-    <div id="footer_logo">
-      <a href="index.html"><img src="Pictures/logo famed.svg" alt="" /></a>
-    </div>
-  </div>
-  <div id="footer_line"></div>
-  <div id="footer_end">
-    <p id="footer_end_p">Designed and Developed by W&T Web Design</p>
-  </div>
-</div>
 
-<!-- <script src="index.js"></script> -->
-</body>
+    <div id="footer">
+      <div id="footer_content">
+        <div id="footer_info">
+          <a href="prawaPacjenta.html">Prawa pacjenta</a>
+          <a href="pom.html">Polityka ochrony małoletnich</a>
+          <a href="#tab2">Dokumenty do pobrania</a>
+          <a href="#tab3">Certyfikaty</a>
+          <a href="#tab4">RODO</a>
+          <a href="#tab5"></a>
+        </div>
+        <div id="footer_contact">
+          <div class="footer_branch_address">
+            <h4>Zbrosławice</h4>
+            <p>ul. Piastowska 3</p>
+            <p>42-674 Zbrosławice</p>
+            <p>tel. (32) 233-70-30</p>
+          </div>
+          <div class="footer_branch_address">
+            <h4>Tarnowskie Góry</h4>
+            <p>ul. Szwedzka 2</p>
+            <p>42-612 Tarnowskie Góry</p>
+            <p>tel. (32) 284-16-73</p>
+          </div>
+          <div class="footer_branch_address">
+            <h4>Wieszowa</h4>
+            <p>ul. Sienkiewicza 123</p>
+            <p>42-672 Wieszowa</p>
+            <p>tel. (32) 273-73-52</p>
+          </div>
+        </div>
+        <div id="footer_logo">
+          <a href="index.html"><img src="Pictures/logo famed.svg" alt="" /></a>
+        </div>
+      </div>
+      <div id="footer_line"></div>
+      <div id="footer_end">
+        <p id="footer_end_p">Designed and Developed by W&T Web Design</p>
+      </div>
+    </div>
+
+    <!-- <script src="index.js"></script> -->
+  </body>
 </html>
-
-<br>
