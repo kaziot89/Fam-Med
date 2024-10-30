@@ -152,6 +152,7 @@ function handleButtonClick(buttonId) {
     bottom_menu_button2: "laboratoria.html",
     bottom_menu_button3: "medycyna.html",
     bottom_menu_button4: "opieka.html",
+    bottom_menu_button5: "40plus.html",
   };
 
   window.location.href = pageMap[buttonId];
@@ -177,6 +178,11 @@ document
 
 document
   .getElementById("bottom_menu_button4")
+  .addEventListener("click", function () {
+    handleButtonClick(this.id);
+  });
+document
+  .getElementById("bottom_menu_button5")
   .addEventListener("click", function () {
     handleButtonClick(this.id);
   });
@@ -223,10 +229,10 @@ function moveToPrevSlide() {
   }
 }
 window.addEventListener("scroll", function () {
-  var elements = document.querySelectorAll(".bottom-menu-tabs");
+  let elements = document.querySelectorAll(".bottom-menu-tabs");
 
   elements.forEach(function (element, index) {
-    var position = element.getBoundingClientRect();
+    let position = element.getBoundingClientRect();
 
     // Sprawdza, czy element jest w widocznej części ekranu
     if (position.top <= window.innerHeight && position.bottom >= 0) {
