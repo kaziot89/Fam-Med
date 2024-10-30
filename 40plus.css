@@ -1,0 +1,49 @@
+#mainContainerIndex {
+  display: flex;
+  flex-direction: row;
+  max-width: 1100px;
+  justify-content: space-between;
+  margin-top: 160px;
+}
+
+#describe40 {
+  flex-basis: 55%;
+}
+
+#poster40 {
+  flex-basis: 40%;
+  box-sizing: border-box;
+}
+
+#poster40 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#notdesktop {
+  display: none;
+}
+
+li {
+  list-style-position: inside;
+}
+
+h1,
+h3,
+p {
+  margin-top: 1rem;
+}
+@media (max-width: 820px) {
+  #mainContainerIndex {
+    flex-direction: column;
+  }
+
+  #notdesktop {
+    display: block;
+  }
+
+  #mainContainerIndex #notmobile {
+    display: none;
+  }
+}
