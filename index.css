@@ -373,9 +373,9 @@ a:visited {
 }
 
 #modal-contact-content h1,
-h2,
-h3,
-h4 {
+#modal-contact-content h2,
+#modal-contact-content h3,
+#modal-contact-content h4 {
   text-align: center;
   padding: 1rem;
 }

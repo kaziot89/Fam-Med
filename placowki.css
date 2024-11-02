@@ -244,6 +244,19 @@ body {
 .headTable {
   font-size: 1.25rem;
 }
+.lab-image {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 48px;
+  max-width: 650px;
+}
+#lab_panel {
+  margin-bottom: 32px;
+}
+#lab_panel p {
+  margin-bottom: 16px;
+}
 #footer {
   margin: 24px 0 0 0;
 }
@@ -373,6 +386,15 @@ tr:nth-child(even) {
   }
   .partners_images {
     margin: 0 auto;
+  }
+  #lab_panel {
+    margin: 16px;
+  }
+  #lab_panel p {
+    margin: 16px 0;
+  }
+  .lab-image {
+    max-width: 95%;
   }
 }
 @media only screen and (max-width: 830px) {

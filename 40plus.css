@@ -29,14 +29,15 @@ li {
   list-style-position: inside;
 }
 
-h1,
-h3,
-p {
+#mainContainerIndex h1,
+#mainContainerIndex h3,
+#mainContainerIndex p {
   margin-top: 1rem;
 }
 @media (max-width: 820px) {
   #mainContainerIndex {
     flex-direction: column;
+    width: 95%;
   }
 
   #notdesktop {
