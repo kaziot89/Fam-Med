@@ -168,7 +168,6 @@ function handleButtonClick(buttonId) {
     bottom_menu_button2: "laboratoria.html",
     bottom_menu_button3: "medycyna.html",
     bottom_menu_button4: "opieka.html",
-    bottom_menu_button5: "40plus.html",
   };
 
   window.location.href = pageMap[buttonId];
@@ -197,11 +196,7 @@ document
   .addEventListener("click", function () {
     handleButtonClick(this.id);
   });
-document
-  .getElementById("bottom_menu_button5")
-  .addEventListener("click", function () {
-    handleButtonClick(this.id);
-  });
+
 const track = document.querySelector(".carousel-track");
 const slides = Array.from(track.children);
 let startX = 0;
