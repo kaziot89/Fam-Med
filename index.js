@@ -32,16 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextButton = document.querySelector(".carousel-button.next");
   const items = Array.from(track.children);
   const itemWidth =
+    items[0].offsetWidth + parseFloat(getComputedStyle(items[0]).marginRight);
+  /*const itemWidth =
     items[0].getBoundingClientRect().width +
-    parseFloat(getComputedStyle(items[0]).marginRight);
-
+    parseFloat(getComputedStyle(items[0]).marginRight);*/
   let currentIndex = 0;
 
   function updateCarousel() {
-    track.style.transition = "transform 0.8s ease"; // Dodanie przejścia CSS
+    track.style.transition = "transform 0.8s ease"; // Adds smooth transition
     track.style.transform = "translateX(" + -currentIndex * itemWidth + "px)";
     prevButton.disabled = currentIndex === 0;
-    nextButton.disabled = currentIndex >= items.length - 4;
+    nextButton.disabled =
+      currentIndex >= items.length - Math.floor(track.offsetWidth / itemWidth);
+    /*nextButton.disabled = currentIndex >= items.length - 4;*/
   }
 
   prevButton.addEventListener("click", () => {
@@ -52,20 +55,33 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   nextButton.addEventListener("click", () => {
+    if (
+      currentIndex <
+      items.length - Math.floor(track.offsetWidth / itemWidth)
+    ) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  updateCarousel(); // Initialize carousel view
+});
+
+/*
+  nextButton.addEventListener("click", () => {
     if (currentIndex < items.length - 4) {
       currentIndex++;
       updateCarousel();
     }
   });
 
-  // Resetowanie przejścia CSS po zakończeniu animacji
   track.addEventListener("transitionend", () => {
     track.style.transition = "";
   });
 
   updateCarousel();
 });
-
+*/
 document.addEventListener("DOMContentLoaded", function () {
   // Pobierz przycisk z identyfikatorem 'branch_button1'
   let button = document.getElementById("branch_button1");
