@@ -285,7 +285,7 @@ a:visited {
   top: 150px;
   height: 500px;
   margin-top: 70px;
-
+  overflow: hidden;
   background-image: url(Pictures/bg1.jpg);
   background-size: cover;
   background-position: top;
@@ -297,13 +297,13 @@ a:visited {
   position: relative;
   min-width: 400px;
   max-width: 500px;
-  top: 30%;
+  top: 20%;
   left: 20%;
 }
-.contact h3 {
+.contact h1 {
   font-family: "Poppins";
-  font-weight: 400;
-  font-size: 24px;
+  font-weight: 300;
+  font-size: 32px;
   color: rgba(0, 162, 172, 1);
 }
 #contactButton {
@@ -335,7 +335,7 @@ a:visited {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
   justify-content: center;
   align-items: center;
   z-index: 10;
@@ -348,10 +348,32 @@ a:visited {
   border-radius: 8px;
   max-width: 1100px;
   width: 85%;
+  height: 30%;
   position: relative;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
 }
-
+.column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 0 24px; */
+}
+.column h3 {
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  /* color: white; */
+  font-weight: 300;
+  /* background-color: rgb(255, 29, 153); */
+  border-radius: 10px;
+}
+.column h3 i {
+  color: rgb(21, 155, 155);
+}
+.column h2 {
+  font-size: 20px;
+}
 /* Close Button */
 .close-button {
   position: absolute;
@@ -360,26 +382,47 @@ a:visited {
   font-size: 20px;
   cursor: pointer;
 }
+#contact-modal {
+  position: absolute;
+  left: 20%;
+  bottom: -100%;
+  width: 430px;
+  background-color: rgba(0, 0, 0, 0);
+  display: none;
+  animation: slideIn 0.5s ease forwards; /* Dodane ease */
+}
 
+@keyframes slideIn {
+  from {
+    bottom: -100%; /* Startowa pozycja */
+  }
+  to {
+    bottom: 15%; /* Docelowa pozycja */
+  }
+}
 .modal-content {
-  background-color: aquamarine;
+  background-color: white;
+  border: solid 2px rgba(0, 162, 172, 0.8);
 }
 
 #mod-infos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* gap: 16px; */
   font-family: Poppins;
 }
 
 #modal-contact-content h1,
-#modal-contact-content h2,
 #modal-contact-content h3,
 #modal-contact-content h4 {
   text-align: center;
   padding: 1rem;
 }
-
+#modal-contact-content h2 {
+  font-weight: 300;
+}
 #bottom-menu {
   display: flex;
   flex-direction: row;
@@ -568,7 +611,14 @@ a:visited {
 /* Add Animation - Zoom in the Modal */
 .modal-content {
   animation-name: zoom;
-  animation-duration: 0.6s;
+  animation-duration: 0.3s;
+}
+#modal-contact-content {
+  font-family: "poppins";
+}
+#modal-contact-content h1 {
+  font-size: 32px;
+  font-weight: 300;
 }
 
 @keyframes zoom {
