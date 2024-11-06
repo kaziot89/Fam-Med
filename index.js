@@ -322,3 +322,42 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// LICZNIK KLINIĘĆ W Contcat button wysyłany na server
+
+// clickButton.addEventListener("click", () => {
+//   clickCount++;
+//   clickCountDisplay.textContent = clickCount;
+
+// Wyślij licznik kliknięć na serwer
+//   fetch('https://example.com/api/clicks', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({ clickCount: clickCount })
+//   })
+//   .then(response => response.json())
+//   .then(data => console.log('Dane zapisane na serwerze:', data))
+//   .catch(error => console.error('Błąd:', error));
+// });
+
+// licznik kliknięć lokalny:
+
+document.addEventListener("DOMContentLoaded", () => {
+  const clickButton = document.getElementById("contactButton");
+  const clickCountDisplay = document.getElementById("clickCount");
+
+  // Wczytaj poprzednią liczbę kliknięć z localStorage (jeśli istnieje)
+  let clickCount = parseInt(localStorage.getItem("clickCount")) || 0;
+  clickCountDisplay.textContent = clickCount;
+
+  // Obsługa kliknięcia przycisku
+  clickButton.addEventListener("click", () => {
+    clickCount++;
+    clickCountDisplay.textContent = clickCount;
+
+    // Zapisz zaktualizowany licznik do localStorage
+    localStorage.setItem("clickCount", clickCount);
+  });
+});

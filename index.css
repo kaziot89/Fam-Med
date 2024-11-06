@@ -870,6 +870,9 @@ iframe {
   .contact {
     left: 10%;
   }
+  #contact-modal {
+    left: 10%;
+  }
   #bottom-menu {
     padding-top: 32px;
     width: 95%;
@@ -948,7 +951,13 @@ iframe {
   .contact {
     position: relative;
 
-    top: 30%;
+    top: 20%;
+    left: 5%;
+  }
+  .contact h1 {
+    font-size: 24px;
+  }
+  #contact-modal {
     left: 5%;
   }
   #footer_contact,
