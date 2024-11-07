@@ -32,10 +32,6 @@ body {
   align-items: center;
 }
 
-.with-space::after {
-  content: "\00a0";
-}
-
 .addressInfos {
   margin-left: 20px; /* Opcjonalne odstępy po lewej stronie */
 }
@@ -285,6 +281,9 @@ body {
     display: flex;
     flex-direction: row;
     gap: 20px;
+  }
+  .with-space::after {
+    content: "\00a0";
   }
 }
 
