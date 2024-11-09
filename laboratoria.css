@@ -32,7 +32,12 @@
   font-family: Poppins;
 }
 
-@media (max-width: 830px) {
+h2,
+h4 {
+  margin-top: 2rem;
+}
+
+@media (max-width: 920px) {
   #main_container_lab {
     display: flex;
     flex-direction: column;
@@ -40,5 +45,17 @@
   #labimg img {
     margin: auto 0;
     max-width: 300px;
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: medium;
+  }
+  h4 {
+    margin-top: 0.5rem;
+  }
+  #labss {
+    display: flex;
+    flex-direction: column;
   }
 }
