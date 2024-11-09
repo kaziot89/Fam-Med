@@ -1137,7 +1137,7 @@ iframe {
   .nav-menu a {
     text-decoration: none;
     color: white;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .nav-menu.activeH {
@@ -1153,7 +1153,7 @@ iframe {
     background-color: #333;
     border: none;
     color: white;
-    font-size: 12px;
+    font-size: 13px;
     font-family: "poppins";
     font-weight: 300;
   }
