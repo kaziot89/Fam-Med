@@ -175,61 +175,38 @@
       <section class="accSection">
         <button class="acc" id="poradnie_spec">Poradnie specjalistyczne</button>
         <div class="panel">
-          <!-- <button class="acc2" id="go_to_clinic1" data-button-id="button_1">
-            Poradnia POZ
-          </button> -->
-          <button class="acc2" id="go_to_clinic8" data-button-id="button_3">
-            Poradnia chorób naczyń
-          </button>
-          <button class="acc2" id="go_to_clinic2" data-button-id="button_6">
-            Poradnia endokrynologiczna
-          </button>
-          <button class="acc2" id="go_to_clinic3" data-button-id="button_9">
-            Poradnia ginekologiczna
-          </button>
-          <button class="acc2" id="go_to_clinic4" data-button-id="button_12">
-            Poradnia laryngologiczna
-          </button>
-          <button class="acc2" id="go_to_clinic6" data-button-id="button_14">
-            Poradnia nefrologiczna
-          </button>
-          <button class="acc2" id="go_to_clinic5" data-button-id="button_15">
-            Poradnia neurologiczna
-          </button>
-          <button class="acc2" id="go_to_clinic7" data-button-id="button_19">
-            Poradnia reumatologiczna
-          </button>
-
-          <!-- <button class="acc2" id="go_to_clinic9" data-button-id="button_5">
-            Poradnia dermatologiczna
-          </button> -->
-          <!-- <button class="acc2" id="go_to_clinic10" data-button-id="button_16">
-            Poradnia ortopedyczna
-          </button> -->
-          <!-- <button class="acc2" id="go_to_clinic11" data-button-id="button_5">
-            Poradnia dermatologiczna
-          </button> -->
-          <!-- <button class="acc2" id="go_to_clinic12" data-button-id="button_27">
-            Badania spirometryczne
-          </button> -->
-          <!-- <button class="acc2" id="go_to_clinic13" data-button-id="button_23">
-            Badania audiometryczne
-          </button> -->
-          <button class="acc2" id="go_to_clinic14" data-button-id="button_13">
-            Medycyna pracy
-          </button>
-          <button class="acc2" id="go_to_clinic15" data-button-id="button_24">
-            Badania kierowców
-          </button>
-          <!-- <button class="acc2" id="go_to_clinic15" data-button-id="button_28">
-            Opieka pielęgniarska
-          </button> -->
-          <button class="acc2" id="go_to_clinic15" data-button-id="button_26">
-            Pracownia USG
-          </button>
-          <!-- <button class="acc2" id="go_to_clinic15" data-button-id="button_31">
-            Gabinet zabiegowy
-          </button> -->
+          <div id="poradnie_panel">
+            <button class="acc2" id="go_to_clinic8" data-button-id="button_3">
+              Poradnia chorób naczyń
+            </button>
+            <button class="acc2" id="go_to_clinic2" data-button-id="button_6">
+              Poradnia endokrynologiczna
+            </button>
+            <button class="acc2" id="go_to_clinic3" data-button-id="button_9">
+              Poradnia ginekologiczna
+            </button>
+            <button class="acc2" id="go_to_clinic4" data-button-id="button_12">
+              Poradnia laryngologiczna
+            </button>
+            <button class="acc2" id="go_to_clinic6" data-button-id="button_14">
+              Poradnia nefrologiczna
+            </button>
+            <button class="acc2" id="go_to_clinic5" data-button-id="button_15">
+              Poradnia neurologiczna
+            </button>
+            <button class="acc2" id="go_to_clinic7" data-button-id="button_19">
+              Poradnia reumatologiczna
+            </button>
+            <button class="acc2" id="go_to_clinic14" data-button-id="button_13">
+              Medycyna pracy
+            </button>
+            <button class="acc2" id="go_to_clinic15" data-button-id="button_24">
+              Badania kierowców
+            </button>
+            <button class="acc2" id="go_to_clinic15" data-button-id="button_26">
+              Pracownia USG
+            </button>
+          </div>
         </div>
         <button class="acc">Harmonogram porad telefonicznych</button>
         <div class="panel">
@@ -256,10 +233,28 @@
         </div>
         <button class="acc">Deklaracje do pobrania</button>
         <div class="panel">
-          <p>Deklaracja wyboru lekarza POZ</p>
-          <p>Deklaracja wyboru pielęgniarki POZ</p>
-          <p>Deklaracja wyboru położnej POZ</p>
+          <div id="declarations_panel">
+            <a
+              class="declaration_link"
+              href="Zbrosławice/deklaracja_lekarz_poz.pdf"
+              download
+              >📄 Deklaracja wyboru lekarza POZ</a
+            ><br />
+            <a
+              class="declaration_link"
+              href="Zbrosławice/deklaracja_pielegniarka_poz.pdf"
+              download
+              >📄 Deklaracja wyboru pielęgniarki POZ</a
+            ><br />
+            <a
+              class="declaration_link"
+              href="Zbrosławice/deklaracja_polozna_poz.pdf"
+              download
+              >📄 Deklaracja wyboru położnej POZ</a
+            >
+          </div>
         </div>
+
         <button class="acc">Laboratorium</button>
         <div class="panel">
           <div id="lab_panel">
@@ -312,14 +307,14 @@
               src="Zbrosławice/zbroslawice.jpg"
               alt="iso"
               class="iso"
-              style="width: 100%; max-width: 600px"
+              style="width: 100%; max-width: 300px"
             />
             <img
               id="cert"
               src="Zbrosławice/certyfikat.jpg"
               alt="certyfikat"
               class="cert"
-              style="width: 100%; max-width: 600px"
+              style="width: 100%; max-width: 300px"
             />
           </div>
         </div>

@@ -896,6 +896,7 @@ iframe {
   #footer_contact {
     margin: 8px 0;
     font-size: 12px;
+    width: 60%;
   }
   #footer_info a {
     font-size: 12px;
@@ -960,9 +961,10 @@ iframe {
   #contact-modal {
     left: 5%;
   }
+
   #footer_contact,
   #footer_info a {
-    font-size: 11px;
+    font-size: 10px;
   }
   .phnmb {
     font-size: 11px;
