@@ -2,51 +2,43 @@ document.addEventListener("DOMContentLoaded", function () {
   const headingsAndParagraphs = document.querySelectorAll(
     ".info-banner h3, .info-banner p, .contact"
   );
-
-  // Utwórz nowy Intersection Observer
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-          // Opóźnij dodanie klasy 'visible' o 500ms
           setTimeout(() => {
             entry.target.classList.add("visible");
           }, 200);
-
-          // Przestań obserwować ten element
           observer.unobserve(entry.target);
         }
       });
     },
     { threshold: 0.5 }
-  ); // Ustawienie progu na 50% widoczności
-
-  // Obserwuj elementy h3 i p wewnątrz .info-banner
+  );
   headingsAndParagraphs.forEach((element) => {
     observer.observe(element);
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
+  // Select elements for carousel
   const track = document.querySelector(".carousel-track");
   const prevButton = document.querySelector(".carousel-button.prev");
   const nextButton = document.querySelector(".carousel-button.next");
-  const items = Array.from(track.children);
-  const itemWidth =
-    items[0].offsetWidth + parseFloat(getComputedStyle(items[0]).marginRight);
-  /*const itemWidth =
-    items[0].getBoundingClientRect().width +
-    parseFloat(getComputedStyle(items[0]).marginRight);*/
+  const slides = Array.from(track.children);
+  const slideWidth = slides[0].getBoundingClientRect().width;
   let currentIndex = 0;
 
+  // Function to update carousel position
   function updateCarousel() {
-    track.style.transition = "transform 0.8s ease"; // Adds smooth transition
-    track.style.transform = "translateX(" + -currentIndex * itemWidth + "px)";
+    track.style.transition = "transform 0.8s ease";
+    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+
+    // Disable buttons when at start or end of slides
     prevButton.disabled = currentIndex === 0;
-    nextButton.disabled =
-      currentIndex >= items.length - Math.floor(track.offsetWidth / itemWidth);
-    /*nextButton.disabled = currentIndex >= items.length - 4;*/
+    nextButton.disabled = currentIndex === slides.length - 1;
   }
 
+  // Button event listeners for carousel navigation
   prevButton.addEventListener("click", () => {
     if (currentIndex > 0) {
       currentIndex--;
@@ -55,64 +47,108 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   nextButton.addEventListener("click", () => {
-    if (
-      currentIndex <
-      items.length - Math.floor(track.offsetWidth / itemWidth)
-    ) {
+    if (currentIndex < slides.length - 1) {
       currentIndex++;
       updateCarousel();
     }
   });
 
-  updateCarousel(); // Initialize carousel view
+  // Event listeners for touch events
+  let startX = 0;
+  let moveX = 0;
+  track.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  track.addEventListener("touchmove", (e) => {
+    moveX = e.touches[0].clientX - startX;
+  });
+
+  track.addEventListener("touchend", () => {
+    if (moveX < -50) {
+      if (currentIndex < slides.length - 1) currentIndex++;
+    } else if (moveX > 50) {
+      if (currentIndex > 0) currentIndex--;
+    }
+    updateCarousel();
+    moveX = 0;
+  });
+
+  updateCarousel(); // Initialize carousel position
 });
 
 /*
-  nextButton.addEventListener("click", () => {
-    if (currentIndex < items.length - 4) {
-      currentIndex++;
-      updateCarousel();
+  document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".carousel-track");
+    const prevButton = document.querySelector(".carousel-button.prev");
+    const nextButton = document.querySelector(".carousel-button.next");
+    const items = Array.from(track.children);
+    const itemWidth =
+      items[0].offsetWidth + parseFloat(getComputedStyle(items[0]).marginRight);
+    let currentIndex = 0;
+  
+    function updateCarousel() {
+      track.style.transition = "transform 0.8s ease";
+      track.style.transform = "translateX(" + -currentIndex * itemWidth + "px)";
+      prevButton.disabled = currentIndex === 0;
+      nextButton.disabled =
+        currentIndex >= items.length - Math.floor(track.offsetWidth / itemWidth);
+    }
+  
+    prevButton.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+  
+    nextButton.addEventListener("click", () => {
+      if (
+        currentIndex <
+        items.length - Math.floor(track.offsetWidth / itemWidth)
+      ) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+  
+    updateCarousel();
+  });
+  */
+/*
+    nextButton.addEventListener("click", () => {
+      if (currentIndex < items.length - 4) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+  
+    track.addEventListener("transitionend", () => {
+      track.style.transition = "";
+    });
+  
+    updateCarousel();
+  });
+  */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buttonMappings = {
+    branch_button1: "porZbr.html",
+    branch_button2: "cmtg.html",
+    branch_button3: "porWie.html",
+  };
+
+  // Adding a click event listener to each button based on the mappings
+  Object.keys(buttonMappings).forEach((buttonId) => {
+    const button = document.getElementById(buttonId);
+    if (button) {
+      button.addEventListener("click", function () {
+        window.location.href = buttonMappings[buttonId];
+      });
     }
   });
-
-  track.addEventListener("transitionend", () => {
-    track.style.transition = "";
-  });
-
-  updateCarousel();
 });
-*/
-document.addEventListener("DOMContentLoaded", function () {
-  // Pobierz przycisk z identyfikatorem 'branch_button1'
-  let button = document.getElementById("branch_button1");
 
-  // Dodaj nasłuchiwanie kliknięcia do przycisku
-  button.addEventListener("click", function () {
-    // Przekieruj do 'porWie.html' w tym samym oknie
-    window.location.href = "porZbr.html";
-  });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  // Pobierz przycisk z identyfikatorem 'branch_button1'
-  let button = document.getElementById("branch_button2");
-
-  // Dodaj nasłuchiwanie kliknięcia do przycisku
-  button.addEventListener("click", function () {
-    // Przekieruj do 'porWie.html' w tym samym oknie
-    window.location.href = "cmtg.html";
-  });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  // Pobierz przycisk z identyfikatorem 'branch_button1'
-  let button = document.getElementById("branch_button3");
-
-  // Dodaj nasłuchiwanie kliknięcia do przycisku
-  button.addEventListener("click", function () {
-    // Przekieruj do 'porWie.html' w tym samym oknie
-    window.location.href = "porWie.html";
-  });
-});
-//
 document.addEventListener("DOMContentLoaded", function () {
   // Get all dropdowns
   let dropdowns = document.querySelectorAll(".dropdown");
@@ -145,22 +181,81 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-function scrollToSection() {
-  const target = document.getElementById("carousel-container");
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all elements with the class 'scroll-button' and add event listeners
+  document.querySelectorAll(".scroll-button").forEach((button) => {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      // Get the target section ID from the data attribute
+      const targetSectionId = button.getAttribute("data-section-id");
+      if (targetSectionId) {
+        scrollToSection(targetSectionId);
+      }
+    });
+  });
+});
+
+// Scroll function that accepts the target section ID
+function scrollToSection(sectionId) {
+  const target = document.getElementById(sectionId);
   if (target) {
     target.scrollIntoView({
       behavior: "smooth",
-      block: "center", // Ustawienie wyświetlania elementu na środku viewportu
+      block: "center",
     });
   }
 }
 
+/*document.addEventListener("DOMContentLoaded", function () {
+    document
+      .getElementById("aktualnosci")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+        scrollToSection("target-section-id");
+      });
+  });
+  function scrollToSection(sectionId) {
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }
+  */
+// document
+//   .getElementById("scrollToCarouselBtn")
+//   .addEventListener("click", function () {
+//     scrollToSection("carousel-container");
+//   });
+
+// document
+//   .getElementById("scrollToContactBtn")
+//   .addEventListener("click", function () {
+//     scrollToSection("contact-section");
+//   });
+
+// document
+//   .getElementById("scrollToAboutUsBtn")
+//   .addEventListener("click", function () {
+//     scrollToSection("about-us");
+//   });
+
 window.onload = function () {
-  // Sprawdzanie, czy strona została załadowana z kotwicą
   if (window.location.hash) {
-    scrollToSection(); // Przewiń do sekcji, jeśli jest kotwica
+    const sectionId = window.location.hash.slice(1);
+    scrollToSection(sectionId);
   }
 };
+
+/*window.onload = function () {
+    if (window.location.hash) {
+      scrollToSection();
+    }
+  };
+  */
 
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("contact-modal");
@@ -268,9 +363,7 @@ window.addEventListener("scroll", function () {
   elements.forEach(function (element, index) {
     let position = element.getBoundingClientRect();
 
-    // Sprawdza, czy element jest w widocznej części ekranu
     if (position.top <= window.innerHeight && position.bottom >= 0) {
-      // Dodajemy opóźnienie do animacji
       element.style.transitionDelay = index * 0.15 + "s";
       element.classList.add("visible");
     }
