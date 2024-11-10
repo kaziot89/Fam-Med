@@ -1,0 +1,120 @@
+* {
+  font-family: "poppins";
+}
+h3 {
+  margin: 24px 0;
+}
+#main_container_ikp {
+  position: relative;
+  max-width: 1100px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-height: 100vh;
+  padding: 0 16px;
+  margin-bottom: 100px;
+}
+#ikp_content {
+  padding-top: 180px;
+}
+
+#ikp_logo img {
+  width: 70%;
+}
+#ikp_info {
+  display: flex;
+}
+#ikp_info_text {
+  width: 45%;
+}
+#ikp_info_comp {
+  width: 55%;
+}
+#ikp_info_comp img {
+  width: 100%;
+}
+#ikp_benefits li {
+  list-style-position: inside; /* Kropka wewnątrz elementu */
+}
+#ikp_log_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 48px;
+}
+
+#ikp_log_container h3 {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+#ikp_log_content {
+  display: flex;
+  /* align-items: center; */
+  width: 100%;
+}
+
+#ikp_loginfo_picture {
+  width: 45%;
+}
+
+#ikp_loginfo_picture img {
+  width: 100%;
+  height: auto;
+}
+#ikp_loginfo_picture h3 {
+  margin-top: 0;
+}
+
+#ikp_loginfo_info {
+  width: 55%;
+  padding-left: 32px;
+}
+
+#ikp_loginfo_info p {
+  margin-bottom: 16px;
+}
+#ikp_profile li {
+  list-style-position: inside;
+}
+#ikp_profile a {
+  color: rgb(43, 159, 167);
+  font-weight: 600;
+}
+@media (max-width: 880px) {
+  #ikp_content {
+    padding-top: 140px;
+  }
+  #ikp_content p {
+    font-size: 14px;
+  }
+  #ikp_logo img {
+    width: 100%;
+  }
+  #ikp_info {
+    display: block;
+  }
+  #ikp_info_text {
+    width: 100%;
+  }
+  #ikp_info_comp {
+    margin: 24px 0;
+    width: 100%;
+  }
+  #ikp_benefits li {
+    font-size: 14px;
+  }
+  #ikp_log_content {
+    display: block;
+  }
+  #ikp_loginfo_picture {
+    width: 100%;
+  }
+  #ikp_loginfo_info {
+    width: 100%;
+    padding: 32px 0;
+  }
+  #ikp_profile li {
+    font-size: 14px;
+  }
+}
