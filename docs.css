@@ -1,3 +1,8 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 #main_container_docs {
   position: relative;
   left: 50%;
@@ -163,6 +168,7 @@
     font-size: 14px;
   }
   .place {
+    width: 90%;
     min-width: 233px;
   }
   #files_inner {
