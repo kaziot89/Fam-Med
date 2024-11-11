@@ -848,7 +848,7 @@ iframe {
     margin-top: auto;
   }
   #menuElements li a {
-    font-size: 14px;
+    font-size: 16px;
   }
   #navbar_content {
     width: 95%;
@@ -920,6 +920,9 @@ iframe {
   #menuElements li {
     font-size: 14px;
     font-weight: 400;
+  }
+  #menuElements li a {
+    font-size: 14px;
   }
   #characterAndSlogan {
     height: 40rem;
