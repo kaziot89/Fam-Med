@@ -549,8 +549,11 @@ a:visited {
 .carousel-item img {
   top: 0;
   left: 0;
+  height: 330px;
+  width: auto;
   max-width: 600px;
-  min-width: 100%;
+
+  padding-right: 16px;
 }
 
 .carousel-button {
@@ -1241,15 +1244,15 @@ iframe {
 
   #branches {
     width: 100vw;
-    height: 850px;
+    height: 900px;
   }
   #branch1,
   #branch2,
   #branch3,
   #branch4 {
     top: 16%;
-    height: 240px;
-    width: 90%;
+    height: 260px;
+    width: 95%;
   }
   iframe {
     height: 110px;

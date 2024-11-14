@@ -55,6 +55,11 @@ body {
   width: 50rem;
   height: auto;
 }
+.modal-content {
+  width: auto !important;
+  height: 70vh !important;
+  object-fit: contain;
+}
 .iso {
   width: 30rem;
   height: auto;
@@ -222,7 +227,6 @@ body {
   margin: 24px 0;
   flex-direction: row;
   align-items: center;
-  padding: 1rem;
   width: 100%;
 }
 .mainView {
@@ -301,9 +305,9 @@ td {
 tr:nth-child(even) {
   background-color: #00a4ac2d;
 }
+#pr,
 #iso,
 #cert {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
