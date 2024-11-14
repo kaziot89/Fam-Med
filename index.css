@@ -533,7 +533,7 @@ a:visited {
   align-items: center;
   justify-content: center;
   font-family: "Poppins";
-  max-width: 600px; /* Zmieniamy szerokość, aby dostosować się do karuzeli */
+  /* max-width: 600px; Zmieniamy szerokość, aby dostosować się do karuzeli */
   flex-shrink: 0; /* Zapobiega zmniejszaniu się elementów */
   /* max-height: 400px; */
   margin: 0 20px; /* Odstęp między slajdami */
@@ -549,9 +549,9 @@ a:visited {
 .carousel-item img {
   top: 0;
   left: 0;
-  height: 330px;
+  height: 430px;
   width: auto;
-  max-width: 600px;
+  max-width: 700px;
 
   padding-right: 16px;
 }
@@ -981,6 +981,7 @@ iframe {
   .carousel-item {
     /* min-width: 300px;
     margin: 0 50px; */
+    min-height: 400px;
 
     min-width: 100%;
     margin: 0;
@@ -1138,10 +1139,6 @@ iframe {
     z-index: 2;
   }
 
-  .nav-menu li {
-    /* Stylowanie elementów menu */
-  }
-
   .nav-menu a {
     text-decoration: none;
     color: white;
@@ -1222,19 +1219,22 @@ iframe {
     font-weight: 300;
     line-height: 24px;
   }
+  .carousel-item img {
+    height: 250px;
+  }
   #bottom-menu {
     flex-direction: column;
     width: 100vw;
   }
   #bottom-menu h2 {
-    font-size: 20px;
+    font-size: 24px;
   }
   .bottom-menu-tabs {
     width: 100vw;
   }
   .bottom-menu-tab-picture {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 16px auto 36px;
   }
   .carousel-container {
