@@ -14,6 +14,7 @@
   /* justify-content: center; */
   max-width: 1100px;
 }
+#diag_info h4 a,
 #diag_info p a,
 #korlab_info p a {
   color: rgb(43, 159, 167);

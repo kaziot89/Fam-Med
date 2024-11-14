@@ -25,7 +25,7 @@ html {
   left: 23%;
   width: 54%;
   min-width: 615px;
-  height: 50%;
+  height: 55%;
   background-color: rgba(250, 250, 250, 0.8);
   border-radius: 15px;
 }
@@ -46,10 +46,13 @@ html {
 .place {
   display: flex;
   flex-direction: row;
-  width: 50%;
-  min-width: 290px;
-  justify-content: space-between;
+  /* width: 50%; */
+  /* min-width: 290px; */
+  /* justify-content: space-between; */
   margin-top: 8px;
+}
+.place_name {
+  width: 225px;
 }
 .place p i {
   color: rgb(43, 159, 167);
@@ -141,13 +144,13 @@ html {
   #docs_info {
     top: 160px;
     width: 100%;
-    height: 400px;
+    height: 500px;
   }
   #files_container {
     /* min-height: 200px; */
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 450px) {
   #main_container_docs {
     min-height: 70vh;
   }
@@ -169,7 +172,10 @@ html {
   }
   .place {
     width: 90%;
-    min-width: 233px;
+    min-width: 280px;
+  }
+  .place_name {
+    width: 150px;
   }
   #files_inner {
     padding: 8px;

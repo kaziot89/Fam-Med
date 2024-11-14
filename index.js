@@ -20,25 +20,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
-  // Select elements for carousel
   const track = document.querySelector(".carousel-track");
+  const container = document.querySelector(".carousel-track-container");
   const prevButton = document.querySelector(".carousel-button.prev");
   const nextButton = document.querySelector(".carousel-button.next");
   const slides = Array.from(track.children);
   const slideWidth = slides[0].getBoundingClientRect().width;
   let currentIndex = 0;
 
-  // Function to update carousel position
   function updateCarousel() {
-    track.style.transition = "transform 0.8s ease";
     track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-
-    // Disable buttons when at start or end of slides
     prevButton.disabled = currentIndex === 0;
     nextButton.disabled = currentIndex === slides.length - 1;
   }
 
-  // Button event listeners for carousel navigation
+  // Event listeners for buttons
   prevButton.addEventListener("click", () => {
     if (currentIndex > 0) {
       currentIndex--;
@@ -53,83 +49,35 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Event listeners for touch events
+  // Scroll event listener for Apple Mouse and trackpad
+  container.addEventListener("scroll", () => {
+    const scrollLeft = container.scrollLeft;
+    currentIndex = Math.round(scrollLeft / slideWidth);
+  });
+
+  // Touch support
   let startX = 0;
   let moveX = 0;
-  track.addEventListener("touchstart", (e) => {
+  container.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
   });
 
-  track.addEventListener("touchmove", (e) => {
+  container.addEventListener("touchmove", (e) => {
     moveX = e.touches[0].clientX - startX;
   });
 
-  track.addEventListener("touchend", () => {
-    if (moveX < -50) {
-      if (currentIndex < slides.length - 1) currentIndex++;
-    } else if (moveX > 50) {
-      if (currentIndex > 0) currentIndex--;
+  container.addEventListener("touchend", () => {
+    if (moveX < -50 && currentIndex < slides.length - 1) {
+      currentIndex++;
+    } else if (moveX > 50 && currentIndex > 0) {
+      currentIndex--;
     }
     updateCarousel();
     moveX = 0;
   });
 
-  updateCarousel(); // Initialize carousel position
+  updateCarousel(); // Initialize carousel
 });
-
-/*
-  document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector(".carousel-track");
-    const prevButton = document.querySelector(".carousel-button.prev");
-    const nextButton = document.querySelector(".carousel-button.next");
-    const items = Array.from(track.children);
-    const itemWidth =
-      items[0].offsetWidth + parseFloat(getComputedStyle(items[0]).marginRight);
-    let currentIndex = 0;
-  
-    function updateCarousel() {
-      track.style.transition = "transform 0.8s ease";
-      track.style.transform = "translateX(" + -currentIndex * itemWidth + "px)";
-      prevButton.disabled = currentIndex === 0;
-      nextButton.disabled =
-        currentIndex >= items.length - Math.floor(track.offsetWidth / itemWidth);
-    }
-  
-    prevButton.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-      }
-    });
-  
-    nextButton.addEventListener("click", () => {
-      if (
-        currentIndex <
-        items.length - Math.floor(track.offsetWidth / itemWidth)
-      ) {
-        currentIndex++;
-        updateCarousel();
-      }
-    });
-  
-    updateCarousel();
-  });
-  */
-/*
-    nextButton.addEventListener("click", () => {
-      if (currentIndex < items.length - 4) {
-        currentIndex++;
-        updateCarousel();
-      }
-    });
-  
-    track.addEventListener("transitionend", () => {
-      track.style.transition = "";
-    });
-  
-    updateCarousel();
-  });
-  */
 
 document.addEventListener("DOMContentLoaded", function () {
   const buttonMappings = {

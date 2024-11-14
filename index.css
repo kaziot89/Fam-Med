@@ -515,15 +515,17 @@ a:visited {
 }
 
 .carousel-track-container {
-  overflow: hidden;
+  overflow-x: auto; /* Pozwala na przewijanie w poziomie */
+  overflow-y: hidden;
   flex: 1;
+  scroll-behavior: smooth; /* Płynne przewijanie */
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.3s ease-in-out;
   z-index: 1;
-  /*z-index: -1;*/
+  scroll-snap-type: x mandatory; /* Ustawienie snapowania slajdów */
 }
 
 .carousel-item {
@@ -531,25 +533,23 @@ a:visited {
   align-items: center;
   justify-content: center;
   font-family: "Poppins";
-  max-width: 30%;
-  max-height: 400px;
-  background-color: #ffffff;
-  margin: 70px 100px;
-  color: rgba(0, 162, 172, 0.2);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5), 0 20px 40px rgba(0, 0, 0, 0.5);
-  z-index: 5;
+  max-width: 600px; /* Zmieniamy szerokość, aby dostosować się do karuzeli */
+  flex-shrink: 0; /* Zapobiega zmniejszaniu się elementów */
+  /* max-height: 400px; */
+  margin: 0 20px; /* Odstęp między slajdami */
+  background-color: transparent;
+  /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5), 0 20px 40px rgba(0, 0, 0, 0.5); */
 }
 
 .carousel-item a {
   display: block;
   width: 100%;
-  height: 100%;
 }
 
 .carousel-item img {
   top: 0;
   left: 0;
-  max-width: 300px;
+  max-width: 600px;
   min-width: 100%;
 }
 
@@ -677,7 +677,7 @@ img {
   top: 50%;
   transform: translateY(-50%);
   width: 30%;
-  height: 350px;
+  height: 390px;
   background-color: #fff;
   font-family: "Poppins";
   text-align: center;
@@ -685,6 +685,8 @@ img {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* cień */
 }
 iframe {
+  position: relative;
+  top: 30px;
   width: 90%;
 }
 .branch_name {

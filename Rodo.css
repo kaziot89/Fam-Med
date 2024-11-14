@@ -1,0 +1,16 @@
+#rodo_container {
+  position: relative;
+  padding-top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1100px;
+  min-height: 86vh;
+  font-family: "poppins";
+  margin: 0 8px;
+}
+#rodo_container h3 {
+  margin: 16px 0;
+}
+#rodo_container p {
+  margin: 16px 0;
+}
