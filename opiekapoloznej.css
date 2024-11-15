@@ -4,6 +4,7 @@
   max-width: 1100px;
   justify-content: space-between;
   margin-top: 160px;
+  margin-bottom: 100px;
 }
 
 #poster40 img {
@@ -16,7 +17,9 @@
 #notdesktop {
   display: none;
 }
-
+#describeOP h4 {
+  margin: 16px 0;
+}
 li {
   list-style-position: inside;
 }
