@@ -267,6 +267,10 @@ body {
 #lab_panel p {
   margin-bottom: 16px;
 }
+#lab_panel a {
+  color: rgb(43, 159, 167);
+  font-weight: 500;
+}
 #footer {
   margin: 24px 0 0 0;
 }
