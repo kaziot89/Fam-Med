@@ -50,31 +50,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Scroll event listener for Apple Mouse and trackpad
-  container.addEventListener("scroll", () => {
-    const scrollLeft = container.scrollLeft;
-    currentIndex = Math.round(scrollLeft / slideWidth);
-  });
+  // container.addEventListener("scroll", () => {
+  //   const scrollLeft = container.scrollLeft;
+  //   currentIndex = Math.round(scrollLeft / slideWidth);
+  // });
 
   // Touch support
-  let startX = 0;
-  let moveX = 0;
-  container.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-  });
+  // let startX = 0;
+  // let moveX = 0;
+  // container.addEventListener("touchstart", (e) => {
+  //   startX = e.touches[0].clientX;
+  // });
 
-  container.addEventListener("touchmove", (e) => {
-    moveX = e.touches[0].clientX - startX;
-  });
+  // container.addEventListener("touchmove", (e) => {
+  //   moveX = e.touches[0].clientX - startX;
+  // });
 
-  container.addEventListener("touchend", () => {
-    if (moveX < -50 && currentIndex < slides.length - 1) {
-      currentIndex++;
-    } else if (moveX > 50 && currentIndex > 0) {
-      currentIndex--;
-    }
-    updateCarousel();
-    moveX = 0;
-  });
+  // container.addEventListener("touchend", () => {
+  //   if (moveX < -50 && currentIndex < slides.length - 1) {
+  //     currentIndex++;
+  //   } else if (moveX > 50 && currentIndex > 0) {
+  //     currentIndex--;
+  //   }
+  //   updateCarousel();
+  //   moveX = 0;
+  // });
 
   updateCarousel(); // Initialize carousel
 });
