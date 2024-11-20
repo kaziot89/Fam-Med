@@ -148,7 +148,7 @@ h3 {
 }
 #schedule {
   display: flex;
-  min-height: 150px
+  min-height: 150px;
 }
 
 .clinic_container.active .clinic_content {
@@ -361,9 +361,6 @@ h3 {
   }
   .content {
     margin-left: 0;
-  }
-  #doctors_schedule_section {
-    /* max-height: 1000px; */
   }
   #footer {
     position: relative;
