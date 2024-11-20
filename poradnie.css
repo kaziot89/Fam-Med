@@ -41,7 +41,7 @@ h3 {
 }
 #clinics_list {
   width: 28%;
-  min-height: 100vh;
+  min-height: 220vh;
   overflow-y: auto;
   border-right: 1px solid #ccc; /* Optional: adds a border to the right */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
@@ -128,7 +128,7 @@ h3 {
 }
 .content h1 {
   font-size: 18px;
-  margin-top: 48px;
+  margin: 24px 0;
   font-weight: 300;
 }
 
@@ -143,9 +143,12 @@ h3 {
   font-size: 16px;
   font-weight: 300;
 }
-
+.doctor_schedule {
+  margin-bottom: 24px;
+}
 #schedule {
   display: flex;
+  min-height: 150px
 }
 
 .clinic_container.active .clinic_content {
@@ -168,7 +171,7 @@ h3 {
 }
 #display_content h3 {
   margin: 0 0 32px 0;
-  font-size: 16px;
+  font-size: 14px;
 }
 #display_content p {
   font-weight: 300;
