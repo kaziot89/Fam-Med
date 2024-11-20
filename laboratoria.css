@@ -61,6 +61,15 @@
 #korlab_logo img,
 #diag_logo img {
   width: 50%;
+  animation: img_animation 2s ease;
+}
+@keyframes img_animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #diag_info h3 a,
 #korlab_info h3 a {
