@@ -19,6 +19,16 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(element);
   });
 });
+setTimeout(() => {
+  document.getElementById("popup-banner").classList.add("show");
+  document.getElementById("overlay").classList.add("show");
+}, 2000);
+
+// Close popup function
+function closePopup() {
+  document.getElementById("popup-banner").classList.remove("show");
+  document.getElementById("overlay").classList.remove("show");
+}
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
   const container = document.querySelector(".carousel-track-container");
