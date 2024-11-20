@@ -19,16 +19,24 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(element);
   });
 });
-setTimeout(() => {
-  document.getElementById("popup-banner").classList.add("show");
-  document.getElementById("overlay").classList.add("show");
-}, 2000);
+// Sprawdź, czy popup już był wyświetlany
+if (!localStorage.getItem("popupDisplayed")) {
+  // Wyświetl popup z opóźnieniem
+  setTimeout(() => {
+    document.getElementById("popup-banner").classList.add("show");
+    document.getElementById("overlay").classList.add("show");
+  }, 1000);
 
-// Close popup function
+  // Zapisz informację, że popup został wyświetlony
+  localStorage.setItem("popupDisplayed", "true");
+}
+
+// Funkcja zamykająca popup
 function closePopup() {
   document.getElementById("popup-banner").classList.remove("show");
   document.getElementById("overlay").classList.remove("show");
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
   const container = document.querySelector(".carousel-track-container");
