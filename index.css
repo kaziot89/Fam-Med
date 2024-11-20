@@ -21,7 +21,7 @@ html {
   border-radius: 10px;
   width: 80%;
   max-width: 600px;
-  padding: 20px;
+  padding: 16px;
   z-index: 1000;
   display: none; /* Hidden initially */
 
@@ -52,7 +52,7 @@ html {
 }
 #popup-banner button {
   position: relative;
-  width: 30%;
+  width: 200px;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgb(255, 29, 153);
@@ -1083,6 +1083,12 @@ iframe {
   }
 }
 @media (max-width: 620px) {
+  #popup-banner h2 {
+    font-size: 13px;
+  }
+  #popup-banner button {
+    width: 200px;
+  }
   #top-navbar {
     padding: 0;
     max-width: 100vw;
