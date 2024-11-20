@@ -24,11 +24,9 @@
     top: 0;
   }
 }
-}
 
 #describe40 {
   flex-basis: 55%;
-  
 }
 
 #poster40 {
@@ -37,15 +35,14 @@
 }
 
 #poster40 img {
-  width: 70%;
-  position:relative;
+  width: 80%;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
-  
 }
 #notmobile {
-  width: 40%;
-  position:relative;
+  width: 30%;
+  position: relative;
   top: 160px;
   left: 50%;
   transform: translateX(-50%);
@@ -58,10 +55,7 @@
   100% {
     opacity: 1;
   }
-
 }
-
-
 
 li {
   list-style-position: inside;
@@ -78,9 +72,10 @@ li {
     width: 95%;
   }
 
- 
   #notmobile {
     width: 60%;
-
-  
+  }
+  #poster40 img {
+    width: 95%;
+  }
 }
