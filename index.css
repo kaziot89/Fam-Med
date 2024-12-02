@@ -1402,12 +1402,12 @@ iframe {
   }
   #footer_info a {
     color: rgb(56, 56, 56);
-    font-size: 12px;
+    font-size: 14px;
   }
   #footer_contact a,
   #footer_contact {
     flex-wrap: wrap;
-    font-size: 12px;
+    font-size: 14px;
     min-width: 100%;
   }
 
@@ -1416,12 +1416,12 @@ iframe {
     color: rgb(70, 70, 70) !important;
   }
   .phnmb {
-    font-size: 12px;
+    font-size: 14px;
   }
   .footer_branch_address {
     flex: 1;
     min-width: 51%;
-    margin: 12px 0;
+    margin: 14px 0;
   }
   #footer_logo {
     display: none;
