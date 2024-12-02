@@ -1420,7 +1420,7 @@ iframe {
   }
   .footer_branch_address {
     flex: 1;
-    min-width: 50%;
+    min-width: 51%;
     margin: 12px 0;
   }
   #footer_logo {
