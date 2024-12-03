@@ -24,6 +24,8 @@
   width: 50%;
   animation: img_animation 2s ease;
 }
+a {
+}
 @keyframes img_animation {
   0% {
     opacity: 0;
@@ -42,11 +44,11 @@
   display: flex;
 }
 #text {
-  text-align: justify;
   flex: 1;
   margin: 0 8px 300px 8px;
 }
-#text div p {
+
+#text p {
   margin-bottom: 16px;
 }
 #picture {
