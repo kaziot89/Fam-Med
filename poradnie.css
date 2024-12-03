@@ -307,6 +307,9 @@ h3 {
   #slogan2 {
     display: none;
   }
+  .clinic_button {
+    font-size: 14px;
+  }
   #display_content {
     position: relative;
     width: 100vw;
