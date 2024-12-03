@@ -15,8 +15,8 @@ h3 {
 #mainContainer {
   position: relative;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  flex-direction: row;
+  /* min-height: 100vh; */
   max-width: 1100px;
   top: 0;
   padding-top: 180px;
@@ -24,7 +24,7 @@ h3 {
   left: 50%;
   transform: translateX(-50%);
   width: 95%;
-  flex: 1;
+  /* flex: 1; */
 }
 #clinics_greeting h3 {
   font-size: 18px;
@@ -41,7 +41,7 @@ h3 {
 }
 #clinics_list {
   width: 28%;
-  min-height: 220vh;
+  /* min-height: 220vh; */
   overflow-y: auto;
   border-right: 1px solid #ccc; /* Optional: adds a border to the right */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
@@ -144,11 +144,12 @@ h3 {
   font-weight: 300;
 }
 .doctor_schedule {
-  margin-bottom: 24px;
+  margin-bottom: 60px;
+  min-width: 250px;
 }
 #schedule {
   display: flex;
-  min-height: 150px;
+  margin-bottom: 24px;
 }
 
 .clinic_container.active .clinic_content {
@@ -156,12 +157,13 @@ h3 {
 }
 
 #display_content {
+  position: relative;
   width: 70%;
   padding-left: 24px;
-  position: absolute;
+
   right: 0;
   font-family: "Poppins";
-  min-height: 90%;
+  /* min-height: 90%; */
   /* overflow-y: auto; */
   box-sizing: border-box;
   /* z-index: 3; */
@@ -170,7 +172,7 @@ h3 {
   font-weight: 300;
 }
 #display_content h3 {
-  margin: 0 0 32px 0;
+  margin: 0 0 12px 0;
   font-size: 14px;
 }
 #display_content p {
@@ -179,7 +181,7 @@ h3 {
 .days p,
 #hours p {
   margin: 4px 24px 4px 0;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
 }
 
@@ -270,8 +272,7 @@ h3 {
   #slogan2 p {
     font-size: 15px;
     font-weight: 500;
-
-    /* margin-left: -15px; */
+    margin-right: 8px;
   }
   #clinics_list {
     width: 35%;
@@ -282,12 +283,15 @@ h3 {
   }
 
   .clinic_button {
-    font-size: 14px;
+    font-size: 12px;
     margin-left: 0;
     color: black;
   }
   #footer {
     position: relative;
+  }
+  #footer_logo {
+    display: none;
   }
 }
 @media (max-width: 620px) {
@@ -352,9 +356,9 @@ h3 {
   #hide_mobile {
     display: none;
   }
-  .button-container {
+  /* .button-container {
     flex-direction: column;
-  }
+  } */
   .branch_button {
     width: 70%;
     text-align: left;
@@ -364,5 +368,13 @@ h3 {
   }
   #footer {
     position: relative;
+  }
+}
+@media (max-width: 420px) {
+  .button-container {
+    flex-direction: column;
+  }
+  #display_content p {
+    font-size: 14px;
   }
 }

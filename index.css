@@ -982,7 +982,7 @@ iframe {
   #footer_contact {
     margin: 8px 0;
     font-size: 12px;
-    width: 60%;
+    width: 70%;
   }
   #footer_info a {
     font-size: 12px;
@@ -1084,7 +1084,7 @@ iframe {
     width: 80px;
   }
   #footer_contact {
-    width: 60%;
+    width: 75%;
   }
 }
 @media (max-width: 620px) {
