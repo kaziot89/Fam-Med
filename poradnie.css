@@ -62,6 +62,12 @@ h3 {
 .clinic_content {
   display: none;
 }
+.clinic_content ol li,
+.clinic_content ul li {
+  font-size: 14px;
+  font-weight: 300;
+  list-style: inside;
+}
 .clinic_content h2 {
   font-size: 18px;
   margin-bottom: 24px;
@@ -163,7 +169,7 @@ h3 {
 }
 .specialist {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .specialist div {
   margin-right: 48px;
