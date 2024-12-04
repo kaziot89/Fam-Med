@@ -1,7 +1,9 @@
 * {
   font-family: Poppins;
 }
-
+p {
+  font-weight: 300;
+}
 #main_container_lab {
   /* display: flex; */
   position: relative;

@@ -1,13 +1,16 @@
 * {
   font-family: "poppins";
 }
+p,
+li {
+  font-weight: 300;
+}
 .mainView {
   margin-top: 320px;
 }
 #main_container {
   max-width: 1100px;
   position: relative;
-  /* top: 180px; */
   top: 12rem;
   left: 50%;
   transform: translateX(-50%);
@@ -24,8 +27,7 @@
   width: 50%;
   animation: img_animation 2s ease;
 }
-a {
-}
+
 @keyframes img_animation {
   0% {
     opacity: 0;

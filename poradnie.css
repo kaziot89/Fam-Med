@@ -11,20 +11,16 @@ h3 {
   height: auto;
   margin: -5px 8px;
 }
-
 #mainContainer {
   position: relative;
   display: flex;
   flex-direction: row;
-  /* min-height: 100vh; */
   max-width: 1100px;
   top: 0;
   padding-top: 180px;
-  /* margin-bottom: 80px; */
   left: 50%;
   transform: translateX(-50%);
   width: 95%;
-  /* flex: 1; */
 }
 #clinics_greeting h3 {
   font-size: 18px;
@@ -32,7 +28,6 @@ h3 {
 }
 #slogan2 {
   height: 50px;
-  /* margin-left: 16px; */
   font-family: "Poppins";
   font-size: 18px;
   max-width: fit-content;
@@ -41,25 +36,16 @@ h3 {
 }
 #clinics_list {
   width: 28%;
-  /* min-height: 220vh; */
   overflow-y: auto;
-  border-right: 1px solid #ccc; /* Optional: adds a border to the right */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
 }
 #clinics_list::-webkit-scrollbar {
   display: none;
 }
-
 #clinics_list {
   scrollbar-width: none;
 }
-
-/* button::before {
-  content: "•";
-  margin-right: 8px;
-  font-size: 24px;
-  color: rgb(3 162 172);
-} */
 .clinic_button {
   border: none;
   background-color: transparent;
@@ -69,13 +55,10 @@ h3 {
   width: 300px;
   height: 2em;
   text-align: left;
-  /* margin-left: 20px;
-  padding-left: 20px; */
 }
 .clinic_button:hover {
   color: rgb(33, 159, 167);
 }
-
 .clinic_content {
   display: none;
 }
@@ -92,12 +75,15 @@ h3 {
   margin-bottom: 24px;
   font-size: 14px;
 }
-
+.phnmb2 {
+  color: rgb(3 162 172) !important;
+  font-size: 14px !important;
+  text-decoration: none;
+}
 #branches_section {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding-top: 48px;
 }
 .button-container {
@@ -106,7 +92,6 @@ h3 {
   width: 100%;
   margin-bottom: 10px;
 }
-
 .branch_button {
   width: 33%;
   height: 50px;
@@ -121,7 +106,6 @@ h3 {
 .branch_button:hover {
   color: rgb(33, 159, 167);
 }
-
 .content {
   margin-top: 10px;
   width: 100%;
@@ -131,7 +115,6 @@ h3 {
   margin: 24px 0;
   font-weight: 300;
 }
-
 #doctors_schedule_section {
   width: 98%;
   display: flex;
@@ -151,22 +134,16 @@ h3 {
   display: flex;
   margin-bottom: 24px;
 }
-
 .clinic_container.active .clinic_content {
   display: block;
 }
-
 #display_content {
   position: relative;
   width: 70%;
   padding-left: 24px;
-
   right: 0;
   font-family: "Poppins";
-  /* min-height: 90%; */
-  /* overflow-y: auto; */
   box-sizing: border-box;
-  /* z-index: 3; */
 }
 #display_content h2 {
   font-weight: 300;
@@ -184,28 +161,23 @@ h3 {
   font-size: 14px;
   font-weight: 300;
 }
-
 .specialist {
   display: flex;
   flex-direction: row;
 }
-
 .specialist div {
   margin-right: 48px;
 }
-
 .acc {
   display: none;
 }
 .accSection {
   display: none;
 }
-
 .active,
 .acc:hover {
   background-color: #ccc;
 }
-
 .panel {
   padding: 0 18px;
   background-color: white;
@@ -213,7 +185,6 @@ h3 {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-
 .acc:after {
   content: "\25BC";
   font-size: 8px;
@@ -221,7 +192,6 @@ h3 {
   float: right;
   margin-left: 5px;
 }
-
 .active:after {
   content: "\25B2";
 }
@@ -232,7 +202,6 @@ h3 {
   display: none;
   margin-left: 20px;
 }
-
 .sub_button {
   display: block;
   margin: 5px 50px;
@@ -243,7 +212,6 @@ h3 {
 #footer {
   margin-top: 120px;
 }
-
 @media (max-width: 1024px) {
   #slogan2 p {
     font-size: 18px;
@@ -268,7 +236,6 @@ h3 {
     position: relative;
     flex-direction: row;
   }
-
   #slogan2 p {
     font-size: 15px;
     font-weight: 500;
@@ -281,7 +248,6 @@ h3 {
     position: relative;
     width: 65%;
   }
-
   .clinic_button {
     font-size: 12px;
     margin-left: 0;
@@ -359,9 +325,6 @@ h3 {
   #hide_mobile {
     display: none;
   }
-  /* .button-container {
-    flex-direction: column;
-  } */
   .branch_button {
     width: 70%;
     text-align: left;

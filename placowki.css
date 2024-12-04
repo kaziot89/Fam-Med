@@ -7,6 +7,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+p,
+li {
+  font-weight: 300;
+}
 .infos {
   display: flex;
   flex-direction: row;

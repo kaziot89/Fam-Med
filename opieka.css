@@ -1,6 +1,9 @@
 * {
   font-family: "poppins";
 }
+p {
+  font-weight: 300;
+}
 .mainView {
   margin-top: 320px;
 }

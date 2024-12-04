@@ -8,6 +8,10 @@
   align-items: center;
   animation: text_slide_animation 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
+p,
+li {
+  font-weight: 300;
+}
 @keyframes text_slide_animation {
   0% {
     top: 1500px;
