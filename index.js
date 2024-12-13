@@ -248,20 +248,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function handleButtonClick(buttonId) {
   const pageMap = {
-    bottom_menu_button1: "poradnie.html",
+    // bottom_menu_button1: "poradnie.html",
     bottom_menu_button2: "laboratoria.html",
     bottom_menu_button3: "medycyna.html",
     bottom_menu_button4: "opieka.html",
+    bottom_menu_button5: "ikp.html",
   };
 
   window.location.href = pageMap[buttonId];
 }
 
-document
-  .getElementById("bottom_menu_button1")
-  .addEventListener("click", function () {
-    handleButtonClick(this.id);
-  });
+// document
+//   .getElementById("bottom_menu_button1")
+//   .addEventListener("click", function () {
+//     handleButtonClick(this.id);
+//   });
 
 document
   .getElementById("bottom_menu_button2")
@@ -277,6 +278,11 @@ document
 
 document
   .getElementById("bottom_menu_button4")
+  .addEventListener("click", function () {
+    handleButtonClick(this.id);
+  });
+document
+  .getElementById("bottom_menu_button5")
   .addEventListener("click", function () {
     handleButtonClick(this.id);
   });
