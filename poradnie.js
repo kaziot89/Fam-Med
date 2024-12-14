@@ -13,7 +13,6 @@ menuBtn.addEventListener("click", () => {
   navMenu.classList.toggle("activeH");
 });
 document.addEventListener("DOMContentLoaded", function () {
-  // Funkcja do ukrywania wszystkich divów z zawartością
   function hideAllContent() {
     document
       .querySelectorAll("#display_content .clinic_content")
@@ -22,29 +21,24 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  // Funkcja do obsługi kliknięcia w przycisk
   function handleButtonClick(event) {
     let buttonId = event.target.id;
     let contentId = buttonId.replace("button_", "clinic_content");
 
-    hideAllContent(); // Ukryj wszystkie divy z zawartością
+    hideAllContent();
     let contentDiv = document.getElementById(contentId);
 
     if (contentDiv) {
-      contentDiv.style.display = "block"; // Pokaż tylko ten odpowiadający przyciskowi
-      // contentDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      contentDiv.style.display = "block";
     }
 
-    // Ukryj div z powitaniem
     document.getElementById("clinics_greeting").style.display = "none";
   }
 
-  // Przywróć widoczność divu powitalnego przy odświeżeniu strony
   window.addEventListener("load", function () {
     document.getElementById("clinics_greeting").style.display = "block";
   });
 
-  // Dodaj nasłuchiwanie kliknięć do wszystkich przycisków
   document.querySelectorAll(".clinic_button").forEach(function (button) {
     button.addEventListener("click", handleButtonClick);
   });
@@ -52,17 +46,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.onload = function () {
   if (window.location.hash) {
-    const hash = window.location.hash.substring(1); // usuwamy #
+    const hash = window.location.hash.substring(1);
     const buttonToClick = document.getElementById(hash);
     if (buttonToClick) {
-      buttonToClick.click(); // Symulujemy kliknięcie
+      buttonToClick.click();
     }
   }
 };
 let acc = document.getElementsByClassName("acc");
 let i;
 
-// Funkcja do zamykania wszystkich paneli
 function closeAllAccordions() {
   console.log("Zamykanie wszystkich paneli");
   for (i = 0; i < acc.length; i++) {
@@ -86,47 +79,43 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-// Pobierz wszystkie elementy z klasą "clinic_button"
 let clinicButtons = document.getElementsByClassName("clinic_button");
 
-// Dodaj nasłuchiwanie zdarzeń dla każdego przycisku
 for (let j = 0; j < clinicButtons.length; j++) {
   clinicButtons[j].addEventListener("click", function () {
-    console.log("Przycisk kliniki kliknięty: " + j); // Log diagnostyczny
+    console.log("Przycisk kliniki kliknięty: " + j);
     closeAllAccordions();
   });
 }
 function toggleContent(branch) {
-  // Ukryj wszystkie elementy content
   const contents = document.querySelectorAll(".content");
   contents.forEach((content) => {
     if (content.id === branch) {
       content.style.display =
-        content.style.display === "block" ? "none" : "block"; // Przełącz widoczność
+        content.style.display === "block" ? "none" : "block";
     } else {
-      content.style.display = "none"; // Ukryj inne elementy
+      content.style.display = "none";
     }
   });
 }
 function toggleContent(branch) {
-  // Ukryj wszystkie elementy content
   const contents = document.querySelectorAll(".content");
   const buttons = document.querySelectorAll(".branch_button");
 
   contents.forEach((content) => {
     if (content.id === branch) {
       content.style.display =
-        content.style.display === "block" ? "none" : "block"; // Przełącz widoczność
+        content.style.display === "block" ? "none" : "block";
     } else {
-      content.style.display = "none"; // Ukryj inne elementy
+      content.style.display = "none";
     }
   });
 
   buttons.forEach((button) => {
     if (button.textContent.toLowerCase() === branch) {
-      button.classList.add("active"); // Dodaj klasę active
+      button.classList.add("active");
     } else {
-      button.classList.remove("active"); // Usuń klasę active z innych przycisków
+      button.classList.remove("active");
     }
   });
 }
@@ -140,7 +129,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (getQueryParam("autoClick") === "true") {
     const buttonId = getQueryParam("buttonId");
 
-    // Kliknij przycisk o ID podanym w parametrze buttonId
     let buttonToClick = document.getElementById(buttonId);
     if (buttonToClick) {
       buttonToClick.click();

@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Funkcja, która ustawia kliknięcia dla każdego przycisku
   const buttons = document.querySelectorAll('button[id^="go_to_clinic"]');
 
   buttons.forEach((button) => {
