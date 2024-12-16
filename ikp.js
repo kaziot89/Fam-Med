@@ -2,17 +2,13 @@ window.onload = function () {
   const menuBtn = document.querySelector(".menu-btn");
   const navMenu = document.querySelector(".nav-menu");
   if (menuBtn) {
-    menuBtn.addEventListener("click", function () {
-      // Twoja logika
-    });
+    menuBtn.addEventListener("click", function () {});
   }
 
   menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("open");
     navMenu.classList.toggle("activeH");
   });
-
-  // Dodaj inne eventy, upewniając się, że elementy istnieją
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,16 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const placesButton = document.getElementById("places_btn");
   const placesDropdown = document.getElementById("places_dropdown");
 
-  let isAnimating = false; // Zmienna do śledzenia animacji
+  let isAnimating = false;
 
   function closeDropdown(dropdown, callback) {
     if (dropdown.classList.contains("open")) {
-      isAnimating = true; // Ustawiamy animację na true
+      isAnimating = true;
       dropdown.classList.remove("open");
       setTimeout(() => {
-        isAnimating = false; // Po zakończeniu animacji ustawiamy na false
+        isAnimating = false;
         callback();
-      }, 300); // Ustaw czas zgodny z transition
+      }, 300);
     } else {
       callback();
     }

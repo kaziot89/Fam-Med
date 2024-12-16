@@ -10,7 +10,6 @@ let acc = document.getElementsByClassName("acc");
 let acc2 = document.getElementsByClassName("acc2");
 let i;
 
-// Logika dla acc i panel
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
@@ -23,7 +22,6 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-// Logika dla acc2 i panel2
 for (i = 0; i < acc2.length; i++) {
   acc2[i].addEventListener("click", function () {
     this.classList.toggle("active");
@@ -58,25 +56,20 @@ document.addEventListener("DOMContentLoaded", function () {
     ".info-banner h3, .info-banner p, .contact"
   );
 
-  // Utwórz nowy Intersection Observer
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-          // Opóźnij dodanie klasy 'visible' o 500ms
           setTimeout(() => {
             entry.target.classList.add("visible");
           }, 200);
 
-          // Przestań obserwować ten element
           observer.unobserve(entry.target);
         }
       });
     },
     { threshold: 0.5 }
-  ); // Ustawienie progu na 50% widoczności
-
-  // Obserwuj elementy h3 i p wewnątrz .info-banner
+  );
   headingsAndParagraphs.forEach((element) => {
     observer.observe(element);
   });
@@ -93,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentIndex = 0;
 
   function updateCarousel() {
-    track.style.transition = "transform 0.8s ease"; // Dodanie przejścia CSS
+    track.style.transition = "transform 0.8s ease";
     track.style.transform = "translateX(" + -currentIndex * itemWidth + "px)";
     prevButton.disabled = currentIndex === 0;
     nextButton.disabled = currentIndex >= items.length - 4;
@@ -113,7 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Resetowanie przejścia CSS po zakończeniu animacji
   track.addEventListener("transitionend", () => {
     track.style.transition = "";
   });
@@ -122,61 +114,45 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Pobierz przycisk z identyfikatorem 'branch_button1'
   let button = document.getElementById("branch_button1");
 
-  // Dodaj nasłuchiwanie kliknięcia do przycisku
   button.addEventListener("click", function () {
-    // Przekieruj do 'porWie.html' w tym samym oknie
     window.location.href = "porZbr.html";
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
-  // Pobierz przycisk z identyfikatorem 'branch_button1'
   let button = document.getElementById("branch_button2");
 
-  // Dodaj nasłuchiwanie kliknięcia do przycisku
   button.addEventListener("click", function () {
-    // Przekieruj do 'porWie.html' w tym samym oknie
     window.location.href = "cmtg.html";
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
-  // Pobierz przycisk z identyfikatorem 'branch_button1'
   let button = document.getElementById("branch_button3");
 
-  // Dodaj nasłuchiwanie kliknięcia do przycisku
   button.addEventListener("click", function () {
-    // Przekieruj do 'porWie.html' w tym samym oknie
     window.location.href = "porWie.html";
   });
 });
-//
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Get all dropdowns
   let dropdowns = document.querySelectorAll(".dropdown");
 
   dropdowns.forEach(function (dropdown) {
-    // Add click event to toggle dropdown
     dropdown.addEventListener("click", function () {
       this.classList.toggle("open");
     });
 
-    // Get all links inside the dropdown-content
     let links = dropdown.querySelectorAll(".dropdown-content a");
 
-    // Add event listener for each link inside dropdown
     links.forEach(function (link) {
       link.addEventListener("click", function () {
-        // Close the dropdown after clicking an option
         dropdown.classList.remove("open");
       });
     });
   });
 
-  // Close dropdown if clicked outside
   document.addEventListener("click", function (event) {
-    // Check if click is outside of dropdown
     dropdowns.forEach(function (dropdown) {
       if (!dropdown.contains(event.target)) {
         dropdown.classList.remove("open");
@@ -189,115 +165,21 @@ function scrollToSection() {
   if (target) {
     target.scrollIntoView({
       behavior: "smooth",
-      block: "center", // Ustawienie wyświetlania elementu na środku viewportu
+      block: "center",
     });
   }
 }
 
 window.onload = function () {
-  // Sprawdzanie, czy strona została załadowana z kotwicą
   if (window.location.hash) {
-    scrollToSection(); // Przewiń do sekcji, jeśli jest kotwica
+    scrollToSection();
   }
 };
-
-// function handleButtonClick(buttonId) {
-//   const pageMap = {
-//     bottom_menu_button1: "poradnie.html",
-//     bottom_menu_button2: "laboratoria.html",
-//     bottom_menu_button3: "medycyna.html",
-//     bottom_menu_button4: "opieka.html",
-//   };
-
-//   window.location.href = pageMap[buttonId];
-// }
-
-// document
-//   .getElementById("bottom_menu_button1")
-//   .addEventListener("click", function () {
-//     handleButtonClick(this.id);
-//   });
-
-// document
-//   .getElementById("bottom_menu_button2")
-//   .addEventListener("click", function () {
-//     handleButtonClick(this.id);
-//   });
-
-// document
-//   .getElementById("bottom_menu_button3")
-//   .addEventListener("click", function () {
-//     handleButtonClick(this.id);
-//   });
-
-// document
-//   .getElementById("bottom_menu_button4")
-//   .addEventListener("click", function () {
-//     handleButtonClick(this.id);
-//   });
-// const track = document.querySelector(".carousel-track");
-// const slides = Array.from(track.children);
-// let startX = 0;
-// let moveX = 0;
-// let currentIndex = 0; // Track the current index of the slide
-
-// // Get the width of one slide
-// const slideWidth = slides[0].getBoundingClientRect().width;
-
-// // Event listeners for touch events
-// track.addEventListener("touchstart", (e) => {
-//   startX = e.touches[0].clientX;
-// });
-
-// track.addEventListener("touchmove", (e) => {
-//   moveX = e.touches[0].clientX - startX;
-// });
-
-// track.addEventListener("touchend", () => {
-//   if (moveX < -50) {
-//     moveToNextSlide();
-//   } else if (moveX > 50) {
-//     moveToPrevSlide();
-//   }
-//   moveX = 0;
-// });
-
-// // Move to the next slide
-// function moveToNextSlide() {
-//   if (currentIndex < slides.length - 1) {
-//     currentIndex++;
-//     track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-//   }
-// }
-
-// // Move to the previous slide
-// function moveToPrevSlide() {
-//   if (currentIndex > 0) {
-//     currentIndex--;
-//     track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-//   }
-// }
-// window.addEventListener("scroll", function () {
-//   var elements = document.querySelectorAll(".bottom-menu-tabs");
-
-//   elements.forEach(function (element, index) {
-//     var position = element.getBoundingClientRect();
-
-//     // Sprawdza, czy element jest w widocznej części ekranu
-//     if (position.top <= window.innerHeight && position.bottom >= 0) {
-//       // Dodajemy opóźnienie do animacji
-//       element.style.transitionDelay = index * 0.15 + "s";
-//       element.classList.add("visible");
-//     }
-//   });
-// });
 document.addEventListener("DOMContentLoaded", () => {
-  // Dodaj event listener do każdego przycisku
   const buttons = document.querySelectorAll(".acc2");
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const buttonId = button.getAttribute("data-button-id");
-      // Przechodzimy do poradnie.html i wywołujemy funkcję klikającą w odpowiedni przycisk
       window.location.href =
         "poradnie.html?" +
         new URLSearchParams({ buttonId: buttonId }).toString();

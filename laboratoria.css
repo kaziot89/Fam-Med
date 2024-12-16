@@ -79,11 +79,6 @@ p {
   font-weight: 600;
 }
 
-/* h2,
-h4 {
-  margin-top: 2rem;
-} */
-
 @media (max-width: 880px) {
   #main_container_lab {
     display: flex;
