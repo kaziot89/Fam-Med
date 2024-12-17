@@ -546,6 +546,14 @@ a:visited {
   margin: 0 20px;
   background-color: transparent;
 }
+#news-element1 img,
+#news-element2 img,
+#news-element3 img,
+#news-element6 img,
+#news-element7 img {
+  /* padding: 18px; */
+  border: 12px white solid;
+}
 .carousel-item a {
   display: block;
   width: 100%;
@@ -556,7 +564,7 @@ a:visited {
   height: 430px;
   width: auto;
   max-width: 700px;
-  padding-right: 16px;
+  /* padding-right: 16px; */
 }
 .carousel-button {
   position: absolute;
