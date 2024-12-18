@@ -13,8 +13,8 @@
 #heading_container img {
   padding: 12px;
 }
-#heading_container h1 {
-  margin: 0 0 24px 0;
+#heading_container h2 {
+  margin: 24px 0 24px 0;
   color: rgba(0, 162, 172, 1);
 }
 #notmobile {
@@ -29,7 +29,7 @@
     flex-direction: column;
   }
   #notmobile {
-    width: 40%;
+    width: 60%;
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 48px;
@@ -38,5 +38,8 @@
 @media (max-width: 620px) {
   #notmobile {
     width: 80%;
+  }
+  #heading_container h2 {
+    font-size: 20px;
   }
 }
