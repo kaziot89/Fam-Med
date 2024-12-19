@@ -526,17 +526,29 @@ a:visited {
   align-items: center;
 }
 .carousel-track-container {
+  overflow: hidden; /* Prevent native scrolling */
+  flex: 1;
+}
+
+/* .carousel-track-container {
   overflow-x: auto;
   overflow-y: hidden;
   flex: 1;
   scroll-behavior: smooth;
-}
+} */
 .carousel-track {
   display: flex;
   transition: transform 0.3s ease-in-out;
   z-index: 1;
-  scroll-snap-type: x mandatory;
+  /* scroll-snap-type: x mandatory; <- REMOVE this if JavaScript is active */
 }
+
+/* .carousel-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+  scroll-snap-type: x mandatory;
+} */
 .carousel-item {
   display: flex;
   align-items: center;

@@ -38,6 +38,44 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevButton = document.querySelector(".carousel-button.prev");
   const nextButton = document.querySelector(".carousel-button.next");
   const slides = Array.from(track.children);
+  let slideWidth = slides[0].getBoundingClientRect().width;
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === slides.length - 1;
+  }
+
+  prevButton.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  nextButton.addEventListener("click", () => {
+    if (currentIndex < slides.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    slideWidth = slides[0].getBoundingClientRect().width;
+    updateCarousel();
+  });
+
+  updateCarousel();
+});
+
+/*
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const container = document.querySelector(".carousel-track-container");
+  const prevButton = document.querySelector(".carousel-button.prev");
+  const nextButton = document.querySelector(".carousel-button.next");
+  const slides = Array.from(track.children);
   const slideWidth = slides[0].getBoundingClientRect().width;
   let currentIndex = 0;
 
@@ -62,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   updateCarousel();
 });
-
+*/
 document.addEventListener("DOMContentLoaded", function () {
   const buttonMappings = {
     branch_button1: "porZbr.html",
