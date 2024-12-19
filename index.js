@@ -15,20 +15,27 @@ document.addEventListener("DOMContentLoaded", () => {
     return "ontouchstart" in window || navigator.maxTouchPoints > 0;
   }
 
-  // Funkcja wykrywająca, czy urządzenie to tablet
+  // Funkcja wykrywająca, czy urządzenie to tablet (iPad)
   function isTablet() {
     const userAgent = navigator.userAgent;
+    // Sprawdzamy iPada po userAgent i szerokości okna
     return (
-      /iPad|Tablet/i.test(userAgent) ||
-      (window.innerWidth >= 768 && window.innerWidth <= 1024)
+      /iPad/i.test(userAgent) ||
+      (window.innerWidth >= 768 &&
+        window.innerWidth <= 1024 &&
+        !/Mobi/i.test(userAgent))
     );
   }
 
-  // Warunki do ukrycia przycisków na urządzeniach dotykowych
+  // Sprawdzamy czy urządzenie to mobilne i czy jest dotykowe, a także nie jest tabletem
   if (isTouchDevice() && !isTablet()) {
     // Ukrywamy przyciski tylko na urządzeniach dotykowych, które nie są tabletami
     prevButton.style.display = "none";
     nextButton.style.display = "none";
+  } else {
+    // Jeśli to tablet lub komputer, przyciski są widoczne
+    prevButton.style.display = "block";
+    nextButton.style.display = "block";
   }
 });
 
@@ -68,78 +75,43 @@ function closePopup() {
 //CAROUSEL//
 
 document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector(".carousel-track");
   const container = document.querySelector(".carousel-track-container");
   const prevButton = document.querySelector(".carousel-button.prev");
   const nextButton = document.querySelector(".carousel-button.next");
-  const slides = Array.from(track.children);
-  const moveDistance = 740; // Przesunięcie o 700px
-
-  let currentIndex = 0;
-
-  // Funkcja aktualizująca karuzelę
-  function updateCarousel() {
-    const newPosition = -moveDistance * currentIndex;
-    track.style.transform = `translateX(${newPosition}px)`; // Przemieszczamy track
-    container.scrollLeft = newPosition; // Ustawiamy scrollLeft, by pasek przewijania odpowiadał nowemu położeniu
-    updateButtons();
-  }
+  const moveDistance = 740; // Przesunięcie o 740px
 
   // Funkcja aktualizująca przyciski
   function updateButtons() {
-    prevButton.disabled = currentIndex === 0;
-    nextButton.disabled = currentIndex === slides.length - 1;
+    prevButton.disabled = container.scrollLeft === 0;
+    nextButton.disabled =
+      container.scrollLeft >= container.scrollWidth - container.offsetWidth;
   }
 
   // Obsługuje kliknięcie przycisków
   prevButton.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
+    container.scrollLeft -= moveDistance; // Przewijamy w lewo
+    updateButtons();
   });
 
   nextButton.addEventListener("click", () => {
-    if (currentIndex < slides.length - 1) {
-      currentIndex++;
-      updateCarousel();
-    }
+    container.scrollLeft += moveDistance; // Przewijamy w prawo
+    updateButtons();
   });
 
-  // Synchronizacja dla swipe'a
-  let startX = 0;
-  let endX = 0;
+  // Ukrywanie przycisków na urządzeniach mobilnych
+  function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(
+      navigator.userAgent
+    );
+  }
 
-  container.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX; // Rozpoczęcie gestu
-  });
-
-  container.addEventListener("touchmove", (e) => {
-    endX = e.touches[0].clientX; // Śledzenie ruchu palca
-  });
-
-  container.addEventListener("touchend", () => {
-    const deltaX = endX - startX;
-    if (Math.abs(deltaX) > 50) {
-      // Minimum przesunięcie w lewo/prawo
-      if (deltaX > 0 && currentIndex > 0) {
-        // Przesuwanie w prawo
-        currentIndex--;
-      } else if (deltaX < 0 && currentIndex < slides.length - 1) {
-        // Przesuwanie w lewo
-        currentIndex++;
-      }
-      updateCarousel();
-    }
-
-    // Reset zmiennych
-    startX = 0;
-    endX = 0;
-  });
+  if (isMobileDevice()) {
+    prevButton.style.display = "none";
+    nextButton.style.display = "none";
+  }
 
   // Inicjalizacja
-  updateButtons();
-  updateCarousel(); // Ustawienie początkowej pozycji
+  updateButtons(); // Ustawienie początkowej pozycji
 });
 
 /*

@@ -891,6 +891,11 @@ iframe {
   .carousel-container {
     width: 95%;
   }
+  .carousel-button.next,
+  .carousel-button.prev {
+    display: none !important;
+  }
+
   #branches {
     width: 95%;
   }
