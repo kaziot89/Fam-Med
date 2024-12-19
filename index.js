@@ -31,7 +31,77 @@ function closePopup() {
   document.getElementById("popup-banner").classList.remove("show");
   document.getElementById("overlay").classList.remove("show");
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const container = document.querySelector(".carousel-track-container");
+  const prevButton = document.querySelector(".carousel-button.prev");
+  const nextButton = document.querySelector(".carousel-button.next");
+  const slides = Array.from(track.children);
+  let slideWidth = slides[0].getBoundingClientRect().width;
+  let currentIndex = 0;
 
+  let startX = 0; // Starting X-coordinate of the touch
+  let endX = 0; // Ending X-coordinate of the touch
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === slides.length - 1;
+  }
+
+  prevButton.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  nextButton.addEventListener("click", () => {
+    if (currentIndex < slides.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  // Handle window resize
+  window.addEventListener("resize", () => {
+    slideWidth = slides[0].getBoundingClientRect().width;
+    updateCarousel();
+  });
+
+  // Touch event handlers for swiping
+  container.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX; // Record the starting touch point
+  });
+
+  container.addEventListener("touchmove", (e) => {
+    endX = e.touches[0].clientX; // Track the current touch point
+  });
+
+  container.addEventListener("touchend", () => {
+    const deltaX = endX - startX;
+
+    if (Math.abs(deltaX) > 50) {
+      // Minimum swipe distance to trigger
+      if (deltaX > 0 && currentIndex > 0) {
+        // Swipe right
+        currentIndex--;
+      } else if (deltaX < 0 && currentIndex < slides.length - 1) {
+        // Swipe left
+        currentIndex++;
+      }
+      updateCarousel();
+    }
+
+    // Reset swipe variables
+    startX = 0;
+    endX = 0;
+  });
+
+  updateCarousel();
+});
+
+/*
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
   const container = document.querySelector(".carousel-track-container");
@@ -68,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateCarousel();
 });
-
+*/
 /*
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
