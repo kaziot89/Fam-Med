@@ -1,37 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const prevButton = document.querySelector(".carousel-button.prev");
-  const nextButton = document.querySelector(".carousel-button.next");
-
-  // Funkcja do wykrywania urządzenia mobilnego (w tym iPad)
-  function isMobileDevice() {
-    const userAgent = navigator.userAgent;
-    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(
-      userAgent
-    );
-  }
-
-  // Funkcja do wykrywania urządzenia dotykowego
-  function isTouchDevice() {
-    return "ontouchstart" in window || navigator.maxTouchPoints > 0;
-  }
-
-  // Funkcja wykrywająca, czy urządzenie to tablet
-  function isTablet() {
-    const userAgent = navigator.userAgent;
-    return (
-      /iPad|Tablet/i.test(userAgent) ||
-      (window.innerWidth >= 768 && window.innerWidth <= 1024)
-    );
-  }
-
-  // Warunki do ukrycia przycisków na urządzeniach dotykowych
-  if (isTouchDevice() && !isTablet()) {
-    // Ukrywamy przyciski tylko na urządzeniach dotykowych, które nie są tabletami
-    prevButton.style.display = "none";
-    nextButton.style.display = "none";
-  }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const headingsAndParagraphs = document.querySelectorAll(
     ".info-banner h3, .info-banner p, .contact"
@@ -65,122 +31,7 @@ function closePopup() {
   document.getElementById("popup-banner").classList.remove("show");
   document.getElementById("overlay").classList.remove("show");
 }
-//CAROUSEL//
 
-document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector(".carousel-track");
-  const container = document.querySelector(".carousel-track-container");
-  const prevButton = document.querySelector(".carousel-button.prev");
-  const nextButton = document.querySelector(".carousel-button.next");
-  const slides = Array.from(track.children);
-  const moveDistance = 740; // Przesunięcie o 700px
-
-  let currentIndex = 0;
-
-  // Funkcja aktualizująca karuzelę
-  function updateCarousel() {
-    const newPosition = -moveDistance * currentIndex;
-    track.style.transform = `translateX(${newPosition}px)`; // Przemieszczamy track
-    container.scrollLeft = newPosition; // Ustawiamy scrollLeft, by pasek przewijania odpowiadał nowemu położeniu
-    updateButtons();
-  }
-
-  // Funkcja aktualizująca przyciski
-  function updateButtons() {
-    prevButton.disabled = currentIndex === 0;
-    nextButton.disabled = currentIndex === slides.length - 1;
-  }
-
-  // Obsługuje kliknięcie przycisków
-  prevButton.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
-  });
-
-  nextButton.addEventListener("click", () => {
-    if (currentIndex < slides.length - 1) {
-      currentIndex++;
-      updateCarousel();
-    }
-  });
-
-  // Synchronizacja dla swipe'a
-  let startX = 0;
-  let endX = 0;
-
-  container.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX; // Rozpoczęcie gestu
-  });
-
-  container.addEventListener("touchmove", (e) => {
-    endX = e.touches[0].clientX; // Śledzenie ruchu palca
-  });
-
-  container.addEventListener("touchend", () => {
-    const deltaX = endX - startX;
-    if (Math.abs(deltaX) > 50) {
-      // Minimum przesunięcie w lewo/prawo
-      if (deltaX > 0 && currentIndex > 0) {
-        // Przesuwanie w prawo
-        currentIndex--;
-      } else if (deltaX < 0 && currentIndex < slides.length - 1) {
-        // Przesuwanie w lewo
-        currentIndex++;
-      }
-      updateCarousel();
-    }
-
-    // Reset zmiennych
-    startX = 0;
-    endX = 0;
-  });
-
-  // Inicjalizacja
-  updateButtons();
-  updateCarousel(); // Ustawienie początkowej pozycji
-});
-
-/*
-document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector(".carousel-track");
-  const container = document.querySelector(".carousel-track-container");
-  const prevButton = document.querySelector(".carousel-button.prev");
-  const nextButton = document.querySelector(".carousel-button.next");
-  const slides = Array.from(track.children);
-  let slideWidth = slides[0].getBoundingClientRect().width;
-  let currentIndex = 0;
-
-  function updateCarousel() {
-    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-    prevButton.disabled = currentIndex === 0;
-    nextButton.disabled = currentIndex === slides.length - 1;
-  }
-
-  prevButton.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
-  });
-
-  nextButton.addEventListener("click", () => {
-    if (currentIndex < slides.length - 1) {
-      currentIndex++;
-      updateCarousel();
-    }
-  });
-
-  window.addEventListener("resize", () => {
-    slideWidth = slides[0].getBoundingClientRect().width;
-    updateCarousel();
-  });
-
-  updateCarousel();
-});
-*/
-/*
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
   const container = document.querySelector(".carousel-track-container");
@@ -211,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   updateCarousel();
 });
-*/
+
 document.addEventListener("DOMContentLoaded", function () {
   const buttonMappings = {
     branch_button1: "porZbr.html",
