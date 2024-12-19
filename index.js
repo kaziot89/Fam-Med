@@ -51,16 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Funkcja do zapętlania karuzeli
   function loopCarousel() {
-    // Jeśli osiągnęliśmy początek
-    if (currentIndex <= 0) {
+    if (currentIndex < 0) {
       currentIndex = totalItems - 1;
-    }
-
-    // Jeśli osiągnęliśmy koniec
-    if (currentIndex >= totalItems - 1) {
+    } else if (currentIndex >= totalItems) {
       currentIndex = 0;
     }
 
+    // Zapewniamy płynne przejście, przesuwając karuzelę w lewo lub w prawo
+    track.style.transition = "transform 0.3s ease-in-out";
     track.style.transform = `translateX(-${currentIndex * moveDistance}px)`;
     updateButtons();
   }
