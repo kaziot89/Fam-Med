@@ -1,44 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const prevButton = document.querySelector(".carousel-button.prev");
-  const nextButton = document.querySelector(".carousel-button.next");
-
-  // Funkcja do wykrywania urządzenia mobilnego (w tym iPad)
-  function isMobileDevice() {
-    const userAgent = navigator.userAgent;
-    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(
-      userAgent
-    );
-  }
-
-  // Funkcja do wykrywania urządzenia dotykowego
-  function isTouchDevice() {
-    return "ontouchstart" in window || navigator.maxTouchPoints > 0;
-  }
-
-  // Funkcja wykrywająca, czy urządzenie to tablet (iPad)
-  function isTablet() {
-    const userAgent = navigator.userAgent;
-    // Sprawdzamy iPada po userAgent i szerokości okna
-    return (
-      /iPad/i.test(userAgent) ||
-      (window.innerWidth >= 768 &&
-        window.innerWidth <= 1024 &&
-        !/Mobi/i.test(userAgent))
-    );
-  }
-
-  // Sprawdzamy czy urządzenie to mobilne i czy jest dotykowe, a także nie jest tabletem
-  if (isTouchDevice() && !isTablet()) {
-    // Ukrywamy przyciski tylko na urządzeniach dotykowych, które nie są tabletami
-    prevButton.style.display = "none";
-    nextButton.style.display = "none";
-  } else {
-    // Jeśli to tablet lub komputer, przyciski są widoczne
-    prevButton.style.display = "block";
-    nextButton.style.display = "block";
-  }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const headingsAndParagraphs = document.querySelectorAll(
     ".info-banner h3, .info-banner p, .contact"
@@ -76,42 +35,77 @@ function closePopup() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".carousel-track-container");
+  const track = document.querySelector(".carousel-track");
   const prevButton = document.querySelector(".carousel-button.prev");
   const nextButton = document.querySelector(".carousel-button.next");
   const moveDistance = 740; // Przesunięcie o 740px
+  const totalItems = document.querySelectorAll(".carousel-item").length;
+
+  let currentIndex = 0; // Zmienna śledząca aktualny indeks
 
   // Funkcja aktualizująca przyciski
   function updateButtons() {
-    prevButton.disabled = container.scrollLeft === 0;
-    nextButton.disabled =
-      container.scrollLeft >= container.scrollWidth - container.offsetWidth;
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === totalItems - 1;
+  }
+
+  // Funkcja do zapętlania karuzeli
+  function loopCarousel() {
+    // Jeśli osiągnęliśmy początek
+    if (currentIndex <= 0) {
+      currentIndex = totalItems - 1;
+    }
+
+    // Jeśli osiągnęliśmy koniec
+    if (currentIndex >= totalItems - 1) {
+      currentIndex = 0;
+    }
+
+    track.style.transform = `translateX(-${currentIndex * moveDistance}px)`;
+    updateButtons();
   }
 
   // Obsługuje kliknięcie przycisków
   prevButton.addEventListener("click", () => {
-    container.scrollLeft -= moveDistance; // Przewijamy w lewo
-    updateButtons();
+    currentIndex--;
+    loopCarousel(); // Zapętlamy
   });
 
   nextButton.addEventListener("click", () => {
-    container.scrollLeft += moveDistance; // Przewijamy w prawo
-    updateButtons();
+    currentIndex++;
+    loopCarousel(); // Zapętlamy
   });
 
-  // Ukrywanie przycisków na urządzeniach mobilnych
-  function isMobileDevice() {
-    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(
-      navigator.userAgent
-    );
-  }
+  // Obsługuje swipe na urządzeniach mobilnych
+  let startX = 0;
+  let endX = 0;
 
-  if (isMobileDevice()) {
-    prevButton.style.display = "none";
-    nextButton.style.display = "none";
-  }
+  container.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX; // Rozpoczęcie gestu
+  });
+
+  container.addEventListener("touchmove", (e) => {
+    endX = e.touches[0].clientX; // Śledzenie ruchu palca
+  });
+
+  container.addEventListener("touchend", () => {
+    const deltaX = endX - startX;
+    if (Math.abs(deltaX) > 50) {
+      if (deltaX > 0) {
+        currentIndex--; // Przesuwamy w lewo
+      } else {
+        currentIndex++; // Przesuwamy w prawo
+      }
+      loopCarousel(); // Zapętlamy
+    }
+
+    // Reset zmiennych
+    startX = 0;
+    endX = 0;
+  });
 
   // Inicjalizacja
-  updateButtons(); // Ustawienie początkowej pozycji
+  loopCarousel(); // Ustawienie początkowej pozycji
 });
 
 /*
