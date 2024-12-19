@@ -33,78 +33,34 @@ function closePopup() {
 }
 //CAROUSEL//
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const container = document.querySelector(".carousel-track-container");
-//   const track = document.querySelector(".carousel-track");
-//   const prevButton = document.querySelector(".carousel-button.prev");
-//   const nextButton = document.querySelector(".carousel-button.next");
-//   const moveDistance = 740; // Przesunięcie o 740px
-//   const totalItems = document.querySelectorAll(".carousel-item").length;
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const prevButton = document.querySelector(".carousel-button.prev");
+  const nextButton = document.querySelector(".carousel-button.next");
+  const moveDistance = 740; // Przesunięcie o 740px
 
-//   let currentIndex = 0; // Zmienna śledząca aktualny indeks
+  let currentIndex = 0; // Zmienna śledząca aktualny indeks
 
-//   // Funkcja aktualizująca przyciski
-//   function updateButtons() {
-//     prevButton.disabled = currentIndex === 0;
-//     nextButton.disabled = currentIndex === totalItems - 1;
-//   }
+  // Funkcja do przesuwania karuzeli
+  function moveCarousel() {
+    track.style.transform = `translateX(-${currentIndex * moveDistance}px)`;
+  }
 
-//   // Funkcja do zapętlania karuzeli
-//   function loopCarousel() {
-//     if (currentIndex < 0) {
-//       currentIndex = totalItems - 1;
-//     } else if (currentIndex >= totalItems) {
-//       currentIndex = 0;
-//     }
+  // Obsługuje kliknięcie przycisków
+  prevButton.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--; // Przesuwamy w lewo
+    }
+    moveCarousel(); // Przesuwamy karuzelę
+  });
 
-//     // Zapewniamy płynne przejście, przesuwając karuzelę w lewo lub w prawo
-//     track.style.transition = "transform 0.3s ease-in-out";
-//     track.style.transform = `translateX(-${currentIndex * moveDistance}px)`;
-//     updateButtons();
-//   }
-
-//   // Obsługuje kliknięcie przycisków
-//   prevButton.addEventListener("click", () => {
-//     currentIndex--;
-//     loopCarousel(); // Zapętlamy
-//   });
-
-//   nextButton.addEventListener("click", () => {
-//     currentIndex++;
-//     loopCarousel(); // Zapętlamy
-//   });
-
-//   // Obsługuje swipe na urządzeniach mobilnych
-//   let startX = 0;
-//   let endX = 0;
-
-//   container.addEventListener("touchstart", (e) => {
-//     startX = e.touches[0].clientX; // Rozpoczęcie gestu
-//   });
-
-//   container.addEventListener("touchmove", (e) => {
-//     endX = e.touches[0].clientX; // Śledzenie ruchu palca
-//   });
-
-//   container.addEventListener("touchend", () => {
-//     const deltaX = endX - startX;
-//     if (Math.abs(deltaX) > 50) {
-//       if (deltaX > 0) {
-//         currentIndex--; // Przesuwamy w lewo
-//       } else {
-//         currentIndex++; // Przesuwamy w prawo
-//       }
-//       loopCarousel(); // Zapętlamy
-//     }
-
-//     // Reset zmiennych
-//     startX = 0;
-//     endX = 0;
-//   });
-
-//   // Inicjalizacja
-//   loopCarousel(); // Ustawienie początkowej pozycji
-// });
+  nextButton.addEventListener("click", () => {
+    if (currentIndex < track.children.length - 1) {
+      currentIndex++; // Przesuwamy w prawo
+    }
+    moveCarousel(); // Przesuwamy karuzelę
+  });
+});
 
 /*
 document.addEventListener("DOMContentLoaded", () => {
