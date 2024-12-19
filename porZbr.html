@@ -9,8 +9,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="placowki.css" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="placowki.css" />
     <link rel="icon" type="image/x-icon" href="/Pictures/favicon.ico" />
     <script src="placowki.js" defer></script>
     <script src="porZbr.js" defer></script>
@@ -172,7 +172,7 @@
               >
             </h3>
             <p class="with-space">42-674 Zbrosławice, ul. Piastowska 3,</p>
-            <p class="with-space">tel. 32 233-70-30 , 32 233 72 50</p>
+            <p class="with-space">tel. 32 233-70-30, 32 233-72-50</p>
             <p>Rejestracja pacjentów od poniedziałku do piątku 08:00-18:00</p>
           </div>
         </div>
@@ -211,6 +211,288 @@
             <button class="acc2" id="go_to_clinic15" data-button-id="button_26">
               Pracownia USG
             </button>
+          </div>
+        </div>
+        <button class="acc">Harmonogram pracy lekarzy</button>
+        <div class="panel">
+          <h2 id="doctors_paragraph">Nasi lekarze</h2>
+          <div id="doctors_container">
+            <!-- <div id="doctors_list"> -->
+            <div class="div_grid">
+              <div class="doctor_info">
+                <h3>
+                  dr. n. med. spec. med. rodz.<br />
+                  Barbara Pietrasińska
+                </h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>8:00 - 13:30</p>
+                    <p>12:00 - 16:00</p>
+                    <p>12:30 - 18:00</p>
+                    <p>8:00 - 13:00</p>
+                    <p>8:00 - 13:00</p>
+                  </div>
+                </div>
+                <p style="margin: 20px 0">wizyty domowe:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>13:30 - 15:00</p>
+                    <p>16:00 - 18:00</p>
+                    <p>9:00 - 10:00</p>
+                    <p>13:00 - 15:30</p>
+                    <p>13:00 - 15:30</p>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor_info">
+                <h3>lek. med. rodz.<br />Joanna Wach-Sury</h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>9:00 - 12:30</p>
+                    <p>9:00 - 11:30</p>
+                    <p>9:00 - 12:30</p>
+                    <p>9:00 - 11:30</p>
+                    <p>9:00 - 12:30</p>
+                  </div>
+                </div>
+                <p style="margin: 20px 0"></p>
+                <p style="margin: 20px 0">wizyty domowe:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>środa</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>12:30 - 13:00</p>
+                    <p>12:30 - 13:00</p>
+                    <p>12:30 - 13:00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="doctor_info">
+                <h3>
+                  lek. spec. med. rodz.<br />
+                  Anna Gradzik
+                </h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>17:00 - 18:00</p>
+                    <p>17:00 - 18:00</p>
+                    <p>13:30 - 15:30</p>
+                    <p>13:30 - 15:30</p>
+                    <p>13:30 - 15:00</p>
+                  </div>
+                </div>
+                <p style="margin: 20px 0">wizyty domowe:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>środa</p>
+                    <p>czwartek</p>
+                  </div>
+                  <div id="hours">
+                    <p>15:30 - 16:00</p>
+                    <p>15:30 - 16:30</p>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor_info">
+                <h3>
+                  lek. med.<br />
+                  Katarzyna Śliwa
+                </h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>12:00 - 17:30</p>
+                    <p>8:30 - 13:30</p>
+                    <p>8:30 - 13:30</p>
+                    <p>9:00 - 14:30</p>
+                    <p>8:30 - 13:30</p>
+                  </div>
+                </div>
+                <p style="margin: 20px 0">wizyty domowe:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>17:30 - 18:00</p>
+                    <p>13:30 - 14:00</p>
+                    <p>13:30 - 14:00</p>
+                    <p>13:30 - 14:00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor_info">
+                <h3>
+                  lek. med.<br />
+                  Agnieszka Kolczyńska-Kukla
+                </h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>9:00 - 12:00</p>
+                    <p>12:15 - 15:00</p>
+                    <p>9:00 - 13:00</p>
+                    <p>13:00 - 17:00</p>
+                    <p>9:00 - 12:00</p>
+                  </div>
+                </div>
+                <p style="margin: 20px 0">wizyty domowe:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>12:00 - 12:45</p>
+                    <p>13:00 - 14:00</p>
+                    <p>17:00 - 18:00</p>
+                    <p>12:00 - 13:00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor_info">
+                <h3>
+                  lek. med.<br />
+                  Jarosław Teodorowicz
+                </h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <!-- <p>wtorek</p> -->
+                    <p>środa</p>
+                    <!-- <p>czwartek</p> -->
+                    <!-- <p>piątek</p> -->
+                  </div>
+                  <div id="hours">
+                    <p>14:30 - 17:30</p>
+                    <!-- <p>8:30 - 13:30</p> -->
+                    <p>14:30 - 17:30</p>
+                    <!-- <p>9:00 - 14:30</p> -->
+                    <!-- <p>8:30 - 13:30</p> -->
+                  </div>
+                </div>
+                <p style="margin: 20px 0">wizyty domowe:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+
+                    <p>środa</p>
+                  </div>
+                  <div id="hours">
+                    <p>17:30 - 18:00</p>
+                    <p>17:30 - 18:00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor_info">
+                <h3>
+                  lek. chor. wewn.<br />
+                  Jerzy Słodczyk
+                </h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>środa</p>
+                    <p>czwartek</p>
+                  </div>
+                  <div id="hours">
+                    <p>8:00 - 10:00</p>
+                    <p>8:00 - 12:00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor_info">
+                <h3>
+                  lek. med.<br />
+                  Agata Kołodziej-Maćczak
+                </h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+
+                    <p>środa</p>
+                  </div>
+                  <div id="hours">
+                    <p>11:30 - 14:30</p>
+                    <p>11:30 - 14:30</p>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor_info">
+                <h3>
+                  lek. med.<br />
+                  Katarzyna Pietrasińska
+                </h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>wtorek</p>
+
+                    <p>czwartek</p>
+                  </div>
+                  <div id="hours">
+                    <p>9:00 - 12:00</p>
+                    <p>9:00 - 12:00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <button class="acc">Harmonogram porad telefonicznych</button>
