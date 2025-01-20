@@ -173,9 +173,9 @@ document.addEventListener("DOMContentLoaded", () => {
 */
 document.addEventListener("DOMContentLoaded", function () {
   const buttonMappings = {
-    branch_button1: "porZbr.html",
+    branch_button1: "zbroslawice.html",
     branch_button2: "cmtg.html",
-    branch_button3: "porWie.html",
+    branch_button3: "wieszowa.html",
   };
 
   Object.keys(buttonMappings).forEach((buttonId) => {

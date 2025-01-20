@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="placowki.css" />
     <link rel="icon" type="image/x-icon" href="/Pictures/favicon.ico" />
     <script src="placowki.js" defer></script>
+    <script src="zbroslawice.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAM-MED</title>
@@ -29,14 +30,14 @@
           <div id="male_menu">
             <p class="contactBar">
               <i class="fas fa-phone"></i
-              ><a class="contact_links" href="tel:+48322737352">
-                +48322737352</a
+              ><a class="contact_links" href="tel:+48322337030">
+                +48322337030</a
               >
             </p>
             <p class="contactBar">
               <i class="fas fa-envelope"></i>
-              <a class="contact_links" href="mailto:wieszowa@fam-med.pl">
-                wieszowa@fam-med.pl</a
+              <a class="contact_links" href="mailto:zbroslawice@fam-med.pl">
+                zbroslawice@fam-med.pl</a
               >
             </p>
           </div>
@@ -54,9 +55,9 @@
                 <li class="dropdown">
                   <button class="dropdown-btn">Placówki</button>
                   <ul class="dropdown-content">
-                    <li><a href="porZbr.html">Zbrosławice</a></li>
+                    <li><a href="zbroslawice.html">Zbrosławice</a></li>
                     <li><a href="cmtg.html">Tarnowskie Góry</a></li>
-                    <li><a href="porWie.html">Wieszowa</a></li>
+                    <li><a href="wieszowa.html">Wieszowa</a></li>
                   </ul>
                 </li>
                 <li class="dropdown">
@@ -64,7 +65,7 @@
                   <ul class="dropdown-content">
                     <li><a href="prawaPacjenta.html">Prawa pacjenta</a></li>
                     <li>
-                      <a href="pom.html">Polityka ochrony małoletnich</a>
+                      <a href="#informacja2">Polityka ochrony małoletnich</a>
                     </li>
                     <li><a href="docs.html">Dokumenty do pobrania</a></li>
                     <li><a href="ikp.html">Internetowe konto pacjenta</a></li>
@@ -123,15 +124,15 @@
                 </div>
               </li>
               <li class="dropdown" id="aktualnosci">
-                <a href="#" onclick="scrollToSection()">Aktualności</a>
+                <a href="index.html" onclick="scrollToSection()">Aktualności</a>
                 <div class="dropdown-content"></div>
               </li>
               <li class="dropdown">
                 <a href="#carousel-container">Placówki</a>
                 <div class="dropdown-content">
-                  <a href="porZbr.html">Zbrosławice</a>
+                  <a href="zbroslawice.html">Zbrosławice</a>
                   <a href="cmtg.html">Tarnowskie Góry</a>
-                  <a href="porWie.html">Wieszowa</a>
+                  <a href="wieszowa.html">Wieszowa</a>
                 </div>
               </li>
               <li class="dropdown">
@@ -162,22 +163,282 @@
               class="logoQ"
             />
           </div>
+
           <div class="addr">
             <h3>
-              <strong>Poradnia Podstawowej Opieki Zdrowotnej FAM-MED</strong>
+              <strong
+                >Zakład Opieki Zdrowotnej <br />
+                FAM-MED S. C.</strong
+              >
             </h3>
-            <p class="with-space">42-672 Wieszowa, ul. Sienkiewicza 123,</p>
-            <p class="with-space">tel. 32 273 73 52</p>
-            <p>Rejestracja pacjentów od poniedziałku do piątku 09:00 - 16:00</p>
+            <p class="with-space">42-674 Zbrosławice, ul. Piastowska 3,</p>
+            <p class="with-space">tel. 32 233-70-30, 32 233-72-50</p>
+            <p>Rejestracja pacjentów od poniedziałku do piątku 08:00-18:00</p>
           </div>
         </div>
       </div>
       <section class="accSection">
+        <button class="acc" id="poradnie_spec">Poradnie specjalistyczne</button>
+        <div class="panel">
+          <div id="poradnie_panel">
+            <button class="acc2" id="go_to_clinic8" data-button-id="button_3">
+              Poradnia chorób naczyń
+            </button>
+            <button class="acc2" id="go_to_clinic2" data-button-id="button_6">
+              Poradnia endokrynologiczna
+            </button>
+            <button class="acc2" id="go_to_clinic3" data-button-id="button_9">
+              Poradnia ginekologiczna
+            </button>
+            <button class="acc2" id="go_to_clinic6" data-button-id="button_14">
+              Poradnia nefrologiczna
+            </button>
+            <button class="acc2" id="go_to_clinic5" data-button-id="button_15">
+              Poradnia neurologiczna
+            </button>
+            <button class="acc2" id="go_to_clinic4" data-button-id="button_12">
+              Poradnia otolaryngologiczna
+            </button>
+            <button class="acc2" id="go_to_clinic7" data-button-id="button_19">
+              Poradnia reumatologiczna
+            </button>
+            <button class="acc2" id="go_to_clinic14" data-button-id="button_13">
+              Medycyna pracy
+            </button>
+            <button class="acc2" id="go_to_clinic15" data-button-id="button_24">
+              Badania kierowców
+            </button>
+            <button class="acc2" id="go_to_clinic15" data-button-id="button_26">
+              Pracownia USG
+            </button>
+          </div>
+        </div>
         <button class="acc">Harmonogram pracy lekarzy</button>
         <div class="panel">
           <h2 id="doctors_paragraph">Nasi lekarze</h2>
           <div id="doctors_container">
-            <div id="doctors_list">
+            <!-- <div id="doctors_list"> -->
+            <div class="div_grid">
+              <div class="doctor_info">
+                <h3>
+                  dr. n. med. spec. med. rodz.<br />
+                  Barbara Pietrasińska
+                </h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>8:00 - 13:30</p>
+                    <p>12:00 - 16:00</p>
+                    <p>12:30 - 18:00</p>
+                    <p>8:00 - 13:00</p>
+                    <p>8:00 - 13:00</p>
+                  </div>
+                </div>
+                <p style="margin: 20px 0">wizyty domowe:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>13:30 - 15:00</p>
+                    <p>16:00 - 18:00</p>
+                    <p>9:00 - 10:00</p>
+                    <p>13:00 - 15:30</p>
+                    <p>13:00 - 15:30</p>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor_info">
+                <h3>lek. med. rodz.<br />Joanna Wach-Sury</h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>9:00 - 12:30</p>
+                    <p>9:00 - 11:30</p>
+                    <p>9:00 - 12:30</p>
+                    <p>9:00 - 11:30</p>
+                    <p>9:00 - 12:30</p>
+                  </div>
+                </div>
+                <p style="margin: 20px 0"></p>
+                <p style="margin: 20px 0">wizyty domowe:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>środa</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>12:30 - 13:00</p>
+                    <p>12:30 - 13:00</p>
+                    <p>12:30 - 13:00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="doctor_info">
+                <h3>
+                  lek. spec. med. rodz.<br />
+                  Anna Gradzik
+                </h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>17:00 - 18:00</p>
+                    <p>17:00 - 18:00</p>
+                    <p>13:30 - 15:30</p>
+                    <p>13:30 - 15:30</p>
+                    <p>13:30 - 15:00</p>
+                  </div>
+                </div>
+                <p style="margin: 20px 0">wizyty domowe:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>środa</p>
+                    <p>czwartek</p>
+                  </div>
+                  <div id="hours">
+                    <p>15:30 - 16:00</p>
+                    <p>15:30 - 16:30</p>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor_info">
+                <h3>
+                  lek. med.<br />
+                  Katarzyna Śliwa
+                </h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>12:00 - 17:30</p>
+                    <p>8:30 - 13:30</p>
+                    <p>8:30 - 13:30</p>
+                    <p>9:00 - 14:30</p>
+                    <p>8:30 - 13:30</p>
+                  </div>
+                </div>
+                <p style="margin: 20px 0">wizyty domowe:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>17:30 - 18:00</p>
+                    <p>13:30 - 14:00</p>
+                    <p>13:30 - 14:00</p>
+                    <p>13:30 - 14:00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor_info">
+                <h3>
+                  lek. med.<br />
+                  Agnieszka Kolczyńska-Kukla
+                </h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>wtorek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>9:00 - 12:00</p>
+                    <p>12:15 - 15:00</p>
+                    <p>9:00 - 13:00</p>
+                    <p>13:00 - 17:00</p>
+                    <p>9:00 - 12:00</p>
+                  </div>
+                </div>
+                <p style="margin: 20px 0">wizyty domowe:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <p>środa</p>
+                    <p>czwartek</p>
+                    <p>piątek</p>
+                  </div>
+                  <div id="hours">
+                    <p>12:00 - 12:45</p>
+                    <p>13:00 - 14:00</p>
+                    <p>17:00 - 18:00</p>
+                    <p>12:00 - 13:00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="doctor_info">
+                <h3>
+                  lek. med.<br />
+                  Jarosław Teodorowicz
+                </h3>
+                <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+                    <!-- <p>wtorek</p> -->
+                    <p>środa</p>
+                    <!-- <p>czwartek</p> -->
+                    <!-- <p>piątek</p> -->
+                  </div>
+                  <div id="hours">
+                    <p>14:30 - 17:30</p>
+                    <!-- <p>8:30 - 13:30</p> -->
+                    <p>14:30 - 17:30</p>
+                    <!-- <p>9:00 - 14:30</p> -->
+                    <!-- <p>8:30 - 13:30</p> -->
+                  </div>
+                </div>
+                <p style="margin: 20px 0">wizyty domowe:</p>
+                <div id="schedule">
+                  <div class="days">
+                    <p>poniedziałek</p>
+
+                    <p>środa</p>
+                  </div>
+                  <div id="hours">
+                    <p>17:30 - 18:00</p>
+                    <p>17:30 - 18:00</p>
+                  </div>
+                </div>
+              </div>
               <div class="doctor_info">
                 <h3>
                   lek. chor. wewn.<br />
@@ -186,74 +447,37 @@
                 <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
                 <div id="schedule">
                   <div class="days">
-                    <p>poniedziałek</p>
-                    <p>wtorek</p>
-                    <p>środa</p>
-                    <p>czwartek</p>
-                    <p>piątek</p>
-                  </div>
-                  <div id="hours">
-                    <p>10:00 - 14:30</p>
-                    <p>13:00 - 16:00</p>
-                    <p>10:30 - 14:00</p>
-                    <p>13:00 - 16:00</p>
-                    <p>10:00 - 14:00</p>
-                  </div>
-                </div>
-                <p style="margin: 20px 0">wizyty domowe:</p>
-                <div id="schedule">
-                  <div class="days">
-                    <p>poniedziałek</p>
-                    <p>wtorek</p>
                     <p>środa</p>
                     <p>czwartek</p>
                   </div>
                   <div id="hours">
-                    <p>09:00 - 10:00</p>
-                    <p>12:00 - 13:00</p>
-                    <p>14:00 - 15:00</p>
-                    <p>12:30 - 13:00</p>
+                    <p>8:00 - 10:00</p>
+                    <p>8:00 - 12:00</p>
                   </div>
                 </div>
               </div>
               <div class="doctor_info">
                 <h3>
-                  dr n. med. spec. chorób dziecięcych <br />Małgorzata
-                  Barć-Czarnecka
+                  lek. med.<br />
+                  Agata Kołodziej-Maćczak
                 </h3>
                 <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
                 <div id="schedule">
                   <div class="days">
                     <p>poniedziałek</p>
-                    <p>wtorek</p>
+
                     <p>środa</p>
-                    <p>czwartek</p>
-                    <p>piątek</p>
                   </div>
                   <div id="hours">
-                    <p>14:15 - 15:30</p>
-                    <p>09:00 - 11:00</p>
-                    <p>14:30 - 16:00</p>
-                    <p>13:30 - 15:00</p>
-                    <p>12:30 - 14:30</p>
-                  </div>
-                </div>
-                <p style="margin: 20px 0"></p>
-                <p style="margin: 20px 0">wizyty domowe:</p>
-                <div id="schedule">
-                  <div class="days">
-                    <p>czwartek</p>
-                  </div>
-                  <div id="hours">
-                    <p>15:00 - 15:30</p>
+                    <p>11:30 - 14:30</p>
+                    <p>11:30 - 14:30</p>
                   </div>
                 </div>
               </div>
-
               <div class="doctor_info">
                 <h3>
-                  lek. med. spec. med. rodz.<br />
-                  Sylwia Gałkowska-Krotla
+                  lek. med.<br />
+                  Katarzyna Pietrasińska
                 </h3>
                 <p style="margin: 20px 0">godziny przyjęć w przychodni:</p>
                 <div id="schedule">
@@ -263,19 +487,8 @@
                     <p>czwartek</p>
                   </div>
                   <div id="hours">
-                    <p>09:00 - 12:00</p>
-                    <p>09:00 - 12:00</p>
-                  </div>
-                </div>
-                <p style="margin: 20px 0">wizyty domowe:</p>
-                <div id="schedule">
-                  <div class="days">
-                    <p>wtorek</p>
-                    <p>czwartek</p>
-                  </div>
-                  <div id="hours">
-                    <p>12:00 - 13:00</p>
-                    <p>12:00 - 13:00</p>
+                    <p>9:00 - 12:00</p>
+                    <p>9:00 - 12:00</p>
                   </div>
                 </div>
               </div>
@@ -286,22 +499,93 @@
         <div class="panel">
           <div class="div_grid">
             <h3>Harmonogram porad telefonicznych</h3>
-            <h3>tel. 32 273-73-52</h3>
+            <h3>tel. 32 233 70 30</h3>
             <div class="grid-container">
-              <div><strong>LEKARZ POZ</strong></div>
-              <br />
+              <div><strong>LEKARZ POZ</strong>:</div>
               <div>
-                <div>Poniedziałek 13:00 – 14:00</div>
-                <div>Środa 14:00 – 15:00</div>
+                <div>Poniedziałek 12:00 – 13:00</div>
+                <div>Czwartek 12:00 – 13:00</div>
               </div>
-              <br /><br /><br />
-              <div><strong>PIELĘGNIARKA POZ</strong></div>
-              <br />
+
+              <div><strong>PIELĘGNIARKA POZ</strong>:</div>
               <div>
-                <div>Wtorek 09:00 – 10:00</div>
-                <div>Piątek 09:00 – 10:00</div>
+                <div>Wtorek 08:00 – 09:00</div>
+                <div>Środa 08:00 – 09:00</div>
               </div>
+
+              <div><strong>POŁOŻNA POZ</strong>:</div>
+              <div>Piątek 10:00 – 12:00</div>
             </div>
+          </div>
+        </div>
+        <button class="acc">Deklaracje do pobrania</button>
+        <div class="panel">
+          <div id="declarations_panel">
+            <a
+              class="declaration_link"
+              href="Zbroslawice/deklaracja_lekarz_poz.pdf"
+              download
+              >📄 Deklaracja wyboru lekarza POZ</a
+            ><br />
+            <a
+              class="declaration_link"
+              href="Zbroslawice/deklaracja_pielegniarka_poz.pdf"
+              download
+              >📄 Deklaracja wyboru pielęgniarki POZ</a
+            ><br />
+            <a
+              class="declaration_link"
+              href="Zbroslawice/deklaracja_polozna_poz.pdf"
+              download
+              >📄 Deklaracja wyboru położnej POZ</a
+            >
+          </div>
+        </div>
+
+        <button class="acc">Laboratorium</button>
+        <div class="panel">
+          <div id="lab_panel">
+            <img src="Pictures/diagnostyka.jpg" alt="" class="lab-image" />
+            <p>
+              W placówce znajduje się punkt pobierania materiału DIAGNOSTYKA do
+              badań laboratoryjnych bakteriologicznych, toksykologicznych,
+              hormonalnych, immunologicznych i markerów nowotworowych.
+            </p>
+            <p>
+              Dla pacjentów posiadających skierowanie od lekarzy POZ i lekarzy
+              specjalistów w ramach umowy z NFZ badania wykonywane są
+              bezpłatnie.
+            </p>
+            <p>
+              Bez wymaganego skierowania badanie wykonywane jest jedynie
+              komercyjnie. Cennik dostępny na stronie:
+              <a href="https://diag.pl/sklep/badania/">DIAGNOSTYKA / CENNIK</a>
+            </p>
+
+            <p></p>
+            <p>
+              Prosimy o zgłaszanie się do badania na czczo (poziom glukozy,
+              morfologia, OB.)
+            </p>
+            <p>
+              Do badania lipidogramu (poziom cholesterolu, trójglicerydów) po
+              16-godzinnym nie przyjmowaniu tłustych pokarmów. Do innych badań
+              laboratoryjnych pacjent przygotuje się zgodnie z zaleceniami
+              lekarza wystawiającego skierowanie.
+            </p>
+            <h4>
+              Wyniki badań laboratoryjnych są do odbioru w rejestracjach
+              placówek lub online na stronie
+              <a href="https://wyniki.diag.pl/ ">DIAGNOSTYKA</a>
+            </h4>
+            <h3>Laboratorium czynne:</h3>
+            <p>Od poniedziałku do piątku w godzinach 7:30 - 9:30</p>
+            <h3>Punkty Pobrań DIAGNOSTYKA:</h3>
+            <p>ZOZ FAM-MED Zbrosławice, ul. Piastowska 3</p>
+            <p>DIAGNOSTYKA Tarnowskie Góry, ul. Piłsudskiego 16</p>
+            <p>LiMED Tarnowskie Góry, ul. Tylna 12</p>
+            <p>FAM-MED Tarnowskie Góry, ul. Szwedzka 2</p>
+            <p>NZOZ Telmed Tarnowskie Góry, ul. Zagórska 83</p>
           </div>
         </div>
         <button class="acc">Gabinet zabiegowy</button>
@@ -352,115 +636,13 @@
             </ul>
           </div>
         </div>
-        <button class="acc">Pracownia USG</button>
-        <div class="panel">
-          <div class="div_margin">
-            <h3>Zapraszamy do korzystania z badań USG:</h3>
-            <ul>
-              <li>USG jamy brzusznej i miednicy małej</li>
-              <li>USG szyi i tarczycy</li>
-            </ul>
-            <h3>
-              Prosimy o przygotowanie się do badania USG jamy brzusznej i
-              miednicy małej w następujący sposób:
-            </h3>
-            <ul>
-              <li>
-                2 dni przed planowanym badaniem nie należy spożywać pokarmów
-                wzdymających.
-              </li>
-              <li>
-                Na badanie należy zgłosić się na czczo (6 godzin wcześniej nic
-                nie jeść i nie pić) i nie palić papierosów.
-              </li>
-              <li>
-                Przez 3 dni przed badaniem można zażywać Espumisan w kapsułkach
-                (bez recepty) – 3x2 kaps./dobę po jedzeniu.
-              </li>
-            </ul>
-            <h4>
-              Prosimy o wcześniejszą rejestrację telefoniczną (32) 273-73-52 lub
-              osobiście.
-            </h4>
-          </div>
-        </div>
-        <button class="acc">Laboratorium</button>
-        <div class="panel">
-          <div id="lab_panel">
-            <img src="Pictures/korlab.png" alt="" class="lab-image" />
-            <p class="paragraph_margin">
-              W placówce FAM-MED Wieszowa, ul Sienkiewicza 123 znajduje się
-              punkt pobierania materiału KORLAB. Dla pacjentów posiadających
-              skierowanie od lekarzy POZ i lekarzy specjalistów Zakładu Opieki
-              Zdrowotnej „FAM - MED” w ramach umowy z NFZ badania wykonywane są
-              bezpłatnie. Bez wymaganego skierowania badanie wykonywane jest
-              jedynie komercyjnie.
-            </p>
-            <p>
-              Prosimy o zgłaszanie się do badania na czczo (poziom glukozy,
-              morfologia, OB.)
-            </p>
-            <p>
-              Do badania lipidogramu (poziom cholesterolu, trójglicerydów) po
-              16-godzinnym nie przyjmowaniu tłustych pokarmów. Do innych badań
-              laboratoryjnych pacjent przygotuje się zgodnie z zaleceniami
-              lekarza wystawiającego skierowanie.
-            </p>
-            <p>
-              Wyniki badań laboratoryjnych są do odbioru w rejestracjach
-              placówek.
-            </p>
-            <h4>
-              Na wizytę proszę umawiać się osobiście lub telefonicznie 32 273 73
-              52
-            </h4>
-            <p>
-              Wyniki badań laboratoryjnych są do odbioru w rejestracjach
-              placówek oraz na stronie Wyniki online KORLAB
-              <a href="https://korlab24.com.pl/">https://korlab24.com.pl/</a>
-            </p>
-            <h3>Laboratorium czynne:</h3>
-            <p>Wtorek: 8:00 - 9:15</p>
-            <p>Czwartek: 9:00 - 9:30</p>
-
-            <h3>Punkty Pobrań DIAGNOSTYKA:</h3>
-            <p>FAM-MED Wieszowa, ul. Sienkiewicza 123</p>
-            <p>VADEMECUM Tarnowskie Góry, ul. Poczdamska 7</p>
-            <p>Przy Szpitalu Specjalistycznym Nr 1 Bytom, ul. Żeromskiego 3</p>
-          </div>
-        </div>
-        <button class="acc">Deklaracje do pobrania</button>
-        <div class="panel">
-          <div id="declarations_panel">
-            <a
-              class="declaration_link"
-              href="Wieszowa/deklaracja_lekarz_poz.pdf"
-              download
-              >📄 Deklaracja wyboru lekarza POZ</a
-            ><br />
-            <a
-              class="declaration_link"
-              href="Wieszowa/deklaracja_pielegniarka_poz.pdf"
-              download
-              >📄 Deklaracja wyboru pielęgniarki POZ</a
-            ><br />
-            <a
-              class="declaration_link"
-              href="Wieszowa/deklaracja_polozna_poz.pdf"
-              download
-              >📄 Deklaracja wyboru położnej POZ</a
-            >
-          </div>
-        </div>
-
         <button class="acc">Certyfikaty</button>
         <div class="panel">
           <div class="certificates">
-            <!-- <span class="close">&times;</span> -->
             <img
               id="iso"
-              src="Wieszowa/wieszowa.jpg"
-              alt="ISO"
+              src="Zbroslawice/zbroslawice.jpg"
+              alt="iso"
               class="iso"
               style="width: 100%; max-width: 240px"
             />
@@ -551,5 +733,7 @@
         <p id="footer_end_p">Designed and Developed by W&T Web Design</p>
       </div>
     </div>
+    <script src="placowki.js" defer></script>
   </body>
+  <script src="placowki.js" defer></script>
 </html>

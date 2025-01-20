@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let button = document.getElementById("branch_button1");
 
   button.addEventListener("click", function () {
-    window.location.href = "porZbr.html";
+    window.location.href = "zbroslawice.html";
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let button = document.getElementById("branch_button3");
 
   button.addEventListener("click", function () {
-    window.location.href = "porWie.html";
+    window.location.href = "wieszowa.html";
   });
 });
 
