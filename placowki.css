@@ -9,7 +9,7 @@ body {
 }
 p,
 li {
-  font-weight: 300;
+  font-weight: 400;
 }
 .infos {
   display: flex;
@@ -324,6 +324,9 @@ tr:nth-child(even) {
 #cert:hover {
   opacity: 0.7;
 }
+#lab_panel p {
+  font-size: 14px;
+}
 @media (max-width: 550px) {
   #doctors_list {
     flex-direction: column;
@@ -432,7 +435,7 @@ tr:nth-child(even) {
     gap: 20px;
   }
   .infos {
-    flex-direction: column;
+    /* flex-direction: column; */
     padding: 0;
     height: auto;
   }
@@ -442,9 +445,12 @@ tr:nth-child(even) {
   .infos h3 {
     font-size: 14px;
   }
-  .infos h4,
-  p {
+  /* .infos h4,
+  .infos h4 p {
     font-size: 10px;
+  } */
+  .addr p {
+    font-size: 14px;
   }
   .with-space {
     font-size: 14px;
@@ -456,6 +462,7 @@ tr:nth-child(even) {
   .panel ul li {
     font-size: 14px;
     margin: 0 24px;
+    font-weight: 400;
   }
   .div_grid {
     margin: 0 8px;
@@ -485,6 +492,9 @@ tr:nth-child(even) {
   }
   .declaration_link {
     font-size: 14px !important;
+  }
+  #footer_logo {
+    display: none;
   }
   @media (max-width: 620px) {
     #top-navbar {

@@ -31,35 +31,74 @@ function closePopup() {
   document.getElementById("popup-banner").classList.remove("show");
   document.getElementById("overlay").classList.remove("show");
 }
-//CAROUSEL//
-
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
+  const container = document.querySelector(".carousel-track-container");
   const prevButton = document.querySelector(".carousel-button.prev");
   const nextButton = document.querySelector(".carousel-button.next");
-  const moveDistance = 740; // Przesunięcie o 740px
+  const slides = Array.from(track.children);
+  let slideWidth = slides[0].getBoundingClientRect().width;
+  let currentIndex = 0;
 
-  let currentIndex = 0; // Zmienna śledząca aktualny indeks
+  let startX = 0; // Starting X-coordinate of the touch
+  let endX = 0; // Ending X-coordinate of the touch
 
-  // Funkcja do przesuwania karuzeli
-  function moveCarousel() {
-    track.style.transform = `translateX(-${currentIndex * moveDistance}px)`;
+  function updateCarousel() {
+    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === slides.length - 1;
   }
 
-  // Obsługuje kliknięcie przycisków
   prevButton.addEventListener("click", () => {
     if (currentIndex > 0) {
-      currentIndex--; // Przesuwamy w lewo
+      currentIndex--;
+      updateCarousel();
     }
-    moveCarousel(); // Przesuwamy karuzelę
   });
 
   nextButton.addEventListener("click", () => {
-    if (currentIndex < track.children.length - 1) {
-      currentIndex++; // Przesuwamy w prawo
+    if (currentIndex < slides.length - 1) {
+      currentIndex++;
+      updateCarousel();
     }
-    moveCarousel(); // Przesuwamy karuzelę
   });
+
+  // Handle window resize
+  window.addEventListener("resize", () => {
+    slideWidth = slides[0].getBoundingClientRect().width;
+    updateCarousel();
+  });
+
+  // Touch event handlers for swiping
+  container.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX; // Record the starting touch point
+  });
+
+  container.addEventListener("touchmove", (e) => {
+    endX = e.touches[0].clientX; // Track the current touch point
+  });
+
+  container.addEventListener("touchend", () => {
+    const deltaX = endX - startX;
+
+    if (Math.abs(deltaX) > 50) {
+      // Minimum swipe distance to trigger
+      if (deltaX > 0 && currentIndex > 0) {
+        // Swipe right
+        currentIndex--;
+      } else if (deltaX < 0 && currentIndex < slides.length - 1) {
+        // Swipe left
+        currentIndex++;
+      }
+      updateCarousel();
+    }
+
+    // Reset swipe variables
+    startX = 0;
+    endX = 0;
+  });
+
+  updateCarousel();
 });
 
 /*
