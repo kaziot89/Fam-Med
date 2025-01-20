@@ -3,7 +3,7 @@
 }
 p,
 li {
-  font-weight: 300;
+  font-weight: 400;
 }
 .mainView {
   margin-top: 320px;
@@ -124,8 +124,17 @@ h3 {
 @media (max-width: 820px) {
   #text {
     flex-direction: column;
-    margin: 0 8px 100px 8px;
+    margin: 0 12px 100px 12px;
   }
+  #text p:not(:scope > p) {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  #text li:not(:scope > li) {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
   #main_container #img_mobile {
     display: block;
     margin-bottom: 24px;

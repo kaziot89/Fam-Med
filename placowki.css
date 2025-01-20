@@ -444,8 +444,12 @@ tr:nth-child(even) {
   }
   .infos h4,
   p {
-    font-size: 16px;
+    font-size: 10px;
   }
+  .with-space {
+    font-size: 14px;
+  }
+
   .panel {
     padding: 0 8px;
   }
@@ -569,7 +573,7 @@ tr:nth-child(even) {
       flex-direction: column;
     }
     .mainView {
-      margin-top: 120px;
+      margin-top: 110px;
     }
     #mainContainerIndex {
       width: 100vw;
@@ -690,17 +694,21 @@ tr:nth-child(even) {
     }
     #footer_info a {
       color: rgb(56, 56, 56);
-      font-size: 12px;
+      font-size: 14px;
     }
     #footer_contact {
       flex-wrap: wrap;
       font-size: 12px;
       min-width: 80vw;
+      flex-direction: column;
     }
     .footer_branch_address {
       flex: 1;
       min-width: 50%;
       margin: 12px 0;
+    }
+    .footer_branch_address p {
+      font-size: 14px;
     }
     #footer_logo {
       display: none;

@@ -10,7 +10,7 @@
 }
 p,
 li {
-  font-weight: 300;
+  font-weight: 400;
 }
 @keyframes text_slide_animation {
   0% {
@@ -74,12 +74,26 @@ li {
   #mainContainerIndex {
     flex-direction: column;
     width: 95%;
+    margin-left: 12px;
+    margin-right: 12px;
   }
-
+  #describe40 p,
+  #describe40 li {
+    font-size: 14px;
+    font-weight: 400;
+  }
   #notmobile {
     width: 60%;
   }
   #poster40 img {
     width: 95%;
+  }
+  .footer_branch_address p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 620px) {
+  .footer_branch_address p {
+    font-size: 14px;
   }
 }

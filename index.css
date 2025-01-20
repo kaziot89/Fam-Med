@@ -189,7 +189,7 @@ a:visited {
 .dropdown-content {
   display: block;
   position: absolute;
-  min-width: 350px;
+  min-width: 260px;
   z-index: 1;
   backdrop-filter: blur(10px);
   background-color: rgba(229, 229, 229, 0.5);
@@ -321,12 +321,26 @@ a:visited {
   height: 500px;
   margin-top: 70px;
   overflow: hidden;
-  background-image: url(Pictures/bg1.jpg);
+  background-image: url(Pictures/bg12.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   scroll-margin-top: 12rem;
 }
+#contact_atribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: 12px;
+  font-family: poppins;
+  margin-right: 4px;
+}
+#contact_atribution p a {
+  color: grey;
+  font-size: 12px;
+}
+
 .contact {
   position: relative;
   min-width: 400px;
@@ -709,7 +723,7 @@ iframe {
 #branch2 p a,
 #branch3 p a,
 #branch4 p a {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   padding: 0;
   font-family: "Poppins";
@@ -858,13 +872,16 @@ iframe {
     margin-top: auto;
   }
   #menuElements li a {
-    font-size: 16px;
+    font-size: 18px;
   }
   #navbar_content {
-    width: 95%;
+    width: 98%;
   }
   #mainContainerIndex {
-    width: 95%;
+    width: 98%;
+  }
+  .dropdown-content {
+    left: -84px;
   }
   #characterAndSlogan {
     background-position: -550px top;
@@ -885,10 +902,10 @@ iframe {
   }
   #bottom-menu {
     padding-top: 32px;
-    width: 95%;
+    width: 98%;
   }
   .carousel-container {
-    width: 95%;
+    width: 98%;
   }
   .carousel-button.next,
   .carousel-button.prev {
@@ -896,7 +913,7 @@ iframe {
   }
 
   #branches {
-    width: 95%;
+    width: 98%;
   }
   #branch1,
   #branch2,
