@@ -44,7 +44,7 @@ a {
   font-family: "poppins";
   font-weight: 300;
   color: white;
-  text-align: center;
+  /* text-align: center; */
 }
 #popup-banner p {
   margin: 10px 0;
