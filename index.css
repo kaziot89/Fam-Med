@@ -773,7 +773,7 @@ iframe {
 #footer {
   position: relative;
   bottom: 0;
-  height: 200px;
+  /* height: 200px; */
   width: 100%;
   box-shadow: rgb(104, 103, 103) 2px 0px 12px 0px;
 }
@@ -790,7 +790,7 @@ iframe {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 95%;
+  width: 98%;
   max-width: 1400px;
 }
 #footer_info {
@@ -814,7 +814,7 @@ iframe {
 #footer_contact {
   display: flex;
   flex-direction: row;
-  width: 60%;
+  width: 78%;
   margin: 24px 0;
   font-family: "Poppins";
   font-size: 12px;
@@ -930,14 +930,14 @@ iframe {
   #footer_contact {
     margin: 8px 0;
     font-size: 12px;
-    width: 70%;
   }
-  #footer_info a {
-    font-size: 12px;
+  #footer_contact > * {
+    flex: 1 1 20%;
   }
-  #footer_logo a img {
-    width: 80px;
-  }
+  /* #footer_info {
+    display: none;
+  } */
+
   #footer_end_p {
     margin-left: 24px;
   }
@@ -1024,12 +1024,12 @@ iframe {
   iframe {
     width: 90%;
   }
-  #footer_logo a img {
+  /* #footer_logo a img {
     width: 80px;
-  }
-  #footer_contact {
-    width: 75%;
-  }
+  } */
+  /* #footer_contact {
+    width: 98%;
+  } */
 }
 @media (max-width: 620px) {
   #popup-banner h2 {
