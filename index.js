@@ -19,13 +19,18 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(element);
   });
 });
-if (!localStorage.getItem("popupDisplayed")) {
-  setTimeout(() => {
-    document.getElementById("popup-banner").classList.add("show");
-    document.getElementById("overlay").classList.add("show");
-  }, 1000);
-  localStorage.setItem("popupDisplayed", "true");
-}
+setTimeout(() => {
+  document.getElementById("popup-banner").classList.add("show");
+  document.getElementById("overlay").classList.add("show");
+}, 1000);
+
+// if (!localStorage.getItem("popupDisplayed")) {
+//   setTimeout(() => {
+//     document.getElementById("popup-banner").classList.add("show");
+//     document.getElementById("overlay").classList.add("show");
+//   }, 1000);
+//   localStorage.setItem("popupDisplayed", "true");
+// }
 
 function closePopup() {
   document.getElementById("popup-banner").classList.remove("show");
