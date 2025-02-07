@@ -40,7 +40,7 @@ a {
 #popup-banner h2 {
   position: relative;
   margin: 32px auto;
-  font-size: 2rem;
+  font-size: 18px;
   font-family: "poppins";
   font-weight: 300;
   color: white;
@@ -64,6 +64,7 @@ a {
   opacity: 0;
   animation: fadeIn 2s ease-in-out forwards;
   margin-bottom: 8px;
+  font-family: "poppins";
 }
 @keyframes fadeIn {
   0% {
@@ -578,7 +579,9 @@ a:visited {
 #news-element2 img,
 #news-element3 img,
 #news-element6 img,
-#news-element7 img {
+#news-element7 img,
+#news-element10 img,
+#news-element11 img {
   /* padding: 18px; */
   border: 12px white solid;
 }
