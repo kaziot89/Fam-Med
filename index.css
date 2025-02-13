@@ -146,6 +146,9 @@ nav {
   display: none;
 }
 #male_menu {
+  display: flex;
+  align-items: center; /* Wyśrodkowanie w pionie */
+  justify-content: flex-end;
   width: 100%;
   height: 40px;
   background: linear-gradient(
@@ -161,7 +164,9 @@ nav {
 #male_menu p {
   display: block;
   float: right;
-  padding: 5px 8px;
+  padding: 0 16px;
+  font-family: "poppins";
+  font-weight: 300;
 }
 #topMenu {
   width: 100%;
@@ -1036,6 +1041,10 @@ iframe {
   } */
 }
 @media (max-width: 620px) {
+  #male_menu p {
+    padding: 0;
+    margin: 0 auto;
+  }
   #popup-banner h2 {
     font-size: 13px;
   }

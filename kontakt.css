@@ -1,0 +1,63 @@
+#main_container_contact {
+  padding-top: 180px;
+  min-height: calc(100vh - 185px);
+}
+#branches {
+  height: 60vh;
+  min-height: 500px;
+}
+#branch1,
+#branch2,
+#branch3 {
+  /* height: 65%; */
+  min-height: 400px;
+  max-height: 500px;
+}
+#branch_button1,
+#branch_button2,
+#branch_button3 {
+  width: 150px;
+  height: 40px;
+}
+@media (max-width: 620px) {
+  #main_container_contact {
+    padding-top: 110px;
+    min-height: calc(100vh - 185px);
+  }
+  #branches {
+    width: 100vw;
+    height: 100%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  #branch1,
+  #branch2,
+  #branch3 {
+    top: 150px;
+    min-height: 300px;
+    max-height: 400px;
+    width: 95%;
+    margin: 24px 0;
+  }
+  iframe {
+    height: 130px;
+    width: 90%;
+    margin-top: 8px;
+  }
+  #branch1 p a,
+  #branch2 p a,
+  #branch3 p a,
+  #branch4 p a {
+    font-size: 12px;
+  }
+  .branch_name {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  #branch_button1,
+  #branch_button2,
+  #branch_button3 {
+    width: 150px;
+    height: 30px;
+  }
+}
