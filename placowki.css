@@ -116,6 +116,7 @@ li {
 }
 .partners_images {
   margin: 8px auto;
+  cursor: default;
 }
 
 .partners_images img {
@@ -123,6 +124,7 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: default;
 }
 #doctors_paragraph {
   display: block;
@@ -264,6 +266,7 @@ li {
   margin-top: 48px;
   width: 80%;
   max-width: 650px;
+  cursor: default;
 }
 #lab_panel {
   margin-bottom: 32px;

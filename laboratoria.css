@@ -76,6 +76,10 @@ p {
   color: rgb(43, 159, 167);
   font-weight: 600;
 }
+.lab_loc {
+  padding: 0 !important;
+  color: rgb(43, 159, 167) !important;
+}
 
 @media (max-width: 880px) {
   #main_container_lab {
