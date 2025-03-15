@@ -865,7 +865,7 @@ iframe {
   font-weight: 300;
 }
 .footer_branch_address {
-  margin: auto;
+  margin: 0 auto;
 }
 #footer_line {
   width: 100%;
