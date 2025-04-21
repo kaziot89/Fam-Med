@@ -588,7 +588,8 @@ a:visited {
 }
 
 .carousel-track-container {
-  overflow-x: auto;
+  overflow-x: hidden;
+  /* overflow-x: auto; */
   overflow-y: hidden;
   flex: 1;
   scroll-behavior: smooth;
