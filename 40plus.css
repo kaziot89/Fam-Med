@@ -45,8 +45,7 @@ li {
   transform: translateX(-50%);
 }
 #notmobile {
-  width: 40%;
-  max-width: 800px;
+  width: 50%;
   position: relative;
   top: 160px;
   left: 50%;
