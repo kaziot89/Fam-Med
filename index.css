@@ -729,10 +729,10 @@ img {
   display: flex;
   justify-content: space-around;
   margin: 0 auto 30px;
-  height: 500px;
+  height: 600px;
   max-width: 1400px;
   width: 90%;
-  background-image: url(Pictures/branches_background.jpg);
+  background-image: url(Pictures/IMG_4389-full.jpg);
   background-position: center;
   background-size: cover;
 }
