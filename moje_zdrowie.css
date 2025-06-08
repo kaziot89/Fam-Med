@@ -8,16 +8,37 @@ body {
   display: block;
   max-width: 1200px;
   margin: auto;
-
   padding-bottom: 148px;
 }
 
 .gallery img {
-  width: 100%;
+  width: 95%;
   max-width: 700px;
   height: auto;
   position: relative;
   left: 50%;
   transform: translate(-50%);
   box-shadow: lightgrey 0px 0px 15px 5px;
+  animation: text_slide_animation 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+@keyframes text_slide_animation {
+  0% {
+    top: 1500px;
+    opacity: 0;
+  }
+  70% {
+    top: -10px;
+    opacity: 1;
+  }
+  85% {
+    top: 5px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@media (max-width: 620px) {
+  .gallery {
+    padding-top: 54px;
+  }
 }
