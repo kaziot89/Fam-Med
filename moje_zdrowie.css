@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  display: block;
+  max-width: 1200px;
+  margin: auto;
+
+  padding-bottom: 148px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: lightgrey 0px 0px 15px 5px;
+}

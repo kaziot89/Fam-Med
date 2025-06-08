@@ -17,6 +17,7 @@
     />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="kontakt.css" />
+    <link rel="stylesheet" href="moje_zdrowie.css" />
     <link rel="icon" type="image/x-icon" href="/Pictures/favicon.ico" />
     <script src="laboratoria.js"></script>
     <script src="index.js"></script>
@@ -191,95 +192,16 @@
       </div>
     </div>
     <div id="main_container_contact">
-      <div id="branches">
-        <div id="branch1">
-          <h3 class="branch_name">Zbrosławice</h3>
-          <p>
-            <a
-              class="contact_links"
-              href="https://www.google.com/maps/dir/?api=1&destination=Piastowska+3,+42-674+Zbrosławice"
-              target="_blank"
-              >ul. Piastowska 3</a
-            >
-          </p>
-          <p>
-            <a class="contact_links" href="tel:+48322337030">32 233-70-30</a>
-          </p>
-          <p>
-            <a class="contact_links" href="mailto:zbroslawice@fam-med.pl"
-              >zbroslawice@fam-med.pl</a
-            >
-          </p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.2335033302575!2d18.75323517775656!3d50.41812097158599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471128d72a99ff27%3A0x89f03351b3183b59!2sCentrum%20Medyczne%20Fam-Med!5e0!3m2!1spl!2spl!4v1729351153058!5m2!1spl!2spl"
-            width="250"
-            height="50%"
-            style="border: 0; top: 16px"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <button id="branch_button1">Poznaj</button>
-        </div>
-        <div id="branch2">
-          <h3 class="branch_name">Tarnowskie Góry</h3>
-          <p>
-            <a
-              class="contact_links"
-              href="https://www.google.com/maps/dir/?api=1&destination=Szwedzka+2,+42-612+Tarnowskie+Góry"
-              target="_blank"
-              >ul. Szwedzka 2</a
-            >
-          </p>
-          <p>
-            <a class="contact_links" href="tel:+48322841673">32 284-16-73</a>,
-            <a class="contact_links" href="tel:+48322841673">602-314-320</a>
-          </p>
-          <p>
-            <a class="contact_links" href="mailto:t.gory@fam-med.pl"
-              >t.gory@fam-med.pl</a
-            >
-          </p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2523.1887010667124!2d18.825751672329638!3d50.44596481545726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4711299c9dcb660b%3A0x3d5d752cecbf4cb5!2sCentrum%20Medyczne%20Fam-Med!5e0!3m2!1spl!2spl!4v1729351091022!5m2!1spl!2spl"
-            width="250"
-            height="50%"
-            style="border: 0; top: 16px"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <button id="branch_button2">Poznaj</button>
-        </div>
-        <div id="branch3">
-          <h3 class="branch_name">Wieszowa</h3>
-          <p>
-            <a
-              class="contact_links"
-              href="https://www.google.com/maps/dir/?api=1&destination=Sienkiewicza+123,+42-672+Wieszowa"
-              target="_blank"
-              >ul. Sienkiewicza 123</a
-            >
-          </p>
-          <p>
-            <a class="contact_links" href="tel:+48322737352"> 32 273-73-52</a>
-          </p>
-          <p>
-            <a class="contact_links" href="mailto:wieszowa@fam-med.pl"
-              >wieszowa@fam-med.pl</a
-            >
-          </p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.164981151019!2d18.750988177755314!3d50.38212297157927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47112ee5924342c7%3A0x6b212b4c3313478b!2sCentrum%20Medyczne%20Fam-Med!5e0!3m2!1spl!2spl!4v1729351036321!5m2!1spl!2spl"
-            width="240"
-            height="50%"
-            style="border: 0; top: 16px"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <button id="branch_button3">Poznaj</button>
-        </div>
+      <!--  -->
+      <div class="gallery">
+        <!-- Przykładowe zdjęcia -->
+        <img src="Pictures/moje_zdrowie.jpg" alt="moje_zdrowie" />
+      </div>
+
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content1" id="modalImage" />
       </div>
     </div>
     <div id="footer">
@@ -366,6 +288,6 @@
       </div>
     </div>
     <script src="laboratoria.js"></script>
-    <!-- <script src="index.js"></script> -->
+    <!-- <script src="prace_plastyczne.js"></script> -->
   </body>
 </html>

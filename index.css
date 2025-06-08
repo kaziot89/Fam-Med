@@ -890,6 +890,14 @@ iframe {
   float: left;
   margin: auto;
 }
+#fb_link {
+  margin-top: 8px;
+}
+#fb_icon {
+  vertical-align: middle;
+  margin-left: 8px;
+  height: 2em; /* dopasuj do rozmiaru tekstu, lub np. 16px */
+}
 @media (max-height: 720px) {
   #characterAndSlogan {
     height: 33rem;
