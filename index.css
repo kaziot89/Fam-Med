@@ -288,7 +288,7 @@ a:visited {
   position: absolute;
   top: 8%;
   right: 8%;
-  font-size: 44px;
+  font-size: 40px;
   width: 40%;
   color: white;
   font-family: "Poppins", sans-serif;
@@ -938,9 +938,9 @@ iframe {
   .dropdown-content {
     left: -84px;
   }
-  #characterAndSlogan {
+  /* #characterAndSlogan {
     background-position: -550px top;
-  }
+  } */
   .info-banner p.visible {
     width: 80%;
     font-size: 20px;
@@ -1022,7 +1022,7 @@ iframe {
   }
   #characterAndSlogan {
     height: 40rem;
-    background-position: -250px top;
+    /* background-position: -250px top; */
   }
   .bottom-menu-tabs {
     height: 250px;
