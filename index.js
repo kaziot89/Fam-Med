@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(element);
   });
 });
+
 setTimeout(() => {
   document.getElementById("popup-banner").classList.add("show");
   document.getElementById("overlay").classList.add("show");
@@ -33,9 +34,22 @@ setTimeout(() => {
 // }
 
 function closePopup() {
-  document.getElementById("popup-banner").classList.remove("show");
+  const popup = document.getElementById("popup-banner");
+  const video = popup.querySelector("video");
+
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+  }
+
+  popup.classList.remove("show");
   document.getElementById("overlay").classList.remove("show");
 }
+// function closePopup() {
+//   document.getElementById("popup-banner").classList.remove("show");
+//   document.getElementById("overlay").classList.remove("show");
+// }
+
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
   const container = document.querySelector(".carousel-track-container");
