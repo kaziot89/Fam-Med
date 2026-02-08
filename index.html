@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,9 +31,6 @@
       <div id="top-navbar">
         <div id="navbar_content">
           <div id="logo">
-            <!-- <a href="index.html"
-              ><img src="Pictures/zczapeczka.png" alt="świąteczne logo"
-            /></a> -->
             <a href="index.html"
               ><img src="Pictures/25png.png" alt="logo 25-lecia firmy"
             /></a>
@@ -51,6 +48,20 @@
                     +48322337030</a
                   >
                 </p> -->
+              <button
+                id="contrastToggle"
+                aria-label="Włącz tryb wysokiego kontrastu"
+              >
+                🟡⚫ Kontrast
+              </button>
+              <!-- <div id="fontControls">
+                <button id="fontMinus" aria-label="Zmniejsz czcionkę">
+                  A−
+                </button>
+                <button id="fontReset" aria-label="Domyślna czcionka">A</button>
+                <button id="fontPlus" aria-label="Powiększ czcionkę">A+</button>
+              </div> -->
+
               <p class="contactBar">ZAKŁAD OPIEKI ZDROWOTNEJ FAM-MED S. C.</p>
               <!-- <p class="contactBar">
                   <i class="fas fa-envelope"></i>
@@ -161,11 +172,14 @@
                   id="aktualnosci"
                   class="dropdown scroll-button"
                   data-section-id="carousel-container"
+                  tabindex="0"
+                  aria-expanded="false"
                 >
                   <a href="#">Aktualności</a>
                   <div class="dropdown-content"></div>
                 </li>
-                <li class="dropdown">
+
+                <li class="dropdown" tabindex="0" aria-expanded="false">
                   Placówki
                   <div class="dropdown-content">
                     <a href="zbroslawice.html">Zbrosławice</a>
@@ -173,7 +187,7 @@
                     <a href="wieszowa.html">Wieszowa</a>
                   </div>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown" tabindex="0" aria-expanded="false">
                   <a href="#carousel-container">Informacje</a>
                   <div class="dropdown-content">
                     <a href="prawaPacjenta.html">Prawa pacjenta</a>
@@ -226,7 +240,7 @@
         <button onclick="closePopup()">Przejdź do strony</button>
       </div> -->
       <div id="mainContainerIndex">
-        <div class="banner">
+        <!-- <div class="banner">
           <div class="banner-text">
             <span
               >Szanowni Państwo, uprzejmie informujemy, że w dniu 05 lutego
@@ -234,7 +248,7 @@
               Przepraszamy za utrudnienia.</span
             >
           </div>
-        </div>
+        </div> -->
         <div id="characterAndSlogan">
           <div id="slogan"></div>
 
@@ -546,7 +560,7 @@
         <button class="carousel-button next">›</button>
       </div>
 
-      <div id="footer">
+      <footer id="footer">
         <div id="footer_content">
           <div id="footer_info">
             <a href="prawaPacjenta.html">Prawa pacjenta</a>
@@ -632,7 +646,7 @@
         <div id="footer_end">
           <p id="footer_end_p">Designed and Developed by W&T Web Design</p>
         </div>
-      </div>
+      </footer>
     </div>
   </body>
 </html>

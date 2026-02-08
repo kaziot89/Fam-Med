@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
   <head>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -17,7 +17,6 @@
     <title>FAM-MED</title>
     <script src="poradnie.js" defer></script>
     <script src="zbroslawice.js" defer></script>
-    <!-- <script src="index.js" defer></script> -->
   </head>
   <body>
     <div id="border">
@@ -42,6 +41,12 @@
                     +48322337030</a
                   >
                 </p> -->
+                <button
+                  id="contrastToggle"
+                  aria-label="Włącz tryb wysokiego kontrastu"
+                >
+                  🟡⚫ Kontrast
+                </button>
                 <p class="contactBar">ZAKŁAD OPIEKI ZDROWOTNEJ FAM-MED S. C.</p>
                 <!-- <p class="contactBar">
                   <i class="fas fa-envelope"></i>
@@ -261,52 +266,19 @@
                   Gabinet Psychoterapii
                 </button>
               </div>
-              <!-- <div class="clinic_container">
-                <button id="button_23" class="clinic_button">
-                  Badania Audiometryczne
-                </button>
-              </div> -->
+
               <div class="clinic_container">
                 <button id="button_24" class="clinic_button">
                   Badania Kierowców
                 </button>
               </div>
-              <!-- <div class="clinic_container">
-                <button id="button_25" class="clinic_button">
-                  Badania Laboratoryjne
-                </button>
-              </div> -->
-              <!-- <div class="clinic_container">
-                <button id="button_26" class="clinic_button">
-                  Badania USG
-                </button>
-              </div> -->
-              <!-- <div class="clinic_container">
-                <button id="button_27" class="clinic_button">
-                  Badania Spirometryczne
-                </button>
-              </div> -->
-              <!-- <div class="clinic_container">
-                <button id="button_28" class="clinic_button">
-                  Opieka Pielęgniarska
-                </button>
-              </div> -->
-              <!-- <div class="clinic_container">
-                <button id="button_30" class="clinic_button">
-                  Opieka Położnej
-                </button>
-              </div> -->
+
               <div class="clinic_container">
                 <button id="button_29" class="clinic_button">
                   Pracownia USG
                 </button>
               </div>
 
-              <!-- <div class="clinic_container">
-                <button id="button_31" class="clinic_button">
-                  Gabinet Zabiegowy
-                </button>
-              </div> -->
               <div class="clinic_container">
                 <button id="button_32" class="clinic_button">
                   Gabinet Zdrowego Żywienia
@@ -368,11 +340,7 @@
               Poradnia Ginekologiczna
             </button>
           </div>
-          <!-- <div class="clinic_container">
-            <button id="button_10" class="clinic_button">
-              Poradnia Internistyczna
-            </button>
-          </div> -->
+
           <div class="clinic_container">
             <button id="button_11" class="clinic_button">
               Poradnia Kardiologiczna
@@ -418,11 +386,7 @@
               Poradnia Reumatologiczna
             </button>
           </div>
-          <!-- <div class="clinic_container">
-            <button id="button_20" class="clinic_button">
-              Poradnia Urologiczna
-            </button>
-          </div> -->
+
           <div class="clinic_container">
             <button id="button_21" class="clinic_button">
               Poradnia Zdrowia Psychicznego
@@ -440,39 +404,13 @@
               Gabinet Psychoterapii
             </button>
           </div>
-          <!-- <div class="clinic_container">
-            <button id="button_23" class="clinic_button">
-              Badania Audiometryczne
-            </button>
-          </div> -->
+
           <div class="clinic_container">
             <button id="button_24" class="clinic_button">
               Badania Kierowców
             </button>
           </div>
-          <!-- <div class="clinic_container">
-            <button id="button_25" class="clinic_button">
-              Badania Laboratoryjne
-            </button>
-          </div> -->
-          <!-- <div class="clinic_container">
-            <button id="button_26" class="clinic_button">Badania USG</button>
-          </div> -->
-          <!-- <div class="clinic_container">
-            <button id="button_27" class="clinic_button">
-              Badania Spirometryczne
-            </button>
-          </div> -->
-          <!-- <div class="clinic_container">
-            <button id="button_28" class="clinic_button">
-              Opieka Pielęgniarska
-            </button>
-          </div>
-          <div class="clinic_container">
-            <button id="button_30" class="clinic_button">
-              Opieka Położnej
-            </button>
-          </div> -->
+
           <div class="clinic_container">
             <button id="button_29" class="clinic_button">Pracownia USG</button>
           </div>
@@ -510,384 +448,6 @@
               samopoczucie naszych pacjentów. Zachęcamy do odwiedzenia jednej z
               naszych placówek oraz skorzystania z dostępnych usług!
             </p>
-            <!-- <h3>
-              W celu sprawdzenia szczegółów, prosimy wybrać interesującą Państwa
-              placówkę.
-            </h3>
-            <div id="branches_section">
-              <div class="button-container">
-                <button
-                  class="branch_button"
-                  onclick="toggleContent('zbroslawice')"
-                >
-                  Zbrosławice<img
-                    class="nfz_logo"
-                    src="Pictures/NFZ_logo.svg"
-                  />
-                </button>
-                <button
-                  class="branch_button"
-                  onclick="toggleContent('wieszowa')"
-                >
-                  Wieszowa<img class="nfz_logo" src="Pictures/NFZ_logo.svg" />
-                </button>
-              </div>
-
-              <div id="zbroslawice" class="content">
-                <h1>POZ w Zbrosławicach, godziny przyjęć lekarzy:</h1>
-                <div id="doctors_schedule_section">
-                  <div class="doctor_schedule" id="doctor1">
-                    <h3>
-                      dr n. med. spec. med. rodz.<br /><strong
-                        >Barbara Pietrasińska</strong
-                      >
-                    </h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>wtorek</p>
-                        <p>środa</p>
-                        <p>czwartek</p>
-                        <p>piątek</p>
-                      </div>
-                      <div class="hours">
-                        <p>8:00 - 13:30</p>
-                        <p>12:00 - 16:00</p>
-                        <p>12:30 - 18:00</p>
-                        <p>8:00 - 13:00</p>
-                        <p>8:00 - 13:00</p>
-                      </div>
-                    </div>
-                    <h3>Wizyty domowe</h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>wtorek</p>
-                        <p>środa</p>
-                        <p>czwartek</p>
-                        <p>piątek</p>
-                      </div>
-                      <div class="hours">
-                        <p>13:30 - 15:00</p>
-                        <p>16:00 - 18:00</p>
-                        <p>9:00 - 10:00</p>
-                        <p>13:00 - 15:30</p>
-                        <p>13:00 - 15:30</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="doctor_schedule" id="doctor2">
-                    <h3>
-                      lek. med. rodz.<br /><strong>Joanna Wach-Sury</strong>
-                    </h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>wtorek</p>
-                        <p>środa</p>
-                        <p>czwartek</p>
-                        <p>piątek</p>
-                      </div>
-                      <div class="hours">
-                        <p>9:00 - 12:30</p>
-                        <p>9:00 - 11:30</p>
-                        <p>9:00 - 12:30</p>
-                        <p>9:00 - 11:30</p>
-                        <p>9:00 - 12:30</p>
-                      </div>
-                    </div>
-                    <h3>Wizyty domowe</h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>środa</p>
-                        <p>piątek</p>
-                      </div>
-                      <div class="hours">
-                        <p>12:30 - 13:00</p>
-                        <p>12:30 - 13:00</p>
-                        <p>12:30 - 13:00</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="doctor_schedule" id="doctor3">
-                    <h3>
-                      lek. spec. med. rodz.<br /><strong>Anna Gradzik</strong>
-                    </h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>wtorek</p>
-                        <p>środa</p>
-                        <p>czwartek</p>
-                        <p>piątek</p>
-                      </div>
-                      <div class="hours">
-                        <p>17:00 - 18:00</p>
-                        <p>17:00 - 18:00</p>
-                        <p>13:30 - 15:30</p>
-                        <p>13:30 - 15:30</p>
-                        <p>13:30 - 15:00</p>
-                      </div>
-                    </div>
-                    <h3>Wizyty domowe</h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>środa</p>
-                        <p>czwartek</p>
-                      </div>
-                      <div class="hours">
-                        <p>15:30 - 16:00</p>
-                        <p>15:30 - 16:30</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="doctor_schedule" id="doctor4">
-                    <h3>lek. med.<br /><strong>Katarzyna Śliwa</strong></h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>wtorek</p>
-                        <p>środa</p>
-                        <p>czwartek</p>
-                        <p>piątek</p>
-                      </div>
-                      <div class="hours">
-                        <p>12:00 - 17:30</p>
-                        <p>8:30 - 13:30</p>
-                        <p>8:30 - 13:30</p>
-                        <p>9:00 - 14:30</p>
-                        <p>8:30 - 13:30</p>
-                      </div>
-                    </div>
-                    <h3>Wizyty domowe</h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>wtorek</p>
-                        <p>środa</p>
-                        <p>piątek</p>
-                      </div>
-                      <div class="hours">
-                        <p>17:30 - 18:00</p>
-                        <p>13:30 - 14:00</p>
-                        <p>13:30 - 14:00</p>
-                        <p>13:30 - 14:00</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="doctor_schedule" id="doctor5">
-                    <h3>
-                      lek. med.<br />
-                      <strong>Agnieszka Kolczyńska-Kukla</strong>
-                    </h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>wtorek</p>
-                        <p>środa</p>
-                        <p>czwartek</p>
-                        <p>piątek</p>
-                      </div>
-                      <div class="hours">
-                        <p>9:00 - 12:00</p>
-                        <p>12:15 - 15:00</p>
-                        <p>9:00 - 13:00</p>
-                        <p>13:00 - 17:00</p>
-                        <p>9:00 - 12:00</p>
-                      </div>
-                    </div>
-                    <h3>Wizyty domowe</h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>środa</p>
-                        <p>czwartek</p>
-                        <p>piątek</p>
-                      </div>
-                      <div class="hours">
-                        <p>12:00 - 12:45</p>
-                        <p>13:00 - 14:00</p>
-                        <p>17:00 - 18:00</p>
-                        <p>12:00 - 13:00</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="doctor_schedule" id="doctor6">
-                    <h3>
-                      lek. med.<br />
-                      <strong>Jarosław Teodorowicz</strong>
-                    </h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>środa</p>
-                      </div>
-                      <div class="hours">
-                        <p>14:30 - 17:30</p>
-                        <p>14:30 - 17:30</p>
-                      </div>
-                    </div>
-                    <h3>Wizyty domowe</h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>środa</p>
-                      </div>
-                      <div class="hours">
-                        <p>17:30 - 18:00</p>
-                        <p>17:30 - 18:00</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="doctor_schedule" id="doctor7">
-                    <h3>
-                      lek. chor. wewn.<br /><strong>Jerzy Słodczyk</strong
-                      ><br />badania USG
-                    </h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>środa</p>
-                        <p>czwartek</p>
-                      </div>
-                      <div class="hours">
-                        <p>8:00 - 10:00</p>
-                        <p>8:00 - 12:00</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="doctor_schedule" id="doctor8">
-                    <h3>
-                      lek. med. <br /><strong>Agata Kołodziej-Maćczak</strong>
-                    </h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>środa</p>
-                      </div>
-                      <div class="hours">
-                        <p>11:30 - 14:30</p>
-                        <p>11:30 - 14:30</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="doctor_schedule" id="doctor9">
-                    <h3>
-                      lek. med. <br /><strong>Katarzyna Pietrasińska</strong>
-                    </h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>wtorek</p>
-                        <p>czwartek</p>
-                      </div>
-                      <div class="hours">
-                        <p>9:00 - 12:00</p>
-                        <p>9:00 - 12:00</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="wieszowa" class="content">
-                <h1>POZ w Wieszowie, godziny przyjęć lekarzy:</h1>
-                <div id="doctors_schedule_section">
-                  <div class="doctor_schedule" id="doctor1">
-                    <h3>
-                      lek. chor. wewn.<br /><strong>Jerzy Słodczyk</strong>
-                    </h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>wtorek</p>
-                        <p>środa</p>
-                        <p>czwartek</p>
-                        <p>piątek</p>
-                      </div>
-                      <div class="hours">
-                        <p>10:00 - 14:30</p>
-                        <p>13:00 - 16:00</p>
-                        <p>10:30 - 14:00</p>
-                        <p>13:00 - 16:00</p>
-                        <p>10:00 - 14:00</p>
-                      </div>
-                    </div>
-                    <h3>Wizyty domowe</h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>wtorek</p>
-                        <p>środa</p>
-                        <p>czwartek</p>
-                      </div>
-                      <div class="hours">
-                        <p>9:00 - 10:00</p>
-                        <p>12:00 - 13:00</p>
-                        <p>14:00 - 15:00</p>
-                        <p>12:30 - 13:00</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="doctor_schedule" id="doctor2">
-                    <h3>
-                      dr n. med. spec. chorób dziecięcych <br />
-                      <strong>Małgorzata Barć-Czarnecka</strong>
-                    </h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>poniedziałek</p>
-                        <p>wtorek</p>
-                        <p>środa</p>
-                        <p>czwartek</p>
-                        <p>piątek</p>
-                      </div>
-                      <div class="hours">
-                        <p>14:15 - 15:30</p>
-                        <p>9:00 - 11:00</p>
-                        <p>14:30 - 16:00</p>
-                        <p>13:30 - 15:00</p>
-                        <p>12:30 - 14:30</p>
-                      </div>
-                    </div>
-                    <h3>Wizyty domowe</h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>czwartek</p>
-                      </div>
-                      <div class="hours">
-                        <p>15:00 - 15:30</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="doctor_schedule" id="doctor3">
-                    <h3>
-                      lek. med. spec. med. rodz. <br />
-                      <strong>Sylwia Gałkowska-Krotla</strong>
-                    </h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>wtorek</p>
-                        <p>czwartek</p>
-                      </div>
-                      <div class="hours">
-                        <p>9:00 - 12:00</p>
-                        <p>9:00 - 12:00</p>
-                      </div>
-                    </div>
-                    <h3>Wizyty domowe</h3>
-                    <div class="schedule">
-                      <div class="days">
-                        <p>wtorek</p>
-                        <p>czwartek</p>
-                      </div>
-                      <div class="hours">
-                        <p>12:00 - 13:00</p>
-                        <p>12:00 - 13:00</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
           <div id="clinic_content2" class="clinic_content">
             <h2>PORADNIA ALERGOLOGICZNA</h2>
@@ -2354,7 +1914,7 @@
               (bez recepty) – 3x2 kaps./dobę po jedzeniu. Prosimy o wcześniejszą
               rejestrację telefoniczną lub osobiście.
             </p>
-            <h3>Pracownia USG Zbrosławice</h3>
+            <h3>Pracownia USG</h3>
             <p>
               Zakład Opieki Zdrowotnej FAM-MED dysponuje wysokiej klasy sprzętem
               USG. Zapraszamy do Pracowni USG w Zbrosławicach, przy ul.
@@ -2383,7 +1943,7 @@
               <div>
                 <h3>Zbrosławice:</h3>
                 <p>
-                  lek. med. <strong>Jerzy Słodczyk</strong>, lekarz chorób
+                  dr n. med. <strong>Łukasz Czarnecki</strong>, lekarz chorób
                   wewnętrznych
                 </p>
                 <p>

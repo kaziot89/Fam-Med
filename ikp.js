@@ -10,6 +10,11 @@ window.onload = function () {
     navMenu.classList.toggle("activeH");
   });
 };
+window.addEventListener("DOMContentLoaded", () => {
+  if (window.location.pathname !== "/") {
+    history.replaceState(null, "", "/");
+  }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const infosButton = document.getElementById("infos_btn");

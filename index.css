@@ -6,12 +6,23 @@
   padding: 0;
 }
 html {
+  font-size: 100%;
   scroll-behavior: smooth;
 }
-a {
-  text-decoration: none;
-  color: black;
+body {
+  font-size: 1rem;
+  line-height: 1.5;
 }
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
 #popup-banner {
   position: fixed;
   top: 50%;
@@ -22,7 +33,7 @@ a {
   border-radius: 10px;
   width: 80%;
   max-width: 600px;
-  padding: 16px;
+  padding: 1rem;
   z-index: 1000;
   display: none;
   background: linear-gradient(
@@ -40,7 +51,7 @@ a {
 #popup-banner h2 {
   position: relative;
   margin: 32px auto;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: "poppins";
   font-weight: 300;
   color: white;
@@ -48,7 +59,7 @@ a {
 }
 #popup-banner p {
   margin: 10px 0;
-  font-size: 1em;
+  font-size: 1rem;
 }
 #popup-banner button {
   position: relative;
@@ -93,18 +104,50 @@ a {
 #overlay.show {
   display: block;
 }
+#contrastToggle {
+  font-size: 1.125rem;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 8px;
+  border: 0;
+}
+#fontControls {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+#fontControls button {
+  background-color: #00a2ac;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+#fontControls button:hover {
+  background-color: #007c82;
+}
+
+#fontControls button:active {
+  background-color: #00585c;
+}
+
 .contactBar {
   font-family: "Poppins";
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  line-height: 30px;
+  line-height: 1.5;
   font-weight: 400;
 }
 .contactBar .contact_links {
   color: white;
   font-family: "Poppins";
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   margin-left: 5px;
   text-decoration: none;
@@ -184,7 +227,7 @@ a:link {
   list-style-type: none;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: rgb(60, 60, 60);
   text-decoration: none;
 }
@@ -212,7 +255,7 @@ a:visited {
   display: block;
   padding: 12px 16px;
   color: black;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   text-decoration: none;
   transition: 0.3s ease;
@@ -221,9 +264,15 @@ a:visited {
   background-color: rgba(200, 200, 200, 0.5);
   color: rgb(3 162 172);
 }
-.dropdown:hover .dropdown-content {
+.dropdown:focus-within .dropdown-content {
   max-height: 400px;
 }
+@media (hover: hover) {
+  .dropdown:hover .dropdown-content {
+    max-height: 400px;
+  }
+}
+
 .banner {
   position: relative;
   top: 150px;
@@ -288,7 +337,7 @@ a:visited {
   position: absolute;
   top: 8%;
   right: 8%;
-  font-size: 40px;
+  font-size: 2.5rem;
   width: 40%;
   color: white;
   font-family: "Poppins", sans-serif;
@@ -333,7 +382,10 @@ a:visited {
   top: 100px;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 1s ease, top 1s ease;
+  transition:
+    visibility 0s,
+    opacity 1s ease,
+    top 1s ease;
 }
 .info-banner h3.visible,
 .info-banner p.visible {
@@ -341,9 +393,9 @@ a:visited {
   top: 0px;
   display: inline-block;
   font-family: "Poppins";
-  line-height: 32px;
+  line-height: 1.6;
   font-weight: 200;
-  font-size: 20px;
+  font-size: 1.25rem;
   width: 60%;
   text-align: justify;
   visibility: visible;
@@ -352,7 +404,7 @@ a:visited {
 .info-banner h3.visible {
   margin-bottom: 50px;
 
-  font-size: 42px;
+  font-size: 2.625rem;
   text-align: center;
 }
 .info {
@@ -375,13 +427,13 @@ a:visited {
   bottom: 0;
   right: 0;
   color: white;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: poppins;
   margin-right: 4px;
 }
 #contact_atribution p a {
   color: grey;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .contact {
@@ -394,7 +446,7 @@ a:visited {
 .contact h1 {
   font-family: "Poppins";
   font-weight: 300;
-  font-size: 32px;
+  font-size: 2rem;
   color: rgb(0, 162, 172);
 }
 #contactButton {
@@ -403,13 +455,17 @@ a:visited {
   padding: 10px 40px;
   margin-top: 30px;
   border: none;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: "Poppins";
   font-weight: 200;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5), 0 20px 40px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease,
+  box-shadow:
+    0 10px 15px rgba(0, 0, 0, 0.5),
+    0 20px 40px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
     box-shadow 0.3s ease;
 }
 #contactButton:hover {
@@ -456,13 +512,13 @@ a:visited {
   color: rgb(21, 155, 155);
 }
 .column h2 {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 .close-button {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 20px;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 #contact-modal {
@@ -522,7 +578,8 @@ a:visited {
   background-color: rgb(255, 255, 255);
   opacity: 0;
   transform: translateY(100px);
-  transition: opacity 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+  transition:
+    opacity 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55),
     transform 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 .bottom-menu-tabs.visible {
@@ -638,7 +695,7 @@ a:visited {
   transform: translateY(-50%);
   background-color: transparent;
   border: none;
-  font-size: 60px;
+  font-size: 3.75rem;
   color: orange;
   cursor: pointer;
   z-index: 1;
@@ -646,7 +703,7 @@ a:visited {
   transition: font-size 0.3s ease;
 }
 .carousel-button:hover {
-  font-size: 90px;
+  font-size: 5.625rem;
 }
 
 .carousel-button.prev {
@@ -693,7 +750,7 @@ a:visited {
   font-family: "poppins";
 }
 #modal-contact-content h1 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 300;
 }
 @keyframes zoom {
@@ -709,7 +766,7 @@ a:visited {
   top: 15px;
   right: 35px;
   color: #f1f1f1;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -770,7 +827,7 @@ iframe {
 #branch2 p a,
 #branch3 p a,
 #branch4 p a {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   padding: 0;
   font-family: "Poppins";
@@ -845,13 +902,13 @@ iframe {
 }
 #footer_info a {
   padding: 0 0;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: "poppins";
   text-decoration: none;
 }
 #footer_contact a {
   margin: 0;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 300;
   color: black;
   text-decoration: none;
@@ -862,7 +919,7 @@ iframe {
   width: 78%;
   margin: 24px 0;
   font-family: "Poppins";
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 300;
 }
 .footer_branch_address {
@@ -886,7 +943,7 @@ iframe {
   transform: translateY(-50%);
   font-family: "Poppins";
   font-weight: 300;
-  font-size: 10px;
+  font-size: 0.625rem;
   float: left;
   margin: auto;
 }
@@ -918,7 +975,7 @@ iframe {
 
   .info-banner p.visible {
     width: 75%;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 @media (max-width: 1024px) {
@@ -927,7 +984,7 @@ iframe {
     margin-top: auto;
   }
   #menuElements li a {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   #navbar_content {
     width: 98%;
@@ -943,8 +1000,8 @@ iframe {
   } */
   .info-banner p.visible {
     width: 80%;
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 1.25rem;
+    line-height: 1.6;
   }
   #contact-container {
     background-position: -250px top;
@@ -982,7 +1039,7 @@ iframe {
   }
   #footer_contact {
     margin: 8px 0;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   #footer_contact > * {
     flex: 1 1 20%;
@@ -1014,11 +1071,11 @@ iframe {
   }
   #menuElements a,
   #menuElements li {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
   }
   #menuElements li a {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   #characterAndSlogan {
     height: 40rem;
@@ -1032,17 +1089,17 @@ iframe {
     height: 120px;
   }
   .bottom-menu-h2 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   #characterAndSlogan p {
-    font-size: 32px;
+    font-size: 2rem;
   }
   .info-banner h3.visible {
     font-size: 24px;
   }
   .info-banner p.visible {
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 1rem;
+    line-height: 1.6;
     width: 90%;
   }
   #contact-container {
@@ -1063,7 +1120,7 @@ iframe {
   #footer_contact a,
   #footer_contact,
   #footer_info a {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
   .phnmb {
     font-size: 11px;
@@ -1105,7 +1162,7 @@ iframe {
     margin: 0 auto;
   }
   #popup-banner h2 {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
   #popup-banner button {
     width: 200px;
@@ -1190,7 +1247,9 @@ iframe {
     width: 100%;
     height: 3px;
     background-color: rgb(3, 162, 172);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
   }
   .menu-btn.open .menu-btn__burger {
     background-color: rgb(3, 162, 172);
@@ -1228,7 +1287,7 @@ iframe {
   .nav-menu a {
     text-decoration: none;
     color: white;
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
   .nav-menu.activeH {
     right: 0;
@@ -1240,7 +1299,7 @@ iframe {
     background-color: #333;
     border: none;
     color: white;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-family: "poppins";
     font-weight: 300;
   }
@@ -1274,7 +1333,7 @@ iframe {
     width: 100vw;
   }
   #characterAndSlogan p {
-    font-size: 16px;
+    font-size: 1rem;
     top: 50%;
   }
   .info-banner {
@@ -1286,14 +1345,14 @@ iframe {
   }
   .info-banner h3.visible {
     width: 80%;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 300;
     margin-bottom: 24px;
   }
   .info-banner p.visible {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
-    line-height: 24px;
+    line-height: 1.6;
   }
   .carousel-item img {
     height: 220px;
@@ -1338,17 +1397,17 @@ iframe {
   #branch2 p a,
   #branch3 p a,
   #branch4 p a {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .branch_name {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
   }
   #aktualnosci {
     display: none;
   }
   .contactBar .contact_links {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   #characterAndSlogan p {
     font-size: 1rem;
@@ -1371,7 +1430,7 @@ iframe {
   #branch1 p a,
   #branch2 p a,
   #branch3 p a {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 300;
     padding: 0;
     font-family: "Poppins";
@@ -1389,12 +1448,12 @@ iframe {
   #footer_contact a,
   #footer_info a {
     color: rgb(56, 56, 56);
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   #footer_contact a,
   #footer_contact {
     flex-wrap: wrap;
-    font-size: 14px;
+    font-size: 0.875rem;
     min-width: 100%;
   }
   .footer_branch_address a i,
@@ -1403,7 +1462,7 @@ iframe {
   }
 
   .phnmb {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: black;
   }
   .footer_branch_address a {
@@ -1422,7 +1481,7 @@ iframe {
   }
   #footer_end {
     margin-right: 12px;
-    font-size: 10px;
+    font-size: 0.625rem;
     color: rgb(56, 56, 56);
   }
   .bottom_menu_buttons {
@@ -1441,5 +1500,62 @@ iframe {
         -100%
       ); /* Przemieszczenie tekstu na lewą stronę poza ekran */
     }
+  }
+}
+
+/* ===== TRYB WYSOKIEGO KONTRASTU ===== */
+body.high-contrast {
+  background-color: #000 !important;
+  color: #ffd700 !important;
+}
+
+body.high-contrast a {
+  color: #ffd700 !important;
+  text-decoration: underline;
+}
+
+body.high-contrast button,
+body.high-contrast .bottom_menu_buttons {
+  background-color: #ffd700 !important;
+  color: #000 !important;
+  border: 2px solid #ffd700;
+}
+
+body.high-contrast nav,
+body.high-contrast #top-navbar,
+body.high-contrast #footer {
+  background-color: #000 !important;
+}
+
+body.high-contrast img {
+  filter: none;
+}
+
+body.high-contrast img.decorative {
+  filter: grayscale(100%) contrast(120%);
+}
+
+/* bannery, boxy */
+body.high-contrast .info-banner,
+body.high-contrast .banner,
+body.high-contrast .contact,
+body.high-contrast .carousel-item {
+  background-color: #000 !important;
+  color: #ffd700 !important;
+  border: 2px solid #ffd700;
+}
+:focus-visible {
+  outline: 3px solid #ffd700;
+  outline-offset: 4px;
+}
+
+body:not(.high-contrast) :focus-visible {
+  outline-color: rgb(0, 162, 172);
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }

@@ -1,3 +1,9 @@
+window.addEventListener("DOMContentLoaded", () => {
+  if (window.location.pathname !== "/") {
+    history.replaceState(null, "", "/");
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll('button[id^="go_to_clinic"]');
 

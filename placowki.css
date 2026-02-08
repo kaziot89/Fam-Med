@@ -7,6 +7,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+#contrastToggle {
+  font-size: 1.125rem;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 8px;
+  border: 0;
+}
 p,
 li {
   font-weight: 400;
@@ -103,7 +110,9 @@ li {
   cursor: pointer;
   padding: 18px;
   margin: 4px 0;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 10px 15px rgba(0, 0, 0, 0.2),
+    0 20px 40px rgba(0, 0, 0, 0.1);
   width: 100%;
   text-align: left;
   border: none;

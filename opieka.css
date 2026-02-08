@@ -1,6 +1,13 @@
 * {
   font-family: "poppins";
 }
+#contrastToggle {
+  font-size: 1.125rem;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 8px;
+  border: 0;
+}
 p {
   font-weight: 400;
 }
@@ -114,7 +121,9 @@ p {
   margin-bottom: 48px;
   border-radius: 10px;
   border: none;
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5), 0 40px 40px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 15px 15px rgba(0, 0, 0, 0.5),
+    0 40px 40px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 1024px) {

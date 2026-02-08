@@ -1,165 +1,219 @@
-const menuBtn = document.querySelector(".menu-btn");
-const navMenu = document.querySelector(".nav-menu");
-
-menuBtn.addEventListener("click", () => {
-  menuBtn.classList.toggle("open");
-  navMenu.classList.toggle("activeH");
-});
-
-let acc = document.getElementsByClassName("acc");
-let acc2 = document.getElementsByClassName("acc2");
-let i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    let panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
-
-for (i = 0; i < acc2.length; i++) {
-  acc2[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    let panel2 = this.nextElementSibling;
-    if (panel2.style.maxHeight) {
-      panel2.style.maxHeight = null;
-    } else {
-      panel2.style.maxHeight = panel2.scrollHeight + "px";
-    }
-  });
-}
-
-let modal = document.getElementById("myModal");
-let modalImg = document.getElementById("img01");
-let captionText = document.getElementById("caption");
-let images = document.querySelectorAll(".certificates img");
-
-images.forEach(function (img) {
-  img.onclick = function () {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  };
-});
-
-modalImg.onclick = function () {
-  modal.style.display = "none";
-};
-
-document.addEventListener("DOMContentLoaded", function () {
-  const headingsAndParagraphs = document.querySelectorAll(
-    ".info-banner h3, .info-banner p, .contact"
-  );
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-          setTimeout(() => {
-            entry.target.classList.add("visible");
-          }, 200);
-
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-  headingsAndParagraphs.forEach((element) => {
-    observer.observe(element);
-  });
-});
 document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector(".carousel-track");
-  const prevButton = document.querySelector(".carousel-button.prev");
-  const nextButton = document.querySelector(".carousel-button.next");
-  const items = Array.from(track.children);
-  const itemWidth =
-    items[0].getBoundingClientRect().width +
-    parseFloat(getComputedStyle(items[0]).marginRight);
+  /* ==================================================
+     KONTRAST (WCAG)
+  ================================================== */
+  const contrastBtn = document.getElementById("contrastToggle");
+  if (contrastBtn) {
+    if (localStorage.getItem("highContrast") === "true") {
+      document.body.classList.add("high-contrast");
+    }
 
-  let currentIndex = 0;
-
-  function updateCarousel() {
-    track.style.transition = "transform 0.8s ease";
-    track.style.transform = "translateX(" + -currentIndex * itemWidth + "px)";
-    prevButton.disabled = currentIndex === 0;
-    nextButton.disabled = currentIndex >= items.length - 4;
+    contrastBtn.addEventListener("click", () => {
+      document.body.classList.toggle("high-contrast");
+      localStorage.setItem(
+        "highContrast",
+        document.body.classList.contains("high-contrast"),
+      );
+    });
   }
 
-  prevButton.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
-  });
+  /* ==================================================
+     ROZMIAR CZCIONKI
+  ================================================== */
+  const fontMinus = document.getElementById("fontMinus");
+  const fontPlus = document.getElementById("fontPlus");
+  const fontReset = document.getElementById("fontReset");
 
-  nextButton.addEventListener("click", () => {
-    if (currentIndex < items.length - 4) {
-      currentIndex++;
-      updateCarousel();
-    }
-  });
+  if (fontMinus && fontPlus && fontReset) {
+    const defaultFontSize = 100;
+    let currentFontSize =
+      parseInt(localStorage.getItem("fontSize")) || defaultFontSize;
 
-  track.addEventListener("transitionend", () => {
-    track.style.transition = "";
-  });
+    const setFontSize = (size) => {
+      document.body.style.fontSize = size + "%";
+      localStorage.setItem("fontSize", size);
+    };
 
-  updateCarousel();
-});
+    setFontSize(currentFontSize);
 
-document.addEventListener("DOMContentLoaded", function () {
-  let button = document.getElementById("branch_button1");
-
-  button.addEventListener("click", function () {
-    window.location.href = "zbroslawice.html";
-  });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  let button = document.getElementById("branch_button2");
-
-  button.addEventListener("click", function () {
-    window.location.href = "cmtg.html";
-  });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  let button = document.getElementById("branch_button3");
-
-  button.addEventListener("click", function () {
-    window.location.href = "wieszowa.html";
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  let dropdowns = document.querySelectorAll(".dropdown");
-
-  dropdowns.forEach(function (dropdown) {
-    dropdown.addEventListener("click", function () {
-      this.classList.toggle("open");
+    fontMinus.addEventListener("click", () => {
+      if (currentFontSize > 50) {
+        currentFontSize -= 10;
+        setFontSize(currentFontSize);
+      }
     });
 
-    let links = dropdown.querySelectorAll(".dropdown-content a");
+    fontPlus.addEventListener("click", () => {
+      if (currentFontSize < 200) {
+        currentFontSize += 10;
+        setFontSize(currentFontSize);
+      }
+    });
 
-    links.forEach(function (link) {
-      link.addEventListener("click", function () {
+    fontReset.addEventListener("click", () => {
+      currentFontSize = defaultFontSize;
+      setFontSize(currentFontSize);
+    });
+  }
+
+  /* ==================================================
+     MENU MOBILNE
+  ================================================== */
+  const menuBtn = document.querySelector(".menu-btn");
+  const navMenu = document.querySelector(".nav-menu");
+
+  if (menuBtn && navMenu) {
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("open");
+      navMenu.classList.toggle("activeH");
+    });
+  }
+
+  /* ==================================================
+     ACCORDION (.acc)
+  ================================================== */
+  document.querySelectorAll(".acc").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      const panel = btn.nextElementSibling;
+      if (!panel) return;
+
+      panel.style.maxHeight
+        ? (panel.style.maxHeight = null)
+        : (panel.style.maxHeight = panel.scrollHeight + "px");
+    });
+  });
+
+  /* ==================================================
+     ACCORDION + PRZEJŚCIE DO PORADNI (.acc2)
+  ================================================== */
+  document.querySelectorAll(".acc2").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      const panel = btn.nextElementSibling;
+      if (panel) {
+        panel.style.maxHeight
+          ? (panel.style.maxHeight = null)
+          : (panel.style.maxHeight = panel.scrollHeight + "px");
+      }
+
+      const buttonId = btn.dataset.buttonId;
+      if (buttonId) {
+        window.location.href =
+          "poradnie.html?" + new URLSearchParams({ buttonId }).toString();
+      }
+    });
+  });
+
+  /* ==================================================
+     MODAL – CERTYFIKATY
+  ================================================== */
+  const modal = document.getElementById("myModal");
+  const modalImg = document.getElementById("img01");
+  const captionText = document.getElementById("caption");
+
+  if (modal && modalImg && captionText) {
+    document.querySelectorAll(".certificates img").forEach((img) => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+      });
+    });
+
+    modalImg.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  }
+
+  /* ==================================================
+     DROPDOWNY
+  ================================================== */
+  document.querySelectorAll(".dropdown").forEach((dropdown) => {
+    dropdown.addEventListener("click", () => {
+      dropdown.classList.toggle("open");
+    });
+
+    dropdown.querySelectorAll(".dropdown-content a").forEach((link) => {
+      link.addEventListener("click", () => {
         dropdown.classList.remove("open");
       });
     });
   });
 
-  document.addEventListener("click", function (event) {
-    dropdowns.forEach(function (dropdown) {
-      if (!dropdown.contains(event.target)) {
+  document.addEventListener("click", (e) => {
+    document.querySelectorAll(".dropdown").forEach((dropdown) => {
+      if (!dropdown.contains(e.target)) {
         dropdown.classList.remove("open");
       }
     });
   });
+
+  /* ==================================================
+     KARUZELA
+  ================================================== */
+  const track = document.querySelector(".carousel-track");
+  const prevButton = document.querySelector(".carousel-button.prev");
+  const nextButton = document.querySelector(".carousel-button.next");
+
+  if (track && prevButton && nextButton) {
+    const items = Array.from(track.children);
+    const itemWidth =
+      items[0].getBoundingClientRect().width +
+      parseFloat(getComputedStyle(items[0]).marginRight);
+
+    let currentIndex = 0;
+
+    const updateCarousel = () => {
+      track.style.transition = "transform 0.8s ease";
+      track.style.transform = "translateX(" + -currentIndex * itemWidth + "px)";
+      prevButton.disabled = currentIndex === 0;
+      nextButton.disabled = currentIndex >= items.length - 4;
+    };
+
+    prevButton.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+
+    nextButton.addEventListener("click", () => {
+      if (currentIndex < items.length - 4) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+
+    track.addEventListener("transitionend", () => {
+      track.style.transition = "";
+    });
+
+    updateCarousel();
+  }
+
+  /* ==================================================
+     PRZEJŚCIA DO PLACÓWEK
+  ================================================== */
+  const branches = {
+    branch_button1: "zbroslawice.html",
+    branch_button2: "cmtg.html",
+    branch_button3: "wieszowa.html",
+  };
+
+  Object.keys(branches).forEach((id) => {
+    const btn = document.getElementById(id);
+    if (btn) {
+      btn.addEventListener("click", () => {
+        window.location.href = branches[id];
+      });
+    }
+  });
 });
+
+/* ==================================================
+   SCROLL DO KARUZELI (HASH)
+================================================== */
 function scrollToSection() {
   const target = document.getElementById("carousel-container");
   if (target) {
@@ -170,19 +224,8 @@ function scrollToSection() {
   }
 }
 
-window.onload = function () {
+window.addEventListener("load", () => {
   if (window.location.hash) {
     scrollToSection();
   }
-};
-document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".acc2");
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const buttonId = button.getAttribute("data-button-id");
-      window.location.href =
-        "poradnie.html?" +
-        new URLSearchParams({ buttonId: buttonId }).toString();
-    });
-  });
 });

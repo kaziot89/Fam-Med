@@ -6,7 +6,13 @@
   margin-top: 160px;
   margin-bottom: 100px;
 }
-
+#contrastToggle {
+  font-size: 1.125rem;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 8px;
+  border: 0;
+}
 #poster40 img {
   width: 50%;
   height: auto;
