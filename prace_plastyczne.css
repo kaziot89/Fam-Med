@@ -6,13 +6,7 @@ body {
 body.no-scroll {
   overflow: hidden;
 }
-#contrastToggle {
-  font-size: 1.125rem;
-  background-color: transparent;
-  border-radius: 8px;
-  padding: 8px;
-  border: 0;
-}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

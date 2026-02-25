@@ -2,13 +2,7 @@
   padding-top: 180px;
   min-height: calc(100vh - 185px);
 }
-#contrastToggle {
-  font-size: 1.125rem;
-  background-color: transparent;
-  border-radius: 8px;
-  padding: 8px;
-  border: 0;
-}
+
 #branches {
   height: 70vh;
   min-height: 500px;

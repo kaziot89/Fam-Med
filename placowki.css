@@ -8,11 +8,55 @@ body {
   justify-content: space-between;
 }
 #contrastToggle {
-  font-size: 1.125rem;
+  /* font-size: 1.125rem; */
   background-color: transparent;
   border-radius: 8px;
-  padding: 8px;
+  /* padding: 8px 12px; */
   border: 0;
+  color: white;
+  font-family: "Poppins";
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 8px;
+}
+
+/* TOR */
+#contrastToggle .switch {
+  position: relative;
+  width: 38px;
+  height: 22px;
+  border-radius: 30px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  transition: border-color 0.35s ease;
+}
+
+/* KROPKA */
+#contrastToggle .dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, black 50%, white 50%);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* 🔥 STAN AKTYWNY – gdy body ma high-contrast */
+body.high-contrast #contrastToggle .dot {
+  transform: translateX(13px);
+  /* background: #ffd400; */
+}
+
+body.high-contrast #contrastToggle .switch {
+  /* border-color: #ffd400; */
+}
+
+/* kliknięcie */
+#contrastToggle:active .dot {
+  transform: scale(1.1);
 }
 p,
 li {

@@ -2,13 +2,7 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
-#contrastToggle {
-  font-size: 1.125rem;
-  background-color: transparent;
-  border-radius: 8px;
-  padding: 8px;
-  border: 0;
-}
+
 #main_container_docs {
   position: relative;
   left: 50%;
