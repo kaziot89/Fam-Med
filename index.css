@@ -667,7 +667,7 @@ a:visited {
 .carousel-container {
   position: relative;
   height: 600px;
-  /* width: 90%; */
+  width: 94%;
   max-width: 1400px;
   margin: 32px auto;
   /* overflow: hidden; */
@@ -1079,7 +1079,7 @@ iframe {
     width: 90%;
   }
   #footer_contact {
-    margin: 8px 0;
+    margin: 26px 0;
     font-size: 0.75rem;
   }
   #footer_contact > * {
