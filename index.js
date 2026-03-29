@@ -43,6 +43,43 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const ids = [
+  "news-element21",
+  "news-element88",
+  "news-element16",
+  "news-element15",
+  "news-element99",
+  "news-element98",
+  "news-element97",
+  "news-element14",
+  "news-element0",
+  "news-element8",
+  "news-element9",
+];
+
+ids.forEach((id) => {
+  const container = document.getElementById(id);
+  if (!container) return;
+
+  const img = container.querySelector("img");
+  if (!img) return;
+
+  img.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const modal = document.createElement("div");
+    modal.className = "img-preview-modal";
+
+    const bigImg = document.createElement("img");
+    bigImg.src = img.src;
+
+    modal.appendChild(bigImg);
+    modal.onclick = () => modal.remove();
+
+    document.body.appendChild(modal);
+  });
+});
+
 // setTimeout(() => {
 //   document.getElementById("popup-banner").classList.add("show");
 //   document.getElementById("overlay").classList.add("show");

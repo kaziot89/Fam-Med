@@ -996,6 +996,21 @@ iframe {
   margin-left: 8px;
   height: 2em; /* dopasuj do rozmiaru tekstu, lub np. 16px */
 }
+.img-preview-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.img-preview-modal img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
 @media (max-height: 720px) {
   #characterAndSlogan {
     height: 33rem;
