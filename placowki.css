@@ -198,7 +198,13 @@ li {
 .doctor_info {
   flex: 1;
 }
-
+.separator {
+  width: 80vw; /* 80% szerokości viewportu */
+  height: 2px; /* grubość linii */
+  background-color: #ccc;
+  border: none;
+  margin: 20px auto;
+}
 #schedule {
   width: 100%;
   min-height: 180px;
