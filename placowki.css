@@ -163,20 +163,46 @@ li {
   outline: none;
   transition: 2s;
 }
+/*
+#partners_panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.partners_images {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/
+
 .partners {
   width: 200px;
   height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
 }
 .partners_images {
-  margin: 8px auto;
+  width: 25%;
+  margin: 8px 0;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: default;
 }
 
 .partners_images img {
-  position: relative;
+  position: static;
+  transform: none;
+  /* position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   cursor: default;
 }
 #doctors_paragraph {
