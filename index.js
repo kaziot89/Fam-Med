@@ -44,17 +44,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const ids = [
-  "news-element21",
-  "news-element88",
-  "news-element16",
-  "news-element15",
-  "news-element99",
-  "news-element98",
-  "news-element97",
-  "news-element14",
   "news-element0",
   "news-element8",
   "news-element9",
+  "news-element14",
+  "news-element15",
+  "news-element16",
+  "news-element17",
+  "news-element18",
+  "news-element19",
+  "news-element21",
+  "news-element22",
+  "news-element23",
+  "news-element83",
+  "news-element88",
+  "news-element97",
+  "news-element98",
+  "news-element99",
 ];
 
 ids.forEach((id) => {
