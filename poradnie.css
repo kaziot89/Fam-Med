@@ -294,7 +294,427 @@ h3 {
   background-color: white;
   font-family: "Poppins";
 }
-#footer {
+:root {
+  --primary-color: #518c67;
+  --primary-hover: #437555;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --bg-input: #ffffff;
+
+  /* Kolory statusów BMI */
+  --bmi-blue: #3b82f6;
+  --bmi-green: #22c55e;
+  --bmi-orange: #f97316;
+  --bmi-red: #ef4444;
+}
+
+.bmi-container {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  max-width: 480px;
+
+  background: #ffffff;
+  color: var(--text-dark);
+}
+
+/* Nagłówek */
+.bmi-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.bmi-logo-wrapper {
+  background-color: #f1f8f4;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #d1e7dd;
+}
+
+.bmi-logo-wrapper svg {
+  width: 32px;
+  height: 32px;
+  color: var(--primary-color);
+}
+
+.bmi-title-text h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #0f172a;
+}
+
+.bmi-title-text p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Formularz */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  width: 18px;
+  height: 18px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  width: 100%;
+  padding: 14px 14px 14px 44px;
+  font-size: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--bg-input);
+  color: var(--text-dark);
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  appearance: none; /* Usuwa domyślny strzałek w select (opcjonalnie) */
+}
+
+/* Dodanie strzałki dla selecta */
+.input-wrapper select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(81, 140, 103, 0.15);
+}
+
+/* Button */
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.btn-submit:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Karta Wyników */
+/* --- KARTA WYNIKU (CAŁOŚĆ) --- */
+.bmi-card-result {
+  background: #f8fafc; /* Bardzo jasne tło karty z oryginalnego zrzutu */
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.result-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.result-score {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+/* Dynamiczne kolory dla samej dużej liczby wyniku */
+.score-underweight {
+  color: var(--bmi-blue);
+}
+.score-normal {
+  color: var(--primary-color);
+}
+.score-overweight {
+  color: var(--bmi-orange);
+}
+.score-obese {
+  color: var(--bmi-red);
+}
+
+/* Odznaka (Badge) po prawej stronie */
+.result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.result-badge svg {
+  width: 16px;
+  height: 16px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Dynamiczne kolory dla odznaki (tło + tekst) */
+.status-underweight {
+  color: var(--bmi-blue);
+  background-color: #eff6ff;
+}
+.status-normal {
+  color: var(--primary-color);
+  background-color: #f0fdf4;
+}
+.status-overweight {
+  color: var(--bmi-orange);
+  background-color: #fff7ed;
+}
+.status-obese {
+  color: var(--bmi-red);
+  background-color: #fef2f2;
+}
+
+/* --- PASEK SKALI I WSKAŹNIK (KROPKA) --- */
+.bmi-scale-wrapper {
+  position: relative;
+  margin-top: 20px;
+}
+
+/* Kontener na kropkę, żeby poruszała się idealnie nad paskiem */
+.scale-pointer-container {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  margin-bottom: 6px;
+}
+
+/* Kropka wskazująca wynik BMI */
+/* Wskaźnik w kształcie trójkąta skierowanego w dół */
+.scale-pointer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  /* Tworzenie trójkąta za pomocą border */
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid var(--primary-color); /* Kolor domyślny */
+
+  background-color: transparent; /* Usuwamy tło kółka */
+  border-radius: 0; /* Resetujemy zaokrąglenie kółka */
+
+  transform: translateX(-50%);
+  bottom: -2px; /* Lekkie przesunięcie w dół, aby ostrze dotykało paska */
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+/* Delikatna, blada poświata wokół trójkąta (jak na zrzucie ekranu) */
+.scale-pointer::after {
+  content: "";
+  position: absolute;
+
+  /* Tworzymy większy trójkąt pod spodem dla efektu poświaty */
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 18px solid currentColor;
+  opacity: 0.25;
+
+  /* Pozycjonowanie poświaty idealnie za głównym trójkątem */
+  top: -15px;
+  left: -14px;
+  z-index: -1;
+}
+
+/* Kolorowy pasek podzielony na 4 części */
+.bmi-scale-bar {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  gap: 4px; /* Odstępy między kafelkami koloru */
+}
+
+.bar-segment {
+  flex: 1; /* Każdy segment zajmuje dokładnie tyle samo miejsca (25%) */
+  height: 100%;
+}
+
+.bar-underweight {
+  background-color: var(--bmi-blue);
+}
+.bar-normal {
+  background-color: var(--primary-color);
+}
+.bar-overweight {
+  background-color: var(--bmi-orange);
+}
+.bar-obese {
+  background-color: var(--bmi-red);
+}
+
+/* --- PODPISY POD SKALĄ --- */
+.scale-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.scale-label {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.scale-label span {
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 2px;
+}
+
+.scale-label small {
+  font-size: 11px;
+  color: #94a3b8;
+}
+/* === BMI CALCULATOR – styl poradnia ===
+
+.bmi-calculator {
+  max-width: 380px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* Labels */
+
+.bmi-calculator label {
+  display: block;
+  /* margin-bottom: 16px; */
+  font-size: 14px;
+  color: #4a5a6a;
+}
+
+/* Inputs & select */
+
+.bmi-calculator input,
+.bmi-calculator select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid #dce3ea;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.bmi-calculator input:focus,
+.bmi-calculator select:focus {
+  outline: none;
+  border-color: #4f9e7b;
+  box-shadow: 0 0 0 2px rgba(79, 158, 123, 0.15);
+}
+
+/* Button */
+
+.bmi-calculator button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: rgb(86, 203, 210);
+
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.bmi-calculator button:hover {
+  background: rgb(3 162 172);
+}
+
+.bmi-calculator button:active {
+  transform: scale(0.98);
+}
+
+/* Result */
+
+#bmi-result {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #f4f8f6;
+  font-size: 15px;
+  color: #1f2d3d;
+}
+
+/* Opcjonalne kolory kategorii BMI (jeśli dodasz klasy w JS) */
+
+#bmi-result.ok {
+  color: #2f855a;
+}
+
+#bmi-result.warn {
+  color: #b7791f;
+}
+
+#bmi-result.bad {
+  color: #c53030;
+}
+*/ #footer {
   margin-top: 36px;
 }
 @media (max-width: 1024px) {

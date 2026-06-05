@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMI</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        width: 320px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background: #2d89ef;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background: #1b5fbf;
+      }
+
+      .result {
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .info {
+        font-size: 13px;
+        color: #666;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Kalkulator BMI</h1>
+
+      <select id="gender">
+        <option value="">Wybierz płeć</option>
+        <option value="male">Mężczyzna</option>
+        <option value="female">Kobieta</option>
+      </select>
+
+      <input type="number" id="age" placeholder="Wiek (lata)" />
+      <input type="number" id="weight" placeholder="Waga (kg)" />
+      <input type="number" id="height" placeholder="Wzrost (cm)" />
+
+      <button onclick="calculateBMI()">Oblicz BMI</button>
+
+      <div class="result" id="result"></div>
+      <div class="info" id="info"></div>
+    </div>
+
+    <script>
+      function calculateBMI() {
+        const gender = document.getElementById("gender").value;
+        const age = parseInt(document.getElementById("age").value);
+        const weight = parseFloat(document.getElementById("weight").value);
+        const heightCm = parseFloat(document.getElementById("height").value);
+
+        const resultEl = document.getElementById("result");
+        const infoEl = document.getElementById("info");
+
+        if (!gender || !age || !weight || !heightCm) {
+          resultEl.textContent = "Uzupełnij wszystkie pola";
+          infoEl.textContent = "";
+          return;
+        }
+
+        const heightM = heightCm / 100;
+        const bmi = weight / (heightM * heightM);
+
+        let category = "";
+
+        if (bmi < 18.5) category = "niedowaga";
+        else if (bmi < 24.9) category = "waga prawidłowa";
+        else if (bmi < 29.9) category = "nadwaga";
+        else category = "otyłość";
+
+        let genderText = gender === "male" ? "Mężczyzna" : "Kobieta";
+
+        resultEl.textContent = `BMI: ${bmi.toFixed(2)}`;
+        infoEl.textContent = `${genderText}, ${age} lat — ${category}`;
+      }
+    </script>
+  </body>
+</html>
