@@ -393,11 +393,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Ukrycie bannera od 7.07.2026
   const banner = document.querySelector(".banner");
-
-  const hideFrom = new Date(2026, 6, 7);
-
-  if (new Date() >= hideFrom && banner) {
+  if (new Date() >= new Date(2026, 6, 7) && banner) {
     banner.style.display = "none";
+  }
+
+  // Ukrycie news-element22 od 16.07.2026
+  const newsElement22 = document.getElementById("news-element22");
+  if (new Date() >= new Date(2026, 6, 16) && newsElement22) {
+    newsElement22.style.display = "none";
   }
 });
