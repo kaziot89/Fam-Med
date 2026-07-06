@@ -391,3 +391,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const banner = document.querySelector(".banner");
+
+  const hideFrom = new Date(2026, 6, 7);
+
+  if (new Date() >= hideFrom && banner) {
+    banner.style.display = "none";
+  }
+});
