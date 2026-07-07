@@ -395,7 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   // Ukrycie bannera od 7.07.2026
   const banner = document.querySelector(".banner");
-  if (new Date() >= new Date(2026, 6, 7) && banner) {
+  if (new Date() >= new Date(2026, 6, 15) && banner) {
     banner.style.display = "none";
   }
 
