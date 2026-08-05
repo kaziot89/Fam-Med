@@ -85,7 +85,27 @@ ids.forEach((id) => {
     document.body.appendChild(modal);
   });
 });
+if (!sessionStorage.getItem("popupShown")) {
+  setTimeout(() => {
+    document.getElementById("popup-banner").classList.add("show");
+    document.getElementById("overlay").classList.add("show");
 
+    sessionStorage.setItem("popupShown", "true");
+  }, 1000);
+}
+
+function closePopup() {
+  const popup = document.getElementById("popup-banner");
+  const video = popup.querySelector("video");
+
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+  }
+
+  popup.classList.remove("show");
+  document.getElementById("overlay").classList.remove("show");
+}
 // setTimeout(() => {
 //   document.getElementById("popup-banner").classList.add("show");
 //   document.getElementById("overlay").classList.add("show");
