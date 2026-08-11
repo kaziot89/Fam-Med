@@ -96,6 +96,45 @@ li {
   height: auto;
   padding: 1rem;
 }
+.infos {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  width: 100%;
+  padding: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.nfz-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nfz_logo {
+  width: 150px;
+  height: auto;
+}
+
+.addr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addr h2 {
+  font-size: 28px;
+  margin: 0 0 15px;
+}
+
+.logoQ {
+  width: 70px;
+  height: auto;
+  display: inline-block;
+  vertical-align: super;
+  margin-left: 5px;
+}
 #mainContainer {
   position: absolute;
   display: flex;
@@ -525,6 +564,24 @@ tr:nth-child(even) {
   }
   .lab-image {
     max-width: 95%;
+  }
+}
+@media (max-width: 430px) {
+  .infos {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .nfz_logo {
+    width: 100px;
+  }
+
+  .addr h2 {
+    font-size: 16px;
+  }
+
+  .logoQ {
+    width: 45px;
   }
 }
 @media only screen and (max-width: 830px) {
